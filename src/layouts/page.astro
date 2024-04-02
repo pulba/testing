@@ -1,0 +1,18 @@
+---
+import Main from './main.astro';
+const { title, desc, subs } = Astro.props;
+---
+
+<Main title={title} desc={desc}>
+  <section>
+    <div class="container py-20 px-6 mx-auto">
+      <div class="text-center">
+        <h1 class="text-3xl text-gray-800 font-poppins font-bold">{title}</h1>
+        <p class="text-gray-500 font-poppins max-w-prose mx-auto mt-2">{subs}</p>
+      </div>
+      <div class="mx-auto my-8 py-6 max-w-4xl">
+        <slot />
+      </div>
+    </div>
+  </section>
+</Main>

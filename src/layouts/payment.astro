@@ -1,0 +1,15 @@
+---
+
+---
+<script>
+  const copyToClipBoard = () => {
+    const copyContent = document.querySelector(".copy-content");
+    navigator.clipboard.writeText(copyContent.innerHTML);
+  };
+  const button = document.querySelector(".icon");
+  button.addEventListener("click", () => {
+    copyToClipBoard();
+
+  alert("Copied the text");
+  });
+</script>

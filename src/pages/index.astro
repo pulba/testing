@@ -1,0 +1,391 @@
+---
+import Home from '../layouts/home.astro';
+import '@fontsource-variable/josefin-sans';
+import { Icon } from 'astro-iconify';
+import { Image } from 'astro:assets';
+//const posts = await Astro.glob('../pages/posts/*.md');
+const posts = await Astro.glob('../pages/demo/*.astro');
+
+---
+
+<Home title="Home" desc="Ini halaman home dari undangan">
+  <section>
+    <div class="container px-6 py-20 mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+        <div class="w-full py-8">
+            <div class="">
+                <h2 class="text-5xl font-bold font-josefin text-gray-800 lg:text-7xl">Buat Undangan Nikahanmu <br/>
+                  <span class="bg-gradient-to-r from-pink-700 to-red-500 inline-block text-transparent bg-clip-text">Tanpa Ribet</span></h2>
+
+                <p class="mt-4 text-sm text-gray-500 lg:text-base">Solusi pernikahan lebih hemat, praktis, dan kekinian dengan JejakBahagia yang disebar otomatis.</p>
+
+                <div class="flex flex-row max-[370px]:flex-col gap-x-2 gap-y-4 w-fit mt-6 [&>*]:rounded-full [&>*]:py-2 [&>*]:px-4 [&>*]:font-josefin [&>*]:text-md">
+                    <a href="https://wa.me/6281532094978?text=Hallo kak, saya buat undangan dong!" class="flex flex-row items-center justify-center tracking-wider text-center text-white transition-colors duration-300 bg-pink-700 hover:bg-pink-600">Buat Undangan <Icon name="mdi:whatsapp" class="w-4 h-4 text-white" /></a>
+                    <a href="/demos" class="flex flex-row items-center justify-center tracking-wider text-center text-gray-900 transition-colors duration-300 transform bg-none ring-1 ring-gray-900 lg:mx-4 hover:bg-gray-900 hover:text-white hover:ring-none">Lihat Tema<Icon name="mdi:arrow-right-thin" class="w-6 h-6" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 relative h-96 [&>*]:bg-cover [&>*]:bg-cover [&>*]:bg-center">
+            <div style="background-image: url(/src/assets/demo-1.jpg">
+            </div>
+            <div style="background-image: url(/src/assets/demo-2.jpg)">
+            </div>
+            <div style="background-image: url(/src/assets/demo-3.jpg)">
+            </div>
+            <div style="background-image: url(/src/assets/demo-4.jpg)">
+            </div>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section>
+    <div class="container py-20 px-6 mx-auto">
+      <div class="text-center mx-auto space-y-3">
+        <h2 class="font-bold font-josefin text-3xl md:text-5xl text-gray-800">Mengapa Harus JejakBahagia?</h2>
+        <p class="max-w-prose text-center text-gray-500 mx-auto">JejakBahagia tidak hanya mengundang orang yang Anda cintai untuk menjadi bagian dari hari spesial Anda, tapi juga memberikan mereka sesuatu yang lebih dari sekedar undangan. </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16 max-w-3xl mx-auto [&>*]:w-full [&>*]:text-center [&>*]:mx-auto [&>*]:px-4 [&>*]:py-8 [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:border [&>*]:border-gray-400 [&>*]:shadow-md [&>*]:rounded-lg">
+        <div>
+          <Icon name="mdi:money-off" class="w-10 h-10 text-pink-700" />
+          <h4 class="font-bold font-josefin text-2xl text-2xl text-gray-800 mt-3">Harga Kompetitif</h4>
+          <p class="text-gray-500">Buat undangan pernikahan tidak pernah semudah dan semurah ini</p>
+        </div>
+        <div>
+          <Icon name="mdi:flash" class="w-10 h-10 text-pink-700" />
+          <h4 class="font-bold font-josefin text-2xl text-2xl text-gray-800 mt-3">Proses Cepat</h4>
+          <p class="text-gray-500">Proses pembuatan undangan hanya memerlukan waktu yang sebentar serta dapat diubah kapanpun
+          </p>
+        </div>
+        <div>
+          <Icon name="mdi:hand-double-tap" class="w-10 h-10 text-pink-700" />
+          <h4 class="font-bold font-josefin text-2xl text-2xl text-gray-800 mt-3">Fitur Lengkap</h4>
+          <p class="text-gray-500">Fitur yang dapat diandalkan mulai dari proses pembuatan undangan hingga proses membagikan undangan
+          </p>
+        </div>
+        <div>
+          <Icon name="mdi:support" class="w-10 h-10 text-pink-700" />
+          <h4 class="font-bold font-josefin text-2xl text-2xl text-gray-800 mt-3">Support Terbaik</h4>
+          <p class="text-gray-500">Perlu bantuan ? tenang tim support Kami selalu bisa diandalkan
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container px-6 py-20 mx-auto text-center">
+      <div class="space-y-2">
+        <h1
+          class="font-bold font-josefin text-3xl md:text-5xl text-gray-800"
+        >
+        Pilihan Desain
+        </h1>
+        <p class="mt-4 text-center text-gray-600 font-bold max-w-prose mx-auto">
+          Dengan adanya preset kamu tinggal pilih design undangan sesuai dengan yang kamu mau!
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 pt-10 max-w-screen-lg mx-auto"
+      >
+        {
+          posts.slice(0, 9).map((post) => (
+            <div class="relative">
+              <div class="overflow-hidden border border-2 border-pink-700 rounded-lg">
+                <a href={post.data.slug}>
+                <Image
+                  class="w-full aspect-video object-cover hover:scale-125 duration-500 transition-all ease-linear"
+                  src={post.data.img.url}
+                  alt=""
+                  width={600}
+                  height={900}
+                />
+              </a>
+              </div>
+              <a href={post.data.slug} class="font-josefin text-white bg-pink-600 w-fit px-4 py-2 absolute left-0 bottom-0">{post.data.type}</a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <section class="bg-gray-100">
+    <div class="container py-20 px-6 mx-auto">
+      <div class="text-center mx-auto space-y-3">
+        <h2 class="font-bold font-josefin text-3xl md:text-5xl text-gray-800">Fitur Terbaik</h2>
+        <p class="max-w-prose text-center text-gray-500 mx-auto">Berbagai macam fitur terbaik undangan online yang Anda butuhkan ada disini dan kami akan selalu berinovasi menambahkan fitur-fitur lainnya
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-16 [&>*]:w-full [&>*]:mx-auto [&>*]:p-8 [&>*]:bg-white [&>*]:shadow-lg [&>*]:rounded-lg [&>*]:flex [&>*]:flex-row [&>*]:gap-4">
+        <div class="hover:shadow-2xl">
+          <Icon name="mdi:web-check" class="w-20 h-fit bg-pink-200 p-2 rounded-full text-pink-700" />
+          <div class="">
+            <h4 class="font-bold font-josefin text-xl text-2xl text-pink-700">Domain Ekslusif</h4>
+            <p class="font-poppins text-gray-400">Menggunakan mekanisme subdomain dan tersedia paket custom domain</p>
+          </div>
+        </div>
+        <div class="hover:shadow-2xl">
+          <Icon name="mdi:people-group" class="w-16 h-fit bg-pink-200 p-2 rounded-full text-pink-700" />
+          <div class="">
+            <h4 class="font-bold font-josefin text-xl text-2xl text-pink-700">Custom Nama Tamu</h4>
+            <p class="font-poppins text-gray-400">Satu tamu, satu undangan. Selayaknya undangan pernikahan fisik</p>
+          </div>
+        </div>
+        <div class="hover:shadow-2xl">
+          <Icon name="mdi:gift-outline" class="w-20 h-fit bg-pink-200 p-2 rounded-full text-pink-700" />
+          <div class="">
+            <h4 class="font-bold font-josefin text-xl text-2xl text-pink-700">Hadiah</h4>
+            <p class="font-poppins text-gray-400">Tersedia fitur kirim hadiah secara online ke rekening kamu atau alamat melalui undanganmu
+          </p>
+          </div>
+        </div>
+        <div class="hover:shadow-2xl">
+          <Icon name="mdi:cash-check" class="w-24 h-fit bg-pink-200 p-2 rounded-full text-pink-700" />
+          <div class="">
+            <h4 class="font-bold font-josefin text-xl text-2xl text-pink-700">Amplop Digital
+            </h4>
+            <p class="font-poppins text-gray-400">Pembayaran dapat dilakukan kapan saja, mudah, otomatis dengan metode pembayaran yang lengkap
+          </p>
+          </div>
+        </div>
+        <div class="hover:shadow-2xl">
+          <Icon name="mdi:book-edit-outline" class="w-24 h-fit bg-pink-200 p-2 rounded-full text-pink-700" />
+          <div class="">
+            <h4 class="font-bold font-josefin text-xl text-2xl text-pink-700">Reservasi & Buku Tamu
+            </h4>
+            <p class="font-poppins text-gray-400">Fitur penerima ucapan dari tamu dan konfirmasi kehadiran dengan manajemen data yang baik
+          </p>
+          </div>
+        </div>
+        <div class="hover:shadow-2xl">
+          <Icon name="mdi:camera-timer" class="w-20 h-fit bg-pink-200 p-2 rounded-full text-pink-700" />
+          <div class="">
+            <h4 class="font-bold font-josefin text-xl text-2xl text-pink-700">Countdown Timer
+            </h4>
+            <p class="font-poppins text-gray-400">Tersedia fitur countdown timer yang dapat berfungsi sebagai pengingat waktu acara
+          </p>
+          </div>
+        </div>
+        <div class="hover:shadow-2xl">
+          <Icon name="mdi:music-note" class="w-20 h-fit bg-pink-200 p-2 rounded-full text-pink-700" />
+          <div class="">
+            <h4 class="font-bold font-josefin text-xl text-2xl text-pink-700">Background Music
+            </h4>
+            <p class="font-poppins text-gray-400">Request musik sesuai keinginan kamu agar undanganmu lebih ekslusif dan romantis.
+          </p>
+          </div>
+        </div>
+        <div class="hover:shadow-2xl">
+          <Icon name="mdi:folder-image" class="w-20 h-fit bg-pink-200 p-2 rounded-full text-pink-700" />
+          <div class="">
+            <h4 class="font-bold font-josefin text-xl text-2xl text-pink-700">Gallery Foto
+            </h4>
+            <p class="font-poppins text-gray-400">Share momen indah kamu dengan pasanganmu dengan slideshow yang keren
+          </p>
+          </div>
+        </div>
+        <div class="hover:shadow-2xl">
+          <Icon name="mdi:book-love-outline" class="w-14 h-fit bg-pink-200 p-2 rounded-full text-pink-700" />
+          <div class="">
+            <h4 class="font-bold font-josefin text-xl text-2xl text-pink-700">Love Stories
+            </h4>
+            <p class="font-poppins text-gray-400">Ceritakan Kisah Cinta kamu dengan leluasa.
+          </p>
+          </div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="bg-white dark:bg-gray-900">
+    <div class="container py-20 px-6 mx-auto">
+      <div class="text-center mx-auto space-y-3">
+        <h2 class="font-bold font-josefin text-3xl md:text-5xl text-gray-800">Apapun Paketnya <br>Tetep Ramah Dikantong</h2>
+        <p class="max-w-prose text-center text-gray-500 mx-auto">Silakan tentukan harga paket sesuai kebutuhan Anda. Kami memberikan harga termurah dan fitur terlengkap. Lihat perbandingan masing-masing paket disini.
+        </p>
+      </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16 gap-8 items-center [&>*]:w-full [&>*]:md:mx-5 [&>*]:transform [&>*]:rounded-lg [&>*]:font-poppins">
+            <div class="px-8 py-12 bg-gray-50 border border-pink-700">
+                <div class="text-center">
+                    <p class="text-2xl font-semibold text-gray-800">Silver</p>
+                    <p class="mt-4 text-gray-500">Paket Termurah</p>
+                    <h4 class="mt-2 text-gray-600 line-through">Rp.65.000</h4>
+                    <h4 class="mt-2 text-4xl font-semibold text-gray-800">Rp.49.000</h4>
+                    <p class="mt-4 text-gray-500">Masa Aktif 7 Hari</p>
+                </div>
+
+                <div class="mt-8 space-y-4 [&>*]:flex [&>*]:items-center">
+                    <div>
+                      <Icon name="mdi:check-circle" class="w-5 h-5 text-pink-700" />
+                        <span class="mx-4 text-gray-700">100 Tamu</span>
+                    </div>
+                    <div>
+                      <Icon name="mdi:check-circle" class="w-5 h-5 text-pink-700" />
+                        <span class="mx-4 text-gray-700">3 Foto</span>
+                    </div>
+                    <div>
+                      <Icon name="mdi:check-circle" class="w-5 h-5 text-pink-700" />
+                        <span class="mx-4 text-gray-700">Countdown Timer</span>
+                    </div>
+                    <div>
+                      <Icon name="mdi:check-circle" class="w-5 h-5 text-pink-700" />
+                        <span class="mx-4 text-gray-700">RSVP</span>
+                    </div>
+                    <div>
+                      <Icon name="mdi:check-circle" class="w-5 h-5 text-pink-700" />
+                        <span class="mx-4 text-gray-700">Amplop Digital</span>
+                    </div>
+                    <div>
+                      <Icon name="mdi:check-circle" class="w-5 h-5 text-pink-700" />
+                        <span class="mx-4 text-gray-700">Google Maps</span>
+                    </div>
+                    <div>
+                      <Icon name="mdi:check-circle" class="w-5 h-5 text-pink-700" />
+                        <span class="mx-4 text-gray-700">Background Music
+                        </span>
+                    </div>
+                    <div>
+                      <Icon name="mdi:check-circle" class="w-5 h-5 text-pink-700" />
+                        <span class="mx-4 text-gray-700">Revisi 2 kali</span>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/6281532094978?text=Hallo kak, saya buat undangan dong!">
+                  <button class="w-full px-4 py-2 mt-10 text-white capitalize font-bold transition-colors duration-300 transform bg-pink-700 rounded-full hover:bg-pink-600">
+                    Buat Undangan
+                  </button>
+                </a>
+                
+            </div>
+            <div class="overflow-hidden bg-pink-700 overflow-hidden">
+              <div class="absolute right-0 top-0 h-16 w-16">
+                <div class="absolute right-[-34px] top-[32px] w-[170px] transform rotate-45 bg-yellow-500 text-center text-white font-bold py-1">Popular</div>
+              </div>
+                <div class="px-8 py-12">
+                    <div class="text-center text-white">
+                        <p class="text-2xl font-semibold">Diamond</p>
+                        <p class="mt-4">Paket Terlaris</p>
+                        <h4 class="mt-2 line-through">Rp.115.000</h4>
+                        <h4 class="mt-2 text-4xl font-semibold">Rp.75.000</h4>
+                        <p class="mt-4">Masa Aktif 1 Tahun</p>
+                    </div>
+
+                    <div class="mt-8 space-y-4 [&>*]:flex [&>*]:items-center">
+                      <div>
+                        <Icon name="mdi:check-circle" class="w-5 h-5 text-yellow-500" />
+                          <span class="mx-4 text-yellow-500">Tamu Tanpa Batas</span>
+                      </div>
+                      <div>
+                        <Icon name="mdi:check-circle" class="w-5 h-5 text-yellow-500" />
+                          <span class="mx-4 text-yellow-500">7 Foto</span>
+                      </div>
+                      <div>
+                        <Icon name="mdi:check-circle" class="w-5 h-5 text-yellow-500" />
+                          <span class="mx-4 text-yellow-500">Love Stories</span>
+                      </div>
+                      <div>
+                        <Icon name="mdi:check-circle" class="w-5 h-5 text-yellow-500" />
+                          <span class="mx-4 text-yellow-500">Quote</span>
+                      </div>
+                      <div>
+                        <Icon name="mdi:check-circle" class="w-5 h-5 text-white" />
+                          <span class="mx-4 text-white">Countdown Timer</span>
+                      </div>
+                      <div>
+                        <Icon name="mdi:check-circle" class="w-5 h-5 text-white" />
+                          <span class="mx-4 text-white">RSVP</span>
+                      </div>
+                      <div>
+                        <Icon name="mdi:check-circle" class="w-5 h-5 text-white" />
+                          <span class="mx-4 text-white">Amplop Digital
+                          </span>
+                      </div>
+                      <div>
+                        <Icon name="mdi:check-circle" class="w-5 h-5 text-white" />
+                          <span class="mx-4 text-white">Google Maps</span>
+                      </div>
+                      <div>
+                        <Icon name="mdi:check-circle" class="w-5 h-5 text-white" />
+                          <span class="mx-4 text-white">Background Music</span>
+                      </div>
+                      <div>
+                        <Icon name="mdi:check-circle" class="w-5 h-5 text-white" />
+                          <span class="mx-4 text-white">Revisi 5 kali</span>
+                      </div>
+                    </div>
+                    <a href="https://wa.me/6281532094978?text=Hallo kak, saya buat undangan dong!">
+                      <button class="w-full px-4 py-2 mt-10 text-gray-800 font-bold capitalize transition-colors duration-300 transform bg-white rounded-full hover:bg-pink-200">
+                        Buat Undangan
+                      </button>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="px-8 py-12 bg-gray-50 bg-gray-800">
+              <div class="text-center text-white">
+                  <h4 class="text-2xl font-semibold">Exclusive</h4>
+                  <p class="mt-4">Paket Request</p>
+                  <h4 class="mt-2 line-through">Rp.250.0000</h4>
+                  <h4 class="mt-2 text-4xl font-semibold">Rp.125.000</h4>
+                  <p class="mt-4">Masa Aktif 1 Tahun</p>
+              </div>
+
+              <div class="mt-8 space-y-4 [&>*]:flex [&>*]:items-center [&>*]:text-white">
+                  <div>
+                    <Icon name="mdi:check-circle" class="w-5 h-5 text-yellow-500" />
+                      <span class="mx-4 text-yellow-500">Request Sesuai Suku & Adat</span>
+                  </div>
+                  <div>
+                    <Icon name="mdi:check-circle" class="w-5 h-5" />
+                      <span class="mx-4">Tamu Tanpa Batas</span>
+                  </div>
+                  <div>
+                    <Icon name="mdi:check-circle" class="w-5 h-5" />
+                      <span class="mx-4">10 Foto</span>
+                  </div>
+                  <div>
+                    <Icon name="mdi:check-circle" class="w-5 h-5" />
+                      <span class="mx-4">Love Stories
+                      </span>
+                  </div>
+                  <div>
+                    <Icon name="mdi:check-circle" class="w-5 h-5" />
+                      <span class="mx-4">Quote
+                      </span>
+                  </div>
+                  <div>
+                    <Icon name="mdi:check-circle" class="w-5 h-5" />
+                      <span class="mx-4">Countdown Timer</span>
+                  </div>
+                  <div>
+                    <Icon name="mdi:check-circle" class="w-5 h-5" />
+                      <span class="mx-4">RSVP</span>
+                  </div>
+                  <div>
+                    <Icon name="mdi:check-circle" class="w-5 h-5" />
+                      <span class="mx-4">Google Maps</span>
+                  </div>
+                  <div>
+                    <Icon name="mdi:check-circle" class="w-5 h-5" />
+                      <span class="mx-4">Amplop Digital
+                      </span>
+                  </div>
+                  <div>
+                    <Icon name="mdi:check-circle" class="w-5 h-5" />
+                      <span class="mx-4">Background Music
+                      </span>
+                  </div>
+                  <div>
+                    <Icon name="mdi:check-circle" class="w-5 h-5" />
+                      <span class="mx-4">Revisi Unlimited</span>
+                  </div>
+              </div>
+
+              <a href="https://wa.me/6281532094978?text=Hallo kak, saya buat undangan dong!">
+                <button class="w-full px-4 py-2 mt-10 text-gray-800 font-bold capitalize transition-colors duration-300 transform bg-white rounded-full hover:bg-gray-200">
+                  Buat Undangan
+                </button>
+              </a>
+          </div>
+        </div>
+    </div>
+</section>
+</Home>

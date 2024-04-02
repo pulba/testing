@@ -1,0 +1,17 @@
+---
+
+---
+
+<script>
+    var box_name = document.querySelector("#invite-name");
+    
+    if (box_name) {
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var name = url.searchParams.get("to");
+      if (name) {
+        box_name.innerHTML = name;
+      }
+    }
+    
+    </script>
