@@ -62,12 +62,12 @@ const current_url = Astro.url.pathname;
 
   //const present = document.querySelector(".radio:checked");
 
-  console.log(username.value);
-  console.log(message.value);
-  console.log(present.value);
+  // console.log(username.value);
+  // console.log(message.value);
+  // console.log(present.value);
 
 
-fetch('http://localhost:4321/api/rsvp-send?name='+username.value+'&content='+message.value+'&present='+present.value+'&url='+current_url+'', {
+fetch('/api/rsvp-send?name='+username.value+'&content='+message.value+'&present='+present.value+'&url='+current_url+'', {
   method: "GET"
 }).then(x => x.text())
 .then(y => console.log(y));
