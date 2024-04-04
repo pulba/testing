@@ -7,8 +7,14 @@ export default {
       montecarlo: ["MonteCarlo", "cursive"],
       nautigal: ["The Nautigal", "cursive"],
       poppins: ["Poppins", "sans-serif"],
+      haviland: ["Mr De Haviland", "cursive"],
     },
     extend: {},
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['active'],
+    }
   },
   plugins: [],
 };

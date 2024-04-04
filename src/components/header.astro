@@ -1,7 +1,7 @@
 ---
 import '@fontsource/poppins';
 import { Icon } from 'astro-iconify';
-import '@fontsource/montecarlo';
+import '@fontsource/mr-de-haviland';
 import '@fontsource/the-nautigal';
 ---
 
@@ -10,7 +10,7 @@ import '@fontsource/the-nautigal';
       <div class="flex items-center justify-between">
         <a href="/" class="flex font-semi-bold text-2xl flex items-center justify-center">
           <img src="/assets/JejakBahagia.png" alt="JejakBahagia" class="w-10 h-10">
-          <h1 class="font-bold font-josefin text-gray-800">Jejak<span class="text-3xl font-montecarlo font-medium">bahagia</span></h1>
+          <h1 class="font-bold font-josefin text-pink-400">Jejak<span class="text-5xl font-haviland font-medium text-gray-800">bahagia</span></h1>
         </a>
       </div>
       <!-- Mobile menu button -->
@@ -22,22 +22,22 @@ import '@fontsource/the-nautigal';
       </div>
       <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
       <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute h-fit inset-0 z-20 w-full px-6 py-4 mt-12 transition-all duration-700 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:opacity-100 md:translate-x-0 md:flex md:items-center md:justify-evenly">
-          <div class="flex flex-col px-2 -mx-4 md:flex-row md:mx-10 md:py-0 [&>*]:py-2.5 [&>*]:px-2.5 [&>*]:text-gray-800 [&>*]:transition-colors [&>*]:duration-300 [&>*]:transform [&>*]:md:mx-2">
-              <a href="/" class="active:text-pink-700">Home</a>
-              <a href="/about" class="active:text-pink-700">About</a>
-              <a href="/demos" class="active:text-pink-700">Tema</a>
-              <a href="/contact" class="active:text-pink-700">Contact</a>
+          <div class="flex flex-col items-center justify-center text-center px-2 -mx-4 md:flex-row md:mx-10 md:py-0 [&>*]:py-2.5 [&>*]:px-2.5 [&>*]:text-gray-800 [&>*]:transition-colors [&>*]:duration-300 [&>*]:transform [&>*]:md:mx-2 [&>*]:w-max [&>*]:relative [&>*]:before:content-[''] [&>*]:before:absolute [&>*]:before:bg-pink-400 [&>*]:before:w-0 [&>*]:before:h-[3px] [&>*]:before:translate-y-6 [&>*]:before:transition-all [&>*]:before:duration-1000 [&>*]:before:ease-in-out">
+              <a href="/" class="hover:before:w-full hover:text-pink-600 active:bg-blue-600">Home</a>
+              <a href="/about" class="hover:before:w-full hover:text-pink-600 active:bg-blue-600">About</a>
+              <a href="/demos" class="hover:before:w-full hover:text-pink-600">Tema</a>
+              <a href="/contact" class="hover:before:w-full hover:text-pink-600">Contact</a>
           </div>
           <div class="relative mt-4 md:mt-0 flex flex-col items-center ">
             <a href="https://wa.me/6281532094978?text=Hallo kak, saya buat undangan dong!">
-              <button class="px-4 py-2 z-50 relative md:hidden block bg-pink-700 w-max rounded-full text-white font-bold font-poppins flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-600 hover:ring hover:ring-pink-600 hover:ring-1">Buat Undangan</button>
+              <button class="px-4 py-2 z-50 relative md:hidden block bg-pink-400 w-max rounded-full text-white font-bold font-poppins flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-400 hover:ring hover:ring-pink-600 hover:ring-1">Buat Undangan</button>
             </a>
             
           </div>
       </div>
       <div class="relative mt-4 md:mt-0 hidden md:flex justify-end">
         <a href="https://wa.me/6281532094978?text=Hallo kak, saya buat undangan dong!">
-          <button class="px-4 py-2 z-50 relative bg-pink-700 w-max rounded-full text-white font-bold font-poppins flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-600 hover:ring hover:ring-pink-600 hover:ring-1">Buat Undangan</button>
+          <button class="px-4 py-2 z-50 relative bg-pink-400 w-max rounded-full text-white font-bold font-poppins flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-400 hover:ring hover:ring-pink-400 hover:ring-1">Buat Undangan</button>
         </a>
         
     </div>
