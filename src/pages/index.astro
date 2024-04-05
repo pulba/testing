@@ -3,10 +3,8 @@ import Home from '../layouts/home.astro';
 import '@fontsource-variable/josefin-sans';
 import { Icon } from 'astro-iconify';
 import { Image } from 'astro:assets';
-//const posts = await Astro.glob('../pages/posts/*.md');
 const posts = await Astro.glob('../pages/demo/*.astro');
 
-console.log(posts[0].url);
 ---
 
 <Home title="Home" desc="Ini halaman home dari undangan">
@@ -15,7 +13,7 @@ console.log(posts[0].url);
       <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
         <div class="w-full py-8">
             <div class="px-6">
-                <h2 class="text-5xl sm:text-6xl md:text-7xl font-bold font-josefin text-gray-800">Buat Undangan Nikahanmu <br/>
+                <h2 class="text-4xl min-[370px]:text-5xl sm:text-6xl md:text-7xl font-bold font-josefin text-gray-800">Buat Undangan Nikahanmu <br/>
                   <span class="bg-gradient-to-r from-pink-600 to-pink-400 inline-block text-transparent bg-clip-text">Murah Ajalah!</span></h2>
 
                 <p class="mt-4 text-sm text-gray-600 lg:text-base font-poppins">Kreasikan Moment Spesialmu dengan Undangan Nikahan yang Menggoda, dan Harga yang Ramah di Kantongmu!</p>
@@ -29,14 +27,14 @@ console.log(posts[0].url);
         <div class="mx-auto relative grid place-items-center overflow-hidden">
           <div class="h-screen grid place-items-center overflow-hidden">
             <div class="grid grid-cols-[repeat(5,_100px)] auto-rows-[100px] gap-2 place-items-center mb-[100px] [&>*]:object-cover [&>*]:w-[200px] [&>*]:h-[200px] [&>*]:rounded-[5px] max-[639px]:[&>*:nth-child(4n-1)]:col-[2_/_span_2] min-[640px]:grid-cols-[repeat(6,_100px)] min-[640px]:[&>*:nth-child(5n-1)]:col-[2_/_span_2] [&>*]:col-[auto_/_span_2]">
-            <img src="/assets/foto-stroy-2.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/foto-stroy-3.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/foto-stroy-2.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/foto-stroy-3.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/foto-stroy-2.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/foto-stroy-1.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/foto-stroy-3.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/foto-stroy-2.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/girl-wedding.jpg" alt="JejakBahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/ring-cd.jpg" alt="JejakBahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/man-wedding.jpg" alt="JejakBahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/foto-moment-3.jpg" alt="JejakBahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/bg-wedding-1.jpg" alt="JejakBahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/foto-tambahan-1.jpg" alt="JejakBahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/foto-moment-2.jpg" alt="JejakBahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/foto-tambahan-2.jpg" alt="JejakBahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
           </div>
         </div>
         
@@ -91,7 +89,7 @@ console.log(posts[0].url);
       <div
         class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 pt-10 max-w-screen-lg mx-auto"
       >
-        <!-- {
+        {
           posts.slice(0, 9).map((post) => (
             <div class="relative">
               <div class="overflow-hidden border border-2 border-pink-400 rounded-lg">
@@ -99,7 +97,7 @@ console.log(posts[0].url);
                 <Image
                   class="w-full aspect-video object-cover hover:scale-125 duration-500 transition-all ease-linear"
                   src={post.data.img.url}
-                  alt=""
+                  alt="JejakBahagia"
                   width={600}
                   height={900}
                 />
@@ -108,7 +106,7 @@ console.log(posts[0].url);
               <a href={post.data.slug} class="font-josefin text-white bg-pink-600 w-fit px-4 py-2 absolute left-0 bottom-0">{post.data.type}</a>
             </div>
           ))
-        } -->
+        }
       </div>
     </div>
   </section>
