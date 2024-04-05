@@ -2,14 +2,18 @@
 
 ---
 <script>
-  const copyToClipBoard = () => {
+
+  const button = document.querySelector(".icon");
+
+  function copyToClipBoard(){
     const copyContent = document.querySelector(".copy-content");
     navigator.clipboard.writeText(copyContent.innerHTML);
-  };
-  const button = document.querySelector(".icon");
-  button.addEventListener("click", () => {
-    copyToClipBoard();
+  }
 
-  alert("Copied the text");
-  });
+  if(button){
+    button.addEventListener("click", function(){
+      copyToClipBoard();
+      alert("Copied the text");
+    });
+  }
 </script>

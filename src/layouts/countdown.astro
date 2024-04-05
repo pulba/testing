@@ -4,9 +4,13 @@
 
 <script>
 //Countdown
-const tanggalTujuan = new Date("Jan 5, 2030 15:37:25").getTime();
+const timer = document.getElementById("timer");
+if(timer){
+    const tanggalTujuan = new Date("Jan 5, 2030 15:37:25").getTime();
 
-const hitungMundur = setInterval(function(){
+    const hitungMundur = setInterval(function(){
+
+
     const sekarang = new Date().getTime();
     const selisih = tanggalTujuan - sekarang;
 
@@ -15,19 +19,18 @@ const hitungMundur = setInterval(function(){
     const menit = Math.floor(selisih % (1000 * 60 * 60) / (1000 * 60));
     const detik = Math.floor(selisih % (1000 * 60) / (1000));
 
-    const timer = document.getElementById("timer").innerHTML = 
+    timer.innerHTML = 
     '<div><div class="leading-8 font-josefin"> ' + hari + ' <br><span class="text-xl">Hari</span></div> </div> ' +
-        '<div> <div class="leading-8 font-josefin"> ' + jam + ' <br><span class="text-xl">Hari</span></div> </div> ' +
-        '<div> <div class="leading-8 font-josefin"> ' + menit + ' <br><span class="text-xl">Hari</span></div> </div> ' +
-        '<div> <div class="leading-8 font-josefin"> ' + detik + ' <br><span class="text-xl">Hari</span></div> </div> ';
+        '<div> <div class="leading-8 font-josefin"> ' + jam + ' <br><span class="text-xl">Jam</span></div> </div> ' +
+        '<div> <div class="leading-8 font-josefin"> ' + menit + ' <br><span class="text-xl">Menit</span></div> </div> ' +
+        '<div> <div class="leading-8 font-josefin"> ' + detik + ' <br><span class="text-xl">Detik</span></div> </div> ';
         if (selisih < 0) {
-    clearInterval(hitungMundur);
-    var timerElement = document.getElementById("timer");
-    var newDiv = document.createElement("div");
-    newDiv.innerHTML = '<div class="leading-8 text-white text-2xl capitalize font-josefin">event telah berakhir</div>';
-    timerElement.innerHTML = ""; 
-    timerElement.appendChild(newDiv);
+            clearInterval(hitungMundur);
+            const end = document.createElement("div");
+            end.innerHTML = '<div class="leading-8 text-white text-2xl capitalize font-josefin">event telah berakhir</div>';
+            timer.innerHTML = "";
+            timer.appendChild(end);
+        }
+    });
 }
-
-});
 </script>

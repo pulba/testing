@@ -10,6 +10,7 @@ import Countdown from '../../layouts/countdown.astro'
 import Footerpost from '../../layouts/footer-post.astro'
 import Animation from '../../layouts/animation.astro'
 
+export const file = null;
 export const data = {
   slug: "demo/wedding-2",
   title: "Demo 2",
@@ -190,32 +191,32 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 >
 <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear " />
 <section class="hero relative h-screen bg-cover bg-center peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
-  <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale" style={`background-image:url(${cover})`}></div>
+  <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale-[75%]" style={`background-image:url(${cover})`}></div>
   
   <div class="container mx-auto pt-20 flex flex-col justify-center items-center text-white relative">
     <h1 class="fade-down text-sm md:text-xl mt-8 font-poppins font-semibold text-gray-800">
       Undangan Pernikahan
     </h1>
-    <h2 class="fade-right text-center font-nautigal font-thin text-white max-[300px]:text-5xl min-[300px]:text-6xl md:text-7xl lg:text-8xl drop-shadow-xl">{ male } & { female }
+    <h2 class="fade-right text-center font-nautigal font-thin text-white text-8xl drop-shadow-xl">{ male }<br> & <br>{ female }
     </h2>
-    <div class="fade-up mx-auto text-center">
-      <h3 class="mt-2 font-poppins">Dear Mr./Mrs./Ms.</h3>
+    <div class="fade-up mx-auto text-center mt-2 text-gray-800">
+      <h3 class="mt-2 font-poppins text-xs">Kepada Yth. <br>  Bapak/Ibu/Saudara/i</h3>
       <h4 id="invite-name" class="text-xl font-poppins my-3 capitalize">
         <Namatamu /> nama tamu
       </h4>
-      <p class="font-poppins text-xl md:text-2xl font-bold">{date}</p>
+      <p class="font-poppins text-lg font-bold">{date}</p>
       <label
         for="toggle"
         class="mt-5 px-6 py-2 relative bg-gray-400 rounded-full shadow-xl text-gray-800 font-bold flex flex-row items-center justify-center gap-1 transition-all duration-700 ease-linear hover:bg-white"><Icon name="mdi:love-letter" class="w-5 h-5" /> Open Invitation </label>
     </div>
   </div>
 </section>
-<main id="myDIV" class="hidden bg-gray-100 peer-checked:block scroll-smooth">
+<main id="myDIV" class="block bg-gray-100 peer-checked:block scroll-smooth">
   <section class="hero relative h-screen">
     <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale" style={`background-image:url(${imgth})`}></div>
     
     <div class="fade-down container mx-auto pt-20 flex flex-col justify-center items-center text-white relative z-50">
-      <h2 class="text-center font-nautigal font-thin text-white max-[300px]:text-5xl min-[300px]:text-6xl md:text-7xl lg:text-9xl drop-shadow-xl">{ male } & { female }
+      <h2 class="fade-right text-center font-nautigal font-thin text-white text-8xl drop-shadow-xl">{ male }<br> & <br>{ female }
       </h2>
       <p class="fade-right font-poppins text-xl md:text-2xl mt-5 font-bold">{date}</p>
     </div>
@@ -292,9 +293,9 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   </div>
 </section>
 <section class="relative">
-  <div class="absolute inset-0 bg-gray-500 bg-cover bg-no-repeat bg-center bg-fixed bg-center grayscale blur-[1px]" style="background-image: url('/assets/ring-cd.jpg');">
+  <div class="absolute inset-0 bg-gray-500 bg-cover bg-no-repeat lg:bg-center bg-fixed bg-center grayscale blur-[1px]" style="background-image: url('/assets/ring-cd.jpg');">
   </div>
-  <div class="container py-32 mx-auto relative z-10">
+  <div class="container py-32 px-6 mx-auto relative z-10">
     <div class="fade-down text-center my-5">
       <h2 class="text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-gray-800">Countdown to</h2>
       <h1 class="text-gray-800 text-center font-nautigal text-4xl md:text-6xl lg:text-8xl">
@@ -304,11 +305,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <div id="timer" class="fade-left grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-bold [&>*]:font-poppins [&>*]:text-gray-800 [&>*]:p-1">
     </div>
     <Countdown/>
-    <div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-x-8 gap-y-16 mt-5 pt-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center max-w-4xl mx-auto gap-x-8 gap-y-16 mt-5 pt-16">
       <div class="fade-up rounded-lg w-full">
         <img src="/assets/foto-tambahan-2.jpg" alt=""  class="rounded-3xl grayscale-[75%]">
       </div>
-      <div class="fade-up text-center font-poppins w-full">
+      <div class="fade-up text-center font-poppins w-full bg-gray-100 py-12 px-6 rounded-3xl">
         <h2 class="text-center font-nautigal text-4xl md:text-6xl text-gray-800">Akad Nikah</h2>
         <p class="mt-2 sm:mt-4">
           <strong class="text-md font-bold text-gray-800"
@@ -334,7 +335,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       <div class="fade-down rounded-lg w-full md:order-last">
         <img src="/assets/foto-tambahan-3.jpg" alt=""  class="rounded-3xl grayscale-[75%]">
       </div>
-      <div class="fade-down text-center font-poppins w-full">
+      <div class="fade-down text-center font-poppins w-full bg-gray-100 py-12 px-6 rounded-3xl">
         <h2 class="text-center font-nautigal text-4xl md:text-6xl text-gray-800">Resepsi</h2>
         <p class="mt-2 sm:mt-4">
           <strong class="text-md font-bold text-gray-800"

@@ -5,16 +5,17 @@ import { Icon } from 'astro-iconify';
 import { Image } from 'astro:assets';
 //const posts = await Astro.glob('../pages/posts/*.md');
 const posts = await Astro.glob('../pages/demo/*.astro');
-import Demo1 from '../assets/demo-1.jpg'
+
+console.log(posts[0].url);
 ---
 
 <Home title="Home" desc="Ini halaman home dari undangan">
   <section>
-    <div class="container px-6 py-20 mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+    <div class="container px-6 pt-16 lg:pt-0 mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-x-8">
         <div class="w-full py-8">
             <div class="">
-                <h2 class="text-5xl font-bold font-josefin text-gray-800 lg:text-7xl">Buat Undangan Nikahanmu <br/>
+                <h2 class="text-5xl sm:text-6xl md:text-7xl font-bold font-josefin text-gray-800">Buat Undangan Nikahanmu <br/>
                   <span class="bg-gradient-to-r from-pink-600 to-pink-400 inline-block text-transparent bg-clip-text">Murah Ajalah!</span></h2>
 
                 <p class="mt-4 text-sm text-gray-600 lg:text-base font-poppins">Kreasikan Moment Spesialmu dengan Undangan Nikahan yang Menggoda, dan Harga yang Ramah di Kantongmu!</p>
@@ -25,24 +26,27 @@ import Demo1 from '../assets/demo-1.jpg'
                 </div>
             </div>
         </div>
-
-        <div class="grid grid-cols-2 gap-2 relative h-96 [&>*]:bg-cover [&>*]:bg-cover [&>*]:bg-center">
-            <div style="background-image: url(/assets/demo-1.jpg">
-            </div>
-            <div style="background-image: url(/assets/demo-2.jpg)">
-            </div>
-            <div style="background-image: url(/assets/demo-3.jpg)">
-            </div>
-            <div style="background-image: url(/assets/demo-4.jpg)">
-            </div>
+        <div class="px-6 mx-auto relative grid place-items-center overflow-hidden">
+          <div class="px-6 h-screen grid place-items-center overflow-hidden">
+            <div class="grid grid-cols-[repeat(5,_100px)] auto-rows-[100px] gap-2 place-items-center mb-[100px] [&>*]:object-cover [&>*]:w-[200px] [&>*]:h-[200px] [&>*]:rounded-[5px] max-[639px]:[&>*:nth-child(4n-1)]:col-[2_/_span_2] min-[640px]:grid-cols-[repeat(6,_100px)] min-[640px]:[&>*:nth-child(5n-1)]:col-[2_/_span_2] [&>*]:col-[auto_/_span_2]">
+            <img src="/assets/foto-stroy-2.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/foto-stroy-3.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/foto-stroy-2.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/foto-stroy-3.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/foto-stroy-2.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/foto-stroy-1.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/foto-stroy-3.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/foto-stroy-2.jpg" alt="" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+          </div>
         </div>
+        
     </div>
     </div>
   </section>
   <section>
-    <div class="container py-20 px-6 mx-auto">
+    <div class="container lg:pb-20 px-6 mx-auto">
       <div class="text-center mx-auto space-y-3">
-        <h2 class="font-bold font-josefin text-3xl md:text-5xl text-pink-600">Mengapa Harus JejakBahagia?</h2>
+        <h2 class="font-bold font-josefin text-4xl md:text-5xl text-pink-600">Mengapa Harus JejakBahagia?</h2>
         <p class="max-w-prose text-center text-gray-500 mx-auto">JejakBahagia tidak hanya mengundang orang yang Anda cintai untuk menjadi bagian dari hari spesial Anda, tapi juga memberikan mereka sesuatu yang lebih dari sekedar undangan. </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16 max-w-3xl mx-auto [&>*]:w-full [&>*]:text-center [&>*]:mx-auto [&>*]:px-4 [&>*]:py-8 [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:border [&>*]:border-pink-400 [&>*]:shadow-md [&>*]:rounded-lg">
@@ -76,7 +80,7 @@ import Demo1 from '../assets/demo-1.jpg'
     <div class="container px-6 py-20 mx-auto text-center">
       <div class="space-y-2">
         <h1
-          class="font-bold font-josefin text-3xl md:text-5xl text-pink-600"
+          class="font-bold font-josefin text-4xl md:text-5xl text-pink-600"
         >
         Pilihan Desain
         </h1>
@@ -87,7 +91,7 @@ import Demo1 from '../assets/demo-1.jpg'
       <div
         class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 pt-10 max-w-screen-lg mx-auto"
       >
-        {
+        <!-- {
           posts.slice(0, 9).map((post) => (
             <div class="relative">
               <div class="overflow-hidden border border-2 border-pink-400 rounded-lg">
@@ -104,14 +108,14 @@ import Demo1 from '../assets/demo-1.jpg'
               <a href={post.data.slug} class="font-josefin text-white bg-pink-600 w-fit px-4 py-2 absolute left-0 bottom-0">{post.data.type}</a>
             </div>
           ))
-        }
+        } -->
       </div>
     </div>
   </section>
   <section class="bg-gray-100">
     <div class="container py-20 px-6 mx-auto">
       <div class="text-center mx-auto space-y-3">
-        <h2 class="font-bold font-josefin text-3xl md:text-5xl text-pink-600">Fitur Terbaik</h2>
+        <h2 class="font-bold font-josefin text-4xl md:text-5xl text-pink-600">Fitur Terbaik</h2>
         <p class="max-w-prose text-center text-gray-500 mx-auto">Berbagai macam fitur terbaik undangan online yang Anda butuhkan ada disini dan kami akan selalu berinovasi menambahkan fitur-fitur lainnya
         </p>
       </div>
@@ -211,7 +215,7 @@ import Demo1 from '../assets/demo-1.jpg'
   <section class="bg-white dark:bg-gray-900">
     <div class="container py-20 px-6 mx-auto">
       <div class="text-center mx-auto space-y-3">
-        <h2 class="font-bold font-josefin text-3xl md:text-5xl text-pink-600">Apapun Paketnya <br>Tetep Ramah Dikantong</h2>
+        <h2 class="font-bold font-josefin text-4xl md:text-5xl text-pink-600">Apapun Paketnya <br>Tetep Ramah Dikantong</h2>
         <p class="max-w-prose text-center text-gray-500 mx-auto">Silakan tentukan harga paket sesuai kebutuhan Anda. Kami memberikan harga termurah dan fitur terlengkap. Lihat perbandingan masing-masing paket disini.
         </p>
       </div>
