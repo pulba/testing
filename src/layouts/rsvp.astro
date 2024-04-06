@@ -30,7 +30,7 @@ const current_url = Astro.url.pathname;
 </form>
 
   
-<div x-data="{ data: [] }" x-init={`fetch('/api/rsvp-get?url=${current_url}').then(response => response.json()).then(rsvp => data = rsvp)`} class="bg-white flex flex-col justify-center items-center mx-auto space-y-5 overflow-y-auto w-full max-w-xl p-6 h-96 rounded-md shadow-md border">
+<div x-data="{ data: [] }" x-init={`fetch('/api/rsvp-get?url=${current_url}').then(response => response.json()).then(rsvp => data = rsvp)`} class="bg-white flex flex-col justify-center items-center mx-auto space-y-5 overflow-y-scroll w-full max-w-xl p-6 h-96 rounded-md shadow-md border">
   <template x-for="user in data" :key="user.id">
     <div class="flex flex-col leading-1.5 p-8 w-full border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl font-poppins order-first" id="display">
       <div class="flex items-center justify-between">
@@ -70,7 +70,10 @@ const current_url = Astro.url.pathname;
 fetch('/api/rsvp-send?name='+username.value+'&content='+message.value+'&present='+present.value+'&url='+current_url+'', {
   method: "GET"
 }).then(x => x.text())
-.then(y => console.log(y));
+.then(y => {
+            submitted = true;
+  console.log('selesai');
+});
 
 
 });

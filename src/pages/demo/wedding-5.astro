@@ -13,9 +13,9 @@ import Animation from '../../layouts/animation.astro'
 export const data = {
   slug: "demo/wedding-5",
   title: "Demo 5",
-  type: "Diamond",
+  type: "Exclusive",
   img: {
-    url: '/assets/demo-4.jpg',
+    url: '/assets/demo-5.jpg',
     alt: "jejak bahagia"
   },
   cover: {
@@ -198,7 +198,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       <div class="h-screen  py-12 flex flex-col justify-between items-center relative">
         <div class="flex items-center w-full lg:w-1/2"> 
           <hr class="flex-grow border border-yellow-800 w-max"> 
-          <span class="px-3 text-xl md:text-2xl lg:text-3xl text-white"> 
+          <span class="px-3 text-xl md:text-2xl text-gray-800"> 
             Wedding Invitation
           </span> 
           <hr class="flex-grow border border-yellow-800 w-max"> 
@@ -224,10 +224,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         
     </div>
   </section>
-  <main id="myDIV" class="block peer-checked:block"
+  <main id="myDIV" class="block peer-checked:block bg-slate-100"
   >
     <section
-      class="hero relative h-screen bg-cover bg-center mx-auto before:content-[''] before:bg-yellow-200 before:opacity-55 before:inset-0 before:absolute"
+      class="hero relative h-screen bg-cover bg-center mx-auto before:content-[''] before:bg-yellow-200 before:opacity-55 before:inset-0 before:absolute overflow-hidden"
       style={`background-image:url(${cover})`}>
       <div class="container mx-auto h-screen flex flex-col justify-center items-center text-white relative z-10 font-josefin">
         <div class="text-yellow-800 mx-auto text-center flex flex-col items-center">
@@ -238,6 +238,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           </h1>
           <h3 class="fade-up text-xl md:text-2xl">{ date }</h3>
         </div>
+      </div>
+
+      <div class="images absolute w-screen -bottom-20">
+        <img src="/assets/wave.svg" class="bg-cover" alt="JejakBahagia" />
       </div>
     </section>
     <section class="dh-3/6 py-20">
@@ -258,7 +262,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </section>
     <section>
       <div class="container mx-auto">
-        <div class="zoom-out flex flex-col text-center items-center">
+        <div class=" flex flex-col text-center items-center">
           <img src="/assets/pattern.png" class="w-24 h-24" alt="JejakBahagia">
         </div>
       </div>
@@ -286,7 +290,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               </div>
             </div>
             
-            <div class="zoom-out font-josefin space-y-3">
+            <div class=" font-josefin space-y-3">
               <h3 class="text-6xl mt-6 font-haviland text-yellow-800">{ female }</h3>
               <p class="text-xl font-medium border-b-2 border-b-yellow-800">{ fullfemale }</p>
               <p class="text-lg">{childfemale}</p>
@@ -313,7 +317,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                     <img src="/assets/floral1.png" alt="JejakBahagia" class="absolute">
                   </div>
                 </div>
-              <div class="zoom-out font-josefin space-y-3">
+              <div class=" font-josefin space-y-3">
                 <h3 class="text-6xl mt-6 font-haviland text-yellow-800">{ male }</h3>
                 <p class="text-xl font-medium border-b-2 border-b-yellow-800">{ fullmale }</p>
                 <p class="text-lg">{ childmale }</p>
@@ -339,8 +343,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
         <div class="text-center my-5 text-yellow-800">
-          <h2 class="fade-right text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3">
-            SAVE THE DATE</h2>
+          <h2 class="fade-left text-2xl text-yellow-800/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">
+            Save The Date</h2>
           <h1 class="fade-left text-center font-haviland text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
@@ -441,13 +445,13 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section>
       <div class="container mx-auto px-6 py-20 text-center">
         <div class="fade-down">
-          <h2 class="text-2xl font-bold mt-5 font-josefin">The Journey</h2>
+          <h2 class="fade-left text-2xl text-yellow-800/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">The Journey</h2>
           <h2 class="text-yellow-800 text-center font-haviland text-6xl lg:text-8xl">Our Story</h2>
         </div>
-        <div class="[&>*]:bg-white [&>*]:rounded [&>*]:shadow-lg [&>*]:mx-auto [&>*]:my-5 [&>*]:w-full [&>*]:md:w-3/4 [&>*]:p-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto [&>*]:bg-white [&>*]:rounded-lg [&>*]:shadow-lg [&>*]:mx-auto [&>*]:my-5 [&>*]:w-full [&>*]:p-10">
           <div class="fade-up">
-            <div class="md:flex mx-auto gap-5 justify-center">
-              <div class="w-full md:w-1/4">
+            <div class="space-y-4 mx-auto gap-5 justify-center">
+              <div class="w-full">
                 <img
                   class="rounded-lg"
                   src={imgsx}
@@ -455,7 +459,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 />
               </div>
               <div class="text-left font-josefin">
-                <p class="text-2xl font-bold mt-5 md:mt-0 mb-3 text-">Fist Time</p>
+                <p class="text-6xl text-yellow-800 font-haviland">Fist Time</p>
                 <p class="max-w-prose">
                   {storyfs}
                 </p>
@@ -463,8 +467,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
             </div>
           </div>
           <div class="fade-up">
-            <div class="md:flex mx-auto gap-5 justify-center">
-              <div class="w-full md:w-1/4">
+            <div class="space-y-4 mx-auto gap-5 justify-center">
+              <div class="w-full">
                 <img
                   class="rounded-lg"
                   src={imgsv}
@@ -472,7 +476,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 />
               </div>
               <div class="text-left font-josefin">
-                <p class="text-2xl mt-5 md:mt-0 font-bold mb-3">
+                <p class="text-6xl text-yellow-800 font-haviland">
                   Express Love
                 </p>
                 <p class="max-w-prose">
@@ -482,8 +486,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
             </div>
           </div>
           <div class="fade-up">
-            <div class="md:flex mx-auto gap-5 justify-center">
-              <div class="w-full md:w-1/4">
+            <div class="space-y-4 mx-auto gap-5 justify-center">
+              <div class="w-full">
                 <img
                   class="rounded-lg"
                   src={imgeg}
@@ -491,7 +495,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 />
               </div>
               <div class="text-left font-josefin">
-                <p class="text-2xl mt-5 md:mt-0 font-bold mb-3">Engagement</p>
+                <p class="text-6xl text-yellow-800 font-haviland">Engagement</p>
                 <p class="max-w-prose">
                   {storyth}
                 </p>
@@ -504,83 +508,83 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section>
       <div class="container mx-auto px-6 py-20">
         <div class="text-center my-5 mb-10 fade-down">
-          <h2 class="text-xl md:text-2xl font-bold mt-5 font-josefin">A Glimpse of</h2>
+          <h2 class="fade-left text-2xl text-yellow-800/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">A Glimpse of</h2>
           <h2 class="text-yellow-800 text-center font-haviland text-5xl lg:text-8xl">
             Our Moments
           </h2>
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-2 pb-20 [&>*]:w-full [&>*]:md:max-w-4xl [&>*]:p-1 [&>*]:relative"
+          class="columns-1 sm:columns-2 lg:columns-3 gap-4 [&>*]:mb-4 [&>*]:rounded-xl"
         >
-          <div class="zoom-out">
-            <div class="truncate">
+          <div class="">
+            <div class="truncate rounded-xl">
               <img
                 src={imgstory1}
                 alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+                class="object-cover aspect-video transition-all duration-700	ease-linear rounded-xl hover:rounded-xl hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
             </div>
           </div>
-          <div class="zoom-out">
-            <div class="truncate">
+          <div class="">
+            <div class="truncate rounded-xl">
               <img
                 src={imgstory2}
                 alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+                class="object-cover aspect-[4/3] transition-all duration-700	ease-linear rounded-xl hover:rounded-xl hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
             </div>
           </div>
-          <div class="zoom-out">
-            <div class="truncate">
+          <div class="">
+            <div class="truncate rounded-xl">
               <img
                 src={imgstory3}
                 alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+                class="object-cover aspect-video transition-all duration-700	ease-linear rounded-xl hover:rounded-xl hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
             </div>
           </div>
-          <div class="zoom-out">
-            <div class="truncate">
+          <div class="">
+            <div class="truncate rounded-xl">
               <img
                 src={imgstory4}
                 alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+                class="object-cover aspect-square transition-all duration-700	ease-linear rounded-xl hover:rounded-xl hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
             </div>
           </div>
-          <div class="zoom-out">
-            <div class="truncate">
+          <div class="">
+            <div class="truncate rounded-xl">
               <img
                 src={imgstory5}
                 alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+                class="object-cover aspect-aspect-[4/3] transition-all duration-700	ease-linear rounded-xl hover:rounded-xl hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
             </div>
           </div>
-          <div class="zoom-out">
-            <div class="truncate">
+          <div class="">
+            <div class="truncate rounded-xl">
               <img
                 src={imgstory6}
                 alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+                class="object-cover aspect-aspect-[4/3] transition-all duration-700	ease-linear rounded-xl hover:rounded-xl hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
             </div>
           </div>
-          <div class="zoom-out">
-            <div class="truncate">
+          <div class="">
+            <div class="truncate rounded-xl">
               <img
                 src={imgstory7}
                 alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+                class="object-cover aspect-aspect-[3/4] transition-all duration-700	ease-linear rounded-xl hover:rounded-xl hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
             </div>
           </div>
-          <div class="zoom-out">
-            <div class="truncate">
+          <div class="">
+            <div class="truncate rounded-xl">
               <img
                 src={imgstory8}
                 alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+                class="object-cover aspect-video transition-all duration-700	ease-linear rounded-xl hover:rounded-xl hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
             </div>
           </div>
@@ -617,7 +621,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           <h2 class="text-yellow-800 text-center font-haviland text-5xl lg:text-8xl">
             Ucapan & Doa
           </h2>
-          <h2 class="text-xl md:text-2xl font-bold mt-5 font-josefin">Please Confirm Your Attendance</h2>
+          <h2 class="fade-left text-2xl text-yellow-800/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Please Confirm Your Attendance</h2>
         </div>
 
         <Rsvp />
