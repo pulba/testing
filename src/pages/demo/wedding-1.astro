@@ -235,7 +235,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       >
     </div>
   </section>
-  <main id="myDIV" class="hidden peer-checked:block"
+  <main id="myDIV" class="block peer-checked:block"
   >
     <section
       class="hero relative h-screen bg-cover bg-center before:content-[''] before:bg-black/50 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute"
@@ -362,8 +362,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           </h1>
         </div>
         <div id="timer" class="grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-white [&>*]:p-1">
-        </div>
+          
         <Countdown/>
+        </div>
+        <div id="endevent" class="hidden leading-8 text-white text-2xl capitalize font-josefin">Event Telah Berakhir</div>
       </div>
       <div class="images absolute w-full rotate-180" style="top: -5px;">
         <img src="/assets/mask.png" class="bg-cover" alt="mask" />

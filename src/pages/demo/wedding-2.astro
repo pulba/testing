@@ -189,7 +189,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   desc="Ini halaman Demo Wedding 2 dari undangan"
 >
 <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear " />
-<section class="hero relative h-screen bg-cover bg-center peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
+<section class="hero relative h-screen bg-cover bg-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
   <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale-[75%]" style={`background-image:url(${cover})`}></div>
   
   <div class="container mx-auto pt-20 flex flex-col justify-center items-center text-white relative">
@@ -301,7 +301,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         Our Happy Day
       </h1>
     </div>
-    <div id="timer" class="fade-left grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-bold [&>*]:font-poppins [&>*]:text-gray-800 [&>*]:p-1">
+    <div id="timer" class="fade-left grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl w-full mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-bold [&>*]:font-poppins [&>*]:text-gray-800 [&>*]:p-1">
     </div>
     <Countdown/>
     <div class="grid grid-cols-1 md:grid-cols-2 items-center max-w-4xl mx-auto gap-x-8 gap-y-16 mt-5 pt-16">

@@ -4,45 +4,55 @@
 
 <script>
     import anime from 'animejs';
+
     anime({
         targets: '.zoom-out',
         scale: 1.3,
         autoplay: true,
-        Delay: 3000,
-        duration: 2000,
-        easing: 'easeInOutSine',
-        direction: 'alternate'
+        delay: 500, 
+        duration: 1500, 
+        easing: 'easeOutExpo', 
+        direction: 'alternate',
     });
+
     anime({
         targets: '.fade-right',
         translateX: [-150, 0],
+        opacity: [0, 1],
         autoplay: true,
-        Delay: 3000,
-        duration: 2000,
-        easing: 'easeInOutSine',
+        delay: 1000, 
+        duration: 2000, 
+        easing: 'easeInOutQuad', 
     });
+
     anime({
         targets: '.fade-left',
         translateX: [150, 0],
+        opacity: [0, 1],
         autoplay: true,
-        Delay: 3000,
-        duration: 2000,
-        easing: 'easeInOutSine',
+        delay: 1500, 
+        duration: 2000, 
+        easing: 'easeInOutQuad', 
     });
+
     anime({
         targets: '.fade-down',
         translateY: [-150, 0],
+        opacity: [0, 1],
         autoplay: true,
-        duration: 3000,
-        easing: 'easeInOutSine',
+        delay: 2000, 
+        duration: 2500, 
+        easing: 'easeInOutQuart', 
     });
+
     anime({
         targets: '.fade-up',
         translateY: [150, 0],
+        opacity: [0, 1], 
         autoplay: true,
-        duration: 3000,
-        easing: 'easeInOutSine',
+        delay: 2500, 
+        duration: 2500, 
+        easing: 'easeInOutQuart', 
     });
 
-    
 </script>

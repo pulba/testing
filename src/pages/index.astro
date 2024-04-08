@@ -13,14 +13,14 @@ const posts = await Astro.glob('../pages/demo/*.astro');
       <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
         <div class="w-full py-8">
             <div class="px-6">
-                <h2 class="text-4xl min-[370px]:text-5xl sm:text-6xl md:text-7xl font-bold font-josefin text-gray-800">Buat Undangan Nikahanmu <br/>
+                <h2 class="text-3xl min-[370px]:text-4xl min-[426px]:text-5xl sm:text-6xl md:text-7xl font-bold font-josefin text-gray-800">Buat Undangan Nikahanmu <br/>
                   <span class="bg-gradient-to-r from-pink-600 to-pink-400 inline-block text-transparent bg-clip-text">Murah Aja!</span></h2>
 
                 <p class="mt-4 text-sm text-gray-600 lg:text-base font-poppins">Kreasikan Moment Spesialmu dengan Undangan Nikahan yang Menggoda, dan Harga yang Ramah di Kantongmu!</p>
 
                 <div class="flex flex-row max-[370px]:flex-col gap-x-2 gap-y-4 w-fit mt-6 [&>*]:rounded-full [&>*]:py-2 [&>*]:px-4 [&>*]:font-josefin [&>*]:text-md">
-                    <a href="https://wa.me/6281532094978?text=Hallo kak, saya buat undangan dong!" class="flex flex-row items-center justify-center tracking-wider text-center text-white transition-colors duration-300 bg-pink-600 hover:bg-pink-400">Buat Undangan <Icon name="mdi:whatsapp" class="w-4 h-4 text-white" /></a>
-                    <a href="/demos" class="flex flex-row items-center justify-center tracking-wider text-center text-gray-900 transition-colors duration-300 transform bg-none ring-1 ring-gray-900 lg:mx-4 hover:bg-gray-900 hover:text-white hover:ring-none">Lihat Tema<Icon name="mdi:arrow-right-thin" class="w-6 h-6" /></a>
+                    <a href="https://wa.me/6281532094978?text=Hallo kak, saya buat undangan dong!" class="flex flex-row items-center justify-center gap-1 tracking-wider text-center text-white transition-colors duration-300 bg-pink-600 hover:bg-pink-400">Buat Undangan<Icon name="mdi:whatsapp" class="w-5 h-5 text-white" /></a>
+                    <a href="/demos" class="flex flex-row items-center justify-center tracking-wider text-center text-gray-900 transition-colors duration-300 transform bg-none ring-1 ring-gray-900 lg:mx-4 hover:bg-gray-900 hover:text-white hover:ring-0">Lihat Tema<Icon name="mdi:arrow-right-thin" class="w-6 h-6" /></a>
                 </div>
             </div>
         </div>
@@ -48,24 +48,24 @@ const posts = await Astro.glob('../pages/demo/*.astro');
         <p class="max-w-prose text-center text-gray-500 mx-auto">JejakBahagia tidak hanya mengundang orang yang Anda cintai untuk menjadi bagian dari hari spesial Anda, tapi juga memberikan mereka sesuatu yang lebih dari sekedar undangan. </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16 max-w-3xl mx-auto [&>*]:w-full [&>*]:text-center [&>*]:mx-auto [&>*]:px-4 [&>*]:py-8 [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:border [&>*]:border-pink-400 [&>*]:shadow-md [&>*]:rounded-lg">
-        <div class="hover:bg-pink-400 group transition-all duration-500 ease-linear">
+        <div class="hover:bg-pink-400 hover:scale-105 group transition-all duration-500 ease-linear">
           <Icon name="mdi:money-off" class="w-10 h-10 text-pink-600 group-hover:text-white" />
           <h4 class="font-bold font-josefin text-2xl text-2xl text-gray-800 mt-3 group-hover:text-white">Harga Kompetitif</h4>
           <p class="text-gray-500 group-hover:text-white">Buat undangan pernikahan tidak pernah semudah dan semurah ini</p>
         </div>
-        <div class="hover:bg-pink-400 group transition-all duration-500 ease-linear">
+        <div class="hover:bg-pink-400 hover:scale-105 group transition-all duration-500 ease-linear">
           <Icon name="mdi:flash" class="w-10 h-10 text-pink-600 group-hover:text-white" />
           <h4 class="font-bold font-josefin text-2xl text-2xl text-gray-800 mt-3 group-hover:text-white">Proses Cepat</h4>
           <p class="text-gray-500 group-hover:text-white">Proses pembuatan undangan hanya memerlukan waktu yang sebentar serta dapat diubah kapanpun
           </p>
         </div>
-        <div class="hover:bg-pink-400 group transition-all duration-500 ease-linear">
+        <div class="hover:bg-pink-400 hover:scale-105 group transition-all duration-500 ease-linear">
           <Icon name="mdi:hand-double-tap" class="w-10 h-10 text-pink-600 group-hover:text-white" />
           <h4 class="font-bold font-josefin text-2xl text-2xl text-gray-800 mt-3 group-hover:text-white">Fitur Lengkap</h4>
           <p class="text-gray-500 group-hover:text-white">Fitur yang dapat diandalkan mulai dari proses pembuatan undangan hingga proses membagikan undangan
           </p>
         </div>
-        <div class="hover:bg-pink-400 group transition-all duration-500 ease-linear">
+        <div class="hover:bg-pink-400 hover:scale-105 group transition-all duration-500 ease-linear">
           <Icon name="mdi:support" class="w-10 h-10 text-pink-600 group-hover:text-white" />
           <h4 class="font-bold font-josefin text-2xl text-2xl text-gray-800 mt-3 group-hover:text-white">Support Terbaik</h4>
           <p class="text-gray-500 group-hover:text-white">Perlu bantuan ? tenang tim support Kami selalu bisa diandalkan
@@ -117,8 +117,8 @@ const posts = await Astro.glob('../pages/demo/*.astro');
         <p class="max-w-prose text-center text-gray-500 mx-auto">Berbagai macam fitur terbaik undangan online yang Anda butuhkan ada disini dan kami akan selalu berinovasi menambahkan fitur-fitur lainnya
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-16 [&>*]:w-full [&>*]:mx-auto [&>*]:p-8 [&>*]:bg-white [&>*]:shadow-lg [&>*]:rounded-lg [&>*]:flex [&>*]:gap-4  [&>*]:relative [&>*]:space-x-10">
-        <div class="hover:shadow-2xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16 [&>*]:w-full [&>*]:mx-auto [&>*]:p-8 [&>*]:bg-white [&>*]:shadow-lg [&>*]:rounded-lg [&>*]:flex [&>*]:gap-4  [&>*]:relative [&>*]:space-x-10">
+        <div class="hover:scale-105 hover:shadow-2xl hover:border-pink-600 hover:border">
           <div class="relative">
             <Icon name="mdi:web-check" class="absolute bg-pink-600 p-1 w-10 h-10 rounded-full text-white" />
           </div>
@@ -127,7 +127,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             <p class="font-poppins text-gray-400">Menggunakan mekanisme subdomain dan tersedia paket custom domain</p>
           </div>
         </div>
-        <div class="hover:shadow-2xl">
+        <div class="hover:scale-105 hover:shadow-2xl hover:border-pink-600 hover:border">
           <div class="relative">
             <Icon name="mdi:people-group" class="absolute bg-pink-600 p-1 w-10 h-10 rounded-full text-white" />
           </div>
@@ -137,7 +137,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             </p>
           </div>
         </div>
-        <div class="hover:shadow-2xl">
+        <div class="hover:scale-105 hover:shadow-2xl hover:border-pink-600 hover:border">
           <div class="relative">
             <Icon name="mdi:gift-outline" class="absolute bg-pink-600 p-1 w-10 h-10 rounded-full text-white" />
           </div>
@@ -147,7 +147,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             </p>
           </div>
         </div>
-        <div class="hover:shadow-2xl">
+        <div class="hover:scale-105 hover:shadow-2xl hover:border-pink-600 hover:border">
           <div class="relative">
             <Icon name="mdi:cash-check" class="absolute bg-pink-600 p-1 w-10 h-10 rounded-full text-white" />
           </div>
@@ -157,7 +157,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             </p>
           </div>
         </div>
-        <div class="hover:shadow-2xl">
+        <div class="hover:scale-105 hover:shadow-2xl hover:border-pink-600 hover:border">
           <div class="relative">
             <Icon name="mdi:book-edit-outline" class="absolute bg-pink-600 p-1 w-10 h-10 rounded-full text-white" />
           </div>
@@ -167,7 +167,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             </p>
           </div>
         </div>
-        <div class="hover:shadow-2xl">
+        <div class="hover:scale-105 hover:shadow-2xl hover:border-pink-600 hover:border">
           <div class="relative">
             <Icon name="mdi:timer-sand-complete" class="absolute bg-pink-600 p-1 w-10 h-10 rounded-full text-white" />
           </div>
@@ -177,7 +177,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             </p>
           </div>
         </div>
-        <div class="hover:shadow-2xl">
+        <div class="hover:scale-105 hover:shadow-2xl hover:border-pink-600 hover:border">
           <div class="relative">
             <Icon name="mdi:music-note" class="absolute bg-pink-600 p-1 w-10 h-10 rounded-full text-white" />
           </div>
@@ -187,7 +187,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             </p>
           </div>
         </div>
-        <div class="hover:shadow-2xl">
+        <div class="hover:scale-105 hover:shadow-2xl hover:border-pink-600 hover:border">
           <div class="relative">
             <Icon name="mdi:folder-image" class="absolute bg-pink-600 p-1 w-10 h-10 rounded-full text-white" />
           </div>
@@ -197,7 +197,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             </p>
           </div>
         </div>
-        <div class="hover:shadow-2xl">
+        <div class="hover:scale-105 hover:shadow-2xl hover:border-pink-600 hover:border">
           <div class="relative">
             <Icon name="mdi:book-love-outline" class="absolute bg-pink-600 p-1 w-10 h-10 rounded-full text-white" />
           </div>
@@ -218,7 +218,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
         </p>
       </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16 gap-8 items-center [&>*]:w-full [&>*]:md:mx-5 [&>*]:transform [&>*]:rounded-lg [&>*]:font-poppins">
-            <div class="px-8 py-12 bg-gray-50 border border-pink-400">
+            <div class="px-8 py-12 bg-gray-50 border border-pink-400 hover:scale-110 transition-all duration-500 ease-linear">
                 <div class="text-center">
                     <p class="text-2xl font-semibold text-gray-800">Silver</p>
                     <p class="mt-4 text-gray-500">Paket Termurah</p>
@@ -270,9 +270,9 @@ const posts = await Astro.glob('../pages/demo/*.astro');
                 </a>
                 
             </div>
-            <div class="overflow-hidden bg-pink-600 overflow-hidden">
+            <div class="overflow-hidden bg-pink-600 overflow-hidden hover:scale-110 transition-all duration-500 ease-linear">
               <div class="absolute right-0 top-0 h-16 w-16">
-                <div class="absolute right-[-34px] top-[32px] w-[170px] transform rotate-45 bg-yellow-400 text-center text-white  font-bold py-1">Popular</div>
+                <div class="absolute right-[-34px] top-[32px] w-[170px] transform rotate-[44deg] bg-yellow-400 text-center text-white  font-bold py-1">Popular</div>
               </div>
                 <div class="px-8 py-12">
                     <div class="text-center text-white">
@@ -334,7 +334,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
                     
                 </div>
             </div>
-            <div class="px-8 py-12 bg-gray-50 bg-gray-800">
+            <div class="px-8 py-12 bg-gray-50 bg-gray-800 hover:scale-110 transition-all duration-500 ease-linear">
               <div class="text-center text-white">
                   <h4 class="text-2xl font-semibold">Exclusive</h4>
                   <p class="mt-4">Paket Request</p>
@@ -399,12 +399,52 @@ const posts = await Astro.glob('../pages/demo/*.astro');
               </div>
 
               <a href="https://wa.me/6281532094978?text=Hallo kak, saya buat undangan dong!">
-                <button class="w-full px-4 py-2 mt-10 text-gray-800 font-bold capitalize transition-colors duration-300 transform bg-white rounded-full hover:bg-gray-200">
+                <button class="w-full px-4 py-2 mt-10 text-gray-800 font-bold capitalize transition-colors duration-300 transform bg-white rounded-full hover:bg-gray-300">
                   Buat Undangan
                 </button>
               </a>
           </div>
         </div>
     </div>
+</section>
+<section>
+  <div class="container px-6 py-20 mx-auto h-max">
+    <div class="text-center">
+      <h1 class="font-bold font-josefin text-4xl md:text-5xl text-pink-600">FAQ</h1>
+      <p class="max-w-prose text-center text-gray-500 mx-auto">Dibawah ini adalah daftar pertanyaan yang sering ditanyakan
+      </p>
+    </div>
+  <div class="w-full max-w-xl mx-auto mt-5 pt-8 space-y-4 font-poppins">
+    <div x-data="{ open: true }" class="bg-gray-100 p-4 rounded-md">
+      <button x-on:click="open = ! open" class="text-lg text-gray-900"> Apa itu Jejak Bahagia?
+      </button>
+      <div x-show="open" class="pt-2 text-gray-500">
+        Jejak Bahagia adalah sebuah layanan web undangan nikah digital yang memungkinkan pasangan untuk membuat undangan pernikahan secara online dengan berbagai fitur menarik.
+      </div>
+    </div>
+    <div x-data="{ open: false }" class="bg-gray-100 p-4 rounded-md">
+      <button x-on:click="open = ! open" class="text-left text-lg text-gray-900"> Apa keunggulan Jejak Bahagia dibandingkan undangan konvensional?
+      </button>
+      <div x-show="open" class="pt-2 text-gray-500">
+        Jejak Bahagia memberikan kemudahan dalam proses pembuatan undangan nikah yang cepat, efisien, dan ramah lingkungan karena tidak menggunakan kertas. Selain itu, fitur-fitur interaktif seperti RSVP online, galeri foto, dan peta lokasi memudahkan tamu undangan untuk berpartisipasi dan merasa lebih terlibat.
+      </div>
+    </div>
+    <div x-data="{ open: false }" class="bg-gray-100 p-4 rounded-md">
+      <button x-on:click="open = ! open" class="text-left text-lg text-gray-900"> Bagaimana cara membuat undangan nikah di Jejak Bahagia?
+      </button>
+      <div x-show="open" class="pt-2 text-gray-500">
+        Anda cukup mendaftar di platform sosial media Jejak Bahagia, lalu pilih template undangan yang diinginkan lalu kirimkan informasi acara pernikahan Anda. Setelah itu, undangan akan siap untuk dibagikan kepada tamu undangan melalui tautan unik.
+      </div>
+    </div>
+    <div x-data="{ open: false }" class="bg-gray-100 p-4 rounded-md">
+      <button x-on:click="open = ! open" class="text-lg text-gray-900"> Apakah Jejak Bahagia menyediakan fitur RSVP online?
+      </button>
+      <div x-show="open" class="pt-2 text-gray-500">
+        Ya, Jejak Bahagia dilengkapi dengan fitur RSVP online yang memudahkan tamu undangan untuk mengkonfirmasi kehadiran mereka dengan cepat dan mudah melalui platform tersebut.
+      </div>
+    </div>
+  </div>
+    
+  </div>
 </section>
 </Home>
