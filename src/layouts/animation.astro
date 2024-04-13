@@ -3,9 +3,10 @@
 ---
 
 <script>
-    import anime from 'animejs';
+import anime from 'animejs';
 
-    anime({
+const animations = [
+    {
         targets: '.zoom-out',
         scale: 1.3,
         autoplay: true,
@@ -13,9 +14,8 @@
         duration: 1500, 
         easing: 'easeOutExpo', 
         direction: 'alternate',
-    });
-
-    anime({
+    },
+    {
         targets: '.fade-right',
         translateX: [-150, 0],
         opacity: [0, 1],
@@ -23,9 +23,8 @@
         delay: 1000, 
         duration: 2000, 
         easing: 'easeInOutQuad', 
-    });
-
-    anime({
+    },
+    {
         targets: '.fade-left',
         translateX: [150, 0],
         opacity: [0, 1],
@@ -33,9 +32,8 @@
         delay: 1500, 
         duration: 2000, 
         easing: 'easeInOutQuad', 
-    });
-
-    anime({
+    },
+    {
         targets: '.fade-down',
         translateY: [-150, 0],
         opacity: [0, 1],
@@ -43,9 +41,8 @@
         delay: 2000, 
         duration: 2500, 
         easing: 'easeInOutQuart', 
-    });
-
-    anime({
+    },
+    {
         targets: '.fade-up',
         translateY: [150, 0],
         opacity: [0, 1], 
@@ -53,6 +50,14 @@
         delay: 2500, 
         duration: 2500, 
         easing: 'easeInOutQuart', 
-    });
+    }
+];
+
+
+animations.forEach(animation => {
+    if (document.querySelector(animation.targets)) {
+        anime(animation);
+    }
+});
 
 </script>

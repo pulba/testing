@@ -21,6 +21,8 @@
     "@fontsource/poppins": "^5.0.12",
     "@fontsource/the-nautigal": "^5.0.19",
     "@libsql/client": "^0.5.6",
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@types/alpinejs": "^3.13.9",
     "alpinejs": "^3.13.7",
     "animejs": "^3.2.2",

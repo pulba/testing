@@ -1,6 +1,6 @@
 ---
 import Noheader from '../../layouts/noheader.astro';
-import '@fontsource/mr-de-haviland';
+import '@fontsource/montecarlo';
 import '@fontsource-variable/josefin-sans';
 import { Icon } from 'astro-iconify';
 import Namatamu from '../../layouts/namatamu.astro'
@@ -9,24 +9,23 @@ import Rsvp from '../../layouts/rsvp.astro'
 import Countdown from '../../layouts/countdown.astro'
 import Footerpost from '../../layouts/footer-post.astro'
 import Animation from '../../layouts/animation.astro'
-
 export const data = {
-  slug: "demo/wedding-5",
-  title: "Demo 5",
+  slug: "demo/wedding-6",
+  title: "Demo 6",
   type: "Exclusive",
   img: {
-    url: '/assets/demo-5.jpg',
+    url: '/assets/demo-6.jpg',
     alt: "jejak bahagia"
   },
   cover: {
-    url: '/assets/foto-tambahan-2.jpg',
+    url: '/assets/foto-tambahan-4.jpg',
     alt: "jejak bahagia"
   },
   imgsc: {
-    url: '/assets/foto-tambahan-2.jpg'
+    url: '/assets/foto-tambahan-5.jpg'
   },
   imgth: {
-    url: '/assets/bg-wedding-2.jpg'
+    url: '/assets/foto-tambahan-6.jpg'
   },
 
   //Img kedua mempelai
@@ -75,10 +74,10 @@ export const data = {
   logobank: {
     url: '/assets/gopay.png'
   },
-  male: "Romeo",
-  fullmale: "Romeo Montaquet",
-  female: "Juliet",
-  fullfemale: "Juliet Capulet",
+  male: "Avif",
+  fullmale: "Avif Maulana",
+  female: "Maria",
+  fullfemale: "Maria Christin",
   date: "Jumat, 05 Januari 2030",
 
   childmale: "Putra Pertama dari Pasangan",
@@ -192,164 +191,113 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   desc="Ini halaman Demo Wedding 1 dari undangan"
 >
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
-  <section class="hero relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-yellow-200 before:opacity-55 before:inset-0 before:absolute"
-    style={`background-image:url(${cover})`}>
+  <section class="hero flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
+    <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale-[75%]" style={`background-image:url(${cover})`}></div>
     <div class="container mx-auto px-6">
-      <div class="h-screen  py-12 flex flex-col justify-between items-center relative">
-        <div class="flex items-center w-full lg:w-1/2"> 
-          <hr class="flex-grow border border-yellow-800 w-max"> 
-          <span class="px-3 text-xl md:text-2xl text-gray-800"> 
-            Wedding Invitation
-          </span> 
-          <hr class="flex-grow border border-yellow-800 w-max"> 
-      </div> 
+      <div class="h-screen  py-12 flex flex-col justify-end items-center relative">
       <div class="flex flex-col justify-end items-center text-black relative overflow-hidden">
-          <div class="mx-auto text-center">
-              <h2 class="text-center font-haviland text-yellow-800 text-6xl lg:text-8xl">
-              { male } & { female }
-              </h2>
-              <h3 class="mt-2 font-josefin">Dear Mr./Mrs./Ms.</h3>
-          <h4 id="invite-name" class="text-xl font-josefin my-3 capitalize">
-              <Namatamu /> nama tamu
-          </h4>
-          <img src="/assets/pattern-3.png" alt="JejakBahagia">
-          <p>{date}</p>
-          </div>
-          <label for="toggle"
-              class="mt-5 px-6 py-2 relative bg-yellow-800 rounded-full shadow-xl text-white font-bold flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-yellow-800"
-              >Open Invitation <Icon name="mdi:love-letter" class="w-5 h-5" /></label>
+        <div class="mx-auto text-center">
+            <span class="px-3 text-xl md:text-2xl text-center mx-auto"> 
+                The Wedding of
+            </span>
+            <h2 class="text-center font-montecarlo font-normal text-6xl lg:text-8xl">
+            { male } & { female }
+            </h2>
+            <h3 class="mt-2 font-josefin">Dear Mr./Mrs./Ms.</h3>
+            <h4 id="invite-name" class="text-xl font-josefin my-3 capitalize">
+            <Namatamu /> nama tamu
+            </h4>
+            <p class="font-josefin tracking-widest">{ date }</p>
+        </div>
+        <label for="toggle"
+        class="mt-5 px-6 py-2 relative bg-gray-500 tracking-widest text-white font-josefin flex gap-1 transition-all duration-700 ease-linear hover:bg-gray-400"
+        ><Icon name="mdi:love-letter" class="w-5 h-5" />Open Invitation 
+        </label>
       </div>
       </div>
       
         
     </div>
   </section>
-  <main id="myDIV" class="hidden peer-checked:block bg-slate-100"
-  >
+  <main id="myDIV" class="hidden bg-orange-50 peer-checked:block overflow-hidden">
     <section
-      class="hero relative h-screen bg-cover bg-center mx-auto before:content-[''] before:bg-yellow-200 before:opacity-55 before:inset-0 before:absolute overflow-hidden"
-      style={`background-image:url(${cover})`}>
-      <div class="container mx-auto h-screen flex flex-col justify-center items-center text-white relative z-10 font-josefin">
-        <div class="text-yellow-800 mx-auto text-center flex flex-col items-center">
-          <img src="/assets/pattern-3.png" class="fade-down" alt="JejakBahagia" />
-          <h2 class="fade-right text-xl mt-4">The Wedding of</h2>
-          <h1 class="fade-left text-4xl md:text-6xl lg:text-8xl font-haviland">{ male }<span class="font-haviland text-white"> & </span> { female }
-            
-          </h1>
-          <h3 class="fade-up text-xl md:text-2xl">{ date }</h3>
-        </div>
-      </div>
-
-      <div class="images absolute w-screen -bottom-20">
-        <img src="/assets/wave.svg" class="bg-cover" alt="JejakBahagia" />
-      </div>
-    </section>
-    <section class="dh-3/6 py-20">
-      <div class="container mx-auto">
-        <div class="fade-down flex flex-col text-center items-center">
+      class="hero relative h-screen bg-cover bg-center mx-auto overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-white before:to-transparent before:inset-0 before:bg-cover before:absolute">
+      <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale-[75%]" style={`background-image:url(${imgth})`}>
+        <div class="absolute left-12 inset-y-1/2 w-full">
           <h2
-            class="text-center font-haviland text-yellow-800 text-6xl lg:text-8xl my-6"
-          >
-            Quote
-          </h2>
-          <p
-            class="fade-right sm:max-w-prose px-5 sm:px-0 max-w-none text-sm font-josefin"
-          >
-            {quote}
-          </p>
+          class="fade-right font-nautigal font-thin text-black w-ful max-[300px]:text-5xl min-[300px]:text-6xl md:text-7xl relative after:content-[''] after:h-[1px] after:w-full after:bg-orange-500 after:top-1/2 after:absolute after:ml-3 after:-translate-y-1/2">{ male } & { female }
+        </h2>
+        <p class="fade-up font-poppins tracking-widest max-w-prose">{quote}</p>    
         </div>
       </div>
     </section>
     <section>
-      <div class="container mx-auto">
-        <div class=" flex flex-col text-center items-center">
-          <img src="/assets/pattern.png" class="w-24 h-24" alt="JejakBahagia">
-        </div>
-      </div>
-    </section>
-    <section class="relative py-20">
-      <div class="container mx-auto">
-        <div class="fade-down flex flex-col text-center items-center mb-9">
-          <h1 class="text-yellow-800 text-center font-haviland text-6xl lg:text-8xl">
-            Bride x Groom
-          </h1>
-          <p class="font-medium pb-8 text-lg font-josefin">
-            We Are Getting Married
-          </p>
-        </div>
-        <div class="mx-auto p-4">
-        <div class="flex flex-col lg:flex-row justify-center items-center gap-11 gap-y-11 max-w-4xl mx-auto [&>*]:text-center">
-          <div class="w-full flex flex-col items-center">
-            <div class="fade-right relative flex items-center justify-center w-72">
-              <div class="relative flex items-center justify-center w-72">
-                <div
-                class="w-56 h-64 bg-cover bg-center relative"
-                style={`background-image:url(${imgfr}); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);`}>
-                </div>
-                <img src="/assets/floral1.png" alt="JejakBahagia" class="absolute">
-              </div>
+      <div class="container mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-20 md:gap-y-40 gap-x-16 max-w-4xl mx-auto mt-12">
+          <div class="relative items-center justify-center mx-auto w-full">
+          <div class="text-center overflow-hidden before:content-[''] before:absolute before:h-full before:w-full before:sm:h-4/5 before:sm:w-4/5  before:-bottom-8 before:-right-8 before:-z-10 before:bg-orange-200 after:content-[''] after:absolute after:h-1/4 after:w-1/4 after:border-t-2 after:border-l-2 after:border-t-2 after:border-l-2 after:border-orange-300 after:-top-5 after:-left-5 after:z-10">
+            <div class="bg-cover bg-top aspect-square overflow-hidden"
+            style={`background-image:url(${imgfr})`}>
             </div>
-            
-            <div class=" font-josefin space-y-3">
-              <h3 class="text-6xl mt-6 font-haviland text-yellow-800">{ female }</h3>
-              <p class="text-xl font-medium border-b-2 border-b-yellow-800">{ fullfemale }</p>
+          </div>
+          </div>
+          <div class="relative items-center justify-center mx-auto w-full">
+            <div class="font-josefin space-y-3">
+              <h3 class="text-6xl mt-6 font-montecarlo text-gray-500">{ female }</h3>
+              <p class="text-xl font-medium border-b-2 border-b-orange-300">{ fullfemale }</p>
               <p class="text-lg">{childfemale}</p>
-              <p class="text-lg font-medium text-yellow-800">
+              <p class="text-lg font-medium text-gray-500">
                 { parentfemale }</p>
               <p>{cityfemale}</p>
-              <div class="flex gap-3 text-center justify-center mt-4">
+              <div class="flex gap-3 mt-4">
                 <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
-                  <Icon name="mdi:facebook" class="w-10 h-10 text-yellow-800 hover:text-white hover:bg-yellow-800 bg-white p-2 rounded-full" />
+                  <Icon name="mdi:facebook" class="w-10 h-10 text-gray-500 hover:text-white hover:bg-gray-500 bg-white p-2 rounded-full" />
                 </a>
                 <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
-                  <Icon name="mdi:instagram" class="w-10 h-10 text-yellow-800 hover:text-white hover:bg-yellow-800 bg-white p-2 rounded-full" />
+                  <Icon name="mdi:instagram" class="w-10 h-10 text-gray-500 hover:text-white hover:bg-gray-500 bg-white p-2 rounded-full" />
                 </a>
               </div>
             </div>
           </div>
-            <div class="w-full flex flex-col items-center">
-                <div class="fade-left relative flex items-center justify-center w-72">
-                  <div class="relative flex items-center justify-center w-72">
-                    <div
-                    class="w-56 h-64 bg-cover bg-center relative"
-                    style={`background-image:url(${imgfv}); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);`}>
-                    </div>
-                    <img src="/assets/floral1.png" alt="JejakBahagia" class="absolute">
-                  </div>
-                </div>
-              <div class=" font-josefin space-y-3">
-                <h3 class="text-6xl mt-6 font-haviland text-yellow-800">{ male }</h3>
-                <p class="text-xl font-medium border-b-2 border-b-yellow-800">{ fullmale }</p>
-                <p class="text-lg">{ childmale }</p>
-                <p class="text-lg font-medium text-yellow-800">
-                  { parentmale }
-                </p>
+          <div class="relative items-center justify-center mx-auto w-full sm:order-last">
+            <div class="text-center overflow-hidden before:content-[''] before:absolute before:h-full before:w-full before:sm:h-4/5 before:sm:w-4/5  before:-bottom-8 before:-left-8 before:-z-10 before:bg-orange-200 after:content-[''] after:absolute after:h-1/4 after:w-1/4 after:border-t-2 after:border-r-2 after:border-orange-300 after:-top-5 after:-right-5 after:z-10">
+              <div class="bg-cover bg-top aspect-square overflow-hidden"
+              style={`background-image:url(${imgfv})`}>
+              </div>
+            </div>
+            </div>
+            <div class="relative items-center justify-center mx-auto w-full">
+              <div class="font-josefin space-y-3 sm:text-right">
+                <h3 class="text-6xl mt-6 font-montecarlo text-gray-500">{ male }</h3>
+                <p class="text-xl font-medium border-b-2 border-b-orange-300">{ fullmale }</p>
+                <p class="text-lg">{childmale}</p>
+                <p class="text-lg font-medium text-gray-500">
+                  { parentmale }</p>
                 <p>{citymale}</p>
-                <div class="flex gap-3 text-center justify-center mt-4">
+                <div class="flex gap-3 mt-4 sm:justify-end">
                   <a href={`https://www.facebook.com/${facebookmale}`} class="flex flex-row gap-2 items-center">
-                    <Icon name="mdi:facebook" class="w-10 h-10 text-yellow-800 hover:text-white hover:bg-yellow-800 bg-white p-2 rounded-full" />
+                    <Icon name="mdi:facebook" class="w-10 h-10 text-gray-500 hover:text-white hover:bg-gray-500 bg-white p-2 rounded-full" />
                   </a>
                   <a href={`https://www.instagram.com/${instagrammale}`} class="flex flex-row gap-2 items-center">
-                    <Icon name="mdi:instagram" class="w-10 h-10 text-yellow-800 hover:text-white hover:bg-yellow-800 bg-white p-2 rounded-full" />
+                    <Icon name="mdi:instagram" class="w-10 h-10 text-gray-500 hover:text-white hover:bg-gray-500 bg-white p-2 rounded-full" />
                   </a>
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
-    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed before:content-[''] before:bg-gradient-to-b before:from-white before:to-transparent before:inset-0 before:bg-cover before:absolute"
+    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute"
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
-        <div class="text-center my-5 text-yellow-800">
-          <h2 class="fade-left text-2xl text-yellow-800/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">
+        <div class="text-center my-5">
+          <h2 class="fade-left text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">
             Save The Date</h2>
-          <h1 class="fade-left text-center font-haviland text-4xl md:text-6xl lg:text-8xl">
+          <h1 class="fade-left text-center text-orange-300 font-montecarlo text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-yellow-800 [&>*]:p-1">
+        <div id="timer" class="fade-up grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-orange-300 [&>*]:p-1">
         </div>
         <Countdown/>
       </div>
@@ -357,150 +305,108 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section>
       <div class="container mx-auto py-20 px-6">
         <div class="text-center my-5 mb-10">
-          <h2 class="fade-left text-2xl text-yellow-800/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
-          <h1 class="fade-right text-yellow-800 text-center font-haviland text-5xl lg:text-8xl">
+          <h2 class="fade-left text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
+          <h1 class="fade-right text-gray-500 text-center font-montecarlo text-5xl lg:text-8xl">
             Wedding Day
           </h1>
         </div>
         <div
-          class="grid gird-cols-1 md:grid-cols-3 max-w-4xl w-full mx-auto justify-center items-center gap-4 mt-5 [&>*]:mx-auto [&>*]:rounded-2xl [&>*]:h-full [&>*]:border [&>*]:border-yellow-800 [&>*]:p-12 [&>*]:w-full"
+          class="grid gird-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-4xl w-full mx-auto justify-center items-center gap-4 mt-5 [&>*]:mx-auto [&>*]:h-full [&>*]:w-full"
         >
-          <div class="fade-right">
+          <div class="fade-right bg-orange-200 py-4 px-8 rounded-xl">
             <div class="text-center font-josefin">
-              <h2 class="text-center font-haviland text-4xl">Akad Nikah</h2>
+              <h2 class="text-center font-montecarlo text-4xl">Akad Nikah</h2>
               <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-yellow-800"
+                <strong class="text-md font-bold text-gray-500"
                   >{date}
                 </strong>
               </p>
               <p class="mt-2 sm:mt-4 text-md">{timefs}</p>
               <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-yellow-800"
+                <strong class="text-md font-bold text-gray-500"
                   >{addressfs}</strong
                 >
               </p>
-              <p class="mt-2 sm:mt-4 text-sm">
-                {locationfs}
-              </p>
-              <div class="group">
-                <a href={mapsfs}>
-                  <button
-                class="mx-auto mt-8 flex items-center justify-center rounded-full border border-yellow-800 text-yellow-800 px-4 py-2 text-center text-sm font-medium group-hover:bg-yellow-800 group-hover:text-white group-hover:border-none group-hover:duration-500 group-hover:transition-all"
-                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-yellow-800 group-hover:text-white" /></button
-              >
-                </a>
-              </div>
+            </div>
+            <div class="group">
+              <a href={mapsfs}>
+                <button
+              class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-500 text-white bg-gray-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-gray-500 group-hover:border-none group-hover:duration-500 group-hover:transition-all"
+              >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
+              </a>
             </div>
           </div>
-          <div class="fade-up">
+          <div class="fade-up bg-orange-200 py-4 px-8 rounded-xl">
             <div class="text-center font-josefin">
-                <h2 class="text-center font-haviland text-5xl">Resepsi</h2>
+                <h2 class="text-center font-montecarlo text-5xl">Resepsi</h2>
                 <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-yellow-800">{date}</strong></p>
+                <strong class="text-md font-bold text-gray-500">{date}</strong></p>
                 <p class="mt-2 sm:mt-4 text-md">{timesc}</p>
                 <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-yellow-800"
+                <strong class="text-md font-bold text-gray-500"
                 >{addresssc}</strong></p>
-                <p class="mt-2 sm:mt-4 text-sm">{locationsc}</p>
-                <div class="group">
-                <a href={mapssc}>
-                    <button
-                class="mx-auto mt-8 flex items-center justify-center rounded-full border border-yellow-800 text-yellow-800 px-4 py-2 text-center text-sm font-medium group-hover:bg-yellow-800 group-hover:text-white group-hover:border-none group-hover:duration-500 group-hover:transition-all"
-                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-yellow-800 group-hover:text-white" /></button
-                >
-                </a>
-                </div>
+            </div>
+            <div class="group">
+              <a href={mapsfs}>
+                <button
+              class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-500 text-white bg-gray-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-gray-500 group-hover:border-none group-hover:duration-500 group-hover:transition-all"
+              >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
+              </a>
             </div>
           </div>
-          <div class="fade-left">
+          <div class="fade-left bg-orange-200 py-4 px-8 rounded-xl">
             <div class="text-center font-josefin">
-              <h2 class="text-center font-haviland text-4xl">Unduh Mantu</h2>
+              <h2 class="text-center font-montecarlo text-3xl">Unduh Mantu</h2>
               <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-yellow-800"
+                <strong class="text-md font-bold text-gray-500"
                   >{date}</strong
                 >
               </p>
               <p class="mt-2 sm:mt-4 text-md">{timeth}</p>
               <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-yellow-800"
+                <strong class="text-md font-bold text-gray-500"
                   >{addressth}</strong
                 >
               </p>
-              <p class="mt-2 sm:mt-4 text-sm">
-                {locationth}
-              </p>
-              <div class="group">
-                <a href={mapsth}>
-                  <button
-                class="mx-auto mt-8 flex items-center justify-center rounded-full border border-yellow-800 text-yellow-800 px-4 py-2 text-center text-sm font-medium group-hover:bg-yellow-800 group-hover:text-white group-hover:border-none group-hover:duration-500 group-hover:transition-all"
-                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-yellow-800 group-hover:text-white" /></button
-              >
-                </a>
-              </div>
+            </div>
+            <div class="group">
+              <a href={mapsfs}>
+                <button
+              class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-500 text-white bg-gray-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-gray-500 group-hover:border-none group-hover:duration-500 group-hover:transition-all"
+              >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
+              </a>
             </div>
           </div>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873130.0607204797!2d110.1445006182314!3d-7.744660421581015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1712983300381!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mx-auto mt-12 w-full"></iframe>
       </div>
     </section>
-    <section>
+    <section class="bg-orange-200">
       <div class="container mx-auto px-6 py-20 text-center">
         <div class="fade-down">
-          <h2 class="fade-left text-2xl text-yellow-800/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">The Journey</h2>
-          <h2 class="text-yellow-800 text-center font-haviland text-6xl lg:text-8xl">Our Story</h2>
+          <h2 class="fade-left text-2xl text-gray-500/50 font-bold my-5 font-josefin">The Journey</h2>
+          <h2 class="text-gray-500 text-center font-montecarlo text-6xl lg:text-8xl">Our Story</h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto [&>*]:bg-white [&>*]:rounded-lg [&>*]:shadow-lg [&>*]:mx-auto [&>*]:my-5 [&>*]:w-full [&>*]:p-10">
-          <div class="fade-up">
-            <div class="space-y-4 mx-auto gap-5 justify-center">
-              <div class="w-full">
-                <img
-                  class="rounded-lg"
-                  src={imgsx}
-                  alt="JejakBahagia"
-                />
-              </div>
-              <div class="text-left font-josefin">
-                <p class="text-6xl text-yellow-800 font-haviland">Fist Time</p>
-                <p class="max-w-prose">
+        <div class="splide h-full md:h-96 overflow-hidden mt-10">
+          <div class="splide__track h-full md:h-96 overflow-visible">
+            <ul class="splide__list flex gap-4">
+              <li
+              class="splide__slide w-full flex bg-white overflow-hidden">
+              <img
+                src={imgstory1}
+                alt="Foto 1"
+                class="object-cover aspect-video"/>
+              </li>
+              <li
+              class="splide__slide w-full flex flex-col items-center justify-center overflow-hidden px-8 space-y-5">
+               <div class="hidden sm:block border border-l-[1px] border-gray-500 h-16"></div>
+               <p class="text-3xl font-montecarlo ">Fist Time</p>
+                <p class="max-w-prose font-josefin">
                   {storyfs}
                 </p>
-              </div>
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="space-y-4 mx-auto gap-5 justify-center">
-              <div class="w-full">
-                <img
-                  class="rounded-lg"
-                  src={imgsv}
-                  alt="JejakBahagia"
-                />
-              </div>
-              <div class="text-left font-josefin">
-                <p class="text-6xl text-yellow-800 font-haviland">
-                  Express Love
-                </p>
-                <p class="max-w-prose">
-                  {storysc}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="space-y-4 mx-auto gap-5 justify-center">
-              <div class="w-full">
-                <img
-                  class="rounded-lg"
-                  src={imgeg}
-                  alt="JejakBahagia"
-                />
-              </div>
-              <div class="text-left font-josefin">
-                <p class="text-6xl text-yellow-800 font-haviland">Engagement</p>
-                <p class="max-w-prose">
-                  {storyth}
-                </p>
-              </div>
-            </div>
+                <div class="hidden sm:block border border-l-[1px] border-gray-500 h-16"></div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -508,8 +414,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section>
       <div class="container mx-auto px-6 py-20">
         <div class="text-center my-5 mb-10 fade-down">
-          <h2 class="fade-left text-2xl text-yellow-800/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">A Glimpse of</h2>
-          <h2 class="text-yellow-800 text-center font-haviland text-5xl lg:text-8xl">
+          <h2 class="fade-left text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">A Glimpse of</h2>
+          <h2 class="text-gray-500 text-center font-montecarlo text-5xl lg:text-8xl">
             Our Moments
           </h2>
         </div>
@@ -592,21 +498,21 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 
       </div>
     </section>
-    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed py-20 before:content-[''] before:bg-gradient-to-b before:from-yellow-800 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
-      <div class="container  text-center mx-auto relative z-10">
+    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed py-20 before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
+      <div class="container text-center mx-auto relative z-10">
         <div class="fade-down">
-          <h2 class="text-5xl lg:text-8xl text-white font-haviland">Wedding Gift</h2>
-          <p class="max-w-prose mx-auto font-bold mt-5 font-josefin text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
+          <h2 class="text-5xl lg:text-8xl text-gray-500 font-montecarlo">Wedding Gift</h2>
+          <p class="max-w-prose mx-auto font-bold mt-5 font-josefin">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
         </div>
         <div class="fade-left py-8 px-8 md:px-16 mx-auto mt-16 w-4/5 sm:w-fit justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
           <div class="text-center font-poppins flex flex-col items-center">
             <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
             <div class="font-josefin">
-              <p class="text-2xl text-yellow-800 mt-5 md:mt-0 font-bold mb-3">{bank}</p>
+              <p class="text-2xl text-gray-500 mt-5 md:mt-0 font-bold mb-3">{bank}</p>
               <p class="max-w-prose">{namebank}</p>
               <span class="copy-content font-bold">{numberbank}</span>
               <div class="icon pt-5">
-                <button class="bg-yellow-800 text-white px-5 py-2 rounded-lg">Copy Rekening</button>
+                <button class="bg-gray-500 text-white px-5 py-2 rounded-lg">Copy Rekening</button>
                 <Payment />
               </div>
             </div>
@@ -615,13 +521,13 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       </div>
       </div>
     </section>
-    <section class="bg-gray-100">
+    <section>
       <div class="container py-20 px-6 text-center mx-auto">
         <div class="fade-down text-center my-5 mb-10">
-          <h2 class="text-yellow-800 text-center font-haviland text-5xl lg:text-8xl">
+          <h2 class="text-gray-500 text-center font-montecarlo text-5xl lg:text-8xl">
             Ucapan & Doa
           </h2>
-          <h2 class="fade-left text-2xl text-yellow-800/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Please Confirm Your Attendance</h2>
+          <h2 class="fade-left text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Please Confirm Your Attendance</h2>
         </div>
 
         <Rsvp />
@@ -631,7 +537,32 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <Footerpost />
     <Animation />
     <audio autoplay loop controls="false" class="hidden">
-      <source src="/assets/john-legend-all-of-me.mp3" type="audio/mpeg">
+      <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg">
     </audio>
   </main>
+  <script>
+    import "@splidejs/splide/css";
+    import Splide from "@splidejs/splide";
+    import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+    if (document.querySelector('.splide')) {
+    new Splide(".splide", {
+        type: "loop",
+        gap: "8px",
+        perPage: 2, 
+        arrows:false, 
+        pagination:false,
+        focus: "center",
+        drag: "free",
+        autoScroll: {
+            speed: 3,
+        },
+        breakpoints: {
+            768: {
+                perPage: 1,
+            },
+        },
+    }).mount({ AutoScroll });
+}
+  </script>
 </Noheader>
+
