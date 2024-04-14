@@ -9,6 +9,7 @@ import Rsvp from '../../layouts/rsvp.astro'
 import Countdown from '../../layouts/countdown.astro'
 import Footerpost from '../../layouts/footer-post.astro'
 import Animation from '../../layouts/animation.astro'
+import Audio from '../../layouts/audio.astro'
 
 export const data = {
   slug: "demo/wedding-4",
@@ -228,15 +229,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         >
     </div>
   </section>
-  <main id="myDIV" class="hidden peer-checked:block"
-  >
-    <section
-      class="hero relative h-screen bg-cover bg-center mx-auto"
-      style={`background-image:url(${cover})`}
-    >
+  <main id="myDIV" class="hidden peer-checked:block">
+    <section class="hero relative h-screen bg-cover bg-center mx-auto overflow-hidden"
+      style={`background-image:url(${cover})`}>
       <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover">
         <div>
-          
         </div>
       </div>
       <div
@@ -255,7 +252,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         <img src="/assets/mask.png" class="bg-cover" alt="JejakBahagia" />
       </div>
     </section>
-    <section class="dh-3/6 py-20">
+    <section class="dh-3/6 py-20 overflow-hidden">
       <div class="container mx-auto">
         <div class="fade-down flex flex-col text-center items-center">
           <h2
@@ -271,14 +268,14 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section>
+    <section class="relative overflow-hidden">
       <div class="container mx-auto">
         <div class="zoom-out flex flex-col text-center items-center">
           <Icon name="mdi:flower-tulip" class="w-16 h-16 text-blue-600 transition-all duration-700 ease-linear hover:text-blue-400 text-center mx-auto" />
         </div>
       </div>
     </section>
-    <section class="relative py-20">
+    <section class="relative py-20 overflow-hidden">
       <div class="container mx-auto">
         <div class="fade-down flex flex-col text-center items-center mb-9">
           <h1 class="text-blue-600 text-center font-montecarlo text-6xl lg:text-8xl">
@@ -349,7 +346,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute"
+    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute"
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
         <div class="text-center my-5">
@@ -369,7 +366,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         <img src="/assets/mask.png" class="bg-cover" alt="mask" />
       </div>
     </section>
-    <section>
+    <section class="relative overflow-hidden">
       <div class="container mx-auto py-20 px-6">
         <div class="text-center my-5 mb-10">
           <h2 class="fade-left text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
@@ -457,7 +454,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section>
+    <section class="relative overflow-hidden">
       <div class="container mx-auto px-6 py-20 text-center">
         <div class="fade-down">
           <h2 class="text-2xl font-bold mt-5 font-josefin">The Journey</h2>
@@ -520,7 +517,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section>
+    <section class="relative overflow-hidden">
       <div class="container mx-auto px-6 py-20">
         <div class="text-center my-5 mb-10 fade-down">
           <h2 class="text-xl md:text-2xl font-bold mt-5 font-josefin">A Glimpse of</h2>
@@ -606,7 +603,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed py-20 before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
+    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed py-20 overflow-hidden before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
       <div class="container  text-center mx-auto relative z-10">
         <div class="fade-down">
           <h2 class="text-5xl lg:text-8xl text-blue-400 font-montecarlo">Wedding Gift</h2>
@@ -629,7 +626,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       </div>
       </div>
     </section>
-    <section class="bg-gray-100">
+    <section class="bg-gray-100 overflow-hidden">
       <div class="container py-20 px-6 text-center mx-auto">
         <div class="fade-down text-center my-5 mb-10">
           <h2 class="text-blue-600 text-center font-montecarlo text-5xl lg:text-8xl">
@@ -642,10 +639,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           
       </div>
     </section>
+    <Audio />
+    <audio id="myAudio" loop class="hidden">
+      <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg">
+  </audio>
     <Footerpost />
     <Animation />
-    <audio autoplay loop controls="false" class="hidden">
-      <source src="/assets/sezairi-its-you.mp3" type="audio/mpeg">
-    </audio>
   </main>
 </Noheader>

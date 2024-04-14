@@ -9,6 +9,7 @@ import Rsvp from '../../layouts/rsvp.astro'
 import Countdown from '../../layouts/countdown.astro'
 import Footerpost from '../../layouts/footer-post.astro'
 import Animation from '../../layouts/animation.astro'
+import Audio from '../../layouts/audio.astro'
 
 export const data = {
   slug: "demo/wedding-3",
@@ -188,7 +189,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   desc="Ini halaman Demo Wedding 2 dari undangan"
 >
 <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear " />
-<section class="hero relative h-screen bg-cover bg-center peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-gradient-to-t before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${cover})`}>
+<section class="hero relative h-screen bg-cover bg-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-gradient-to-t before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${cover})`}>
   
   <div class="container h-screen pb-20 mx-auto flex flex-col justify-between items-center relative">
     <h1 class="fade-down text-sm md:text-xl mt-8 tracking-widest font-poppins font-semibold text-black">
@@ -209,7 +210,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   </div>
 </section>
 <main id="myDIV" class="hidden bg-orange-100 peer-checked:block scroll-smooth">
-  <section class="hero relative h-screen bg-cover bg-center before:content-[''] before:bg-gradient-to-t before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${imgth})`}>
+  <section class="hero relative h-screen bg-cover bg-center overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${imgth})`}>
     <div class="container h-screen mx-auto py-20 text-orange-500 relative overflow-hidden">
       <div class="absolute left-12 bottom-12 w-full">
         <h2
@@ -219,7 +220,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       </div>
     </div>
   </section>
-  <section class="relative bg-cover bg-no-repeat bg-center bg-fixed before:content-[''] before:bg-gradient-to-b before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute"
+  <section class="relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute"
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
         <div class="fade-down text-center my-5">
@@ -233,7 +234,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         <Countdown>
       </div>
   </section>
-  <section class="bg-orange-100">
+  <section class="bg-orange-100 overflow-hidden">
     <div class="container py-20 px-6 mx-auto">
         <img src="/assets/pattern-2.png" alt="JejakBahagia" class="mx-auto">
         <div class="flex flex-col lg:flex-row justify-center items-center gap-y-16 max-w-4xl mx-auto mt-5 [&>*]:text-center [&>*]:w-full [&>*]:flex [&>*]:flex-col [&>*]:items-center">
@@ -287,7 +288,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
     </div>
   </section>
-  <section class="relative bg-cover bg-no-repeat bg-center bg-fixed before:content-before:content-[''] before:bg-gradient-to-b before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url('/assets/ring-cd.jpg');">
+  <section class="relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-before:content-[''] before:bg-gradient-to-b before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url('/assets/ring-cd.jpg');">
   <div class="container py-20 px-6 mx-auto relative z-10">
     <div class="text-center my-5 mb-10">
         <h2 class="fade-down text-black text-center font-nautigal text-5xl lg:text-8xl">
@@ -344,7 +345,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </div>
   </div>
 </section>
-<section>
+<section class="overflow-hidden">
   <div class="container mx-auto px-6 py-20">
     <div class="text-center my-5 mb-10">
       <h2 class="fade-down text-black text-center font-nautigal text-5xl lg:text-8xl">
@@ -391,7 +392,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </div>
   </div>
 </section>
-<section class="relative">
+<section class="relative overflow-hidden">
   <div class="absolute inset-0 bg-black bg-cover bg-no-repeat bg-center bg-fixed bg-center before:content-[''] before:bg-black before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg);"></div>
   <div class="container py-20 px-6 text-center mx-auto relative">
     <div class="fade-down">
@@ -413,7 +414,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   </div>
   </div>
 </section>
-<section>
+<section class="overflow-hidden">
   <div class="container py-20 px-6 text-center mx-auto">
     <div class="fade-down text-center my-5 mb-10">
       <h2 class="text-orange-500 text-center font-nautigal text-5xl lg:text-8xl">
@@ -423,11 +424,12 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <Rsvp />
   </div>
 </section>
+<Audio />
+<audio id="myAudio" loop class="hidden">
+  <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg">
+</audio>
 <Footerpost />
 <Animation />
-<audio autoplay loop controls="false" class="hidden">
-  <source src="/assets/andmesh-kamaleng-cinta-luar-biasa.mp3" type="audio/mpeg">
-</audio>
 </main>
 </Noheader>
 

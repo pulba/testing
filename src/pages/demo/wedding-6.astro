@@ -9,6 +9,8 @@ import Rsvp from '../../layouts/rsvp.astro'
 import Countdown from '../../layouts/countdown.astro'
 import Footerpost from '../../layouts/footer-post.astro'
 import Animation from '../../layouts/animation.astro'
+import Audio from '../../layouts/audio.astro'
+
 export const data = {
   slug: "demo/wedding-6",
   title: "Demo 6",
@@ -191,7 +193,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   desc="Ini halaman Demo Wedding 1 dari undangan"
 >
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
-  <section class="hero flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
+  <section class="hero relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
     <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale-[75%]" style={`background-image:url(${cover})`}></div>
     <div class="container mx-auto px-6">
       <div class="h-screen  py-12 flex flex-col justify-end items-center relative">
@@ -219,11 +221,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         
     </div>
   </section>
-  <main id="myDIV" class="hidden bg-orange-50 peer-checked:block overflow-hidden">
-    <section
-      class="hero relative h-screen bg-cover bg-center mx-auto overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-white before:to-transparent before:inset-0 before:bg-cover before:absolute">
-      <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale-[75%]" style={`background-image:url(${imgth})`}>
-        <div class="absolute left-12 inset-y-1/2 w-full">
+  <main id="myDIV" class="block bg-orange-50 peer-checked:block overflow-hidden relative">
+    <section class="hero relative h-screen bg-cover bg-center mx-auto overflow-hidden">
+      <div class="absolute flex flex-col items-center justify-end h-screen inset-0 bg-gray-500 bg-cover bg-center before:content-[''] before:bg-gradient-to-t before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${imgth})`}>
+        <div class="absolute left-6 md:left-12 bootom-10 w-full">
           <h2
           class="fade-right font-nautigal font-thin text-black w-ful max-[300px]:text-5xl min-[300px]:text-6xl md:text-7xl relative after:content-[''] after:h-[1px] after:w-full after:bg-orange-500 after:top-1/2 after:absolute after:ml-3 after:-translate-y-1/2">{ male } & { female }
         </h2>
@@ -231,7 +232,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section>
+    <section class="relative overflow-hidden">
       <div class="container mx-auto px-6 py-20">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-20 md:gap-y-40 gap-x-16 max-w-4xl mx-auto mt-12">
           <div class="relative items-center justify-center mx-auto w-full">
@@ -287,22 +288,22 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute"
+    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute"
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
         <div class="text-center my-5">
-          <h2 class="fade-left text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">
+          <h2 class="fade-left text-2xl text-gray-500/80 font-bold mt-5 md:mt-0 mb-3 font-josefin">
             Save The Date</h2>
-          <h1 class="fade-left text-center text-orange-300 font-montecarlo text-4xl md:text-6xl lg:text-8xl">
+          <h1 class="fade-left text-center text-orange-500 font-montecarlo text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-orange-300 [&>*]:p-1">
+        <div id="timer" class="fade-up grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-orange-500 [&>*]:p-1">
         </div>
         <Countdown/>
       </div>
     </section>
-    <section>
+    <section class="relative overflow-hidden">
       <div class="container mx-auto py-20 px-6">
         <div class="text-center my-5 mb-10">
           <h2 class="fade-left text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
@@ -311,10 +312,23 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           </h1>
         </div>
         <div
-          class="grid gird-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-4xl w-full mx-auto justify-center items-center gap-4 mt-5 [&>*]:mx-auto [&>*]:h-full [&>*]:w-full"
-        >
-          <div class="fade-right bg-orange-200 py-4 px-8 rounded-xl">
-            <div class="text-center font-josefin">
+          class="grid gird-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-4xl w-full mx-auto justify-center items-center gap-x-6 gap-y-8 mt-5 [&>*]:mx-auto [&>*]:h-full [&>*]:w-full [&>*]:bg-orange-200 [&>*]:relative">
+          <div class="fade-right">
+            <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2">
+              <div>
+                  <img src="/assets/frame-2.png" alt="JejakBahagia" />
+              </div>
+              <div class="right-0 top-0">
+                  <img src="/assets/frame-1.png" class="right-0 top-0" alt="JejakBahagia" />
+              </div>
+              <div class="right-0 bottom-0 rotate-180">
+                  <img src="/assets/frame-2.png" class="" alt="JejakBahagia" />
+              </div>
+              <div class="left-0 bottom-0 rotate-180">
+                  <img src="/assets/frame-1.png" alt="JejakBahagia" />
+              </div>
+            </div>
+            <div class="text-center font-josefin px-4 min-[350px]:px-12 py-12 w-full relative">
               <h2 class="text-center font-montecarlo text-4xl">Akad Nikah</h2>
               <p class="mt-2 sm:mt-4">
                 <strong class="text-md font-bold text-gray-500"
@@ -327,17 +341,31 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                   >{addressfs}</strong
                 >
               </p>
-            </div>
-            <div class="group">
-              <a href={mapsfs}>
-                <button
-              class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-500 text-white bg-gray-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-gray-500 group-hover:border-none group-hover:duration-500 group-hover:transition-all"
-              >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
-              </a>
+              <div class="group">
+                <a href={mapsfs}>
+                  <button
+                class="mx-auto mt-8 flex items-center justify-center rounded-full  text-white bg-gray-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-gray-500 group-hover:ring-2 group-hover:ring-gray-500 group-hover:duration-500 group-hover:transition-all"
+                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="fade-up bg-orange-200 py-4 px-8 rounded-xl">
-            <div class="text-center font-josefin">
+          <div class="fade-up">
+            <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2">
+              <div>
+                  <img src="/assets/frame-2.png" alt="JejakBahagia" />
+              </div>
+              <div class="right-0 top-0">
+                  <img src="/assets/frame-1.png" class="right-0 top-0" alt="JejakBahagia" />
+              </div>
+              <div class="right-0 bottom-0 rotate-180">
+                  <img src="/assets/frame-2.png" class="" alt="JejakBahagia" />
+              </div>
+              <div class="left-0 bottom-0 rotate-180">
+                  <img src="/assets/frame-1.png" alt="JejakBahagia" />
+              </div>
+            </div>
+            <div class="text-center font-josefin px-4 min-[350px]:px-12 py-12 w-full relative">
                 <h2 class="text-center font-montecarlo text-5xl">Resepsi</h2>
                 <p class="mt-2 sm:mt-4">
                 <strong class="text-md font-bold text-gray-500">{date}</strong></p>
@@ -345,17 +373,31 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 <p class="mt-2 sm:mt-4">
                 <strong class="text-md font-bold text-gray-500"
                 >{addresssc}</strong></p>
-            </div>
-            <div class="group">
-              <a href={mapsfs}>
-                <button
-              class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-500 text-white bg-gray-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-gray-500 group-hover:border-none group-hover:duration-500 group-hover:transition-all"
-              >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
-              </a>
+                <div class="group">
+                  <a href={mapsfs}>
+                    <button
+                  class="mx-auto mt-8 flex items-center justify-center rounded-full  text-white bg-gray-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-gray-500 group-hover:ring-2 group-hover:ring-gray-500 group-hover:duration-500 group-hover:transition-all"
+                  >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
+                  </a>
+                </div>
             </div>
           </div>
-          <div class="fade-left bg-orange-200 py-4 px-8 rounded-xl">
-            <div class="text-center font-josefin">
+          <div class="fade-left">
+            <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2">
+              <div>
+                  <img src="/assets/frame-2.png" alt="JejakBahagia" />
+              </div>
+              <div class="right-0 top-0">
+                  <img src="/assets/frame-1.png" class="right-0 top-0" alt="JejakBahagia" />
+              </div>
+              <div class="right-0 bottom-0 rotate-180">
+                  <img src="/assets/frame-2.png" class="" alt="JejakBahagia" />
+              </div>
+              <div class="left-0 bottom-0 rotate-180">
+                  <img src="/assets/frame-1.png" alt="JejakBahagia" />
+              </div>
+            </div>
+            <div class="text-center font-josefin px-4 min-[350px]:px-12 py-12 w-full relative">
               <h2 class="text-center font-montecarlo text-3xl">Unduh Mantu</h2>
               <p class="mt-2 sm:mt-4">
                 <strong class="text-md font-bold text-gray-500"
@@ -368,21 +410,35 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                   >{addressth}</strong
                 >
               </p>
-            </div>
-            <div class="group">
-              <a href={mapsfs}>
-                <button
-              class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-500 text-white bg-gray-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-gray-500 group-hover:border-none group-hover:duration-500 group-hover:transition-all"
-              >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
-              </a>
+              <div class="group">
+                <a href={mapsfs}>
+                  <button
+                class="mx-auto mt-8 flex items-center justify-center rounded-full  text-white bg-gray-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-gray-500 group-hover:ring-2 group-hover:ring-gray-500 group-hover:duration-500 group-hover:transition-all"
+                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873130.0607204797!2d110.1445006182314!3d-7.744660421581015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1712983300381!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mx-auto mt-12 w-full"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873130.0607204797!2d110.1445006182314!3d-7.744660421581015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1712983300381!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mx-auto mt-12 w-full max-w-3xl h-96"></iframe>
       </div>
     </section>
-    <section class="bg-orange-200">
-      <div class="container mx-auto px-6 py-20 text-center">
+    <section class="bg-orange-200 relative overflow-hidden">
+      <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:md:w-1/3 [&>*]:lg:w-1/5">
+        <div>
+            <img src="/assets/frame-2.png" alt="JejakBahagia" />
+        </div>
+        <div class="right-0 top-0">
+            <img src="/assets/frame-1.png" class="right-0 top-0" alt="JejakBahagia" />
+        </div>
+        <div class="right-0 bottom-0 rotate-180">
+            <img src="/assets/frame-2.png" class="" alt="JejakBahagia" />
+        </div>
+        <div class="left-0 bottom-0 rotate-180">
+            <img src="/assets/frame-1.png" alt="JejakBahagia" />
+        </div>
+    </div>
+      <div class="container mx-auto py-20 text-center">
         <div class="fade-down">
           <h2 class="fade-left text-2xl text-gray-500/50 font-bold my-5 font-josefin">The Journey</h2>
           <h2 class="text-gray-500 text-center font-montecarlo text-6xl lg:text-8xl">Our Story</h2>
@@ -411,7 +467,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section>
+    <section class="relative overflow-hidden">
       <div class="container mx-auto px-6 py-20">
         <div class="text-center my-5 mb-10 fade-down">
           <h2 class="fade-left text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">A Glimpse of</h2>
@@ -498,7 +554,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 
       </div>
     </section>
-    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed py-20 before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
+    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed py-20 overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
       <div class="container text-center mx-auto relative z-10">
         <div class="fade-down">
           <h2 class="text-5xl lg:text-8xl text-gray-500 font-montecarlo">Wedding Gift</h2>
@@ -521,7 +577,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       </div>
       </div>
     </section>
-    <section>
+    <section class="relative overflow-hidden">
       <div class="container py-20 px-6 text-center mx-auto">
         <div class="fade-down text-center my-5 mb-10">
           <h2 class="text-gray-500 text-center font-montecarlo text-5xl lg:text-8xl">
@@ -534,35 +590,36 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           
       </div>
     </section>
+    <Audio />
+    <audio id="myAudio" loop class="hidden">
+      <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg">
+  </audio>
     <Footerpost />
     <Animation />
-    <audio autoplay loop controls="false" class="hidden">
-      <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg">
-    </audio>
   </main>
   <script>
     import "@splidejs/splide/css";
     import Splide from "@splidejs/splide";
     import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
     if (document.querySelector('.splide')) {
-    new Splide(".splide", {
-        type: "loop",
-        gap: "8px",
-        perPage: 2, 
-        arrows:false, 
-        pagination:false,
-        focus: "center",
-        drag: "free",
-        autoScroll: {
-            speed: 3,
-        },
-        breakpoints: {
-            768: {
-                perPage: 1,
+        new Splide(".splide", {
+            type: "loop",
+            gap: "8px",
+            perPage: 2, 
+            arrows:false, 
+            pagination:false,
+            focus: "center",
+            drag: "free",
+            autoScroll: {
+                speed: 3,
             },
-        },
-    }).mount({ AutoScroll });
-}
+            breakpoints: {
+                768: {
+                    perPage: 1,
+                },
+            },
+        }).mount({ AutoScroll });
+    }
   </script>
 </Noheader>
 

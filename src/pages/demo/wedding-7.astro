@@ -9,6 +9,8 @@ import Rsvp from '../../layouts/rsvp.astro'
 import Countdown from '../../layouts/countdown.astro'
 import Footerpost from '../../layouts/footer-post.astro'
 import Animation from '../../layouts/animation.astro'
+import Audio from '../../layouts/audio.astro'
+
 export const data = {
   slug: "demo/wedding-7",
   title: "Demo 7",
@@ -191,7 +193,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   desc="Ini halaman Demo Wedding 1 dari undangan"
 >
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
-  <section class="bg-red-50 flex items-center relative overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
+  <section class="bg-red-50 hero relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
     <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:md:w-1/3 [&>*]:lg:w-1/5">
         <div>
             <img src="/assets/frame-2.png" class="" alt="JejakBahagia" />
@@ -237,7 +239,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         
     </div>
   </section>
-  <main id="myDIV" class="block bg-red-50 peer-checked:block overflow-hidden">
+  <main id="myDIV" class="hidden bg-red-50 peer-checked:block">
     <section class="relative h-screen overflow-hidden">
         <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:md:w-1/3 [&>*]:lg:w-1/5">
         <div>
@@ -256,8 +258,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-
-    <section class="relative">
+    <section class="relative overflow-hidden">
         <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:md:w-1/3 [&>*]:lg:w-1/5">
             <div>
                 <img src="/assets/frame-2.png" class="" alt="JejakBahagia" />
@@ -321,7 +322,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           </div>
         </div>
     </section>
-    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute"
+    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute"
       style="background-image: url(/assets/ring-cd.jpg);">
         <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:md:w-1/3 [&>*]:lg:w-1/5">
             <div class="right-0 bottom-0 rotate-180">
@@ -344,7 +345,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         <Countdown/>
       </div>
     </section>
-    <section class="relative border-t-2 border-red-800">
+    <section class="relative border-t-2 border-red-800 overflow-hidden">
         <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:md:w-1/3 [&>*]:lg:w-1/5">
             <div>
                 <img src="/assets/frame-2.png" alt="JejakBahagia" />
@@ -412,7 +413,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed py-20 before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
+    <section class="relative bg-cover bg-no-repeat bg-center bg-fixed py-20 overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
       <div class="container text-center mx-auto relative z-10">
         <div class="fade-down">
           <h2 class="text-5xl lg:text-8xl text-red-800 font-montecarlo">Wedding Gift</h2>
@@ -435,7 +436,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       </div>
       </div>
     </section>
-    <section class="relative">
+    <section class="relative h-fit overflow-hidden">
         <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:md:w-1/3 [&>*]:lg:w-1/5">
             <div>
                 <img src="/assets/frame-2.png" class="" alt="JejakBahagia" />
@@ -462,11 +463,12 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           
       </div>
     </section>
+    <Audio />
+    <audio id="myAudio" loop class="hidden">
+        <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg">
+    </audio>
     <Footerpost />
     <Animation />
-    <audio autoplay loop controls="false" class="hidden">
-      <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg">
-    </audio>
   </main>
 </Noheader>
 
