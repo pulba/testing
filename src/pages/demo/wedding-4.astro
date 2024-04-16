@@ -16,7 +16,7 @@ export const data = {
   title: "Demo 4",
   type: "Diamond",
   img: {
-    url: '/assets/demo-4.jpg',
+    url: '/assets/demo-4.webp',
     alt: "jejak bahagia"
   },
   cover: {
@@ -223,7 +223,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         <p class="font-josefin">You are cordially invited to our wedding.</p>
         </div>
         <label
-            for="toggle"
+            for="toggle" id="toaudio"
             class="mt-5 px-6 py-2 relative bg-blue-600 rounded-full shadow-xl text-white font-bold flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-blue-600"
             >Open Invitation <Icon name="mdi:love-letter" class="w-5 h-5" /></label
         >
@@ -641,8 +641,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </section>
     <Audio />
     <audio id="myAudio" loop class="hidden">
-      <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg">
-  </audio>
+      <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg" />
+    </audio>
     <Footerpost />
     <Animation />
   </main>

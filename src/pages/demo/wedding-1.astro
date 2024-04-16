@@ -16,7 +16,7 @@ export const data = {
   title: "Demo 1",
   type: "Diamond",
   img: {
-    url: '/assets/demo-1.jpg',
+    url: '/assets/demo-1.webp',
     alt: "jejak bahagia"
   },
   cover: {
@@ -97,6 +97,7 @@ export const data = {
   bank: "BCA",
   namebank: "Yanto Nugroho",
   numberbank: "123456789",
+
   // waktu & tempat acara
   timefs: "08:00 - 09:00 WIB",
   timesc: "10:00 - 11:00 WIB",
@@ -110,7 +111,6 @@ export const data = {
   mapsfs: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
   mapssc: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
   mapsth: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
-
   
   storyfs: "Di sebuah kafe yang nyaman di tengah kota, dua orang asing, Juliet dan Romeo, tak sengaja bertemu. Romeo, seorang fotografer yang sedang mencari inspirasi untuk proyek terbarunya, sedangkan Juliet, seorang penulis lepas yang sedang mencatat ide-ide baru untuk novel romantisnya, tak menyadari bahwa matanya sedang bertatapan dengan seorang pria tampan di sisi lain kafe.",
   storysc: "Beberapa bulan kemudian, Romeo memutuskan bahwa dia tidak ingin kehilangan Juliet dari hidupnya. Dengan hati yang penuh harap, dia menyiapkan proposal yang tak terlupakan. Di bawah langit malam yang cerah, di taman yang dihiasi dengan ratusan lentera, Romeo berlutut di hadapan Juliet.",
@@ -230,7 +230,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       </h4>
       <p class="font-josefin">You are cordially invited to our wedding.</p>
       <label
-        for="toggle"
+        for="toggle" id="toaudio"
         class="mt-5 px-6 py-2 relative bg-pink-600 rounded-full shadow-xl text-white font-bold flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-600"
         >Open Invitation <Icon name="mdi:love-letter" class="w-5 h-5" /></label
       >
@@ -627,7 +627,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         <div class="py-8 px-8 md:px-16 mx-auto mt-16 w-4/5 sm:w-fit justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
           <div class="text-center font-poppins flex flex-col items-center">
             <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
-            <div class="font-josefin">
+            <div class="font-josefin relative w-full">
               <p class="text-2xl text-pink-600 mt-5 md:mt-0 font-bold mb-3">{bank}</p>
               <p class="max-w-prose">{namebank}</p>
               <span class="copy-content font-bold">{numberbank}</span>
@@ -635,6 +635,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 <button class="bg-pink-600 text-white px-5 py-2 rounded-lg">Copy Rekening</button>
                 <Payment />
               </div>
+              <span class="copy-message absolute hidden text-pink-600 -bottom-6 inset-x-0">Rekening dicopy</span>
             </div>
           </div>
         </div>

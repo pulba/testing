@@ -54,10 +54,13 @@ const animations = [
 ];
 
 
-animations.forEach(animation => {
-    if (document.querySelector(animation.targets)) {
-        anime(animation);
-    }
-});
+    animations.forEach(animation => {
+        if (document.querySelector(animation.targets)) {
+            anime(animation);
+        }
+    });
+
+    // var animasi = document.querySelector('section');
+    // console.log(animasi);
 
 </script>

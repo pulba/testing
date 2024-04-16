@@ -1,22 +1,21 @@
 ---
 import { Icon } from 'astro-iconify';
 import '@fontsource/the-nautigal';
+import '@fontsource/mr-de-haviland';
+import Logo from '../components/logo.astro';
+
 ---
 
 
 <section class="relative bg-cover bg-no-repeat bg-top bg-fixed py-20 before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/ring-footer.jpg)">
     <div class="container text-center mx-auto relative z-10">
-      <div>
+      <div class="flex flex-col items-center justify-center">
         <p class="text-xl max-w-prose mx-auto font-bold mt-5 font-poppins text-white">Terimakasih</p>
         <h2 class="text-5xl lg:text-8xl text-white font-nautigal leading-7">untuk</h2>
          <p class="max-w-prose text-xl mx-auto font-bold font-poppins text-white capitalize">segenap keluarga besar mempelai</p>
+         <p class="mx-auto mt-5 pt-8 font-poppins text-white text-center flex justify-center items-center gap-1">Made with by</p>
+         <Logo text="pink-600" textsc="white"/>
       </div>
-      <p class="mx-auto mt-5 pt-8 font-poppins text-white text-center flex justify-center items-center gap-1">Made with by</p>
-      
-      <a href="/" class="flex font-semi-bold text-2xl flex items-center justify-center">
-        <img src="/assets/JejakBahagia.png" class="w-10 h-10" alt="" />
-        <h1 class="font-bold font-josefin text-white">Jejak<span class="text-3xl font-montecarlo font-medium">bahagia</span></h1>
-      </a>
       <div class="flex gap-3 text-center justify-center mt-4">
         <a href="/"><Icon name="mdi:instagram" class="w-8 h-8 text-neutral-400 hover:text-white" />
         </a>

@@ -3,16 +3,13 @@ import '@fontsource/poppins';
 import { Icon } from 'astro-iconify';
 import '@fontsource/mr-de-haviland';
 import '@fontsource/the-nautigal';
+import Logo from './logo.astro';
 ---
 
 <nav x-data="{ isOpen: false }" class="relative bg-white shadow">
   <div class="container px-6 py-4 mx-auto relative w-full flex justify-between items-center [&>*]:lg:w-1/3 [&>*]:font-poppins">
-      <div class="flex items-center justify-between">
-        <a href="/" class="flex font-semi-bold text-2xl flex items-center justify-center">
-          <img src="/assets/JejakBahagia.png" alt="JejakBahagia" class="w-10 h-10">
-          <h1 class="font-bold font-josefin text-pink-400">Jejak<span class="text-5xl font-haviland font-medium text-gray-800">bahagia</span></h1>
-        </a>
-      </div>
+      
+    <Logo text="grya-800" textsc="pink-600"/>
       <!-- Mobile menu button -->
       <div class="flex md:hidden justify-between items-center z-40">
         <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 [&>*]:w-6 [&>*]:h-6" aria-label="toggle menu">
@@ -21,23 +18,23 @@ import '@fontsource/the-nautigal';
         </button>
       </div>
       <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0']" class="absolute h-fit inset-0 z-20 w-full px-6 py-4 mt-20 transition-all duration-700 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:opacity-100 md:translate-x-0 md:flex md:items-center md:justify-evenly">
-          <div class="flex flex-col items-center justify-center text-center px-2 -mx-4 md:flex-row md:mx-10 md:py-0 [&>*]:py-2.5 [&>*]:px-2.5 [&>*]:text-gray-800 [&>*]:transition-colors [&>*]:duration-300 [&>*]:transform [&>*]:md:mx-2 [&>*]:w-max [&>*]:relative [&>*]:before:content-[''] [&>*]:before:absolute [&>*]:before:bg-pink-400 [&>*]:before:w-0 [&>*]:before:h-[3px] [&>*]:before:translate-y-6 [&>*]:before:transition-all [&>*]:before:duration-1000 [&>*]:before:ease-in-out">
-              <a href="/" class="hover:before:w-full hover:text-pink-600 active [&.active]:text-pink-600">Home</a>
-              <a href="/about" class="hover:before:w-full hover:text-pink-600 active">About</a>
-              <a href="/demos" class="hover:before:w-full hover:text-pink-600">Tema</a>
-              <a href="/contact" class="hover:before:w-full hover:text-pink-600 active">Contact</a>
+      <div x-cloak :class="[isOpen ? 'w-full opacity-100 ' : 'w-0 opacity-0']" class="absolute h-fit inset-0 z-20 w-full px-6 py-4 mt-20 transition-all duration-700 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:opacity-100 md:translate-x-0 md:flex md:items-center md:justify-evenly">
+          <div class="flex flex-col items-center justify-center text-center px-2 -mx-4 md:flex-row md:mx-10 md:py-0 [&>*]:py-2.5 [&>*]:px-2.5 [&>*]:text-gray-800/75 [&>*]:transition-colors [&>*]:duration-300 [&>*]:transform [&>*]:md:mx-2 [&>*]:w-max [&>*]:relative [&>*]:before:content-[''] [&>*]:before:absolute [&>*]:before:bg-pink-600 [&>*]:before:w-0 [&>*]:before:h-[3px] [&>*]:before:translate-y-6 [&>*]:before:transition-all [&>*]:before:duration-1000 [&>*]:before:ease-in-out [&>*]:font-bold">
+              <a href="/" class="hover:before:w-full hover:text-pink-700 active [&.active]:text-pink-700">Home</a>
+              <a href="/about" class="hover:before:w-full hover:text-pink-700 active">About</a>
+              <a href="/demos" class="hover:before:w-full hover:text-pink-700">Tema</a>
+              <a href="/contact" class="hover:before:w-full hover:text-pink-700 active">Contact</a>
           </div>
           <div class="relative mt-4 md:mt-0 flex flex-col items-center ">
             <a href="https://wa.me/6281532094978?text=Hallo kak, saya buat undangan dong!">
-              <button class="px-4 py-2 z-50 relative md:hidden block bg-pink-400 w-max rounded-full text-white font-bold font-poppins flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-400 hover:ring hover:ring-pink-600 hover:ring-1">Buat Undangan</button>
+              <button class="px-4 py-2 z-50 relative md:hidden block bg-pink-600 w-max rounded-full text-white font-bold font-poppins flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-600 hover:ring hover:ring-pink-700 hover:ring-1">Buat Undangan</button>
             </a>
             
           </div>
       </div>
       <div class="relative mt-4 md:mt-0 hidden md:flex justify-end">
         <a href="https://wa.me/6281532094978?text=Hallo kak, saya buat undangan dong!">
-          <button class="px-4 py-2 z-50 relative bg-pink-400 w-max rounded-full text-white font-bold font-poppins flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-400 hover:ring hover:ring-pink-400 hover:ring-1">Buat Undangan</button>
+          <button class="px-4 py-2 z-50 relative bg-pink-600 w-max rounded-full text-white font-bold font-poppins flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-600 hover:ring hover:ring-pink-600 hover:ring-1">Buat Undangan</button>
         </a>
         
     </div>

@@ -4,6 +4,7 @@
 <script>
 
   const button = document.querySelector(".icon");
+  const message = document.querySelector(".copy-message");
 
   function copyToClipBoard(){
     const copyContent = document.querySelector(".copy-content");
@@ -13,7 +14,14 @@
   if(button){
     button.addEventListener("click", function(){
       copyToClipBoard();
-      alert("Copied the text");
+      showMessage();
     });
+    function showMessage() {
+    message.classList.remove("hidden");
+    setTimeout(() => {
+      message.classList.add("hidden");
+    }, 2000);
   }
+  }
+  
 </script>

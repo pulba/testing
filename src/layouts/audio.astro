@@ -3,7 +3,7 @@ import { Icon } from 'astro-iconify';
 ---
 
 <section class="fixed bottom-5 right-5 z-20">
-    <div x-data="{ playing: true }" id="playPauseBtn" class="relative flex items-end justify-end bg-white rounded-full p-2 ml-auto w-max border-[1px] border-red-800">
+    <div x-data="{ playing: false }" id="playPauseBtn" class="relative flex items-end justify-end bg-white rounded-full p-2 ml-auto w-max border-[1px] border-red-800">
       <button x-show="!playing" x-on:click="playing = true">
           <Icon name="mdi:music-note" class="text-red-800 w-8 h-8"/>
       </button>
@@ -14,10 +14,16 @@ import { Icon } from 'astro-iconify';
   </section> 
 
   <script>
+
+    var btn = document.getElementById('playPauseBtn');
+    var btnaudio = document.getElementById('toaudio');
+    var audio = document.getElementById('myAudio') as HTMLAudioElement;
+    
+    // btnaudio.addEventListener('click', function() {
+    //   audio.play();
+    // });
     document.addEventListener("DOMContentLoaded", function() {
-      var btn = document.getElementById('playPauseBtn');
-      var audio = document.getElementById('myAudio') as HTMLAudioElement;
-  
+      
       if (btn && audio) {
           btn.addEventListener('click', function() {
               if (audio.paused) {
@@ -26,9 +32,12 @@ import { Icon } from 'astro-iconify';
                   audio.pause();
               }
           });
-      } else {
-          
-      }
-  });
+      } 
+    });
+    
+    window.addEventListener("DOMContentLoaded", () => {
+        audio.play();
+    });
+    
   
   </script>
