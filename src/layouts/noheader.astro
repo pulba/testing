@@ -9,10 +9,16 @@ const { title, desc } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <SEO title={title} desc={desc} />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
   </head>
   <body>
     <Primary>
       <slot />
     </Primary>
+    <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script is:inline>
+      AOS.init();
+    </script>
   </body>
 </html>

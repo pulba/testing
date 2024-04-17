@@ -8,7 +8,6 @@ import Payment from '../../layouts/payment.astro'
 import Rsvp from '../../layouts/rsvp.astro'
 import Countdown from '../../layouts/countdown.astro'
 import Footerpost from '../../layouts/footer-post.astro'
-import Animation from '../../layouts/animation.astro'
 import Audio from '../../layouts/audio.astro'
 
 export const data = {
@@ -197,32 +196,32 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     style={`background-image:url(${cover})`}
   >
     <div class="container mx-auto flex flex-col justify-center items-center text-white relative overflow-hidden">
-        <h1 class="text-xl mb-8 font-josefin font-semibold text-blue-600">
+        <h1 data-aos="fade-down"data-aos-easing="linear"data-aos-duration="1500" class="text-xl mb-8 font-josefin font-semibold text-blue-600">
         Wedding Invitation
         </h1>
         <div class="relative overflow-hidden">
             
         </div>
-        <div class="zoom-out relative">
+        <div class="relative">
             <div class="relative flex items-center justify-center w-72">
-                <div
+                <div data-aos="zoom-in"data-aos-easing="linear"data-aos-duration="1500"
                 class="w-56 h-64 bg-cover bg-center relative"
                 style={`background-image:url(${imgstory8}); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);`}>
             </div>
-            <img src="/assets/floral-frame.png" alt="JejakBahagia" class="absolute">
+            <img src="/assets/floral-frame.png" alt="JejakBahagia" data-aos="zoom-out"data-aos-easing="linear"data-aos-duration="1500" class="absolute">
             </div>
         </div>
-        <div class="zoom-out text-blue-600 mx-auto text-center">
-            <h2 class="text-center font-montecarlo text-blue-600 text-4xl md:text-6xl lg:text-8xl">
+        <div class="text-blue-600 mx-auto text-center">
+            <h2 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-center font-montecarlo text-blue-600 text-4xl md:text-6xl lg:text-8xl">
             { male } & { female }
             </h2>
-            <h3 class="mt-2 font-josefin">Dear Mr./Mrs./Ms.</h3>
-        <h4 id="invite-name" class="text-xl font-josefin my-3 capitalize">
+            <h3 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="mt-2 font-josefin">Dear Mr./Mrs./Ms.</h3>
+        <h4 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" id="invite-name" class="text-xl font-josefin my-3 capitalize">
             <Namatamu /> nama tamu
         </h4>
-        <p class="font-josefin">You are cordially invited to our wedding.</p>
+        <p data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="font-josefin">You are cordially invited to our wedding.</p>
         </div>
-        <label
+        <label data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1000"
             for="toggle" id="toaudio"
             class="mt-5 px-6 py-2 relative bg-blue-600 rounded-full shadow-xl text-white font-bold flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-blue-600"
             >Open Invitation <Icon name="mdi:love-letter" class="w-5 h-5" /></label
@@ -230,7 +229,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </div>
   </section>
   <main id="myDIV" class="hidden peer-checked:block">
-    <section class="hero relative h-screen bg-cover bg-center mx-auto overflow-hidden"
+    <section id="animasi1" class="hero relative h-screen bg-cover bg-center mx-auto overflow-hidden"
       style={`background-image:url(${cover})`}>
       <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover">
         <div>
@@ -240,28 +239,27 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         class="container mx-auto h-screen flex flex-col justify-center items-center text-white relative z-10 font-josefin"
       >
       <div class="text-blue-600 mx-auto text-center flex flex-col items-center">
-        <img src="/assets/1.png" class="fade-down" alt="JejakBahagia" />
-        <h2 class="fade-right text-xl mt-4">The Wedding of</h2>
-        <h1 class="fade-left text-4xl md:text-6xl lg:text-8xl">{ male }<span class="font-montecarlo">&</span> { female }
+        <img src="/assets/1.png" alt="JejakBahagia" data-aos="zoom-in"data-aos-easing="linear"data-aos-duration="1500" />
+        <h2 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-xl mt-4">The Wedding of</h2>
+        <h1 data-aos="zoom-in"data-aos-easing="linear"data-aos-duration="1500" class="text-4xl md:text-6xl lg:text-8xl">{ male }<span class="font-montecarlo">&</span> { female }
            
         </h1>
-        <h3 class="fade-up text-xl md:text-2xl">{ date }</h3>
+        <h3 data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500" class="fade-up text-xl md:text-2xl">{ date }</h3>
       </div>
       </div>
       <div class="images absolute w-full" style="bottom: -5px;">
         <img src="/assets/mask.png" class="bg-cover" alt="JejakBahagia" />
       </div>
     </section>
-    <section class="dh-3/6 py-20 overflow-hidden">
+    <section id="animasi1" class="dh-3/6 py-20 overflow-hidden">
       <div class="container mx-auto">
         <div class="fade-down flex flex-col text-center items-center">
-          <h2
+          <h2 data-aos="fade-down"data-aos-easing="linear"data-aos-duration="1500"
             class="text-center font-montecarlo text-blue-600 text-6xl lg:text-8xl my-6"
           >
             Quote
           </h2>
-          <p
-            class="fade-right sm:max-w-prose px-5 sm:px-0 max-w-none text-sm font-josefin"
+          <p data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="opacity-0 sm:max-w-prose px-5 sm:px-0 max-w-none text-sm font-josefin"
           >
             {quote}
           </p>
@@ -270,7 +268,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </section>
     <section class="relative overflow-hidden">
       <div class="container mx-auto">
-        <div class="zoom-out flex flex-col text-center items-center">
+        <div data-aos="zoom-in"data-aos-easing="linear"data-aos-duration="1500" class="flex flex-col text-center items-center">
           <Icon name="mdi:flower-tulip" class="w-16 h-16 text-blue-600 transition-all duration-700 ease-linear hover:text-blue-400 text-center mx-auto" />
         </div>
       </div>
@@ -278,28 +276,28 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="relative py-20 overflow-hidden">
       <div class="container mx-auto">
         <div class="fade-down flex flex-col text-center items-center mb-9">
-          <h1 class="text-blue-600 text-center font-montecarlo text-6xl lg:text-8xl">
+          <h1 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-blue-600 text-center font-montecarlo text-6xl lg:text-8xl">
             Bride x Groom
           </h1>
-          <p class="font-medium pb-8 text-lg font-josefin">
+          <p data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="font-medium pb-8 text-lg font-josefin">
             We Are Getting Married
           </p>
         </div>
         <div class="mx-auto p-4">
         <div class="flex flex-col lg:flex-row justify-center items-center gap-11 gap-y-11 max-w-4xl mx-auto [&>*]:text-center">
           <div class="w-full flex flex-col items-center">
-            <div class="fade-right relative flex items-center justify-center w-72">
-                <div
+            <div class="relative flex items-center justify-center w-72">
+                <div data-aos="zoom-in"data-aos-easing="linear"data-aos-duration="1500"
                 class="rounded-full w-60 h-60 bg-cover bg-center bg-white flex justify-center items-center"
                 style={`background-image:url(${imgfr})`}
               >
               
               </div>
-              <img src="/assets/floral-frame.png" alt="JejakBahagia" class="absolute">
+              <img src="/assets/floral-frame.png" alt="JejakBahagia" data-aos="zoom-out"data-aos-easing="linear"data-aos-duration="1500" class="absolute">
             </div>
             
-            <div class="zoom-out font-josefin space-y-3">
-              <h3 class="text-6xl mt-6 font-montecarlo text-blue-600">{ female }</h3>
+            <h3 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500"   class="text-6xl mt-6 font-montecarlo text-blue-600">{ female }</h3>
+            <div data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="font-josefin space-y-3">
               <p class="text-xl font-medium border-b-2 border-b-blue-600">{ fullfemale }</p>
               <p class="text-lg">{childfemale}</p>
               <p class="text-lg font-medium text-blue-600">
@@ -316,16 +314,16 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
             </div>
           </div>
             <div class="w-full flex flex-col items-center">
-                <div class="fade-left relative flex items-center justify-center w-72">
-                    <div class="rounded-full w-60 h-60 bg-cover bg-center bg-white flex justify-center items-center"
+                <div class="relative flex items-center justify-center w-72">
+                    <div data-aos="zoom-in"data-aos-easing="linear"data-aos-duration="1500" class="rounded-full w-60 h-60 bg-cover bg-center bg-white flex justify-center items-center"
                     style={`background-image:url(${imgfv})`}
                   >
                   
                   </div>
-                  <img src="/assets/floral-frame.png" alt="JejakBahagia" class="absolute">
+                  <img src="/assets/floral-frame.png" alt="JejakBahagia"  data-aos="zoom-out"data-aos-easing="linear"data-aos-duration="1500"class="absolute">
                 </div>
-              <div class="zoom-out font-josefin space-y-3">
-                <h3 class="text-6xl mt-6 font-montecarlo text-blue-600">{ male }</h3>
+                <h3 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-6xl mt-6 font-montecarlo text-blue-600">{ male }</h3>
+              <div data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="font-josefin space-y-3">
                 <p class="text-xl font-medium border-b-2 border-b-blue-600">{ fullmale }</p>
                 <p class="text-lg">{ childmale }</p>
                 <p class="text-lg font-medium text-blue-600">
@@ -350,12 +348,12 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
         <div class="text-center my-5">
-          <h2 class="fade-right text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-white">Countdown to</h2>
-          <h1 class="fade-left text-white text-center font-montecarlo text-4xl md:text-6xl lg:text-8xl">
+          <h2 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-white">Countdown to</h2>
+          <h1 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-white text-center font-montecarlo text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-white [&>*]:p-1">
+        <div data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500" id="timer" class="fade-up grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-white [&>*]:p-1">
         </div>
         <Countdown/>
       </div>
@@ -369,15 +367,15 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="relative overflow-hidden">
       <div class="container mx-auto py-20 px-6">
         <div class="text-center my-5 mb-10">
-          <h2 class="fade-left text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
-          <h1 class="fade-right text-blue-600 text-center font-montecarlo text-5xl lg:text-8xl">
+          <h2  data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500"class="text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
+          <h1 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-blue-600 text-center font-montecarlo text-5xl lg:text-8xl">
             Wedding Day
           </h1>
         </div>
         <div
           class="grid gird-cols-1 md:grid-cols-3 max-w-4xl w-full mx-auto justify-center items-center gap-4 mt-5 [&>*]:mx-auto [&>*]:rounded-2xl [&>*]:h-full [&>*]:border [&>*]:border-blue-600 [&>*]:p-12 [&>*]:w-full"
         >
-          <div class="fade-right">
+          <div data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500">
             <div class="text-center font-josefin">
               <h2 class="text-center font-montecarlo text-4xl">Akad Nikah</h2>
               <p class="mt-2 sm:mt-4">
@@ -404,7 +402,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               </div>
             </div>
           </div>
-          <div class="fade-up">
+          <div data-aos="zoom-out"data-aos-easing="linear"data-aos-duration="1500">
             <div class="text-center font-josefin">
                 <h2 class="text-center font-montecarlo text-5xl">Resepsi</h2>
                 <p class="mt-2 sm:mt-4">
@@ -424,7 +422,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 </div>
             </div>
           </div>
-          <div class="fade-left">
+          <div data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500">
             <div class="text-center font-josefin">
               <h2 class="text-center font-montecarlo text-4xl">Unduh Mantu</h2>
               <p class="mt-2 sm:mt-4">
@@ -456,12 +454,12 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </section>
     <section class="relative overflow-hidden">
       <div class="container mx-auto px-6 py-20 text-center">
-        <div class="fade-down">
-          <h2 class="text-2xl font-bold mt-5 font-josefin">The Journey</h2>
-          <h2 class="text-blue-600 text-center font-montecarlo text-6xl lg:text-8xl">Our Story</h2>
+        <div>
+          <h2 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-2xl font-bold mt-5 font-josefin">The Journey</h2>
+          <h2 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-blue-600 text-center font-montecarlo text-6xl lg:text-8xl">Our Story</h2>
         </div>
         <div class="[&>*]:bg-white [&>*]:rounded [&>*]:shadow-lg [&>*]:mx-auto [&>*]:my-5 [&>*]:w-full [&>*]:md:w-3/4 [&>*]:p-10">
-          <div class="fade-up">
+          <div data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500">
             <div class="md:flex mx-auto gap-5 justify-center">
               <div class="w-full md:w-1/4">
                 <img
@@ -478,7 +476,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               </div>
             </div>
           </div>
-          <div class="fade-up">
+          <div data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500">
             <div class="md:flex mx-auto gap-5 justify-center">
               <div class="w-full md:w-1/4">
                 <img
@@ -497,7 +495,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               </div>
             </div>
           </div>
-          <div class="fade-up">
+          <div data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500">
             <div class="md:flex mx-auto gap-5 justify-center">
               <div class="w-full md:w-1/4">
                 <img
@@ -520,15 +518,13 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="relative overflow-hidden">
       <div class="container mx-auto px-6 py-20">
         <div class="text-center my-5 mb-10 fade-down">
-          <h2 class="text-xl md:text-2xl font-bold mt-5 font-josefin">A Glimpse of</h2>
-          <h2 class="text-blue-600 text-center font-montecarlo text-5xl lg:text-8xl">
+          <h2 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-xl md:text-2xl font-bold mt-5 font-josefin">A Glimpse of</h2>
+          <h2 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-blue-600 text-center font-montecarlo text-5xl lg:text-8xl">
             Our Moments
           </h2>
         </div>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-2 pb-20 [&>*]:w-full [&>*]:md:max-w-4xl [&>*]:p-1 [&>*]:relative"
-        >
-          <div class="zoom-out">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-2 pb-20 [&>*]:w-full [&>*]:md:max-w-4xl [&>*]:p-1 [&>*]:relative">
+          <div data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate">
               <img
                 src={imgstory1}
@@ -537,7 +533,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="zoom-out">
+          <div data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate">
               <img
                 src={imgstory2}
@@ -546,7 +542,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="zoom-out">
+          <div data-aos="fade-down"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate">
               <img
                 src={imgstory3}
@@ -555,7 +551,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="zoom-out">
+          <div data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate">
               <img
                 src={imgstory4}
@@ -564,7 +560,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="zoom-out">
+          <div data-aos="zoom-in"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate">
               <img
                 src={imgstory5}
@@ -573,7 +569,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="zoom-out">
+          <div data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate">
               <img
                 src={imgstory6}
@@ -582,7 +578,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="zoom-out">
+          <div data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate">
               <img
                 src={imgstory7}
@@ -591,7 +587,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="zoom-out">
+          <div data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate">
               <img
                 src={imgstory8}
@@ -605,11 +601,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </section>
     <section class="relative bg-cover bg-no-repeat bg-center bg-fixed py-20 overflow-hidden before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
       <div class="container  text-center mx-auto relative z-10">
-        <div class="fade-down">
-          <h2 class="text-5xl lg:text-8xl text-blue-400 font-montecarlo">Wedding Gift</h2>
-          <p class="max-w-prose mx-auto font-bold mt-5 font-josefin text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
+        <div>
+          <h2 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-5xl lg:text-8xl text-blue-400 font-montecarlo">Wedding Gift</h2>
+          <p data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="max-w-prose mx-auto font-bold mt-5 font-josefin text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
         </div>
-        <div class="fade-left py-8 px-8 md:px-16 mx-auto mt-16 w-4/5 sm:w-fit justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
+        <div data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500" class="py-8 px-8 md:px-16 mx-auto mt-16 w-4/5 sm:w-fit justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
           <div class="text-center font-poppins flex flex-col items-center">
             <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
             <div class="font-josefin">
@@ -644,6 +640,5 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg" />
     </audio>
     <Footerpost />
-    <Animation />
   </main>
 </Noheader>

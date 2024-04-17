@@ -8,7 +8,6 @@ import Payment from '../../layouts/payment.astro'
 import Rsvp from '../../layouts/rsvp.astro'
 import Countdown from '../../layouts/countdown.astro'
 import Footerpost from '../../layouts/footer-post.astro'
-import Animation from '../../layouts/animation.astro'
 import Audio from '../../layouts/audio.astro'
 
 export const data = {
@@ -194,24 +193,24 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 >
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
   <section class="hero relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
-    <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale-[75%]" style={`background-image:url(${cover})`}></div>
+    <div class="absolute inset-0 bg-gray-500 bg-cover bg-center before:content-[''] before:bg-gradient-to-t before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${cover})`}></div>
     <div class="container mx-auto px-6">
-      <div class="h-screen  py-12 flex flex-col justify-end items-center relative">
+      <div class="h-screen py-12 flex flex-col justify-center items-center relative">
       <div class="flex flex-col justify-end items-center text-black relative overflow-hidden">
         <div class="mx-auto text-center">
-            <span class="px-3 text-xl md:text-2xl text-center mx-auto"> 
+            <span data-aos="fade-down"data-aos-easing="linear"data-aos-duration="1500" class="px-3 text-xl md:text-2xl text-center mx-auto"> 
                 The Wedding of
             </span>
-            <h2 class="text-center font-montecarlo font-normal text-6xl lg:text-8xl">
+            <h2 data-aos="zoom-in"data-aos-easing="linear"data-aos-duration="1500" class="text-center font-montecarlo font-normal text-6xl lg:text-8xl">
             { male } & { female }
             </h2>
-            <h3 class="mt-2 font-josefin">Dear Mr./Mrs./Ms.</h3>
-            <h4 id="invite-name" class="text-xl font-josefin my-3 capitalize">
+            <h3 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="mt-2 font-josefin">Dear Mr./Mrs./Ms.</h3>
+            <h4 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" id="invite-name" class="text-xl font-josefin my-3 capitalize">
             <Namatamu /> nama tamu
             </h4>
-            <p class="font-josefin tracking-widest">{ date }</p>
+            <p data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="font-josefin tracking-widest">{ date }</p>
         </div>
-        <label for="toggle" id="toaudio"
+        <label data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500" for="toggle" id="toaudio"
         class="mt-5 px-6 py-2 relative bg-gray-500 tracking-widest text-white font-josefin flex gap-1 transition-all duration-700 ease-linear hover:bg-gray-400"
         ><Icon name="mdi:love-letter" class="w-5 h-5" />Open Invitation 
         </label>
@@ -225,10 +224,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="hero relative h-screen bg-cover bg-center mx-auto overflow-hidden">
       <div class="absolute flex flex-col items-center justify-end h-screen inset-0 bg-gray-500 bg-cover bg-center before:content-[''] before:bg-gradient-to-t before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${imgth})`}>
         <div class="absolute left-6 md:left-12 bootom-10 w-full">
-          <h2
-          class="fade-right font-nautigal font-thin text-black w-ful max-[300px]:text-5xl min-[300px]:text-6xl md:text-7xl relative after:content-[''] after:h-[1px] after:w-full after:bg-orange-500 after:top-1/2 after:absolute after:ml-3 after:-translate-y-1/2">{ male } & { female }
+          <h2 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500"
+          class="font-nautigal font-thin text-black w-ful max-[300px]:text-5xl min-[300px]:text-6xl md:text-7xl relative after:content-[''] after:h-[1px] after:w-full after:bg-orange-500 after:top-1/2 after:absolute after:ml-3 after:-translate-y-1/2">{ male } & { female }
         </h2>
-        <p class="fade-up font-poppins tracking-widest max-w-prose">{quote}</p>    
+        <p data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500" class="font-poppins tracking-widest max-w-prose">{quote}</p>    
         </div>
       </div>
     </section>
@@ -236,15 +235,15 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       <div class="container mx-auto px-6 py-20">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-20 md:gap-y-40 gap-x-16 max-w-4xl mx-auto mt-12">
           <div class="relative items-center justify-center mx-auto w-full">
-          <div class="text-center overflow-hidden before:content-[''] before:absolute before:h-full before:w-full before:sm:h-4/5 before:sm:w-4/5  before:-bottom-8 before:-right-8 before:-z-10 before:bg-orange-200 after:content-[''] after:absolute after:h-1/4 after:w-1/4 after:border-t-2 after:border-l-2 after:border-t-2 after:border-l-2 after:border-orange-300 after:-top-5 after:-left-5 after:z-10">
-            <div class="bg-cover bg-top aspect-square overflow-hidden"
-            style={`background-image:url(${imgfr})`}>
+            <div data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-center overflow-hidden before:content-[''] before:absolute before:h-full before:w-full before:sm:h-4/5 before:sm:w-4/5  before:-bottom-8 before:-right-8 before:-z-10 before:bg-orange-200 after:content-[''] after:absolute after:h-1/4 after:w-1/4 after:border-t-2 after:border-l-2 after:border-t-2 after:border-l-2 after:border-orange-300 after:-top-5 after:-left-5 after:z-10">
+              <div class="bg-cover bg-top aspect-square overflow-hidden"
+              style={`background-image:url(${imgfr})`}>
+              </div>
             </div>
           </div>
-          </div>
           <div class="relative items-center justify-center mx-auto w-full">
-            <div class="font-josefin space-y-3">
-              <h3 class="text-6xl mt-6 font-montecarlo text-gray-500">{ female }</h3>
+            <h3 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-6xl mt-6 font-montecarlo text-gray-500">{ female }</h3>
+            <div data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500" class="font-josefin space-y-3">
               <p class="text-xl font-medium border-b-2 border-b-orange-300">{ fullfemale }</p>
               <p class="text-lg">{childfemale}</p>
               <p class="text-lg font-medium text-gray-500">
@@ -261,15 +260,15 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
             </div>
           </div>
           <div class="relative items-center justify-center mx-auto w-full sm:order-last">
-            <div class="text-center overflow-hidden before:content-[''] before:absolute before:h-full before:w-full before:sm:h-4/5 before:sm:w-4/5  before:-bottom-8 before:-left-8 before:-z-10 before:bg-orange-200 after:content-[''] after:absolute after:h-1/4 after:w-1/4 after:border-t-2 after:border-r-2 after:border-orange-300 after:-top-5 after:-right-5 after:z-10">
+            <div data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-center overflow-hidden before:content-[''] before:absolute before:h-full before:w-full before:sm:h-4/5 before:sm:w-4/5  before:-bottom-8 before:-left-8 before:-z-10 before:bg-orange-200 after:content-[''] after:absolute after:h-1/4 after:w-1/4 after:border-t-2 after:border-r-2 after:border-orange-300 after:-top-5 after:-right-5 after:z-10">
               <div class="bg-cover bg-top aspect-square overflow-hidden"
               style={`background-image:url(${imgfv})`}>
               </div>
             </div>
             </div>
             <div class="relative items-center justify-center mx-auto w-full">
-              <div class="font-josefin space-y-3 sm:text-right">
-                <h3 class="text-6xl mt-6 font-montecarlo text-gray-500">{ male }</h3>
+              <h3 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-6xl  sm:text-right mt-6 font-montecarlo text-gray-500">{ male }</h3>
+              <div data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500" class="font-josefin space-y-3 sm:text-right">
                 <p class="text-xl font-medium border-b-2 border-b-orange-300">{ fullmale }</p>
                 <p class="text-lg">{childmale}</p>
                 <p class="text-lg font-medium text-gray-500">
@@ -292,13 +291,13 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
         <div class="text-center my-5">
-          <h2 class="fade-left text-2xl text-gray-500/80 font-bold mt-5 md:mt-0 mb-3 font-josefin">
+          <h2 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-2xl text-gray-500/80 font-bold mt-5 md:mt-0 mb-3 font-josefin">
             Save The Date</h2>
-          <h1 class="fade-left text-center text-orange-500 font-montecarlo text-4xl md:text-6xl lg:text-8xl">
+          <h1 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-center text-orange-500 font-montecarlo text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-orange-500 [&>*]:p-1">
+        <div data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500" id="timer" class="grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-orange-500 [&>*]:p-1">
         </div>
         <Countdown/>
       </div>
@@ -306,14 +305,14 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="relative overflow-hidden">
       <div class="container mx-auto py-20 px-6">
         <div class="text-center my-5 mb-10">
-          <h2 class="fade-left text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
-          <h1 class="fade-right text-gray-500 text-center font-montecarlo text-5xl lg:text-8xl">
+          <h2 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
+          <h1 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-gray-500 text-center font-montecarlo text-5xl lg:text-8xl">
             Wedding Day
           </h1>
         </div>
         <div
           class="grid gird-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-4xl w-full mx-auto justify-center items-center gap-x-6 gap-y-8 mt-5 [&>*]:mx-auto [&>*]:h-full [&>*]:w-full [&>*]:bg-orange-200 [&>*]:relative">
-          <div class="fade-right">
+          <div data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1000">
             <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2">
               <div>
                   <img src="/assets/frame-2.png" alt="JejakBahagia" />
@@ -350,7 +349,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               </div>
             </div>
           </div>
-          <div class="fade-up">
+          <div data-aos="fade-right"data-aos-easing="linear"data-aos-duration="2000">
             <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2">
               <div>
                   <img src="/assets/frame-2.png" alt="JejakBahagia" />
@@ -382,7 +381,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 </div>
             </div>
           </div>
-          <div class="fade-left">
+          <div data-aos="fade-right"data-aos-easing="linear"data-aos-duration="3000">
             <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2">
               <div>
                   <img src="/assets/frame-2.png" alt="JejakBahagia" />
@@ -420,7 +419,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
             </div>
           </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873130.0607204797!2d110.1445006182314!3d-7.744660421581015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1712983300381!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mx-auto mt-12 w-full max-w-3xl h-96"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873130.0607204797!2d110.1445006182314!3d-7.744660421581015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1712983300381!5m2!1sid!2sid" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mx-auto mt-12 w-full max-w-3xl h-96"></iframe>
       </div>
     </section>
     <section class="bg-orange-200 relative overflow-hidden">
@@ -439,9 +438,9 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
     </div>
       <div class="container mx-auto py-20 text-center">
-        <div class="fade-down">
-          <h2 class="fade-left text-2xl text-gray-500/50 font-bold my-5 font-josefin">The Journey</h2>
-          <h2 class="text-gray-500 text-center font-montecarlo text-6xl lg:text-8xl">Our Story</h2>
+        <div>
+          <h2 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-2xl text-gray-500/50 font-bold my-5 font-josefin">The Journey</h2>
+          <h2  data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500"class="text-gray-500 text-center font-montecarlo text-6xl lg:text-8xl">Our Story</h2>
         </div>
         <div class="splide h-full md:h-96 overflow-hidden mt-10">
           <div class="splide__track h-full md:h-96 overflow-visible">
@@ -470,15 +469,15 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="relative overflow-hidden">
       <div class="container mx-auto px-6 py-20">
         <div class="text-center my-5 mb-10 fade-down">
-          <h2 class="fade-left text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">A Glimpse of</h2>
-          <h2 class="text-gray-500 text-center font-montecarlo text-5xl lg:text-8xl">
+          <h2 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">A Glimpse of</h2>
+          <h2 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-gray-500 text-center font-montecarlo text-5xl lg:text-8xl">
             Our Moments
           </h2>
         </div>
         <div
           class="columns-1 sm:columns-2 lg:columns-3 gap-4 [&>*]:mb-4 [&>*]:rounded-xl"
         >
-          <div class="">
+          <div data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate rounded-xl">
               <img
                 src={imgstory1}
@@ -487,7 +486,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="">
+          <div data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate rounded-xl">
               <img
                 src={imgstory2}
@@ -496,7 +495,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="">
+          <div data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate rounded-xl">
               <img
                 src={imgstory3}
@@ -505,7 +504,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="">
+          <div data-aos="zoom-in"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate rounded-xl">
               <img
                 src={imgstory4}
@@ -514,7 +513,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="">
+          <div data-aos="fade-down"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate rounded-xl">
               <img
                 src={imgstory5}
@@ -523,7 +522,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="">
+          <div data-aos="zoom-out"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate rounded-xl">
               <img
                 src={imgstory6}
@@ -532,7 +531,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="">
+          <div data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate rounded-xl">
               <img
                 src={imgstory7}
@@ -541,7 +540,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="">
+          <div data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500">
             <div class="truncate rounded-xl">
               <img
                 src={imgstory8}
@@ -556,11 +555,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </section>
     <section class="relative bg-cover bg-no-repeat bg-center bg-fixed py-20 overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
       <div class="container text-center mx-auto relative z-10">
-        <div class="fade-down">
-          <h2 class="text-5xl lg:text-8xl text-gray-500 font-montecarlo">Wedding Gift</h2>
-          <p class="max-w-prose mx-auto font-bold mt-5 font-josefin">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
+        <div>
+          <h2 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-5xl lg:text-8xl text-gray-500 font-montecarlo">Wedding Gift</h2>
+          <p data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="max-w-prose mx-auto font-bold mt-5 font-josefin">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
         </div>
-        <div class="fade-left py-8 px-8 md:px-16 mx-auto mt-16 w-4/5 sm:w-fit justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
+        <div data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500" class="py-8 px-8 md:px-16 mx-auto mt-16 w-4/5 sm:w-fit justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
           <div class="text-center font-poppins flex flex-col items-center">
             <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
             <div class="font-josefin">
@@ -580,10 +579,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="relative overflow-hidden">
       <div class="container py-20 px-6 text-center mx-auto">
         <div class="fade-down text-center my-5 mb-10">
-          <h2 class="text-gray-500 text-center font-montecarlo text-5xl lg:text-8xl">
+          <h2 data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="text-gray-500 text-center font-montecarlo text-5xl lg:text-8xl">
             Ucapan & Doa
           </h2>
-          <h2 class="fade-left text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Please Confirm Your Attendance</h2>
+          <h2 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-2xl text-gray-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Please Confirm Your Attendance</h2>
         </div>
 
         <Rsvp />
@@ -592,10 +591,9 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </section>
     <Audio />
     <audio id="myAudio" loop class="hidden">
-      <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg">
+      <source src="/assets/bruno-mars-marry-you.mp3" type="audio/mpeg">
   </audio>
     <Footerpost />
-    <Animation />
   </main>
   <script>
     import "@splidejs/splide/css";
