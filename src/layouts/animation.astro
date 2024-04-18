@@ -5,85 +5,67 @@
 <script>
 import anime from 'animejs';
 
-// const animations = [
-//     {
-//         targets: '.zoom-out',
-//         scale: 1.3,
-//         autoplay: true,
-//         delay: 500, 
-//         duration: 1500, 
-//         easing: 'easeOutExpo', 
-//         direction: 'alternate',
-//     },
-//     {
-//         targets: '.fade-right',
-//         translateX: [-150, 0],
-//         opacity: [0, 1],
-//         autoplay: true,
-//         delay: 1000, 
-//         duration: 2000, 
-//         easing: 'easeInOutQuad', 
-//     },
-//     {
-//         targets: '.fade-left',
-//         translateX: [150, 0],
-//         opacity: [0, 1],
-//         autoplay: true,
-//         delay: 1500, 
-//         duration: 2000, 
-//         easing: 'easeInOutQuad', 
-//     },
-//     {
-//         targets: '.fade-down',
-//         translateY: [-150, 0],
-//         opacity: [0, 1],
-//         autoplay: true,
-//         delay: 2000, 
-//         duration: 2500, 
-//         easing: 'easeInOutQuart', 
-//     },
-//     {
-//         targets: '.fade-up',
-//         translateY: [150, 0],
-//         opacity: [0, 1], 
-//         autoplay: true,
-//         delay: 2500, 
-//         duration: 2500, 
-//         easing: 'easeInOutQuart', 
-//     }
-// ];
 
 
-    // animations.forEach(animation => {
-    //     if (document.querySelector(animation.targets)) {
-    //         anime(animation);
-    //     }
-    // });
+window.onscroll = () => {
+    var doc = document.documentElement;
+    var elements = ['.animasi1', '.animasi2', '.animasi3', '.animasi4', '.animasi5', '.animasi5', '.animasi6', '.animasi7', '.animasi8', '.animasi9', '.animasi10', '.animasi11'];
+    var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
 
-    // window.onscroll = () => {
-    //     var doc = document.documentElement;
-    //     var animasi1 = document.querySelector('#animasi1');
-    //     var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-    //     if (top > animasi1.offsetTop ) {
-    //         anime({
-    //         targets: '#fade-right',
-    //         translateX: 250,
-    //         opacity: 1
-    //         });
-
-    //     }
-    //     if (top < animasi1.offsetTop ) {
-    //         anime({
-    //         targets: '#fade-right',
-    //         translateX: 0,
-    //         opacity: 1
-    //         });
-    //     }
-       
-        
-    //     console.log(animasi1.offsetTop);
-    // }
-
-        
+    elements.forEach(element => {
+        var animasi = document.querySelector(element);
+        if (animasi && top > animasi.offsetTop - 100) {
+             
+            anime({
+                targets: element + ' .zoom-in',
+                scale: [1, 1.5, 1],
+                opacity: [0, 1], 
+                autoplay: true,
+                duration: 4000,
+                easing: 'easeInOutQuad',
+            });
+            anime({
+                targets: element + ' .zoom-out',
+                scale: [1.2, 1],
+                opacity: [0, 1], 
+                autoplay: true,
+                duration: 4000,
+                easing: 'easeInOutQuad',
+            });
+            anime({
+                targets: element + ' .fade-left',
+                translateX: [150, 0],
+                opacity: [0, 1], 
+                autoplay: true,
+                duration: 2000,
+                easing: 'easeInOutSine',
+            });
+            anime({
+                targets: element + ' .fade-right',
+                translateX: [-150, 0],
+                opacity: [0, 1], 
+                autoplay: true,
+                duration: 2000,
+                easing: 'easeInOutSine',
+            });
+            anime({
+                targets: element + ' .fade-up',
+                translateY: [150, 0],
+                opacity: [0, 1], 
+                autoplay: true,
+                duration: 2000,
+                easing: 'easeInOutSine',
+            });
+            anime({
+                targets: element + ' .fade-down',
+                translateY: [-150, 0],
+                opacity: [0, 1], 
+                autoplay: true,
+                duration: 2000,
+                easing: 'easeInOutSine',
+            });
+        }
+    });
+}
 
 </script>

@@ -11,7 +11,42 @@ export default {
       poppins: ["Poppins", "sans-serif"],
       haviland: ["Mr De Haviland", "cursive"],
     },
-    extend: {},
+    extend: {
+      animation: {
+        'zoomin': 'zoomin 4s linear',
+        'zoomout': 'zoomout 4s linear',
+        'fadeleft': 'fadeleft 2s linear',
+        'faderight': 'faderight 2s linear',
+        'fadeup': 'fadeup 2s linear',
+        'fadedown': 'fadedown 2s linear',
+      },
+      keyframes: {
+        zoomin: {
+          '0%': { transform: 'scale(0)', opacity: 0 },
+          '100%': { transform: 'scale(1)', opacity: 1 },
+        },
+        zoomout: {
+          '0%': { transform: 'scale(1.5)', opacity: 1 },
+          '100%': { transform: 'scale(1)', opacity: 1 },
+        },
+        faderight: {
+          '0%': { transform: 'translateX(-150px)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
+        fadeleft: {
+          '0%': { transform: 'translateX(150px)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
+        fadeup: {
+          '0%': { transform: 'translateY(150px)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
+        fadedown: {
+          '0%': { transform: 'translateY(-150px)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        }
+      }
+    },
   },
   
   plugins: [

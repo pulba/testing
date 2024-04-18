@@ -3,6 +3,7 @@ import { Icon } from 'astro-iconify';
 import '@fontsource/the-nautigal';
 import '@fontsource/mr-de-haviland';
 import Logo from '../components/logo.astro';
+import Animation from './animation.astro';
 
 ---
 
@@ -10,13 +11,13 @@ import Logo from '../components/logo.astro';
 <section class="relative bg-cover bg-no-repeat bg-top bg-fixed py-20 before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/ring-footer.jpg)">
     <div class="container text-center mx-auto relative z-10">
       <div class="flex flex-col items-center justify-center">
-        <p data-aos="fade-down"data-aos-easing="linear"data-aos-duration="1500" class="text-xl max-w-prose mx-auto font-bold mt-5 font-poppins text-white">Terimakasih</p>
-        <h2 data-aos="fade-left"data-aos-easing="linear"data-aos-duration="1500" class="text-5xl lg:text-8xl text-white font-nautigal leading-7">untuk</h2>
-         <p data-aos="fade-right"data-aos-easing="linear"data-aos-duration="1500" class="max-w-prose text-xl mx-auto font-bold font-poppins text-white capitalize">segenap keluarga besar mempelai</p>
-         <p class="mx-auto mt-5 pt-8 font-poppins text-white text-center flex justify-center items-center gap-1">Made with by</p>
+        <p class="fade-down text-xl max-w-prose mx-auto font-bold mt-5 font-poppins text-white">Terimakasih</p>
+        <h2 class="fade-right text-5xl lg:text-8xl text-white font-nautigal leading-7">untuk</h2>
+         <p class="fade-left max-w-prose text-xl mx-auto font-bold font-poppins text-white capitalize">segenap keluarga besar mempelai</p>
+         <p class="fade-up mx-auto mt-5 pt-8 font-poppins text-white text-center flex justify-center items-center gap-1">Made with by</p>
          <Logo text="pink-600" textsc="white"/>
       </div>
-      <div class="flex gap-3 text-center justify-center mt-4">
+      <div class="fade-up flex gap-3 text-center justify-center mt-4">
         <a href="/"><Icon name="mdi:instagram" class="w-8 h-8 text-neutral-400 hover:text-white" />
         </a>
         <a href="/"><Icon name="mdi:phone-incoming" class="w-8 h-8 text-neutral-400 hover:text-white"/>
@@ -24,4 +25,5 @@ import Logo from '../components/logo.astro';
       </div>
     </div>
     </div>
+    <Animation />
   </section>
