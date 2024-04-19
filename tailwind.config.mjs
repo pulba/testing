@@ -13,7 +13,7 @@ export default {
     },
     extend: {
       animation: {
-        'zoomin': 'zoomin 4s linear',
+        'zoomin': 'zoomin 3s linear',
         'zoomout': 'zoomout 4s linear',
         'fadeleft': 'fadeleft 2s linear',
         'faderight': 'faderight 2s linear',
@@ -22,7 +22,7 @@ export default {
       },
       keyframes: {
         zoomin: {
-          '0%': { transform: 'scale(0)', opacity: 0 },
+          '0%': { transform: 'scale(.5)', opacity: 0 },
           '100%': { transform: 'scale(1)', opacity: 1 },
         },
         zoomout: {

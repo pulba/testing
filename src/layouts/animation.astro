@@ -17,47 +17,48 @@ window.onscroll = () => {
         if (animasi) {
             var elementTop = animasi.offsetTop - 100;
             if (top > elementTop && !animasi.classList.contains('animated')) {
+                
                 animasi.classList.add('animated');
 
                 anime({
                     targets: element + ' .zoom-in',
                     scale: [1, 1.5, 1],
-                    opacity: [0, 1], 
+                    opacity: 1, 
                     duration: 4000,
                     easing: 'easeInOutQuad',
                 });
                 anime({
                     targets: element + ' .zoom-out',
                     scale: [1.2, 1],
-                    opacity: [0, 1], 
+                    opacity: 1, 
                     duration: 4000,
                     easing: 'easeInOutQuad',
                 });
                 anime({
                     targets: element + ' .fade-left',
                     translateX: [150, 0],
-                    opacity: [0, 1], 
+                    opacity: 1, 
                     duration: 2000,
                     easing: 'easeInOutSine',
                 });
                 anime({
                     targets: element + ' .fade-right',
                     translateX: [-150, 0],
-                    opacity: [0, 1], 
+                    opacity: 1, 
                     duration: 2000,
                     easing: 'easeInOutSine',
                 });
                 anime({
                     targets: element + ' .fade-up',
                     translateY: [150, 0],
-                    opacity: [0, 1], 
+                    opacity: 1, 
                     duration: 2000,
                     easing: 'easeInOutSine',
                 });
                 anime({
                     targets: element + ' .fade-down',
                     translateY: [-150, 0],
-                    opacity: [0, 1], 
+                    opacity: 1, 
                     duration: 2000,
                     easing: 'easeInOutSine',
                 });
@@ -65,6 +66,5 @@ window.onscroll = () => {
         }
     });
 }
-
 
 </script>

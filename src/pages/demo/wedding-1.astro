@@ -188,10 +188,8 @@ const imgstory7 = frontmatter ? frontmatter.imgstory7 ? frontmatter.imgstory7.ur
 const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.url ? frontmatter.imgstory8.url : data.imgstory8.url :  data.imgstory8.url : data.imgstory8.url;
 ---
 
-<Noheader
-  title={title}
-  desc="Ini halaman Demo Wedding 1 dari undangan"
->
+<Noheader title={title} desc="Ini halaman Demo Wedding 1 dari undangan">
+  
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
   <section class="animasi11 relative h-screen bg-cover bg-center overflow-hidden flex items-center peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-black/65 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute"
     style={`background-image:url(${cover})`}>
@@ -254,14 +252,14 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       <div
         class="container mx-auto h-screen flex flex-col justify-center items-center text-white relative z-10 font-josefin"
       >
-        <h2 class="animate-fadedown fade-down text-xl mt-4">The Wedding of</h2>
+        <h2 class="animate-fadedown fade-down opacity-0 text-xl mt-4">The Wedding of</h2>
         <div
         class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-montecarlo text-white text-center text-5xl sm:text-6xl lg:text-8xl">
         <span>{ female }</span>
         <span> & </span> 
         <span> { male } </span> 
       </div>
-        <h3 class="animate-fadeup fade-up text-xl md:text-2xl">{ date }</h3>
+        <h3 class="animate-fadeup fade-up opacity-0 text-xl md:text-2xl">{ date }</h3>
       </div>
       <div class="images absolute w-full" style="bottom: -5px;">
         <img src="/assets/mask.png" class="bg-cover" alt="JejakBahagia" />
@@ -271,12 +269,12 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       <div class="container mx-auto">
         <div class="notes flex flex-col text-center items-center">
           <h2 
-            class="fade-right text-center font-montecarlo text-pink-600 text-6xl lg:text-8xl my-6"
+            class="fade-right opacity-0 text-center font-montecarlo text-pink-600 text-6xl lg:text-8xl my-6"
           >
             Notes
           </h2>
           <p 
-            class="fade-up sm:max-w-prose px-5 sm:px-0 max-w-none text-sm font-josefin"
+            class="fade-up opacity-0 sm:max-w-prose px-5 sm:px-0 max-w-none text-sm font-josefin"
           >
             {quote}
           </p>
@@ -285,7 +283,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </section>
     <section class="animasi3 overflow-hidden">
       <div class="container mx-auto">
-        <div class="zoom-in flex flex-col text-center items-center">
+        <div class="zoom-in opacity-0 flex flex-col text-center items-center">
           <Icon name="mdi:flower-tulip" class="w-16 h-16 text-pink-600 transition-all duration-700 ease-linear hover:text-pink-400 text-center mx-auto" />
         </div>
       </div>
@@ -293,10 +291,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="animasi4 relative py-20 overflow-hidden">
       <div class="container mx-auto">
         <div class="flex flex-col text-center items-center mb-9">
-          <h1 class="fade-left text-pink-600 text-center font-montecarlo text-6xl lg:text-8xl">
+          <h1 class="fade-left opacity-0 text-pink-600 text-center font-montecarlo text-6xl lg:text-8xl">
             Bride x Groom
           </h1>
-          <p class="fade-up font-medium pb-8 text-lg font-josefin">
+          <p class="fade-up opacity-0 font-medium pb-8 text-lg font-josefin">
             We Are Getting Married
           </p>
         </div>
@@ -304,12 +302,12 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         <div class="flex flex-col lg:flex-row justify-center items-center gap-11 gap-y-11 max-w-4xl mx-auto [&>*]:text-center">
           <div class="w-full flex flex-col items-center">
             <div
-              class="fade-right rounded-full w-40 h-40 md:w-60 md:h-60 bg-cover bg-center bg-white flex justify-center items-center ring-offset-2 ring-4 ring-pink-600"
+              class="fade-right opacity-0 rounded-full w-40 h-40 md:w-60 md:h-60 bg-cover bg-center bg-white flex justify-center items-center ring-offset-2 ring-4 ring-pink-600"
               style={`background-image:url(${imgfr})`}
             >
             </div>
-            <h3 class="fade-left text-6xl mt-6 font-montecarlo text-pink-600">{ female }</h3>
-            <div class="fade-up font-josefin space-y-3">
+            <h3 class="fade-left opacity-0 text-6xl mt-6 font-montecarlo text-pink-600">{ female }</h3>
+            <div class="fade-up opacity-0 font-josefin space-y-3">
               
               <p class="text-xl font-medium border-b-2 border-b-pink-600">{ fullfemale }</p>
               <p class="text-lg">{childfemale}</p>
@@ -328,11 +326,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           </div>
             <div class="w-full flex flex-col items-center">
               <div
-                class="fade-left rounded-full w-40 h-40 md:w-60 md:h-60 bg-cover bg-center bg-white flex justify-center items-center ring-offset-2 ring-4 ring-pink-600"
+                class="fade-left opacity-0 rounded-full w-40 h-40 md:w-60 md:h-60 bg-cover bg-center bg-white flex justify-center items-center ring-offset-2 ring-4 ring-pink-600"
                 style={`background-image:url(${imgfv})`}>
               </div>
-              <h3 class="fade-right text-6xl mt-6 font-montecarlo text-pink-600">{ male }</h3>
-              <div class="fade-up font-josefin space-y-3">
+              <h3 class="fade-right opacity-0 text-6xl mt-6 font-montecarlo text-pink-600">{ male }</h3>
+              <div class="fade-up opacity-0 font-josefin space-y-3">
                 <p class="text-xl font-medium border-b-2 border-b-pink-600">{ fullmale }</p>
                 <p class="text-lg">{ childmale }</p>
                 <p class="text-lg font-medium text-pink-600">
@@ -357,16 +355,16 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
         <div class="text-center my-5">
-          <h2 class="fade-left text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-white">Countdown to</h2>
-          <h1 class="fade-right text-white text-center font-montecarlo text-4xl md:text-6xl lg:text-8xl">
+          <h2 class="fade-left opacity-0 text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-white">Countdown to</h2>
+          <h1 class="fade-right opacity-0 text-white text-center font-montecarlo text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-white [&>*]:p-1">
+        <div id="timer" class="fade-up opacity-0 grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-white [&>*]:p-1">
           
         <Countdown/>
         </div>
-        <div id="endevent" class="fade-up hidden leading-8 text-white text-2xl capitalize font-josefin">Event Telah Berakhir</div>
+        <div id="endevent" class="fade-up opacity-0 hidden leading-8 text-white text-2xl capitalize font-josefin">Event Telah Berakhir</div>
       </div>
       <div class="images absolute w-full rotate-180" style="top: -5px;">
         <img src="/assets/mask.png" class="bg-cover" alt="mask" />
@@ -378,15 +376,15 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section  class="animasi6 overflow-hidden">
       <div class="container mx-auto py-20 px-6">
         <div class="text-center my-5 mb-10">
-          <h2 class="fade-right text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
-          <h1 class="fade-left text-pink-600 text-center font-montecarlo text-5xl lg:text-8xl">
+          <h2 class="fade-right opacity-0 text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
+          <h1 class="fade-left opacity-0 text-pink-600 text-center font-montecarlo text-5xl lg:text-8xl">
             Wedding Day
           </h1>
         </div>
         <div
           class="grid gird-cols-1 md:grid-cols-3 max-w-4xl w-full mx-auto justify-center items-center gap-4 mt-5 [&>*]:mx-auto [&>*]:rounded-2xl [&>*]:h-full [&>*]:border [&>*]:border-pink-600 [&>*]:p-12 [&>*]:w-full"
         >
-          <div class="fade-right">
+          <div class="fade-right opacity-0">
             <div class="text-center font-josefin">
               <h2 class="text-center font-montecarlo text-4xl">Akad Nikah</h2>
               <p class="mt-2 sm:mt-4">
@@ -413,7 +411,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               </div>
             </div>
           </div>
-          <div class="fade-up">
+          <div class="fade-up opacity-0">
             <div class="text-center font-josefin">
               <h2 class="text-center font-montecarlo text-5xl">Resepsi</h2>
             <p class="mt-2 sm:mt-4">
@@ -441,7 +439,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
             
           </div>
           </div>
-          <div class="fade-left">
+          <div class="fade-left opacity-0">
             <div class="text-center font-josefin">
               <h2 class="text-center font-montecarlo text-4xl">Unduh Mantu</h2>
               <p class="mt-2 sm:mt-4">
@@ -474,11 +472,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section  class="animasi7 overflow-hidden">
       <div class="container mx-auto px-6 py-20 text-center">
         <div>
-          <h2 class="fade-left text-2xl font-bold mt-5 font-josefin">The Journey</h2>
-          <h2 class="fade-right text-pink-600 text-center font-montecarlo text-6xl lg:text-8xl">Our Story</h2>
+          <h2 class="fade-left opacity-0 text-2xl font-bold mt-5 font-josefin">The Journey</h2>
+          <h2 class="fade-right opacity-0 text-pink-600 text-center font-montecarlo text-6xl lg:text-8xl">Our Story</h2>
         </div>
         <div class="[&>*]:bg-white [&>*]:rounded [&>*]:shadow-lg [&>*]:mx-auto [&>*]:my-5 [&>*]:w-full [&>*]:md:w-3/4 [&>*]:p-10">
-          <div class="fade-up">
+          <div class="fade-up opacity-0">
             <div class="md:flex mx-auto gap-5 justify-center">
               <div class="w-full md:w-1/4">
                 <img
@@ -495,7 +493,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               </div>
             </div>
           </div>
-          <div class="fade-left">
+          <div class="fade-left opacity-0">
             <div class="md:flex mx-auto gap-5 justify-center">
               <div class="w-full md:w-1/4">
                 <img
@@ -514,7 +512,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               </div>
             </div>
           </div>
-          <div class="fade-down">
+          <div class="fade-down opacity-0">
             <div class="md:flex mx-auto gap-5 justify-center">
               <div class="w-full md:w-1/4">
                 <img
@@ -537,15 +535,15 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section  class="animasi8 overflow-hidden">
       <div class="container mx-auto px-6 py-20">
         <div class="text-center my-5 mb-10">
-          <h2 class="fade-left text-xl md:text-2xl font-bold mt-5 font-josefin">A Glimpse of</h2>
-          <h2 class="fade-right text-pink-600 text-center font-montecarlo text-5xl lg:text-8xl">
+          <h2 class="fade-left opacity-0 text-xl md:text-2xl font-bold mt-5 font-josefin">A Glimpse of</h2>
+          <h2 class="fade-right opacity-0 text-pink-600 text-center font-montecarlo text-5xl lg:text-8xl">
             Our Moments
           </h2>
         </div>
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-2 pb-20 [&>*]:w-full [&>*]:md:max-w-4xl [&>*]:p-1 [&>*]:relative"
         >
-          <div class="fade-right">
+          <div class="fade-right opacity-0">
             <div class="truncate">
               <img
                 src={imgstory1}
@@ -554,7 +552,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="fade-down">
+          <div class="fade-down opacity-0">
             <div class="truncate">
               <img
                 src={imgstory2}
@@ -563,7 +561,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="fade-up">
+          <div class="fade-up opacity-0">
             <div class="truncate">
               <img
                 src={imgstory3}
@@ -572,7 +570,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="fade-left">
+          <div class="fade-left opacity-0">
             <div class="truncate">
               <img
                 src={imgstory4}
@@ -581,7 +579,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="fade-up">
+          <div class="fade-up opacity-0">
             <div class="truncate">
               <img
                 src={imgstory5}
@@ -590,7 +588,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="zoom-out">
+          <div class="zoom-out opacity-0">
             <div class="truncate">
               <img
                 src={imgstory6}
@@ -599,7 +597,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="fade-up">
+          <div class="fade-up opacity-0">
             <div class="truncate">
               <img
                 src={imgstory7}
@@ -608,7 +606,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="fade-left">
+          <div class="fade-left opacity-0">
             <div class="truncate">
               <img
                 src={imgstory8}
@@ -623,10 +621,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section  class="animasi9 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden py-20 before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
       <div class="container  text-center mx-auto relative z-10">
         <div>
-          <h2 class="fade-down text-5xl lg:text-8xl text-pink-400 font-montecarlo">Wedding Gift</h2>
-          <p class="fade-left max-w-prose mx-auto mt-5 font-josefin text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
+          <h2 class="fade-down opacity-0 text-5xl lg:text-8xl text-pink-400 font-montecarlo">Wedding Gift</h2>
+          <p class="fade-left opacity-0 max-w-prose mx-auto mt-5 font-josefin text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
         </div>
-        <div class="py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
+        <div class="fade-up opacity-0 py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
           <div class="text-center font-poppins flex flex-col items-center">
             <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
             <div class="font-josefin relative w-full">
@@ -647,10 +645,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section  class="animasi10 bg-gray-100 overflow-hidden">
       <div class="container py-20 px-6 text-center mx-auto">
         <div class="text-center my-5 mb-10">
-          <h2 class="fade-down text-pink-600 text-center font-montecarlo text-5xl lg:text-8xl">
+          <h2 class="fade-down opacity-0 text-pink-600 text-center font-montecarlo text-5xl lg:text-8xl">
             Ucapan & Doa
           </h2>
-          <h2 class="fade-right text-xl md:text-2xl font-bold mt-5 font-josefin">Please Confirm Your Attendance</h2>
+          <h2 class="fade-right opacity-0 text-xl md:text-2xl font-bold mt-5 font-josefin">Please Confirm Your Attendance</h2>
         </div>
 
         <Rsvp />

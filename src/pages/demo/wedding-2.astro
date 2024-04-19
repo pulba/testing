@@ -184,16 +184,15 @@ const imgstory7 = frontmatter ? frontmatter.imgstory7 ? frontmatter.imgstory7.ur
 const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.url ? frontmatter.imgstory8.url : data.imgstory8.url :  data.imgstory8.url : data.imgstory8.url;
 ---
 
-<Noheader
-  title={title}
-  desc="Ini halaman Demo Wedding 2 dari undangan"
->
-<input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear " />
-<section class="hero relative h-screen bg-cover bg-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
+<Noheader title={title} desc="Ini halaman Demo Wedding 2 dari undangan">
+
+  <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear " />
+
+  <section class="animasi1 relative h-screen bg-cover bg-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
   <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale-[75%]" style={`background-image:url(${cover})`}></div>
   
   <div class="container mx-auto py-20 h-screen flex flex-col justify-between items-center text-white relative">
-      <p class="text-sm md:text-xl mt-8 font-poppins font-semibold text-gray-800">
+      <p class="animate-fadedown text-sm md:text-xl mt-8 font-poppins font-semibold text-gray-800">
         Undangan Pernikahan
       </p>
       <div class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-nautigal text-gray-800 text-center text-6xl lg:text-8xl">
@@ -201,354 +200,354 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         <span> & </span> 
         <span> { male } </span> 
       </div>
-    <div class="mx-auto text-center mt-2 text-gray-800">
+    <div class="animate-fadedown mx-auto text-center mt-2 text-gray-800">
       <h3 class="mt-2 font-poppins text-xs">Kepada Yth. <br>  Bapak/Ibu/Saudara/i</h3>
       <h4 id="invite-name" class="font-poppins my-3 capitalize">
         <Namatamu /> nama tamu
       </h4>
       <label
         for="toggle" id="toaudio"
-        class="mt-5 px-4 py-2 relative bg-gray-400 rounded-full text-gray-800 font-bold flex flex-row items-center justify-center gap-1 transition-all duration-700 ease-linear hover:bg-white"><Icon name="mdi:love-letter" class="w-5 h-5" /> Open Invitation </label>
+        class="animate-fadeup mt-5 px-4 py-2 relative bg-gray-400 rounded-full text-gray-800 font-bold flex flex-row items-center justify-center gap-1 transition-all duration-700 ease-linear hover:bg-white"><Icon name="mdi:love-letter" class="w-5 h-5" /> Open Invitation </label>
     </div>
   </div>
-</section>
-<main id="myDIV" class="block bg-gray-100 peer-checked:block scroll-smooth">
-  <section class="hero relative h-screen overflow-hidden">
-    <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale" style={`background-image:url(${imgth})`}></div>
-    
-    <div class="container h-screen mx-auto pt-20 flex flex-col justify-center items-center text-white relative z-50">
-      <div class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-nautigal text-white text-center text-6xl lg:text-8xl">
-        <span>{ female }</span>
-        <span> & </span> 
-        <span> { male } </span> 
-      </div>
-      <p class="font-poppins text-center text-xl md:text-2xl mt-5">{date}</p>
-    </div>
   </section>
-  <section class="overflow-hidden">
-    <div class="container py-20 px-6 mx-auto">
-      <div class="flex flex-col md:flex-row gap-16 max-w-4xl mx-auto my-12">
-        <div class="rounded-lg grayscale">
-          <img src={imgth} alt="JejakBahagia"  class="rounded-3xl w-screen">
+  <main id="myDIV" class="hidden bg-gray-100 peer-checked:block scroll-smooth">
+    <section class="animasi2 hero relative h-screen overflow-hidden">
+      <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale" style={`background-image:url(${imgth})`}></div>
+      
+      <div class="container h-screen mx-auto pt-20 flex flex-col justify-center items-center text-white relative">
+        <div class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-nautigal text-white text-center text-6xl lg:text-8xl">
+          <span>{ female }</span>
+          <span> & </span> 
+          <span> { male } </span> 
         </div>
-        <div class="flex flex-col items-center justify-center font-poppins text-center">
-          <img src="/assets/pattern.png" alt="JejakBahagia">
-          <p>{quote}</p>
+        <p class="animate-faderight font-poppins text-center text-xl md:text-2xl mt-5">{date}</p>
+      </div>
+    </section>
+    <section class="animasi3 overflow-hidden">
+      <div class="container py-20 px-6 mx-auto">
+        <div class="flex flex-col md:flex-row gap-16 max-w-4xl mx-auto my-12">
+          <div class="rounded-lg grayscale">
+            <img src={imgth} alt="JejakBahagia"  class="fade-right opacity-0 rounded-3xl w-screen">
+          </div>
+          <div class="flex flex-col items-center justify-center font-poppins text-center">
+            <img src="/assets/pattern.png" class="fade-left opacity-0" alt="JejakBahagia">
+            <p class="fade-left opacity-0">{quote}</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-<section class="bg-white overflow-hidden">
-  <div class="container py-20 px-6 mx-auto">
-    <img src="/assets/pattern-2.png" alt="JejakBahagia" class="mx-auto">
-    <div class="flex flex-col lg:flex-row justify-center items-center gap-y-16 max-w-4xl mx-auto mt-5 [&>*]:text-center [&>*]:w-full [&>*]:flex [&>*]:flex-col [&>*]:items-center">
-      <div>
-        <div
-          class="rounded-full w-48 h-48 md:w-60 md:h-60 bg-cover bg-center bg-white border-8 border-gray-500 flex justify-center items-center grayscale"
-          style={`background-image:url(${imgfr})`}>
+    </section>
+    <section class="animasi4 bg-white overflow-hidden">
+      <div class="container py-20 px-6 mx-auto">
+        <img src="/assets/pattern-2.png" alt="JejakBahagia" class="fade-down opacity-0 mx-auto">
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-y-16 max-w-4xl mx-auto mt-5 [&>*]:text-center [&>*]:w-full [&>*]:flex [&>*]:flex-col [&>*]:items-center">
+          <div>
+            <div
+              class="fade-right opacity-0 rounded-full w-48 h-48 md:w-60 md:h-60 bg-cover bg-center bg-white border-8 border-gray-500 flex justify-center items-center grayscale"
+              style={`background-image:url(${imgfr})`}>
+            </div>
+            <h3 class="fade-down opacity-0 text-8xl mt-6 font-nautigal text-gray-800">{ female }</h3>
+            <div class="fade-up opacity-0 font-poppins space-y-3">
+              <div class="">
+                <p class="text-xl font-medium w-max mx-auto border-b-2 border-b-gray-800">{ fullfemale }</p>
+                <p class="text-lg">{childfemale}</p>
+                <p class="text-lg font-medium text-gray-800">
+                  { parentfemale }
+                </p>
+                <p>{cityfemale}</p>
+                <div class="flex gap-3 text-center justify-center mt-4">
+                  <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
+                    <Icon name="mdi:facebook" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
+                  </a>
+                  <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
+                    <Icon name="mdi:instagram" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div>
+              <div
+                class="fade-left opacity-0 rounded-full w-48 h-48 md:w-60 md:h-60 bg-cover bg-center bg-white border-8 border-gray-500 flex justify-center items-center grayscale"
+                style={`background-image:url(${imgfv})`}>
+              </div>
+              <h3 class="fade-down opacity-0 text-8xl mt-6 font-nautigal text-gray-800">{ male }</h3>
+              <div class="fade-up opacity-0 font-poppins space-y-3">
+                <div>
+                    <p class="text-xl font-medium w-max mx-auto border-b-2 border-b-gray-800">{ fullmale }</p>
+                    <p class="text-lg">{ childmale }</p>
+                    <p class="text-lg font-medium text-gray-800">
+                      { parentmale }
+                    </p>
+                    <p>{citymale}</p>
+                    <div class="flex gap-3 text-center justify-center mt-4">
+                      <a href={`https://www.facebook.com/${facebookmale}`} class="flex flex-row gap-2 items-center">
+                        <Icon name="mdi:facebook" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
+                      </a>
+                      <a href={`https://www.instagram.com/${instagrammale}`} class="flex flex-row gap-2 items-center">
+                        <Icon name="mdi:instagram" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
+                      </a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section class="animasi5 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gray-500 bg-cover bg-no-repeat lg:bg-center bg-fixed bg-center grayscale blur-[1px]" style="background-image: url('/assets/ring-cd.jpg');">
+      </div>
+      <div class="container py-32 px-6 mx-auto relative z-10">
+        <div class="text-center my-5">
+          <h2 class="fade-down opacity-0 text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-gray-800">Countdown to</h2>
+          <h1 class="fade-right opacity-0 text-gray-800 text-center font-nautigal text-4xl md:text-6xl lg:text-8xl">
+            Our Happy Day
+          </h1>
         </div>
-        <h3 class="text-8xl mt-6 font-nautigal text-gray-800">{ female }</h3>
-        <div class="font-poppins space-y-3">
-          <div class="">
-            <p class="text-xl font-medium w-max mx-auto border-b-2 border-b-gray-800">{ fullfemale }</p>
-            <p class="text-lg">{childfemale}</p>
-            <p class="text-lg font-medium text-gray-800">
-              { parentfemale }
+        <div id="timer" class="fade-up opacity-0 grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl w-full mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-bold [&>*]:font-poppins [&>*]:text-gray-800 [&>*]:p-1">
+        </div>
+        <Countdown/>
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center max-w-4xl mx-auto gap-x-8 gap-y-16 mt-5 pt-16">
+          <div class="fade-right opacity-0 rounded-lg w-full">
+            <img src="/assets/foto-tambahan-2.jpg" alt="JejakBahagia"  class="rounded-3xl grayscale-[75%]">
+          </div>
+          <div class="fade-left opacity-0 text-center font-poppins w-full bg-gray-100 py-12 px-6 rounded-3xl">
+            <h2 class="text-center font-nautigal text-4xl md:text-6xl text-gray-800">Akad Nikah</h2>
+            <p class="mt-2 sm:mt-4">
+              <strong class="text-md font-bold text-gray-800"
+                >{date}
+              </strong>
             </p>
-            <p>{cityfemale}</p>
-            <div class="flex gap-3 text-center justify-center mt-4">
-              <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
-                <Icon name="mdi:facebook" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
+            <p class="mt-2 sm:mt-4 text-md">{timefs}</p>
+            <p class="mt-2 sm:mt-4">
+              <strong class="text-md font-bold text-gray-800"
+                >{addressth}</strong
+              >
+            </p>
+            <p class="mt-2 sm:mt-4 text-sm">
+              {locationfs}
+            </p>
+            <div class="group">
+              <a href={mapsfs}>
+                <button class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-800 text-gray-800 px-4 py-2 text-center text-sm font-medium group-hover:bg-gray-800 group-hover:text-white group-hover:border-none group-hover:duration-500 group-hover:transition-all">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-gray-800 group-hover:text-white" />
+                </button>
               </a>
-              <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
-                <Icon name="mdi:instagram" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
+            </div>
+          </div>
+          <div class="fade-right opacity-0 rounded-lg w-full md:order-last">
+            <img src="/assets/foto-tambahan-3.jpg" alt="JejakBahagia"  class="rounded-3xl grayscale-[75%]">
+          </div>
+          <div class="fade-left opacity-0 text-center font-poppins w-full bg-gray-100 py-12 px-6 rounded-3xl">
+            <h2 class="text-center font-nautigal text-4xl md:text-6xl text-gray-800">Resepsi</h2>
+            <p class="mt-2 sm:mt-4">
+              <strong class="text-md font-bold text-gray-800"
+                >{date}
+              </strong>
+            </p>
+            <p class="mt-2 sm:mt-4 text-md">{timesc}</p>
+            <p class="mt-2 sm:mt-4">
+              <strong class="text-md font-bold text-gray-800"
+                >{addressth}</strong
+              >
+            </p>
+            <p class="mt-2 sm:mt-4 text-sm">
+              {locationsc}
+            </p>
+            <div class="group">
+              <a href={mapssc}>
+                <button class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-800 text-gray-800 px-4 py-2 text-center text-sm font-medium group-hover:bg-gray-800 group-hover:text-white group-hover:border-none group-hover:duration-500 group-hover:transition-all">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-gray-800 group-hover:text-white" />
+                </button>
               </a>
             </div>
           </div>
         </div>
       </div>
+    </section>
+    <section class="animasi6 py-20 overflow-hidden">
+      <div class="container py-20 px-6 text-center mx-auto">
         <div>
-          <div
-            class="rounded-full w-48 h-48 md:w-60 md:h-60 bg-cover bg-center bg-white border-8 border-gray-500 flex justify-center items-center grayscale"
-            style={`background-image:url(${imgfv})`}>
-          </div>
-          <h3 class="text-8xl mt-6 font-nautigal text-gray-800">{ male }</h3>
-          <div class="font-poppins space-y-3">
-            <div>
-                <p class="text-xl font-medium w-max mx-auto border-b-2 border-b-gray-800">{ fullmale }</p>
-                <p class="text-lg">{ childmale }</p>
-                <p class="text-lg font-medium text-gray-800">
-                  { parentmale }
-                </p>
-                <p>{citymale}</p>
-                <div class="flex gap-3 text-center justify-center mt-4">
-                  <a href={`https://www.facebook.com/${facebookmale}`} class="flex flex-row gap-2 items-center">
-                    <Icon name="mdi:facebook" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
-                  </a>
-                  <a href={`https://www.instagram.com/${instagrammale}`} class="flex flex-row gap-2 items-center">
-                    <Icon name="mdi:instagram" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
-                  </a>
-                </div>
+          <h2 class="fade-down opacity-0 text-gray-800 text-center font-nautigal text-6xl lg:text-8xl">Tentang Kami</h2>
+        </div>
+        <div class="mx-auto">
+          <div class="fade-right opacity-0 bg-white rounded shadow-lg mx-auto my-5 w-full md:w-3/4 p-10">
+            <div class="md:flex mx-auto gap-5 justify-center">
+              <div class="w-full md:w-1/4">
+                <img
+                  class="rounded-lg grayscale"
+                  src={imgsx}
+                  alt="JejakBahagia"
+                />
               </div>
+              <div class="text-left font-poppins">
+                <p class="text-5xl text-gray-800 mt-5 md:mt-0 font-nautigal mb-3">Fist Time</p>
+                <p class="max-w-prose text-gray-800/75">
+                  {storyfs}
+                </p>
+              </div>
+            </div>
+          </div>
+          <Icon name="mdi:arrow-u-down-left" class="fade-down opacity-0 w-24 h-24 mx-auto text-gray-400" />
+          <div class="fade-left opacity-0 bg-white rounded shadow-lg mx-auto my-5 w-full md:w-3/4 p-10">
+            <div class="md:flex mx-auto gap-5 justify-center">
+              <div class="w-full md:w-1/4">
+                <img
+                  class="rounded-lg grayscale"
+                  src={imgsv}
+                  alt="JejakBahagia"
+                />
+              </div>
+              <div class="text-left font-poppins">
+                <p class="text-5xl text-gray-800 mt-5 md:mt-0 font-nautigal mb-3">
+                  Menyatakan Cinta
+                </p>
+                <p class="max-w-prose text-gray-800/75">
+                  {storysc}
+                </p>
+              </div>
+            </div>
+          </div>
+          <Icon name="mdi:arrow-u-down-left" class="fade-down opacity-0 w-24 h-24 mx-auto text-gray-400" />
+          <div class="fade-up opacity-0 bg-white rounded shadow-lg mx-auto my-5 w-full md:w-3/4 p-10">
+            <div class="md:flex mx-auto gap-5 justify-center">
+              <div class="w-full md:w-1/4">
+                <img
+                  class="rounded-lg grayscale"
+                  src={imgeg}
+                  alt="JejakBahagia"
+                />
+              </div>
+              <div class="text-left font-poppins">
+                <p class="text-5xl text-gray-800 mt-5 md:mt-0 font-nautigal mb-3">Tunangan</p>
+                <p class="max-w-prose text-gray-800/75">
+                  {storyth}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-  </div>
-</section>
-<section class="relative overflow-hidden">
-  <div class="absolute inset-0 bg-gray-500 bg-cover bg-no-repeat lg:bg-center bg-fixed bg-center grayscale blur-[1px]" style="background-image: url('/assets/ring-cd.jpg');">
-  </div>
-  <div class="container py-32 px-6 mx-auto relative z-10">
-    <div class="text-center my-5">
-      <h2 class="text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-gray-800">Countdown to</h2>
-      <h1 class="text-gray-800 text-center font-nautigal text-4xl md:text-6xl lg:text-8xl">
-        Our Happy Day
-      </h1>
-    </div>
-    <div id="timer" class="grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl w-full mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-bold [&>*]:font-poppins [&>*]:text-gray-800 [&>*]:p-1">
-    </div>
-    <Countdown/>
-    <div class="grid grid-cols-1 md:grid-cols-2 items-center max-w-4xl mx-auto gap-x-8 gap-y-16 mt-5 pt-16">
-      <div class="rounded-lg w-full">
-        <img src="/assets/foto-tambahan-2.jpg" alt="JejakBahagia"  class="rounded-3xl grayscale-[75%]">
-      </div>
-      <div class="text-center font-poppins w-full bg-gray-100 py-12 px-6 rounded-3xl">
-        <h2 class="text-center font-nautigal text-4xl md:text-6xl text-gray-800">Akad Nikah</h2>
-        <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-gray-800"
-            >{date}
-          </strong>
-        </p>
-        <p class="mt-2 sm:mt-4 text-md">{timefs}</p>
-        <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-gray-800"
-            >{addressth}</strong
-          >
-        </p>
-        <p class="mt-2 sm:mt-4 text-sm">
-          {locationfs}
-        </p>
-        <div class="group">
-          <a href={mapsfs}>
-            <button class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-800 text-gray-800 px-4 py-2 text-center text-sm font-medium group-hover:bg-gray-800 group-hover:text-white group-hover:border-none group-hover:duration-500 group-hover:transition-all">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-gray-800 group-hover:text-white" />
-            </button>
-          </a>
+    </section>
+    <section class="animasi7 overflow-hidden">
+      <div class="container mx-auto px-6 py-20">
+        <div class="text-center my-5 mb-10">
+          <h2 class="fade-down opacity-0 text-gray-800 text-center font-nautigal text-5xl lg:text-8xl">
+            Moment Kami
+          </h2>
         </div>
-      </div>
-      <div class="rounded-lg w-full md:order-last">
-        <img src="/assets/foto-tambahan-3.jpg" alt="JejakBahagia"  class="rounded-3xl grayscale-[75%]">
-      </div>
-      <div class="text-center font-poppins w-full bg-gray-100 py-12 px-6 rounded-3xl">
-        <h2 class="text-center font-nautigal text-4xl md:text-6xl text-gray-800">Resepsi</h2>
-        <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-gray-800"
-            >{date}
-          </strong>
-        </p>
-        <p class="mt-2 sm:mt-4 text-md">{timesc}</p>
-        <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-gray-800"
-            >{addressth}</strong
-          >
-        </p>
-        <p class="mt-2 sm:mt-4 text-sm">
-          {locationsc}
-        </p>
-        <div class="group">
-          <a href={mapssc}>
-            <button class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-800 text-gray-800 px-4 py-2 text-center text-sm font-medium group-hover:bg-gray-800 group-hover:text-white group-hover:border-none group-hover:duration-500 group-hover:transition-all">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-gray-800 group-hover:text-white" />
-            </button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="py-20 overflow-hidden">
-  <div class="container py-20 px-6 text-center mx-auto">
-    <div>
-      <h2 class="text-gray-800 text-center font-nautigal text-6xl lg:text-8xl">Tentang Kami</h2>
-    </div>
-    <div class="mx-auto">
-      <div class="bg-white rounded shadow-lg mx-auto my-5 w-full md:w-3/4 p-10">
-        <div class="md:flex mx-auto gap-5 justify-center">
-          <div class="w-full md:w-1/4">
-            <img
-              class="rounded-lg grayscale"
-              src={imgsx}
-              alt="JejakBahagia"
-            />
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-2 pb-20 [&>*]:w-full [&>*]:md:max-w-4xl [&>*]:p-1 [&>*]:relative [&>*]:grayscale">
+          <div class="fade-right">
+            <div class="truncate">
+              <img
+                src={imgstory1}
+                alt="Foto 1"
+                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+              />
+            </div>
           </div>
-          <div class="text-left font-poppins">
-            <p class="text-5xl text-gray-800 mt-5 md:mt-0 font-nautigal mb-3">Fist Time</p>
-            <p class="max-w-prose text-gray-800/75">
-              {storyfs}
-            </p>
+          <div class="fade-down opacity-0">
+            <div class="truncate">
+              <img
+                src={imgstory2}
+                alt="Foto 1"
+                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+              />
+            </div>
+          </div>
+          <div class="fade-up opacity-0">
+            <div class="truncate">
+              <img
+                src={imgstory3}
+                alt="Foto 1"
+                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+              />
+            </div>
+          </div>
+          <div class="fade-left opacity-0">
+            <div class="truncate">
+              <img
+                src={imgstory4}
+                alt="Foto 1"
+                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+              />
+            </div>
+          </div>
+          <div class="fade-left opacity-0">
+            <div class="truncate">
+              <img
+                src={imgstory5}
+                alt="Foto 1"
+                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+              />
+            </div>
+          </div>
+          <div class="fade-up opacity-0">
+            <div class="truncate">
+              <img
+                src={imgstory6}
+                alt="Foto 1"
+                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+              />
+            </div>
+          </div>
+          <div class="fade-down opacity-0">
+            <div class="truncate">
+              <img
+                src={imgstory7}
+                alt="Foto 1"
+                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+              />
+            </div>
+          </div>
+          <div class="fade-left opacity-0">
+            <div class="truncate">
+              <img
+                src={imgstory8}
+                alt="Foto 1"
+                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+              />
+            </div>
           </div>
         </div>
       </div>
-      <Icon name="mdi:arrow-u-down-left" class="w-24 h-24 mx-auto text-gray-400" />
-      <div data-aos="fade-down"data-aos-easing="linear"data-aos-duration="2000" class="bg-white rounded shadow-lg mx-auto my-5 w-full md:w-3/4 p-10">
-        <div class="md:flex mx-auto gap-5 justify-center">
-          <div class="w-full md:w-1/4">
-            <img
-              class="rounded-lg grayscale"
-              src={imgsv}
-              alt="JejakBahagia"
-            />
-          </div>
-          <div class="text-left font-poppins">
-            <p class="text-5xl text-gray-800 mt-5 md:mt-0 font-nautigal mb-3">
-              Menyatakan Cinta
-            </p>
-            <p class="max-w-prose text-gray-800/75">
-              {storysc}
-            </p>
-          </div>
+    </section>
+    <section class="animasi8 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gray-500 bg-cover bg-no-repeat bg-center bg-fixed bg-center grayscale before:content-[''] before:bg-black before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg);"></div>
+      <div class="container py-20 px-6 text-center mx-auto relative">
+        <div>
+          <h2 class="fade-down opacity-0 text-5xl lg:text-8xl text-white font-nautigal">Wedding Gift</h2>
+          <img src="/assets/pattern-2.png" alt="JejakBahagia" class="fade-down opacity-0 mx-auto">
+          <p class="fade-left opacity-0 max-w-prose mx-auto mt-5 font-poppins text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
         </div>
-      </div>
-      <Icon name="mdi:arrow-u-down-left" class="w-24 h-24 mx-auto text-gray-400" />
-      <div data-aos="fade-down"data-aos-easing="linear"data-aos-duration="3000" class="bg-white rounded shadow-lg mx-auto my-5 w-full md:w-3/4 p-10">
-        <div class="md:flex mx-auto gap-5 justify-center">
-          <div class="w-full md:w-1/4">
-            <img
-              class="rounded-lg grayscale"
-              src={imgeg}
-              alt="JejakBahagia"
-            />
-          </div>
-          <div class="text-left font-poppins">
-            <p class="text-5xl text-gray-800 mt-5 md:mt-0 font-nautigal mb-3">Tunangan</p>
-            <p class="max-w-prose text-gray-800/75">
-              {storyth}
-            </p>
+        <div class="fade-up opacity-0 py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
+          <div class="text-center font-poppins flex flex-col items-center">
+            <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
+            <p class="text-2xl c mt-5 md:mt-0 font-bold mb-3">{bank}</p>
+            <p class="max-w-prose text-gray-800">{namebank}</p>
+            <span class="copy-content font-bold">{numberbank}</span>
+            <div class="icon pt-5">
+              <button class="bg-gray-800 text-white px-5 py-2 rounded-full">Copy Rekening</button>
+              <Payment />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<section class="overflow-hidden">
-  <div class="container mx-auto px-6 py-20">
-    <div class="text-center my-5 mb-10">
-      <h2 class="text-gray-800 text-center font-nautigal text-5xl lg:text-8xl">
-         Moment Kami
-      </h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-2 pb-20 [&>*]:w-full [&>*]:md:max-w-4xl [&>*]:p-1 [&>*]:relative [&>*]:grayscale">
-      <div>
-        <div class="truncate">
-          <img
-            src={imgstory1}
-            alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-          />
-        </div>
       </div>
-      <div>
-        <div class="truncate">
-          <img
-            src={imgstory2}
-            alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-          />
+    </section>
+    <section class="animasi9 overflow-hidden">
+      <div class="container py-20 sm:px-6 text-center mx-auto">
+        <div class="text-center my-5 mb-10">
+          <h2  class="fade-down opacity-0 text-gray-800 text-center font-nautigal text-5xl lg:text-8xl">
+            Ucapan & Doa
+          </h2>
         </div>
+        <Rsvp color="gray-600" />
       </div>
-      <div>
-        <div class="truncate">
-          <img
-            src={imgstory3}
-            alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-          />
-        </div>
-      </div>
-      <div>
-        <div class="truncate">
-          <img
-            src={imgstory4}
-            alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-          />
-        </div>
-      </div>
-      <div data-aos="zoom-in"data-aos-easing="linear"data-aos-duration="1500">
-        <div class="truncate">
-          <img
-            src={imgstory5}
-            alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-          />
-        </div>
-      </div>
-      <div>
-        <div class="truncate">
-          <img
-            src={imgstory6}
-            alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-          />
-        </div>
-      </div>
-      <div>
-        <div class="truncate">
-          <img
-            src={imgstory7}
-            alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-          />
-        </div>
-      </div>
-      <div>
-        <div class="truncate">
-          <img
-            src={imgstory8}
-            alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="relative overflow-hidden">
-  <div class="absolute inset-0 bg-gray-500 bg-cover bg-no-repeat bg-center bg-fixed bg-center grayscale before:content-[''] before:bg-black before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg);"></div>
-  <div class="container py-20 px-6 text-center mx-auto relative">
-    <div>
-      <h2 class="text-5xl lg:text-8xl text-white font-nautigal">Wedding Gift</h2>
-      <img src="/assets/pattern-2.png" alt="JejakBahagia" class="mx-auto">
-      <p class="max-w-prose mx-auto mt-5 font-poppins text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
-    </div>
-    <div class="py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
-      <div class="text-center font-poppins flex flex-col items-center">
-        <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
-        <p class="text-2xl c mt-5 md:mt-0 font-bold mb-3">{bank}</p>
-        <p class="max-w-prose text-gray-800">{namebank}</p>
-        <span class="copy-content font-bold">{numberbank}</span>
-        <div class="icon pt-5">
-          <button class="bg-gray-800 text-white px-5 py-2 rounded-full">Copy Rekening</button>
-          <Payment />
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-<section class="overflow-hidden">
-  <div class="container py-20 px-6 text-center mx-auto">
-    <div class="text-center my-5 mb-10">
-      <h2  class="text-gray-800 text-center font-nautigal text-5xl lg:text-8xl">
-        Ucapan & Doa
-      </h2>
-    </div>
-    <Rsvp color="gray-600" />
-  </div>
-</section>
-<Audio />
-<audio id="myAudio" loop class="hidden">
-  <source src="/assets/john-legend-all-of-me.mp3" type="audio/mpeg">
-</audio>
-<Footerpost />
-</main>
+    </section>
+    <Audio />
+    <audio id="myAudio" loop class="hidden">
+      <source src="/assets/john-legend-all-of-me.mp3" type="audio/mpeg">
+    </audio>
+    <Footerpost />
+  </main>
 </Noheader>
 
