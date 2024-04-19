@@ -10,62 +10,61 @@ import anime from 'animejs';
 window.onscroll = () => {
     var doc = document.documentElement;
     var elements = ['.animasi1', '.animasi2', '.animasi3', '.animasi4', '.animasi5', '.animasi5', '.animasi6', '.animasi7', '.animasi8', '.animasi9', '.animasi10', '.animasi11'];
-    var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 
     elements.forEach(element => {
         var animasi = document.querySelector(element);
-        if (animasi && top > animasi.offsetTop - 100) {
-             
-            anime({
-                targets: element + ' .zoom-in',
-                scale: [1, 1.5, 1],
-                opacity: [0, 1], 
-                autoplay: true,
-                duration: 4000,
-                easing: 'easeInOutQuad',
-            });
-            anime({
-                targets: element + ' .zoom-out',
-                scale: [1.2, 1],
-                opacity: [0, 1], 
-                autoplay: true,
-                duration: 4000,
-                easing: 'easeInOutQuad',
-            });
-            anime({
-                targets: element + ' .fade-left',
-                translateX: [150, 0],
-                opacity: [0, 1], 
-                autoplay: true,
-                duration: 2000,
-                easing: 'easeInOutSine',
-            });
-            anime({
-                targets: element + ' .fade-right',
-                translateX: [-150, 0],
-                opacity: [0, 1], 
-                autoplay: true,
-                duration: 2000,
-                easing: 'easeInOutSine',
-            });
-            anime({
-                targets: element + ' .fade-up',
-                translateY: [150, 0],
-                opacity: [0, 1], 
-                autoplay: true,
-                duration: 2000,
-                easing: 'easeInOutSine',
-            });
-            anime({
-                targets: element + ' .fade-down',
-                translateY: [-150, 0],
-                opacity: [0, 1], 
-                autoplay: true,
-                duration: 2000,
-                easing: 'easeInOutSine',
-            });
+        if (animasi) {
+            var elementTop = animasi.offsetTop - 100;
+            if (top > elementTop && !animasi.classList.contains('animated')) {
+                animasi.classList.add('animated');
+
+                anime({
+                    targets: element + ' .zoom-in',
+                    scale: [1, 1.5, 1],
+                    opacity: [0, 1], 
+                    duration: 4000,
+                    easing: 'easeInOutQuad',
+                });
+                anime({
+                    targets: element + ' .zoom-out',
+                    scale: [1.2, 1],
+                    opacity: [0, 1], 
+                    duration: 4000,
+                    easing: 'easeInOutQuad',
+                });
+                anime({
+                    targets: element + ' .fade-left',
+                    translateX: [150, 0],
+                    opacity: [0, 1], 
+                    duration: 2000,
+                    easing: 'easeInOutSine',
+                });
+                anime({
+                    targets: element + ' .fade-right',
+                    translateX: [-150, 0],
+                    opacity: [0, 1], 
+                    duration: 2000,
+                    easing: 'easeInOutSine',
+                });
+                anime({
+                    targets: element + ' .fade-up',
+                    translateY: [150, 0],
+                    opacity: [0, 1], 
+                    duration: 2000,
+                    easing: 'easeInOutSine',
+                });
+                anime({
+                    targets: element + ' .fade-down',
+                    translateY: [-150, 0],
+                    opacity: [0, 1], 
+                    duration: 2000,
+                    easing: 'easeInOutSine',
+                });
+            }
         }
     });
 }
+
 
 </script>

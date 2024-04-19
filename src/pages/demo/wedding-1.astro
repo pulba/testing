@@ -210,25 +210,23 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       </div>
     </div>
     <div
-      class="container mx-auto flex flex-col justify-center items-center text-white relative"
-    >
+      class="container mx-auto flex flex-col justify-center items-center text-white relative">
       <div
         class="animate-zoomin rounded-full w-24 h-24 md:w-40 md:h-40 bg-cover bg-center bg-white flex justify-center items-center"
         style={`background-image:url(${imgsc})`}>
       </div>
-      <h1 class="animate-faderight text-xl mt-8 font-josefin font-semibold text-pink-600">
-        Wedding Invitation
-      </h1>
-      <h2
-        class="animate-fadeleft text-center font-montecarlo text-white text-4xl md:text-6xl lg:text-8xl"
-      >
-        { male } & { female }
-      </h2>
+      
+      <div
+        class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-montecarlo text-white text-center text-5xl sm:text-6xl lg:text-8xl">
+        <span>{ female }</span>
+        <span> & </span> 
+        <span> { male } </span> 
+      </div>
       <h3 class="animate-fadeup mt-2 font-josefin">Dear Mr./Mrs./Ms.</h3>
       <h4 id="invite-name" class="animate-fadeup text-xl font-josefin my-3 capitalize">
         <Namatamu /> nama tamu
       </h4>
-      <p class="animate-fadeup font-josefin">You are cordially invited to our wedding.</p>
+      <p class="animate-fadeup font-josefin text-center">You are cordially invited to our wedding.</p>
       <label
         for="toggle" id="toaudio"
         class="animate-fadeup mt-5 px-6 py-2 relative bg-pink-600 rounded-full shadow-xl text-white font-bold flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-600"
@@ -257,9 +255,12 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         class="container mx-auto h-screen flex flex-col justify-center items-center text-white relative z-10 font-josefin"
       >
         <h2 class="animate-fadedown fade-down text-xl mt-4">The Wedding of</h2>
-        <h1 class="animate-zoomout zoom-out text-4xl md:text-6xl lg:text-8xl">{ male }<span class="text-pink-600 font-montecarlo">&</span> { female }
-           
-        </h1>
+        <div
+        class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-montecarlo text-white text-center text-5xl sm:text-6xl lg:text-8xl">
+        <span>{ female }</span>
+        <span> & </span> 
+        <span> { male } </span> 
+      </div>
         <h3 class="animate-fadeup fade-up text-xl md:text-2xl">{ date }</h3>
       </div>
       <div class="images absolute w-full" style="bottom: -5px;">
@@ -589,7 +590,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               />
             </div>
           </div>
-          <div class="zoom-in">
+          <div class="zoom-out">
             <div class="truncate">
               <img
                 src={imgstory6}
@@ -623,9 +624,9 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       <div class="container  text-center mx-auto relative z-10">
         <div>
           <h2 class="fade-down text-5xl lg:text-8xl text-pink-400 font-montecarlo">Wedding Gift</h2>
-          <p class="fade-left max-w-prose mx-auto font-bold mt-5 font-josefin text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
+          <p class="fade-left max-w-prose mx-auto mt-5 font-josefin text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
         </div>
-        <div class="fade-up py-8 px-8 md:px-16 mx-auto mt-16 w-4/5 sm:w-fit justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
+        <div class="py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
           <div class="text-center font-poppins flex flex-col items-center">
             <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
             <div class="font-josefin relative w-full">
