@@ -19,25 +19,22 @@ import { Icon } from 'astro-iconify';
     var btnaudio = document.getElementById('toaudio');
     var audio = document.getElementById('myAudio') as HTMLAudioElement;
     
-    btnaudio.addEventListener('click', function() {
+    if(btnaudio) {
+      btnaudio.addEventListener('click', function() {
       audio.play();
-    });
-    document.addEventListener("DOMContentLoaded", function() {
-      
-      if (btn && audio) {
-          btn.addEventListener('click', function() {
-              if (audio.paused) {
-                  audio.play();
-              } else {
-                  audio.pause();
-              }
-          });
-      } 
-    });
-    
-    // window.addEventListener("DOMContentLoaded", () => {
-    //     audio.play();
-    // });
+      });
+      document.addEventListener("DOMContentLoaded", function() {
+        if (btn && audio) {
+            btn.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+        } 
+      });
+    }
     
   
   </script>

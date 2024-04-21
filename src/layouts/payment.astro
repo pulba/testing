@@ -2,26 +2,26 @@
 
 ---
 <script>
-
-  const button = document.querySelector(".icon");
-  const message = document.querySelector(".copy-message");
-
+  const button = document.querySelector(".icon") as HTMLElement;
+  const message = document.querySelector(".copy-message") as HTMLElement;
+  
   function copyToClipBoard(){
-    const copyContent = document.querySelector(".copy-content");
-    navigator.clipboard.writeText(copyContent.innerHTML);
+    const copyContent = document.querySelector(".copy-content") as HTMLElement;
+    navigator.clipboard.writeText(copyContent.innerHTML)
+    .then(() => {
+      message.style.display = "block";
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 2000);
+    })
+    .catch(err => {
+      console.error('Gagal menyalin teks: ', err);
+    });
   }
-
+  
   if(button){
     button.addEventListener("click", function(){
       copyToClipBoard();
-      showMessage();
     });
-    function showMessage() {
-    message.classList.remove("hidden");
-    setTimeout(() => {
-      message.classList.add("hidden");
-    }, 2000);
   }
-  }
-  
-</script>
+  </script>

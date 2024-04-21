@@ -191,14 +191,14 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 <Noheader title={title} desc="Ini halaman Demo Wedding 1 dari undangan">
   
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
-  <section class="animasi11 relative h-screen bg-cover bg-center overflow-hidden flex items-center peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-black/65 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute"
+  <section class="animasi11 relative h-screen bg-cover bg-center overflow-hidden flex items-center peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-gradient-to-t before:from-pink-100 before:to-transparent before:inset-0 before:bg-cover before:absolute"
     style={`background-image:url(${cover})`}>
-    <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5 [&>*]:animate-pulse">
+    <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
       <div>
-        <img src="/assets/frame-tl.png" class="" alt="JejakBahagia" />
+        <img src="/assets/frame-tl.png" class="animate-fadedown" alt="JejakBahagia" />
       </div>
       <div class="right-0 top-0">
-        <img src="/assets/frame-tr.png" class="right-0 top-0" alt="JejakBahagia" />
+        <img src="/assets/frame-tr.png" class="animate-fadedown right-0 top-0" alt="JejakBahagia" />
       </div>
       <div class="left-0 bottom-0">
         <img src="/assets/frame-tr.png" class="rotate-180" alt="JejakBahagia" />
@@ -208,23 +208,28 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       </div>
     </div>
     <div
-      class="container mx-auto flex flex-col justify-center items-center text-white relative">
-      <div
-        class="animate-zoomin rounded-full w-24 h-24 md:w-40 md:h-40 bg-cover bg-center bg-white flex justify-center items-center"
-        style={`background-image:url(${imgsc})`}>
-      </div>
+      class="container z-50 mx-auto flex flex-col justify-center items-center text-white relative">
       
+      <div class="relative flex flex-col items-center justify-center">
+        <div class="animate-zoomin relative flex items-center justify-center w-40">
+            <div class="w-36 h-36 bg-cover bg-center relative rounded-full"
+            style={`background-image:url(${imgsc})`}>
+            </div>
+            <img src="/assets/floral2.webp" alt="JejakBahagia"  class="absolute">
+        </div>
       <div
-        class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-montecarlo text-white text-center text-5xl sm:text-6xl lg:text-8xl">
+        class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-montecarlo text-pink-600 text-center text-5xl sm:text-6xl lg:text-8xl">
         <span>{ female }</span>
         <span> & </span> 
         <span> { male } </span> 
       </div>
-      <h3 class="animate-fadeup mt-2 font-josefin">Dear Mr./Mrs./Ms.</h3>
+      <div class="text-center text-gray-800">
+        <h3 class="animate-fadeup mt-2 font-josefin">Dear Mr./Mrs./Ms.</h3>
       <h4 id="invite-name" class="animate-fadeup text-xl font-josefin my-3 capitalize">
         <Namatamu /> nama tamu
       </h4>
       <p class="animate-fadeup font-josefin text-center">You are cordially invited to our wedding.</p>
+      </div>
       <label
         for="toggle" id="toaudio"
         class="animate-fadeup mt-5 px-6 py-2 relative bg-pink-600 rounded-full shadow-xl text-white font-bold flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-600"
@@ -232,10 +237,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       >
     </div>
   </section>
-  <main id="myDIV" class="hidden peer-checked:block">
-    <section class="animasi1 relative h-screen bg-cover bg-center overflow-hidden before:content-[''] before:bg-black/50 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute"
+  <main id="myDIV" class="bg-pink-100 hidden peer-checked:block">
+    <section class="animasi1 relative h-screen bg-cover bg-center overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-pink-100 before:to-transparent before:inset-0 before:bg-cover before:absolute"
       style={`background-image:url(${imgth})`}>
-      <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5 [&>*]:animate-pulse">
+      <div class="absolute z-20 overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5 [&>*]:animate-pulse">
         <div>
           <img src="/assets/frame-tl.png" class="" alt="JejakBahagia" />
         </div>
@@ -252,20 +257,17 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       <div
         class="container mx-auto h-screen flex flex-col justify-center items-center text-white relative z-10 font-josefin"
       >
-        <h2 class="animate-fadedown fade-down opacity-0 text-xl mt-4">The Wedding of</h2>
+        <h2 class="animate-fadedown text-xl mt-4">The Wedding of</h2>
         <div
-        class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-montecarlo text-white text-center text-5xl sm:text-6xl lg:text-8xl">
+        class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-montecarlo text-pink-600 text-center text-5xl sm:text-6xl lg:text-8xl">
         <span>{ female }</span>
         <span> & </span> 
         <span> { male } </span> 
       </div>
-        <h3 class="animate-fadeup fade-up opacity-0 text-xl md:text-2xl">{ date }</h3>
-      </div>
-      <div class="images absolute w-full" style="bottom: -5px;">
-        <img src="/assets/mask.png" class="bg-cover" alt="JejakBahagia" />
+        <h3 class="animate-fadeup text-xl md:text-2xl">{ date }</h3>
       </div>
     </section>
-    <section class="animasi2 dh-3/6 py-20 overflow-hidden">
+    <section class="animasi2 dh-3/6 pb-20 overflow-hidden">
       <div class="container mx-auto">
         <div class="notes flex flex-col text-center items-center">
           <h2 
@@ -300,34 +302,39 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
         <div class="mx-auto p-4">
         <div class="flex flex-col lg:flex-row justify-center items-center gap-11 gap-y-11 max-w-4xl mx-auto [&>*]:text-center">
-          <div class="w-full flex flex-col items-center">
-            <div
-              class="fade-right opacity-0 rounded-full w-40 h-40 md:w-60 md:h-60 bg-cover bg-center bg-white flex justify-center items-center ring-offset-2 ring-4 ring-pink-600"
-              style={`background-image:url(${imgfr})`}
-            >
-            </div>
-            <h3 class="fade-left opacity-0 text-6xl mt-6 font-montecarlo text-pink-600">{ female }</h3>
-            <div class="fade-up opacity-0 font-josefin space-y-3">
-              
-              <p class="text-xl font-medium border-b-2 border-b-pink-600">{ fullfemale }</p>
-              <p class="text-lg">{childfemale}</p>
-              <p class="text-lg font-medium text-pink-600">
-                { parentfemale }</p>
-              <p>{cityfemale}</p>
-              <div class="flex gap-3 text-center justify-center mt-4">
-                <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
-                  <Icon name="mdi:facebook" class="w-10 h-10 text-pink-700 hover:text-white hover:bg-pink-700 bg-white p-2 rounded-full" />
-                </a>
-                <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
-                  <Icon name="mdi:instagram" class="w-10 h-10 text-pink-700 hover:text-white hover:bg-pink-700 bg-white p-2 rounded-full" />
-                </a>
+            <div class="w-full flex flex-col items-center">
+              <div class="fade-right opacity-0 relative flex items-center justify-center w-72">
+                <div class="w-56 h-64 bg-cover bg-center relative rounded-full"
+                style={`background-image:url(${imgfr})`}>
+                </div>
+                <img src="/assets/floral2.webp" alt="JejakBahagia"  class="absolute">
+              </div>
+              <h3 class="fade-left opacity-0 text-6xl mt-6 font-montecarlo text-pink-600">{ female }</h3>
+              <div class="fade-up opacity-0 font-josefin space-y-3">
+                  <p class="text-xl font-medium border-b-2 border-b-pink-600">{ fullfemale }</p>
+                  <p class="text-lg">{childfemale}</p>
+                  <p class="text-lg font-medium text-pink-600">
+                    { parentfemale }</p>
+                  <p>{cityfemale}</p>
+                  <div class="flex gap-3 text-center justify-center mt-4">
+                    <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
+                      <Icon name="mdi:facebook" class="w-10 h-10 text-pink-700 hover:text-white hover:bg-pink-700 bg-white p-2 rounded-full" />
+                    </a>
+                    <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
+                      <Icon name="mdi:instagram" class="w-10 h-10 text-pink-700 hover:text-white hover:bg-pink-700 bg-white p-2 rounded-full" />
+                    </a>
+                  </div>
               </div>
             </div>
-          </div>
             <div class="w-full flex flex-col items-center">
-              <div
-                class="fade-left opacity-0 rounded-full w-40 h-40 md:w-60 md:h-60 bg-cover bg-center bg-white flex justify-center items-center ring-offset-2 ring-4 ring-pink-600"
-                style={`background-image:url(${imgfv})`}>
+              
+              <div class="fade-left opacity-0 relative">
+                <div class="relative flex items-center justify-center w-72">
+                    <div
+                    class="w-56 h-64 bg-cover bg-center relative rounded-full"
+                    style={`background-image:url(${imgfv})`}>
+                </div>
+                <img src="/assets/floral2.webp" alt="JejakBahagia"  class="absolute">
               </div>
               <h3 class="fade-right opacity-0 text-6xl mt-6 font-montecarlo text-pink-600">{ male }</h3>
               <div class="fade-up opacity-0 font-josefin space-y-3">
@@ -351,29 +358,23 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section  class="animasi5 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute"
+    <section class="animasi5 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-pink-100 before:to-transparent before:inset-0 before:bg-cover before:absolute"
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
         <div class="text-center my-5">
-          <h2 class="fade-left opacity-0 text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-white">Countdown to</h2>
-          <h1 class="fade-right opacity-0 text-white text-center font-montecarlo text-4xl md:text-6xl lg:text-8xl">
+          <h2 class="fade-left opacity-0 text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-pink-600">Countdown to</h2>
+          <h1 class="fade-right opacity-0 text-pink-600 text-center font-montecarlo text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up opacity-0 grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-white [&>*]:p-1">
+        <div id="timer" class="fade-up opacity-0 grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-pink-600 [&>*]:p-1">
           
         <Countdown/>
         </div>
         <div id="endevent" class="fade-up opacity-0 hidden leading-8 text-white text-2xl capitalize font-josefin">Event Telah Berakhir</div>
       </div>
-      <div class="images absolute w-full rotate-180" style="top: -5px;">
-        <img src="/assets/mask.png" class="bg-cover" alt="mask" />
-      </div>
-      <div class="images absolute w-full" style="bottom: -5px;">
-        <img src="/assets/mask.png" class="bg-cover" alt="mask" />
-      </div>
     </section>
-    <section  class="animasi6 overflow-hidden">
+    <section class="animasi6 overflow-hidden">
       <div class="container mx-auto py-20 px-6">
         <div class="text-center my-5 mb-10">
           <h2 class="fade-right opacity-0 text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
@@ -469,7 +470,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section  class="animasi7 overflow-hidden">
+    <section class="animasi7 overflow-hidden">
       <div class="container mx-auto px-6 py-20 text-center">
         <div>
           <h2 class="fade-left opacity-0 text-2xl font-bold mt-5 font-josefin">The Journey</h2>
@@ -532,7 +533,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section  class="animasi8 overflow-hidden">
+    <section class="animasi8 overflow-hidden">
       <div class="container mx-auto px-6 py-20">
         <div class="text-center my-5 mb-10">
           <h2 class="fade-left opacity-0 text-xl md:text-2xl font-bold mt-5 font-josefin">A Glimpse of</h2>
@@ -618,11 +619,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section  class="animasi9 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden py-20 before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
+    <section class="animasi9 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden py-20 before:content-[''] before:bg-gradient-to-b before:from-pink-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
       <div class="container  text-center mx-auto relative z-10">
         <div>
           <h2 class="fade-down opacity-0 text-5xl lg:text-8xl text-pink-400 font-montecarlo">Wedding Gift</h2>
-          <p class="fade-left opacity-0 max-w-prose mx-auto mt-5 font-josefin text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
+          <p class="fade-left opacity-0 max-w-prose mx-auto mt-5 font-josefin text-gray-800">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
         </div>
         <div class="fade-up opacity-0 py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
           <div class="text-center font-poppins flex flex-col items-center">
@@ -635,23 +636,23 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 <button class="bg-pink-600 text-white px-5 py-2 rounded-lg">Copy Rekening</button>
                 <Payment />
               </div>
-              <span class="copy-message absolute hidden text-pink-600 -bottom-6 inset-x-0">Rekening dicopy</span>
+              <span class="copy-message absolute hidden inset-x-0">Rekening dicopy</span>
             </div>
           </div>
         </div>
       </div>
       </div>
     </section>
-    <section  class="animasi10 bg-gray-100 overflow-hidden">
+    <section class="animasi10 overflow-hidden">
       <div class="container py-20 px-6 text-center mx-auto">
         <div class="text-center my-5 mb-10">
           <h2 class="fade-down opacity-0 text-pink-600 text-center font-montecarlo text-5xl lg:text-8xl">
             Ucapan & Doa
           </h2>
-          <h2 class="fade-right opacity-0 text-xl md:text-2xl font-bold mt-5 font-josefin">Please Confirm Your Attendance</h2>
+          <h2 class="fade-right opacity-0 text-xl md:text-2xl font-bold mt-5 font-josefin text-gray-800">Please Confirm Your Attendance</h2>
         </div>
 
-        <Rsvp />
+        <Rsvp color="pink-600"/>
           
       </div>
     </section>

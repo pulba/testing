@@ -242,9 +242,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         <img src="/assets/pattern-2.png" alt="JejakBahagia" class="fade-down opacity-0 mx-auto">
         <div class="flex flex-col lg:flex-row justify-center items-center gap-y-16 max-w-4xl mx-auto mt-5 [&>*]:text-center [&>*]:w-full [&>*]:flex [&>*]:flex-col [&>*]:items-center">
           <div>
-            <div
-              class="fade-right opacity-0 rounded-full w-48 h-48 md:w-60 md:h-60 bg-cover bg-center bg-white border-8 border-gray-500 flex justify-center items-center grayscale"
+            <div class="fade-right opacity-0 relative grayscale flex items-center justify-center w-72">
+              <div class="w-56 h-64 bg-cover bg-center relative rounded-full"
               style={`background-image:url(${imgfr})`}>
+              </div>
+              <img src="/assets/floral2.webp" alt="JejakBahagia"  class="absolute">
             </div>
             <h3 class="fade-down opacity-0 text-8xl mt-6 font-nautigal text-gray-800">{ female }</h3>
             <div class="fade-up opacity-0 font-poppins space-y-3">
@@ -267,9 +269,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
             </div>
           </div>
             <div>
-              <div
-                class="fade-left opacity-0 rounded-full w-48 h-48 md:w-60 md:h-60 bg-cover bg-center bg-white border-8 border-gray-500 flex justify-center items-center grayscale"
+              <div class="fade-right opacity-0 relative grayscale flex items-center justify-center w-72">
+                <div class="w-56 h-64 bg-cover bg-center relative rounded-full"
                 style={`background-image:url(${imgfv})`}>
+                </div>
+                <img src="/assets/floral2.webp" alt="JejakBahagia"  class="absolute">
               </div>
               <h3 class="fade-down opacity-0 text-8xl mt-6 font-nautigal text-gray-800">{ male }</h3>
               <div class="fade-up opacity-0 font-poppins space-y-3">
@@ -528,6 +532,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               <button class="bg-gray-800 text-white px-5 py-2 rounded-full">Copy Rekening</button>
               <Payment />
             </div>
+            <span class="copy-message absolute hidden -bottom-6 inset-x-0">Rekening dicopy</span>
           </div>
         </div>
       </div>

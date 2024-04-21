@@ -191,9 +191,23 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 <Noheader title={title} desc="Ini halaman Demo Wedding 1 dari undangan">
   
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
-  <section class="animasi hero relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500"
+  <section class="animasi relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500"
     style={`background-image:url(${cover})`}>
-    <div class="container mx-auto flex flex-col justify-center items-center text-white relative overflow-hidden">
+    <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+      <div>
+        <img src="/assets/dekor1.webp" class="-scale-x-100" alt="JejakBahagia" />
+      </div>
+      <div class="right-0 top-0">
+        <img src="/assets/dekor2.webp" class="-scale-x-100 -rotate-90 right-0 top-0" alt="JejakBahagia" />
+      </div>
+      <div class="left-0 bottom-0">
+        <img src="/assets/dekor2.webp" class="" alt="JejakBahagia" />
+      </div>
+      <div class="bottom-0 right-0">
+        <img src="/assets/dekor1.webp" class="rotate-90" alt="JejakBahagia" />
+      </div>
+    </div>
+    <div class="container mx-auto flex flex-col justify-center items-center text-white relative overflow-hidden z-50">
         <h1 class="animate-fadedown text-xl mb-8 font-josefin font-semibold text-blue-600">
         Wedding Invitation
         </h1>
@@ -201,13 +215,13 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
             
         </div>
         <div class="animate-zoomin relative">
-            <div class="relative flex items-center justify-center w-72">
+            <div class="relative flex items-center justify-center w-56 md:w-64">
                 <div
-                class="w-56 h-64 bg-cover bg-center relative"
+                class="w-48 h-48 bg-cover bg-center relative"
                 style={`background-image:url(${imgstory8}); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);`}>
             </div>
             <img src="/assets/floral-frame.png" alt="JejakBahagia"  class="absolute">
-            </div>
+          </div>
         </div>
         <div class="text-blue-600 mx-auto text-center">
         
@@ -229,9 +243,18 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         >
     </div>
   </section>
-  <main id="myDIV" class="hidden peer-checked:block">
+  <main id="myDIV" class="hidden bg-blue-100 peer-checked:block">
     <section class="animasi1 relative h-screen bg-cover bg-center mx-auto overflow-hidden"
       style={`background-image:url(${cover})`}>
+      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+        <div>
+          <img src="/assets/dekor1.webp" class="-scale-x-100" alt="JejakBahagia" />
+        </div>
+        
+        <div class="bottom-0 right-0">
+          <img src="/assets/dekor2.webp" class="-scale-x-100" alt="JejakBahagia" />
+        </div>
+      </div>
       <div
         class="container mx-auto h-screen flex flex-col justify-center items-center text-white relative z-10 font-josefin"
       >
@@ -247,11 +270,17 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         <h3 class="animate-fadeup text-xl md:text-2xl">{ date }</h3>
       </div>
       </div>
-      <div class="images absolute w-full" style="bottom: -5px;">
-        <img src="/assets/mask.png" class="bg-cover" alt="JejakBahagia" />
-      </div>
     </section>
-    <section class="animasi2 dh-3/6 py-20 overflow-hidden">
+    <section class="animasi2 dh-3/6 overflow-hidden relative">
+      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+        <div>
+          <img src="/assets/dekor1.webp" class="-scale-x-100" alt="JejakBahagia" />
+        </div>
+        <div class="right-0 top-0">
+          <img src="/assets/dekor2.webp" class="-scale-x-100 -rotate-90 right-0 top-0" alt="JejakBahagia" />
+        </div>
+        
+      </div>
       <div class="container mx-auto">
         <div class="flex flex-col text-center items-center">
           <h2
@@ -273,8 +302,17 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section class="animasi4 relative py-20 overflow-hidden">
-      <div class="container mx-auto">
+    <section class="animasi4 relative overflow-hidden">
+      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+        
+        <div class="left-0 bottom-0">
+          <img src="/assets/dekor2.webp" class="" alt="JejakBahagia" />
+        </div>
+        <div class="bottom-0 right-0">
+          <img src="/assets/dekor1.webp" class="rotate-90" alt="JejakBahagia" />
+        </div>
+      </div>
+      <div class="container py-20 mx-auto">
         <div class="fade-down flex flex-col text-center items-center mb-9">
           <h1 class="fade-down opacity-0 text-blue-600 text-center font-montecarlo text-6xl lg:text-8xl">
             Bride x Groom
@@ -344,24 +382,18 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section class="animasi5 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute"
+    <section class="animasi5 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute"
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
         <div class="text-center my-5">
-          <h2 class="fade-down opacity-0 text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-white">Countdown to</h2>
-          <h1 class="fade-down opacity-0 text-white text-center font-montecarlo text-4xl md:text-6xl lg:text-8xl">
+          <h2 class="fade-down opacity-0 text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-blue-700">Countdown to</h2>
+          <h1 class="fade-down opacity-0 text-blue-700 text-center font-montecarlo text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up opacity-0  grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-white [&>*]:p-1">
+        <div id="timer" class="fade-up opacity-0  grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-blue-700 [&>*]:p-1">
         </div>
         <Countdown/>
-      </div>
-      <div class="images absolute w-full rotate-180" style="top: -5px;">
-        <img src="/assets/mask.png" class="bg-cover" alt="mask" />
-      </div>
-      <div class="images absolute w-full" style="bottom: -5px;">
-        <img src="/assets/mask.png" class="bg-cover" alt="mask" />
       </div>
     </section>
     <section class="animasi6 relative overflow-hidden">
@@ -453,6 +485,20 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       </div>
     </section>
     <section class="animasi7 relative overflow-hidden">
+      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+        <div class="rotate-90">
+          <img src="/assets/dekor1.webp" class="-scale-100" alt="JejakBahagia" />
+        </div>
+        <div class="top-0 right-0 scale-100 rotate-90">
+          <img src="/assets/dekor2.webp" class="rotate-90" alt="JejakBahagia" />
+        </div>
+        <div class="left-0 bottom-0">
+          <img src="/assets/dekor2.webp" class="" alt="JejakBahagia" />
+        </div>
+        <div class="bottom-0 right-0">
+          <img src="/assets/dekor1.webp" class="rotate-90" alt="JejakBahagia" />
+        </div>
+      </div>
       <div class="container mx-auto px-6 py-20 text-center">
         <div>
           <h2 class="fade-down opacity-0 text-2xl font-bold mt-5 font-josefin">The Journey</h2>
@@ -616,14 +662,29 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 <button class="bg-blue-600 text-white px-5 py-2 rounded-lg">Copy Rekening</button>
                 <Payment />
               </div>
+              <span class="copy-message absolute hidden inset-x-0">Rekening dicopy</span>
             </div>
           </div>
         </div>
       </div>
       </div>
     </section>
-    <section class="animasi10 bg-gray-100 overflow-hidden">
-      <div class="container py-20 px-6 text-center mx-auto">
+    <section class="animasi10 bg-gray-100 overflow-hidden relative">
+      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+        <div class="rotate-90">
+          <img src="/assets/dekor1.webp" class="-scale-100" alt="JejakBahagia" />
+        </div>
+        <div class="top-0 right-0 scale-100 rotate-90">
+          <img src="/assets/dekor2.webp" class="rotate-90" alt="JejakBahagia" />
+        </div>
+        <div class="left-0 bottom-0">
+          <img src="/assets/dekor2.webp" class="" alt="JejakBahagia" />
+        </div>
+        <div class="bottom-0 right-0">
+          <img src="/assets/dekor1.webp" class="rotate-90" alt="JejakBahagia" />
+        </div>
+      </div>
+      <div class="container py-20 z-50 px-6 text-center mx-auto relative">
         <div class="fade-down text-center my-5 mb-10">
           <h2 class="fade-left text-blue-600 text-center font-montecarlo text-5xl lg:text-8xl">
             Ucapan & Doa
