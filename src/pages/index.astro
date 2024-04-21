@@ -221,7 +221,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             <div class="px-8 py-12 bg-gray-50 border border-pink-700 hover:scale-105 transition-all duration-500 ease-linear">
               <div class="text-center">
                   <p class="text-2xl font-semibold text-gray-800">TANPA FOTO</p>
-                  <h4 class="mt-2 text-gray-600 line-through">Rp.65.000</h4>
+                  <h4 class="mt-2 text-gray-600 line-through">Rp.100.000</h4>
                   <h4 class="mt-2 text-4xl font-semibold flex justify-center text-gray-800"><span class="text-xl font-medium">Rp</span>49.000</h4>
                   <p class="mt-4 text-gray-500">Masa Aktif 1 Bulan</p>
               </div>
@@ -272,7 +272,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             <div class="px-8 py-12 bg-gray-50 border border-pink-700 hover:scale-105 transition-all duration-500 ease-linear">
                 <div class="text-center">
                     <p class="text-2xl font-semibold text-gray-800">Silver</p>
-                    <h4 class="mt-2 text-gray-600 line-through">Rp.115.000
+                    <h4 class="mt-2 text-gray-600 line-through">Rp.150.000
                     </h4>
                     <h4 class="mt-2 text-4xl font-semibold flex justify-center text-gray-800"><span class="text-xl font-medium">Rp</span>75.000</h4>
                     <p class="mt-4 text-gray-500">Masa Aktif 1 Bulan</p>
@@ -328,7 +328,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
                 <div class="px-8 py-12">
                     <div class="text-center text-white">
                         <p class="text-2xl font-semibold">Diamond</p>
-                        <h4 class="mt-2 line-through">Rp.150.000</h4>
+                        <h4 class="mt-2 line-through">Rp.200.000</h4>
                         <h4 class="mt-2 text-4xl font-semibold flex justify-center"><span class="text-xl font-medium">Rp</span>99.000</h4>
                         <p class="mt-4">Masa Aktif 1 Tahun</p>
                     </div>
@@ -388,7 +388,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
               <div class="text-center text-white">
                   <h4 class="text-2xl font-semibold">Exclusive</h4>
                   <h4 class="mt-2 line-through">Rp.250.0000</h4>
-                  <h4 class="mt-2 text-4xl font-semibold flex justify-center"><span class="text-xl font-medium">Rp</span>129.000</h4>
+                  <h4 class="mt-2 text-4xl font-semibold flex justify-center"><span class="text-xl font-medium">Rp</span>149.000</h4>
                   <p class="mt-4">Masa Aktif 1 Tahun</p>
               </div>
 
@@ -465,30 +465,30 @@ const posts = await Astro.glob('../pages/demo/*.astro');
     </div>
   <div class="w-full max-w-xl mx-auto mt-5 pt-8 space-y-4 font-poppins">
     <div x-data="{ open: true }" class="bg-gray-100 p-4 rounded-md">
-      <button x-on:click="open = ! open" class="text-lg text-gray-900"> Apa itu Jejak Bahagia?
+      <button x-on:click="open = ! open" class="text-left text-base text-gray-900"> Apa itu Jejak Bahagia?
       </button>
-      <div x-show="open" class="pt-2 text-gray-500">
+      <div x-show="open" class="pt-2 text-gray-500 text-sm">
         Jejak Bahagia adalah sebuah layanan web undangan nikah digital yang memungkinkan pasangan untuk membuat undangan pernikahan secara online dengan berbagai fitur menarik.
       </div>
     </div>
     <div x-data="{ open: false }" class="bg-gray-100 p-4 rounded-md">
-      <button x-on:click="open = ! open" class="text-left text-lg text-gray-900"> Apa keunggulan Jejak Bahagia dibandingkan undangan konvensional?
+      <button x-on:click="open = ! open" class="text-left text-base text-gray-900"> Apa keunggulan Jejak Bahagia dibandingkan undangan konvensional?
       </button>
-      <div x-show="open" class="pt-2 text-gray-500">
+      <div x-show="open" class="pt-2 text-gray-500 text-sm">
         Jejak Bahagia memberikan kemudahan dalam proses pembuatan undangan nikah yang cepat, efisien, dan ramah lingkungan karena tidak menggunakan kertas. Selain itu, fitur-fitur interaktif seperti RSVP online, galeri foto, dan peta lokasi memudahkan tamu undangan untuk berpartisipasi dan merasa lebih terlibat.
       </div>
     </div>
     <div x-data="{ open: false }" class="bg-gray-100 p-4 rounded-md">
-      <button x-on:click="open = ! open" class="text-left text-lg text-gray-900"> Bagaimana cara membuat undangan nikah di Jejak Bahagia?
+      <button x-on:click="open = ! open" class="text-left text-base text-gray-900"> Bagaimana cara membuat undangan nikah di Jejak Bahagia?
       </button>
-      <div x-show="open" class="pt-2 text-gray-500">
+      <div x-show="open" class="pt-2 text-gray-500 text-sm">
         Anda cukup mendaftar di platform sosial media Jejak Bahagia, lalu pilih template undangan yang diinginkan lalu kirimkan informasi acara pernikahan Anda. Setelah itu, undangan akan siap untuk dibagikan kepada tamu undangan melalui tautan unik.
       </div>
     </div>
     <div x-data="{ open: false }" class="bg-gray-100 p-4 rounded-md">
-      <button x-on:click="open = ! open" class="text-lg text-gray-900"> Apakah Jejak Bahagia menyediakan fitur RSVP online?
+      <button x-on:click="open = ! open" class="text-left text-base text-gray-900"> Apakah Jejak Bahagia menyediakan fitur RSVP online?
       </button>
-      <div x-show="open" class="pt-2 text-gray-500">
+      <div x-show="open" class="pt-2 text-gray-500 text-sm">
         Ya, Jejak Bahagia dilengkapi dengan fitur RSVP online yang memudahkan tamu undangan untuk mengkonfirmasi kehadiran mereka dengan cepat dan mudah melalui platform tersebut.
       </div>
     </div>
