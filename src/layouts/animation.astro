@@ -15,7 +15,7 @@ window.onscroll = () => {
     elements.forEach(element => {
         var animasi = document.querySelector(element);
         if (animasi) {
-            var elementTop = animasi.offsetTop - 100;
+            var elementTop = animasi.offsetTop - 500;
             if (top > elementTop && !animasi.classList.contains('animated')) {
                 
                 animasi.classList.add('animated');

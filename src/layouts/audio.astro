@@ -2,7 +2,7 @@
 import { Icon } from 'astro-iconify';
 ---
 
-<section class="fixed bottom-5 right-5 z-20">
+<div class="">
     <div x-data="{ playing: false }" id="playPauseBtn" class="relative flex items-end justify-end bg-white rounded-full p-2 ml-auto w-max border-[1px] border-red-800">
       <button x-show="!playing" x-on:click="playing = true">
           <Icon name="mdi:music-note" class="text-red-800 w-8 h-8"/>
@@ -11,7 +11,7 @@ import { Icon } from 'astro-iconify';
           <Icon name="mdi:music-note-off" class="text-red-800 w-8 h-8" />
       </button>
     </div>
-  </section> 
+  </div> 
 
   <script>
 

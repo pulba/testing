@@ -15,37 +15,38 @@ const userig = "jejakbahagia_";
   <div class="container mx-auto pt-20 pb-2 px-6">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 font-poppins">
       <div class="flex flex-col items-start space-y-2 text-white">
-        <Logo text="pink-600" textsc="white"/>
+        <Logo file="jejakbahagiawhite"/>
         <p>Solusi pernikahan lebih hemat, praktis, dan kekinian dengan JejakBahagia yang disebar otomatis.
         </p>
       </div>
-      <div class="flex flex-col items-start space-y-3 text-white [&>*]:flex [&>*]:flex-row [&>*]:gap-2 [&>*]:justify-center [&>*]:items-center">
-        <h3 class="text-xl font-bold pb-5">Lebih Dekat dengan Kami</h3>
-        <div>
-          <a href={`https://www.${instagram}.com/${userig}`} class="flex flex-row gap-2 items-center">
-            <Icon name="mdi:instagram" class="w-10 h-10 text-pink-600 hover:text-white hover:bg-pink-600 bg-white p-2 rounded-full" />{userig}
+      <div class="flex flex-col items-start text-white">
+        <h3 class="text-base pb-5">Lebih Dekat dengan Kami</h3>
+        <div class="grid grid-cols-4 gap-4 [&>*]:flex [&>*]:flex-row [&>*]:gap-2 [&>*]:justify-center [&>*]:items-center">
+          <div>
+            <a href={`https://www.${instagram}.com/${userig}`} class="flex flex-row gap-2 items-center">
+              <Icon name="mdi:instagram" class="w-10 h-10 text-pink-600 hover:text-white hover:bg-pink-600 bg-white p-2 rounded-full" />
+            </a>
+          </div>
+          <div>
+            <a href={`https://www.${facebook}.com/${userfb}`} class="flex flex-row gap-2 items-center">
+            <Icon name="mdi:facebook" class="w-10 h-10 text-pink-600 hover:text-white hover:bg-pink-600 bg-white p-2 rounded-full" />
           </a>
-        </div>
-        <div>
-          <a href={`https://www.${facebook}.com/${userfb}`} class="flex flex-row gap-2 items-center">
-          <Icon name="mdi:facebook" class="w-10 h-10 text-pink-600 hover:text-white hover:bg-pink-600 bg-white p-2 rounded-full" />{userfb}
-        </a>
-        </div>
-        <div>
-          <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=jejakbahagiainfo@gmail.com" class="flex flex-row gap-2 items-center">
-          <Icon name="mdi:email" class="w-10 h-10 text-pink-600 hover:text-white hover:bg-pink-600 bg-white p-2 rounded-full" />jejakbahagiainfo@gmail.com
-        </a>
-        </div>
-        <div>
-          <a href="https://wa.me/6281532094978?text=Hallo admin Jejak Bahagia, buat undangan dong!" class="flex flex-row items-center gap-2">
-          <Icon name="mdi:whatsapp" class="w-10 h-10 text-pink-600 hover:text-white hover:bg-pink-600 bg-white p-2 rounded-full" />
-          <p>+62 815-3209-4978</p>
+          </div>
+          <div>
+            <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=jejakbahagiainfo@gmail.com" class="flex flex-row gap-2 items-center">
+            <Icon name="mdi:email" class="w-10 h-10 text-pink-600 hover:text-white hover:bg-pink-600 bg-white p-2 rounded-full" />
           </a>
-          
+          </div>
+          <div>
+            <a href="https://wa.me/6281532094978?text=Hallo admin Jejak Bahagia, buat undangan dong!" class="flex flex-row items-center gap-2">
+            <Icon name="mdi:whatsapp" class="w-10 h-10 text-pink-600 hover:text-white hover:bg-pink-600 bg-white p-2 rounded-full" />
+            </a>
+            
+          </div>
         </div>
       </div>
       <div class="">
-        <h3 class="text-xl font-bold pb-5 text-white">Support Pembayaran</h3>
+        <h3 class="text-base pb-5 text-white">Support Pembayaran</h3>
         <div class="grid max-[300px]:grid-cols-3 grid-cols-6 gap-3 items-center relative justify-start text-white w-fit [&>*]:flex [&>*]:flex-row [&>*]:gap-2 [&>*]:justify-center [&>*]:items-center [&>*]:rounded-full [&>*]:relative [&>*]:w-10 [&>*]:h-10 [&>*]:bg-white">
           <div class="hover:bg-pink-600">
             <img src="/assets/bri.png" alt="Pembayaran" class="absolute w-6">
@@ -69,7 +70,7 @@ const userig = "jejakbahagia_";
       </div>
     </div>
     <div class="border-t border-1 mt-10 border-pink-40  0 text-center">
-      <p class="text-white pt-5">Copyright © 2024 <a href="#" class="text-pink-600 hover:text-white">JejakBahagia</a> All Right Reserved</p>
+      <p class="text-white pt-5">Copyright © 2024 <a href="#" class="text-pink-500 hover:text-white">JejakBahagia</a> All Right Reserved</p>
     </div>
   </div>
 </footer>

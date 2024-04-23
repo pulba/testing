@@ -9,16 +9,24 @@ const { title, desc } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <SEO title={title} desc={desc} />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
+    <style>
+      body::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      body::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+      }
+      
+      body::-webkit-scrollbar-thumb {
+        background-color: #db2777;
+        border-radius: 25px;
+      }
+    </style>
   </head>
   <body>
     <Primary>
       <slot />
     </Primary>
-    <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script is:inline>
-      AOS.init();
-    </script>
   </body>
 </html>
