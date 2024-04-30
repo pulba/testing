@@ -12,15 +12,15 @@ import Audio from '../../layouts/audio.astro'
 import Animation from '../../layouts/animation.astro';
 
 export const data = {
-  slug: "demo/wedding-3",
-  title: "Demo 3",
+  slug: "demo/wedding-8",
+  title: "Demo 8",
   type: "Basic",
   img: {
-    url: '/assets/demo-3.webp',
+    url: '/assets/demo-8.webp',
     alt: "jejak bahagia"
   },
   cover: {
-    url: '/assets/bg-wedding-1.jpg',
+    url: '/assets/foto-tambahan-9.jpg',
     alt: "jejak bahagia"
   },
   imgth: {
@@ -189,80 +189,85 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   desc="Ini halaman Demo Wedding 2 dari undangan"
 >
 <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear " />
-<section class="animasi1 relative h-screen bg-cover bg-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-gradient-to-t before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${cover})`}>
+<section class="animasi1 relative h-screen bg-cover bg-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-gradient-to-t before:from-sky-500 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${cover})`}>
   
   <div class="container h-screen pb-20 mx-auto flex flex-col justify-between items-center relative">
-    <h1 class="animate-fadedown text-sm md:text-xl mt-8 tracking-widest font-poppins font-semibold text-black">
+    <h1 class="animate-fadedown text-sm md:text-xl mt-8 tracking-widest font-poppins font-semibold text-sky-500">
         WEDDING INVITATION
     </h1>
-    <div class="text-center text-orange-400">
+    <div class="text-center">
         
         <div
-        class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-nautigal font-thin text-orange-500 text-center text-6xl lg:text-8xl">
+        class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-nautigal font-thin text-white text-center text-6xl lg:text-8xl">
         <span>{ female }</span>
         <span> & </span> 
         <span> { male } </span> 
       </div>
-        <h3 class="animate-faderight mt-2 font-poppins">Dear Mr./Mrs./Ms.</h3>
-        <h4 id="invite-name" class="animate-fadeleft text-orange-500 my-3 capitalize">
+        <h3 class="animate-faderight mt-2 font-poppins text-white">Dear Mr./Mrs./Ms.</h3>
+        <h4 id="invite-name" class="animate-fadeleft font-bold text-xl text-white my-3 capitalize">
           <Namatamu /> nama tamu
         </h4>
         <label
           for="toggle" id="toaudio"
-          class="animate-fadeup w-fit mx-auto mt-5 px-4 py-2 relative bg-orange-400 text-white flex gap-1 transition-all duration-700 ease-linear hover:bg-orange-500 uppercase">Open Invitation </label>
+          class="animate-fadeup w-fit mx-auto mt-5 px-4 py-2 relative bg-white text-sky-500 flex gap-1 transition-all duration-700 ease-linear hover:bg-sky-500 uppercase">Open Invitation </label>
     </div>
   </div>
 </section>
-<main id="myDIV" class="hidden bg-orange-100 peer-checked:block scroll-smooth">
-  <section class="animasi2 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${imgth})`}>
-    <div class="container px-6 mx-auto py-20 text-orange-500 relative overflow-hidden">
-      <div class="h-screen grid grid-cols-1 gap-4 place-content-end">
-        <h2
-        class="animate-faderight font-nautigal font-thin text-black w-full max-[300px]:text-5xl min-[300px]:text-6xl md:text-7xl lg:text-9xl relative after:content-[''] after:h-[1px] after:w-full after:bg-orange-500 after:top-1/2 after:absolute after:ml-3 after:-translate-y-1/2">{ male } & { female }
-      </h2>
-      <p class="animate-fadeup max-w-prose font-poppins">{quote}</p>    
+<main id="myDIV" class="hidden bg-sky-500 peer-checked:block scroll-smooth">
+  <section class="animasi2 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-sky-500 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${imgstory7})`}>
+    <div class="container h-screen pb-20 mx-auto flex flex-col justify-center items-center relative">
+        <h1 class="animate-fadedown text-sm md:text-xl mt-8 tracking-widest font-poppins font-semibold text-white">
+            WEDDING INVITATION
+        </h1>
+        <div class="text-center">
+            
+            <div
+            class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-nautigal font-thin text-white text-center text-6xl lg:text-8xl">
+            <span>{ female }</span>
+            <span> & </span> 
+            <span> { male } </span> 
+          </div>
+        </div>
       </div>
-    </div>
   </section>
-  <section class="animasi3 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute"
+  <section class="animasi3 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-sky-500 before:to-transparent before:inset-0 before:bg-cover before:absolute"
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
         <div class="text-center my-5">
-          <h2 class="fade-down opacity-0  text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-black">Countdown to</h2>
-          <h1 class="fade-right opacity-0  text-orange-500 text-center font-nautigal text-4xl md:text-6xl lg:text-8xl">
+          <h2 class="fade-down opacity-0  text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-white">Countdown to</h2>
+          <h1 class="fade-right opacity-0  text-white text-center font-nautigal text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up opacity-0  grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-orange-500 [&>*]:p-1">
+        <div id="timer" class="fade-up opacity-0  grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-bold [&>*]:text-white [&>*]:p-1">
         </div>
         <Countdown>
       </div>
   </section>
-  <section class="animasi4 bg-orange-100 overflow-hidden">
+  <section class="animasi4 bg-sky-500 overflow-hidden">
     <div class="container py-20 px-6 mx-auto">
-        <img src="/assets/pattern-2.png" alt="JejakBahagia" class="fade-down opacity-0  mx-auto">
+        <img src="/assets/dekor10.webp" alt="JejakBahagia" class="fade-left opacity-0  mx-auto">
         <div class="flex flex-col lg:flex-row justify-center items-center gap-y-16 max-w-4xl mx-auto mt-5 [&>*]:text-center [&>*]:w-full [&>*]:flex [&>*]:flex-col [&>*]:items-center">
         <div>
             <div class="fade-right opacity-0 relative flex items-center justify-center w-72">
-              <div class="w-56 h-64 bg-cover bg-center relative"
+              <div class="w-56 h-56 bg-cover ring-4 ring-white border-sky-500 border-4 bg-center relative rounded-full"
               style={`background-image:url(${imgfr})`}>
               </div>
-              <img src="/assets/dekor8.png" alt="JejakBahagia"  class="absolute">
             </div>
-            <h3 class="fade-down opacity-0  text-8xl mt-6 font-nautigal text-orange-500">{ female }</h3>
-            <div class="fade-up opacity-0  font-poppins space-y-3 text-black">
-            <div>
-              <p class="text-xl font-medium border-b-2 border-b-orange-500 w-max mx-auto">{ fullfemale }</p>
+            <h3 class="fade-down opacity-0  text-8xl mt-6 font-nautigal text-white">{ female }</h3>
+            <div class="fade-up opacity-0  font-poppins space-y-3 text-white">
+            <div class="text-white">
+              <p class="text-xl font-medium border-b-2 border-b-sky-500 w-max mx-auto">{ fullfemale }</p>
               <p class="text-lg">{childfemale}</p>
-              <p class="text-lg font-medium text-orange-500">
+              <p class="text-lg font-medium text-white">
                 { parentfemale }
               </p>
               <div class="flex gap-3 text-center justify-center mt-4">
                 <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
-                  <Icon name="mdi:facebook" class="w-8 h-8 text-orange-300 hover:text-orange-500" />
+                  <Icon name="mdi:facebook" class="w-8 h-8 text-white hover:text-white" />
                 </a>
                 <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
-                  <Icon name="mdi:instagram" class="w-8 h-8 text-orange-300 hover:text-orange-500" />
+                  <Icon name="mdi:instagram" class="w-8 h-8 text-white hover:text-white" />
                 </a>
               </div>
             </div>
@@ -270,25 +275,24 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
             <div>
               <div class="fade-right opacity-0 relative flex items-center justify-center w-72">
-                <div class="w-56 h-64 bg-cover bg-center relative"
-                style={`background-image:url(${imgfv})`}>
-                </div>
-                <img src="/assets/dekor8.png" alt="JejakBahagia"  class="absolute">
+                <div class="w-56 h-56 bg-cover ring-4 ring-white border-sky-500 border-4 bg-center relative rounded-full"
+              style={`background-image:url(${imgfv})`}>
               </div>
-            <h3 class="fade-down opacity-0  text-8xl mt-6 font-nautigal text-orange-500">{male}</h3>
-            <div class="fade-up opacity-0  font-poppins space-y-3 text-black">
-                <div>
-                  <p class="text-xl font-medium border-b-2 border-b-orange-500 w-max mx-auto">{fullmale}</p>
+              </div>
+            <h3 class="fade-down opacity-0  text-8xl mt-6 font-nautigal text-white">{male}</h3>
+            <div class="fade-up opacity-0  font-poppins space-y-3 text-white">
+                <div class="text-white">
+                  <p class="text-xl font-medium border-b-2 border-b-sky-500 w-max mx-auto">{fullmale}</p>
                   <p class="text-lg">{ childmale }</p>
-                  <p class="text-lg font-medium text-orange-500">
+                  <p class="text-lg font-medium text-white">
                     { parentmale }
                   </p>
                   <div class="flex gap-3 text-center justify-center mt-4">
                     <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
-                      <Icon name="mdi:facebook" class="w-8 h-8 text-orange-300 hover:text-orange-500" />
+                      <Icon name="mdi:facebook" class="w-8 h-8 text-white hover:text-white" />
                     </a>
                     <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
-                      <Icon name="mdi:instagram" class="w-8 h-8 text-orange-300 hover:text-orange-500" />
+                      <Icon name="mdi:instagram" class="w-8 h-8 text-white hover:text-white" />
                     </a>
                   </div>
                 </div>
@@ -297,24 +301,24 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
     </div>
   </section>
-  <section class="animasi5 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-before:content-[''] before:bg-gradient-to-b before:from-orange-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url('/assets/ring-cd.jpg');">
+  <section class="animasi5 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-before:content-[''] before:bg-gradient-to-b before:from-sky-500 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url('/assets/ring-cd.jpg');">
   <div class="container py-20 px-6 mx-auto relative z-10">
     <div class="text-center my-5 mb-10">
-        <h2 class="fade-down opacity-0  text-black text-center font-nautigal text-5xl lg:text-8xl">
+        <h2 class="fade-down opacity-0  text-white text-center font-nautigal text-5xl lg:text-8xl">
             Event will be organized
         </h2>
       </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-x-8 gap-y-16 mt-5 pt-16">
-      <div class="fade-right opacity-0  text-center font-poppins w-full border border-orange-500 rounded-lg py-20 px-8">
-        <h2 class="text-center font-nautigal text-4xl md:text-6xl text-orange-500">Akad Nikah</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-x-8 gap-y-16 mt-5 pt-16 [&>*]:bg-sky-500 [&>*]:opacity-0 [&>*]:text-center [&>*]:font-poppins [&>*]:w-full [&>*]:border [&>*]:border-sky-500 [&>*]:rounded-lg [&>*]:border-2 [&>*]:border-white [&>*]:py-20 [&>*]:px-8">
+      <div class="fade-right">
+        <h2 class="text-center font-nautigal text-4xl md:text-6xl text-white">Akad Nikah</h2>
         <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-orange-500"
+          <strong class="text-md font-bold text-white"
             >{date}
           </strong>
         </p>
         <p class="mt-2 sm:mt-4 text-md">{timefs}</p>
         <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-orange-500"
+          <strong class="text-md font-bold text-white"
             >{addressfs}</strong
           >
         </p>
@@ -323,21 +327,21 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </p>
         <div class="group">
         <a href={mapsfs}>
-          <button class="mx-auto mt-8 flex items-center justify-center rounded-full border border-orange-500 text-orange-500 px-12 py-3 text-center text-sm font-medium group-hover:bg-orange-500 group-hover:text-white group-hover:border-none group-hover:duration-500 group-hover:transition-all">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-orange-500 group-hover:text-white" />
+          <button class="mx-auto mt-8 flex items-center justify-center rounded-full bg-white text-sky-500 px-12 py-3 text-center text-sm font-medium">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-white group-hover:text-white" />
           </button>
         </a>
         </div>
       </div>
-      <div class="fade-left opacity-0  text-center font-poppins w-full border border-orange-500 rounded-lg py-20 px-8">
-        <h2 class="text-center font-nautigal text-4xl md:text-6xl text-orange-500">Resepsi</h2>
+      <div class="fade-left">
+        <h2 class="text-center font-nautigal text-4xl md:text-6xl text-white">Resepsi</h2>
         <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-orange-500"
+          <strong class="text-md font-bold text-white"
             >{date}
           </strong>
         </p>
         <p class="mt-2 sm:mt-4 text-md">{timefs}</p>
         <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-orange-500"
+          <strong class="text-md font-bold text-white"
             >{addresssc}</strong
           >
         </p>
@@ -346,7 +350,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </p>
         <div class="group">
           <a href={mapsfs}>
-            <button class="mx-auto mt-8 flex items-center justify-center rounded-full border border-orange-500 text-orange-500 px-12 py-3 text-center text-sm font-medium group-hover:bg-orange-500 group-hover:text-white group-hover:border-none group-hover:duration-500 group-hover:transition-all">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-orange-500 group-hover:text-white" />
+            <button class="mx-auto mt-8 flex items-center justify-center rounded-full bg-white text-sky-500 px-12 py-3 text-center text-sm font-medium">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-white group-hover:text-white" />
             </button>
           </a>
         </div>
@@ -357,44 +361,44 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 <section class="animasi6 overflow-hidden">
   <div class="container mx-auto px-6 py-20">
     <div class="text-center my-5 mb-10">
-      <h2 class="fade-down opacity-0  text-black text-center font-nautigal text-5xl lg:text-8xl">
+      <h2 class="fade-down opacity-0  text-white text-center font-nautigal text-5xl lg:text-8xl">
         Our Moment
       </h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 justify-center gap-2 pb-20 w-full md:max-w-4xl mx-auto [&>*]:p-1 [&>*]:relative">
       <div class="fade-right opacity-0 ">
-        <div class="truncate">
+        <div class="truncate rounded-md">
           <img
           src={imgstory1}
             alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+            class="object-cover aspect-video transition-all duration-700 rounded-md	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
           />
         </div>
       </div>
       <div class="fade-left opacity-0 ">
-        <div class="truncate">
+        <div class="truncate rounded-md">
           <img
           src={imgstory3}
             alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+            class="object-cover aspect-video transition-all duration-700 rounded-md	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
           />
         </div>
       </div>
-      <div class="fade-up opacity-0 ">
+      <div class="fade-up opacity-0 rounded-md">
         <div class="truncate">
           <img
           src={imgstory2}
             alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+            class="object-cover aspect-video transition-all duration-700 rounded-md	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
           />
         </div>
       </div>
-      <div class="fade-down opacity-0 ">
+      <div class="fade-down opacity-0 rounded-md">
         <div class="truncate">
           <img
           src={imgstory3}
             alt="Foto 1"
-            class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
+            class="object-cover aspect-video transition-all duration-700 rounded-md	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
           />
         </div>
       </div>
@@ -402,20 +406,20 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   </div>
 </section>
 <section class="animasi7 relative overflow-hidden">
-  <div class="absolute inset-0 bg-black bg-cover bg-no-repeat bg-center bg-fixed bg-center before:content-[''] before:bg-black before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg);"></div>
+  <div class="absolute inset-0 bg-white bg-cover bg-no-repeat bg-center bg-fixed bg-center before:content-[''] before:bg-gradient-to-b before:from-sky-500 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg);"></div>
   <div class="container py-20 px-6 text-center mx-auto relative">
     <div>
       <h2 class="fade-right opacity-0  text-5xl lg:text-8xl text-white font-nautigal">Wedding Gift</h2>
-      <img src="/assets/pattern-2.png" alt="JejakBahagia" class="fade-left opacity-0  mx-auto">
+      <img src="/assets/dekor10.webp" alt="JejakBahagia" class="fade-left opacity-0  mx-auto">
       <p class="fade-down opacity-0  max-w-prose mx-auto mt-5 font-poppins text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
     </div>
-    <div class="fade-up opacity-0  py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
+    <div class="fade-up opacity-0 relative py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-center items-center flex flex-col mx-auto gap-5 bg-white rounded shadow-lg">
       <div class="text-center font-poppins">
-        <p class="text-2xl text-orange-500 mt-5 md:mt-0 font-bold mb-3">{bank}</p>
+        <p class="text-2xl text-sky-500 mt-5 md:mt-0 font-bold mb-3">{bank}</p>
         <p class="max-w-prose">{namebank}</p>
         <span class="copy-content font-bold">{numberbank}</span>
         <div class="icon pt-5">
-          <button class="bg-orange-500 text-white px-5 py-2 rounded-full">Copy Rekening</button>
+          <button class="bg-sky-500 text-white px-5 py-2 rounded-full">Copy Rekening</button>
           <Payment />
         </div>
         <span class="copy-message absolute hidden inset-x-0">Rekening dicopy</span>
@@ -427,11 +431,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 <section class="animasi8 overflow-hidden">
   <div class="container py-20 sm:px-6 text-center mx-auto">
     <div class="text-center my-5 mb-10">
-      <h2 class="fade-down opacity-0  text-orange-500 text-center font-nautigal text-5xl lg:text-8xl">
+      <h2 class="fade-down opacity-0  text-white text-center font-nautigal text-5xl lg:text-8xl">
         Reservation
       </h2>
     </div>
-    <Rsvp color="orange-500"/>
+    <Rsvp color="sky-500" />
   </div>
 </section>
 <section class="sticky bottom-5 right-5 z-20">
