@@ -1,6 +1,6 @@
 ---
 import Noheader from '../../layouts/noheader.astro';
-import '@fontsource/montecarlo';
+import '@fontsource/great-vibes';
 import '@fontsource-variable/josefin-sans';
 import { Icon } from 'astro-iconify';
 import Namatamu from '../../layouts/namatamu.astro'
@@ -9,14 +9,14 @@ import Rsvp from '../../layouts/rsvp.astro'
 import Countdown from '../../layouts/countdown.astro'
 import Footerpost from '../../layouts/footer-post.astro'
 import Audio from '../../layouts/audio.astro'
-import Animation from '../../layouts/audio.astro'
+import Animation from '../../layouts/animation.astro'
 
 export const data = {
-  slug: "demo/wedding-10",
-  title: "Demo 10",
+  slug: "demo/wedding-11",
+  title: "Demo 11",
   type: "Silver",
   img: {
-    url: '/assets/demo-10.webp',
+    url: '/assets/demo-11.webp',
     alt: "jejak bahagia"
   },
   cover: {
@@ -191,37 +191,45 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 <Noheader title={title} desc="Ini halaman Demo Wedding 1 dari undangan">
   
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
-  <section class="animasi relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-black/65 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute"
+  <section class="animasi relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-white/65 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute"
     style={`background-image:url(${cover})`}>
-    <div class="container mx-auto flex flex-col justify-center items-center text-white relative overflow-hidden z-50">
-        <h1 class="animate-fadedown text-xl mb-8 font-josefin font-semibold text-white">
-        Wedding Invitation
-        </h1>
-        <div class="text-white mx-auto text-center [&>*]:text-white">
-            <div class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-montecarlo text-center text-6xl lg:text-8xl">
+    <div class="container mx-auto flex flex-col justify-center items-center text-yellow-500 relative overflow-hidden z-50">
+      <div class="animate-zoomin relative">
+        <div class="relative flex items-center justify-center">
+            <div
+            class="w-44 h-44 bg-cover bg-center relative rounded-full shadow-xl shadow-black/50"
+            style={`background-image:url(${imgstory8})`}>
+        </div>
+      </div>
+    </div>
+    <h1 class="animate-fadedown text-xl mt-8 font-josefin font-semibold text-purple-900">
+    Wedding Invitation
+    </h1>
+        <div class="mx-auto text-center [&>*]:text-purple-900">
+            <div class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-great text-center text-6xl lg:text-8xl">
                 <span>{ female }</span>
-                <span> & </span> 
+                <span > & </span> 
                 <span> { male } </span> 
             </div>
             <h3 class="animate-faderight mt-2 font-poppins">Dear Mr./Mrs./Ms.</h3>
-            <h4 id="invite-name" class="animate-fadeleft my-3 capitalize">
+            <h4 id="invite-name" class="animate-fadeleft text-2xl my-3 capitalize">
                 <Namatamu /> nama tamu
             </h4>
         </div>
         <label
             for="toggle" id="toaudio"
-            class="animate-fadeup mt-5 px-6 py-2 relative bg-red-900 rounded-full shadow-xl text-white font-bold flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-white"
+            class="animate-fadeup mt-5 px-6 py-2 relative bg-purple-900 rounded-full shadow-xl text-yellow-500 font-bold flex gap-1 transition-all duration-700 ease-linear hover:bg-purple-700 hover:text-yellow-500"
             >Open Invitation <Icon name="mdi:love-letter" class="w-5 h-5" /></label
         >
     </div>
   </section>
-  <main id="myDIV" class="hidden bg-red-900 peer-checked:block">
-    <section class="animasi1 relative h-screen bg-cover bg-center mx-auto overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-red-900 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${imgsc})`}>
-      <div class="container mx-auto h-screen flex flex-col justify-end items-end text-white relative z-10 font-josefin">
-      <div class="[&>*]:text-white mx-auto text-center flex flex-col items-center">
+  <main id="myDIV" class="hidden relative bg-purple-900 peer-checked:block">
+    <section class="animasi1 relative h-screen bg-cover bg-center mx-auto overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-purple-900 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${imgsc})`}>
+      <div class="container mx-auto h-screen flex flex-col justify-end items-end text-yellow-500 relative z-10 font-josefin">
+      <div class="[&>*]:text-yellow-500 mx-auto text-center flex flex-col items-center">
         <h2 class="animate-faderight text-xl mt-4">The Wedding of</h2>
         <div
-        class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-montecarlo text-white text-center text-6xl lg:text-8xl">
+        class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-great text-yellow-500 text-center text-6xl lg:text-8xl">
           <span>{ female }</span>
           <span> & </span> 
           <span> { male } </span> 
@@ -233,21 +241,21 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="animasi5 relative">
       <div class="container py-32 mx-auto relative z-10">
         <div class="text-center my-5">
-          <h2 class="fade-down opacity-0 text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-white">Countdown to</h2>
-          <h1 class="fade-down opacity-0 text-white text-center font-montecarlo text-4xl md:text-6xl lg:text-8xl">
+          <h2 class="fade-down opacity-0 text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-yellow-500">Countdown to</h2>
+          <h1 class="fade-down opacity-0 text-yellow-500 text-center font-great text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up opacity-0  grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-white [&>*]:p-1">
+        <div id="timer" class="fade-up opacity-0  grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-yellow-500 [&>*]:p-1">
         </div>
         <Countdown/>
       </div>
     </section>
-    <section class="animasi2 dh-3/6 overflow-hidden relative -mt-20">       
+    <section class="animasi2 w-full max-w-screen-md mx-auto overflow-hidden relative -mt-20">       
       <div class="container mx-auto py-20 px-6 bg-white rounded-[50px] shadow-lg">
-        <div class="flex flex-col text-center items-center text-red-900">
+        <div class="flex flex-col text-center items-center text-purple-900">
           <h2
-            class="fade-down text-center font-montecarlo text-6xl lg:text-8xl my-6"
+            class="fade-down text-center font-great text-6xl lg:text-8xl my-6"
           >
             Quote
           </h2>
@@ -256,8 +264,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
             {quote}
           </p>
         </div>
-        <div class="fade-down flex flex-col mt-5 text-red-900 text-center items-center mb-9">
-            <h1 class="fade-down opacity-0 text-center font-montecarlo text-6xl lg:text-8xl">
+        <div class="fade-down flex flex-col mt-5 text-purple-900 text-center items-center mb-9">
+            <h1 class="fade-down opacity-0 text-center font-great text-6xl lg:text-8xl">
               Bride x Groom
             </h1>
             <p class="fade-right opacity-0 font-medium pb-8 text-lg font-josefin">
@@ -276,8 +284,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 
               </div>
               
-              <h3 class="fade-down opacity-0 text-6xl mt-6 font-montecarlo text-red-900">{ female }</h3>
-              <div class="fade-up opacity-0 font-josefin space-y-3 text-red-900">
+              <h3 class="fade-down opacity-0 text-6xl mt-6 font-great text-purple-900">{ female }</h3>
+              <div class="fade-up opacity-0 font-josefin space-y-3 text-purple-900">
                 <p class="text-xl font-medium border-b-2 border-b-white">{ fullfemale }</p>
                 <p class="text-lg">{childfemale}</p>
                 <p class="text-lg font-medium">
@@ -285,10 +293,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 <p>{cityfemale}</p>
                 <div class="flex gap-3 text-center justify-center mt-4">
                   <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
-                    <Icon name="mdi:facebook" class="w-10 h-10 text-white hover:text-white hover:bg-red-900 bg-white p-2 rounded-full" />
+                    <Icon name="mdi:facebook" class="w-10 h-10 text-white hover:text-yellow-500 bg-purple-900 hover:bg-purple-700 p-2 rounded-full" />
                   </a>
                   <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
-                    <Icon name="mdi:instagram" class="w-10 h-10 text-white hover:text-white hover:bg-red-900 bg-white p-2 rounded-full" />
+                    <Icon name="mdi:instagram" class="w-10 h-10 text-white hover:text-yellow-500 bg-purple-900 hover:bg-purple-700 p-2 rounded-full" />
                   </a>
                 </div>
               </div>
@@ -302,8 +310,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                     </div>
                     
                   </div>
-                  <h3 class="fade-down opacity-0 text-6xl mt-6 font-montecarlo text-red-900">{ male }</h3>
-                <div class="fade-up opacity-0 font-josefin space-y-3 text-red-900">
+                  <h3 class="fade-down opacity-0 text-6xl mt-6 font-great text-purple-900">{ male }</h3>
+                <div class="fade-up opacity-0 font-josefin space-y-3 text-purple-900">
                   <p class="text-xl font-medium border-b-2 border-b-white">{ fullmale }</p>
                   <p class="text-lg">{ childmale }</p>
                   <p class="text-lg font-medium">
@@ -312,10 +320,10 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                   <p>{citymale}</p>
                   <div class="flex gap-3 text-center justify-center mt-4">
                     <a href={`https://www.facebook.com/${facebookmale}`} class="flex flex-row gap-2 items-center">
-                      <Icon name="mdi:facebook" class="w-10 h-10 text-white hover:text-white hover:bg-red-900 bg-white p-2 rounded-full" />
+                      <Icon name="mdi:facebook" class="w-10 h-10 text-white hover:text-yellow-500 bg-purple-900 hover:bg-purple-700 p-2 rounded-full" />
                     </a>
                     <a href={`https://www.instagram.com/${instagrammale}`} class="flex flex-row gap-2 items-center">
-                      <Icon name="mdi:instagram" class="w-10 h-10 text-white hover:text-white hover:bg-red-900 bg-white p-2 rounded-full" />
+                      <Icon name="mdi:instagram" class="w-10 h-10 text-white hover:text-yellow-500 bg-purple-900 hover:bg-purple-700 p-2 rounded-full" />
                     </a>
                   </div>
                 </div>
@@ -327,17 +335,17 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="animasi6 relative overflow-hidden">
       <div class="container mx-auto py-20 px-6">
         <div class="text-center my-5 mb-10">
-          <h2 class="fade-left opacity-0 text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin text-white">Where & When</h2>
-          <h1 class="fade-right opacity-0 text-white text-center font-montecarlo text-5xl lg:text-8xl">
+          <h2 class="fade-left opacity-0 text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin text-yellow-500">Where & When</h2>
+          <h1 class="fade-right opacity-0 text-yellow-500 text-center font-great text-5xl lg:text-8xl">
             Wedding Day
           </h1>
         </div>
         <div
-          class="grid gird-cols-1 md:grid-cols-3 max-w-4xl w-full mx-auto justify-center items-center gap-4 mt-5 [&>*]:mx-auto [&>*]:rounded-2xl [&>*]:h-full [&>*]:border [&>*]:border-white [&>*]:text-white [&>*]:p-12 [&>*]:w-full"
+          class="grid gird-cols-1 md:grid-cols-3 max-w-4xl w-full mx-auto justify-center items-center gap-4 mt-5 [&>*]:mx-auto [&>*]:rounded-2xl [&>*]:h-full [&>*]:border [&>*]:border-white [&>*]:text-yellow-500 [&>*]:p-12 [&>*]:w-full"
         >
           <div class="fade-right opacity-0">
             <div class="text-center font-josefin">
-              <h2 class="text-center font-montecarlo text-4xl">Akad Nikah</h2>
+              <h2 class="text-center font-great text-4xl">Akad Nikah</h2>
               <p class="mt-2 sm:mt-4">
                 <strong class="text-md font-bold"
                   >{date}
@@ -352,8 +360,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               <div class="group">
                 <a href={mapsfs}>
                   <button
-                class="mx-auto mt-8 flex items-center justify-center rounded-full border border-white text-white px-4 py-2 text-center text-sm font-medium"
-                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-white" /></button
+                class="mx-auto mt-8 flex items-center justify-center rounded-full border border-white text-yellow-500 px-4 py-2 text-center text-sm font-medium"
+                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-yellow-500" /></button
               >
                 </a>
               </div>
@@ -361,7 +369,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           </div>
           <div class="zoom-out opacity-0 ">
             <div class="text-center font-josefin">
-                <h2 class="text-center font-montecarlo text-5xl">Resepsi</h2>
+                <h2 class="text-center font-great text-5xl">Resepsi</h2>
                 <p class="mt-2 sm:mt-4">
                 <strong class="text-md font-bold">{date}</strong></p>
                 <p class="mt-2 sm:mt-4 text-md">{timesc}</p>
@@ -371,8 +379,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
                 <div class="group">
                 <a href={mapssc}>
                     <button
-                class="mx-auto mt-8 flex items-center justify-center rounded-full border border-white text-white px-4 py-2 text-center text-sm font-medium"
-                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-white" /></button
+                class="mx-auto mt-8 flex items-center justify-center rounded-full border border-white text-yellow-500 px-4 py-2 text-center text-sm font-medium"
+                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-yellow-500" /></button
                 >
                 </a>
                 </div>
@@ -380,7 +388,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           </div>
           <div class="fade-left opacity-0 ">
             <div class="text-center font-josefin">
-              <h2 class="text-center font-montecarlo text-4xl">Unduh Mantu</h2>
+              <h2 class="text-center font-great text-4xl">Unduh Mantu</h2>
               <p class="mt-2 sm:mt-4">
                 <strong class="text-md font-bold"
                   >{date}</strong
@@ -395,8 +403,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               <div class="group">
                 <a href={mapsth}>
                   <button
-                class="mx-auto mt-8 flex items-center justify-center rounded-full border border-white text-white px-4 py-2 text-center text-sm font-medium"
-                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-white" /></button
+                class="mx-auto mt-8 flex items-center justify-center rounded-full border border-white text-yellow-500 px-4 py-2 text-center text-sm font-medium"
+                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-yellow-500" /></button
               >
                 </a>
               </div>
@@ -408,9 +416,9 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </section>
     <section class="animasi8 relative overflow-hidden">
       <div class="container mx-auto px-6 py-20">
-        <div class="text-center my-5 mb-10 fade-down text-white">
+        <div class="text-center my-5 mb-10 fade-down text-yellow-500">
           <h2 class="fade-down opacity-0 text-xl md:text-2xl font-bold mt-5 font-josefin ">A Glimpse of</h2>
-          <h2 class="fade-down opacity-0 text-center font-montecarlo text-5xl lg:text-8xl">
+          <h2 class="fade-down opacity-0 text-center font-great text-5xl lg:text-8xl">
             Our Moments
           </h2>
         </div>
@@ -475,18 +483,18 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="animasi9 relative bg-cover bg-no-repeat bg-center bg-fixed py-20 overflow-hidden before:content-[''] before:bg-black/75 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
       <div class="container  text-center mx-auto relative z-10">
         <div>
-          <h2 class="fade-right text-5xl lg:text-8xl text-white font-montecarlo">Wedding Gift</h2>
-          <p class="fade-left max-w-prose mx-auto font-bold mt-5 font-josefin text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
+          <h2 class="fade-right text-5xl lg:text-8xl text-yellow-500 font-great">Wedding Gift</h2>
+          <p class="fade-left max-w-prose mx-auto font-bold mt-5 font-josefin text-yellow-500">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
         </div>
         <div class="fade-up py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
           <div class="text-center font-poppins flex flex-col items-center">
             <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
             <div class="font-josefin">
-              <p class="text-2xl text-white mt-5 md:mt-0 font-bold mb-3">{bank}</p>
+              <p class="text-2xl text-yellow-500 mt-5 md:mt-0 font-bold mb-3">{bank}</p>
               <p class="max-w-prose">{namebank}</p>
               <span class="copy-content font-bold">{numberbank}</span>
               <div class="icon pt-5">
-                <button class="bg-red-900 text-white px-5 py-2 rounded-lg">Copy Rekening</button>
+                <button class="bg-purple-900 text-white px-5 py-2 rounded-lg">Copy Rekening</button>
                 <Payment />
               </div>
               <span class="copy-message absolute hidden inset-x-0">Rekening dicopy</span>
@@ -498,18 +506,19 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </section>
     <section class="animasi10 overflow-hidden relative">
       <div class="container py-20 z-50 px-6 text-center mx-auto relative">
-        <div class="fade-down text-center my-5 mb-10 text-white">
-          <h2 class="fade-left text-center font-montecarlo text-5xl lg:text-8xl">
+        <div class="fade-down text-center my-5 mb-10 text-yellow-500">
+          <h2 class="fade-left text-center font-great text-5xl lg:text-8xl">
             Ucapan & Doa
           </h2>
           <h2 class="fade-right text-xl md:text-2xl font-bold mt-5 font-josefin">Please Confirm Your Attendance</h2>
         </div>
 
-        <Rsvp color="red-900" />
+        <Rsvp color="purple-900" />
           
       </div>
     </section>
-    <section class="sticky bottom-5 right-5 z-20">
+    <Footerpost />
+    <section class="fixed bottom-5 right-5 z-20">
       <div class="container flex flex-col items-end justify-end mx-auto">
         <a href="https://wa.me/6281532094978?text=Hallo Admin JejakBahagia, saya mau konsultasi undangan digital dong!" target="_blank">
           <Icon name="mdi:whatsapp" class="w-14 h-14 mb-5 text-white bg-green-500 rounded-full p-2" />
@@ -519,9 +528,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       </div>
     </section>
     <audio id="myAudio" loop class="hidden">
-      <source src="/assets/christina-perri-a-thousand-years.mp3" type="audio/mpeg" />
+      <source src="/assets/sezairi-its-you.mp3" type="audio/mpeg">
     </audio>
-    <Footerpost />
     <Animation />
   </main>
 </Noheader>

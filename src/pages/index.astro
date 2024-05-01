@@ -13,8 +13,8 @@ const posts = await Astro.glob('../pages/demo/*.astro');
       <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
         <div class="w-full py-8">
             <div class="px-6">
-                <h2 class="text-3xl min-[370px]:text-4xl min-[426px]:text-5xl sm:text-6xl md:text-7xl font-bold font-josefin text-gray-800">Buat Undangan Nikah? Disini <br/>
-                  <span class="bg-gradient-to-r from-pink-600 to-pink-700 inline-block text-transparent bg-clip-text">Murah Banget!</span></h2>
+                <h2 class="text-3xl min-[340px]:text-4xl min-[445px]:text-5xl sm:text-6xl md:text-7xl font-black font-poppins text-gray-800">Buat Undangan Nikah Online <br/>
+                  <span class="text-pink-700 italic font-thin">Murah & Cepat</span></h2>
 
                 <p class="mt-4 text-gray-600 font-poppins max-w-lg">Membuat Setiap Jejak Menuju Kebahagiaan dengan Harga yang Ramah di Kantong!</p>
 
@@ -301,7 +301,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             </div>
             <div class="overflow-hidden bg-pink-600">
               <div class="absolute right-0 top-0 h-16 w-16">
-                <div class="absolute right-[-34px] top-[32px] w-[170px] transform rotate-[44deg] bg-yellow-400 text-center text-white  font-bold py-1">Popular</div>
+                <div class="absolute right-[-34px] top-[32px] w-[170px] transform rotate-[44deg] bg-gray-300 text-center text-gray-800  font-bold py-1">Popular</div>
               </div>
                 <div class="px-8 py-12">
                     <div class="text-center text-white">
@@ -324,6 +324,9 @@ const posts = await Astro.glob('../pages/demo/*.astro');
                       </div>
                       <div>
                           <span class="mx-4 text-white">Love Stories</span>
+                      </div>
+                      <div>
+                          <span class="mx-4 text-white">Template IG Stories</span>
                       </div>
                       <div>
                           <span class="mx-4 text-white">Revisi 5 kali</span>
@@ -356,10 +359,13 @@ const posts = await Astro.glob('../pages/demo/*.astro');
                       <span class="mx-4 text-white">Video Live Steaming</span>
                   </div>
                   <div>
-                      <span class="mx-4">10 Foto</span>
+                      <span class="mx-4 text-white">10 Foto</span>
                   </div>
                   <div>
-                      <span class="mx-4">Revisi Unlimited</span>
+                      <span class="mx-4 text-white">Video Undangan</span>
+                  </div>
+                  <div>
+                      <span class="mx-4 text-white">Revisi 5 kali</span>
                   </div>
               </div>
 
@@ -411,7 +417,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
   </div>
   </div>
 </section>
-<section class="sticky bottom-0">
+<section class="fixed bottom-5 right-5 z-20">
   <div class="container flex items-end justify-end mx-auto">
     <a href="https://wa.me/6281532094978?text=Hallo Admin Jejak Bahagia, saya mau konsultasi undangan digital dong!" target="_blank">
       <Icon name="mdi:whatsapp" class="w-14 h-14 mb-5 text-white bg-green-500 rounded-full p-2" />

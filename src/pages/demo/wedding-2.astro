@@ -9,6 +9,7 @@ import Rsvp from '../../layouts/rsvp.astro'
 import Countdown from '../../layouts/countdown.astro'
 import Footerpost from '../../layouts/footer-post.astro'
 import Audio from '../../layouts/audio.astro'
+import Animation from '../../layouts/animation.astro'
 
 export const data = {
   slug: "demo/wedding-2",
@@ -548,7 +549,9 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         <Rsvp color="gray-600" />
       </div>
     </section>
-    <section class="sticky bottom-5 right-5 z-20">
+    
+    <Footerpost />
+    <section class="fixed bottom-5 right-5 z-20">
       <div class="container flex flex-col items-end justify-end mx-auto">
         <a href="https://wa.me/6281532094978?text=Hallo Admin JejakBahagia, saya mau konsultasi undangan digital dong!" target="_blank">
           <Icon name="mdi:whatsapp" class="w-14 h-14 mb-5 text-white bg-green-500 rounded-full p-2" />
@@ -560,7 +563,8 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <audio id="myAudio" loop class="hidden">
       <source src="/assets/john-legend-all-of-me.mp3" type="audio/mpeg">
     </audio>
-    <Footerpost />
+
+  <Animation />
   </main>
 </Noheader>
 

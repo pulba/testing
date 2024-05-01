@@ -1,0 +1,522 @@
+---
+import Noheader from '../../layouts/noheader.astro';
+import '@fontsource/great-vibes';
+import '@fontsource-variable/josefin-sans';
+import { Icon } from 'astro-iconify';
+import Namatamu from '../../layouts/namatamu.astro'
+import Payment from '../../layouts/payment.astro'
+import Rsvp from '../../layouts/rsvp.astro'
+import Countdown from '../../layouts/countdown.astro'
+import Footerpost from '../../layouts/footer-post.astro'
+import Audio from '../../layouts/audio.astro'
+import Animation from '../../layouts/animation.astro'
+
+export const data = {
+  slug: "demo/wedding-12",
+  title: "Demo 12",
+  type: "Exlusive",
+  img: {
+    url: '/assets/demo-12.webp',
+    alt: "jejak bahagia"
+  },
+  cover: {
+    url: '/assets/foto-tambahan-10.webp',
+    alt: "jejak bahagia"
+  },
+  imgsc: {
+    url: '/assets/foto-tambahan-11.webp'
+  },
+  imgth: {
+    url: '/assets/bg-wedding-2.jpg'
+  },
+
+  //Img kedua mempelai
+  imgfr: {
+    url: '/assets/girl-wedding.jpg'
+  },
+  imgfv: {
+    url: '/assets/man-wedding.jpg'
+  },
+
+  //Img Our Story
+  imgsx: {
+    url: '/assets/foto-stroy-1.jpg'
+  },
+  imgsv: {
+    url: '/assets/foto-stroy-2.jpg'
+  },
+  imgeg: {
+    url: '/assets/foto-stroy-3.jpg'
+  },
+  //img Our Moments
+  imgstory1: {
+    url: '/assets/foto-tambahan-11.webp'
+  },
+  imgstory2: {
+    url: '/assets/foto-tambahan-10.webp'
+  },
+  imgstory3: {
+    url: '/assets/foto-tambahan-9.jpg'
+  },
+  imgstory4: {
+    url: '/assets/foto-tambahan-8.jpg'
+  },
+  imgstory5: {
+    url: '/assets/foto-tambahan-7.jpg'
+  },
+  imgstory6: {
+    url: '/assets/foto-tambahan-6.jpg'
+  },
+  imgstory7: {
+    url: '/assets/foto-stroy-2.jpg'
+  },
+  imgstory8: {
+    url: '/assets/foto-moment-3.jpg'
+  },
+  logobank: {
+    url: '/assets/gopay.png'
+  },
+  male: "Romeo",
+  fullmale: "Romeo Montaquet",
+  female: "Juliet",
+  fullfemale: "Juliet Capulet",
+  date: "Jumat, 05 Januari 2030",
+
+  childmale: "Putra Pertama dari Pasangan",
+  childfemale: "Putri Pertama dari Pasangan",
+  parentmale: "Bambang & Mulyani",
+  parentfemale: "Joko & Siti",
+  instagrammale: "invivit.id",
+  instagramfemale: "invivit.id",
+  facebookmale: "invivit",
+  facebookfemale: "invivit",
+  citymale: "Yogyakarta",
+  cityfemale: "Lampung",
+
+//name bank
+  bank: "BCA",
+  namebank: "Yanto Nugroho",
+  numberbank: "123456789",
+  // waktu & tempat acara
+  timefs: "08:00 - 09:00 WIB",
+  timesc: "10:00 - 11:00 WIB",
+  timeth: "13:00 - end WIB",
+  addressfs: "Masjid Kampus UGM",
+  addresssc: "Jogja Expo Center",
+  addressth: "Rumah Mempelai Wanita",
+  locationfs: "Jl. Raya Janti Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55198",
+  locationsc: "Jl. Raya Janti Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55198",
+  locationth: "Jl. Raya Janti Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55198",
+  mapsfs: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
+  mapssc: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
+  mapsth: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
+
+  
+  storyfs: "Di sebuah kafe yang nyaman di tengah kota, dua orang asing, Juliet dan Romeo, tak sengaja bertemu. Romeo, seorang fotografer yang sedang mencari inspirasi untuk proyek terbarunya, sedangkan Juliet, seorang penulis lepas yang sedang mencatat ide-ide baru untuk novel romantisnya, tak menyadari bahwa matanya sedang bertatapan dengan seorang pria tampan di sisi lain kafe.",
+  storysc: "Beberapa bulan kemudian, Romeo memutuskan bahwa dia tidak ingin kehilangan Juliet dari hidupnya. Dengan hati yang penuh harap, dia menyiapkan proposal yang tak terlupakan. Di bawah langit malam yang cerah, di taman yang dihiasi dengan ratusan lentera, Romeo berlutut di hadapan Juliet.",
+  storyth: "Dari pertemuan tak terduga di kafe hingga momen indah pertunangan mereka di taman yang dipenuhi lentera, cerita cinta Juliet dan Romeo adalah bukti bahwa takdir bisa membawa dua hati yang saling mencari dan membuat mereka bersatu dalam cinta yang abadi.",
+  quote: "And everything that We have made in pairs so that you may remember (the greatness of Allah). Q.S Adz-Dzariat verse 49",
+}
+
+const { frontmatter } = Astro.props;
+const title = frontmatter ? frontmatter.title : data.title;
+
+const male = frontmatter ? frontmatter.male : data.male;
+const fullmale = frontmatter ? frontmatter.fullmale : data.fullmale;
+const female = frontmatter ? frontmatter.female : data.female;
+const fullfemale = frontmatter ? frontmatter.fullfemale : data.fullfemale;
+const date = frontmatter ? frontmatter.date : data.date;
+
+const childmale = frontmatter ? frontmatter.childmale : data.childmale;
+const childfemale = frontmatter ? frontmatter.childfemale : data.childfemale;
+const parentmale = frontmatter ? frontmatter.parentmale : data.parentmale;
+const parentfemale = frontmatter ? frontmatter.parentfemale : data.parentfemale;
+const instagrammale = frontmatter ? frontmatter.instagrammale : data.instagrammale;
+const instagramfemale = frontmatter ? frontmatter.instagramfemale : data.instagramfemale;
+const facebookmale = frontmatter ? frontmatter.facebookmale : data.facebookmale;
+const facebookfemale = frontmatter ? frontmatter.facebookfemale : data.facebookfemale;
+const citymale = frontmatter ? frontmatter.citymale : data.citymale;
+const cityfemale = frontmatter ? frontmatter.cityfemale : data.cityfemale;
+
+//bank
+const bank = frontmatter ? frontmatter.bank : data.bank;
+const namebank = frontmatter ? frontmatter.namebank : data.namebank;
+const numberbank = frontmatter ? frontmatter.numberbank : data.numberbank;
+const logobank = frontmatter ? frontmatter.logobank ? frontmatter.logobank.url ? frontmatter.logobank.url : data.logobank.url :  data.logobank.url : data.logobank.url;
+//waktu & tempat acara
+const timefs = frontmatter ? frontmatter.timefs : data.timefs;
+const timesc = frontmatter ? frontmatter.timesc : data.timesc;
+const timeth = frontmatter ? frontmatter.timeth : data.timeth;
+const addressfs = frontmatter ? frontmatter.addressfs : data.addressfs;
+const addresssc = frontmatter ? frontmatter.addresssc : data.addresssc;
+const addressth = frontmatter ? frontmatter.addressth : data.addressth;
+const mapsfs = frontmatter ? frontmatter.mapsfs : data.mapsfs;
+const mapssc = frontmatter ? frontmatter.mapssc : data.mapssc;
+const mapsth = frontmatter ? frontmatter.mapsth : data.mapsth;
+const locationfs = frontmatter ? frontmatter.locationfs : data.locationfs;
+const locationsc = frontmatter ? frontmatter.locationsc : data.locationsc;
+const locationth = frontmatter ? frontmatter.locationth : data.locationth;
+
+//story & quote
+const storyfs = frontmatter ? frontmatter.storyfs : data.storyfs;
+const storysc = frontmatter ? frontmatter.storysc : data.storysc;
+const storyth = frontmatter ? frontmatter.storyth : data.storyth;
+const quote = frontmatter ? frontmatter.quote : data.quote;
+
+//Img header
+const cover = frontmatter ? frontmatter.cover ? frontmatter.cover.url ? frontmatter.cover.url : data.cover.url :  data.cover.url : data.cover.url;
+const imgsc = frontmatter ? frontmatter.imgsc ? frontmatter.imgsc.url ? frontmatter.imgsc.url : data.imgsc.url :  data.imgsc.url : data.imgsc.url;
+const imgth = frontmatter ? frontmatter.imgth ? frontmatter.imgth.url ? frontmatter.imgth.url : data.imgth.url :  data.imgth.url : data.imgth.url;
+
+//Img kedua mempelai
+const imgfr = frontmatter ? frontmatter.imgfr ? frontmatter.imgfr.url ? frontmatter.imgfr.url : data.imgfr.url :  data.imgfr.url : data.imgfr.url;
+const imgfv = frontmatter ? frontmatter.imgfv ? frontmatter.imgfv.url ? frontmatter.imgfv.url : data.imgfv.url :  data.imgfv.url : data.imgfv.url;
+
+//Img Our Story
+const imgsx = frontmatter ? frontmatter.imgsx ? frontmatter.imgsx.url ? frontmatter.imgsx.url : data.imgsx.url :  data.imgsx.url : data.imgsx.url;
+const imgsv = frontmatter ? frontmatter.imgsv ? frontmatter.imgsv.url ? frontmatter.imgsv.url : data.imgsv.url :  data.imgsv.url : data.imgsv.url;
+const imgeg = frontmatter ? frontmatter.imgeg ? frontmatter.imgeg.url ? frontmatter.imgeg.url : data.imgeg.url :  data.imgeg.url : data.imgeg.url;
+
+//Img Our Moments
+const imgstory1 = frontmatter ? frontmatter.imgstory1 ? frontmatter.imgstory1.url ? frontmatter.imgstory1.url : data.imgstory1.url :  data.imgstory1.url : data.imgstory1.url;
+const imgstory2 = frontmatter ? frontmatter.imgstory2 ? frontmatter.imgstory2.url ? frontmatter.imgstory2.url : data.imgstory2.url :  data.imgstory2.url : data.imgstory2.url;
+const imgstory3 = frontmatter ? frontmatter.imgstory3 ? frontmatter.imgstory3.url ? frontmatter.imgstory3.url : data.imgstory3.url :  data.imgstory3.url : data.imgstory3.url;
+const imgstory4 = frontmatter ? frontmatter.imgstory4 ? frontmatter.imgstory4.url ? frontmatter.imgstory4.url : data.imgstory4.url :  data.imgstory4.url : data.imgstory4.url;
+const imgstory5 = frontmatter ? frontmatter.imgstory5 ? frontmatter.imgstory5.url ? frontmatter.imgstory5.url : data.imgstory5.url :  data.imgstory5.url : data.imgstory5.url;
+const imgstory6 = frontmatter ? frontmatter.imgstory6 ? frontmatter.imgstory6.url ? frontmatter.imgstory6.url : data.imgstory6.url :  data.imgstory6.url : data.imgstory6.url;
+const imgstory7 = frontmatter ? frontmatter.imgstory7 ? frontmatter.imgstory7.url ? frontmatter.imgstory7.url : data.imgstory7.url :  data.imgstory7.url : data.imgstory7.url;
+const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.url ? frontmatter.imgstory8.url : data.imgstory8.url :  data.imgstory8.url : data.imgstory8.url;
+---
+
+<Noheader title={title} desc="Ini halaman Demo Wedding 1 dari undangan">
+  
+  <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
+  <section class="animasi relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-black/80 before:inset-0 before:bg-cover before:absolute"
+    style={`background-image:url(${cover})`}>
+    <div class="container mx-auto flex flex-col justify-center items-center text-amber-200 relative overflow-hidden z-50">
+        <img src="/assets/dekor-11.png" alt="jejakbahagia" class="w-24 md:w-44 mb-5">
+        <div class="mx-auto text-center [&>*]:text-amber-500">
+            <div class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-great text-center text-6xl lg:text-8xl">
+                <span>{ female }</span>
+                <span > & </span> 
+                <span> { male } </span> 
+            </div>
+            <h3 class="animate-faderight mt-2 font-poppins">Dear Mr./Mrs./Ms.</h3>
+            <h4 id="invite-name" class="animate-fadeleft text-2xl my-3 capitalize">
+                <Namatamu /> nama tamu
+            </h4>
+        </div>
+        <label
+            for="toggle" id="toaudio"
+            class="animate-fadeup mt-5 px-6 py-2 relative bg-amber-200 rounded-full shadow-xl text-gray-800 font-bold flex gap-1 transition-all duration-700 ease-linear hover:bg-amber-300"
+            >Open Invitation <Icon name="mdi:love-letter" class="w-5 h-5" /></label
+        >
+    </div>
+  </section>
+  <main id="myDIV" class="hidden relative bg-gray-950 peer-checked:block">
+    <section class="animasi1 relative h-screen bg-cover bg-center mx-auto overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-gray-950 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${imgsc})`}>
+      <div class="container mx-auto h-screen flex flex-col justify-end items-end text-amber-200 relative z-10 font-josefin">
+      <div class="[&>*]:text-amber-200 mx-auto text-center flex flex-col items-center">
+        <img src="/assets/dekor-11.png" alt="jejakbahagia" class="w-24 md:w-44 mb-5">
+        <div
+        class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-great text-amber-200 text-center text-6xl lg:text-8xl">
+          <span>{ female }</span>
+          <span> & </span> 
+          <span> { male } </span> 
+        </div>
+        <h3 class="animate-fadeup text-xl md:text-2xl">{ date }</h3>
+      </div>
+      </div>
+    </section>
+    <section class="animasi5 relative">
+      <div class="container pt-20 mx-auto relative z-10">
+        <div class="flex flex-col text-center items-center text-amber-200">
+          <p class="fade-up opacity-0 sm:max-w-prose px-5 sm:px-0 max-w-none text-sm font-josefin"
+          >
+          Kami Akan Menikah, <br>
+          Dan Kami Ingin Anda Menjadi Bagian Dari Hari Istimewa Kami!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="animasi2 w-full mx-auto overflow-hidden relative">       
+      <div class="container mx-auto py-20 px-6">
+        <div class="text-center my-5 text-amber-200">
+          <h2 class="fade-down opacity-0 text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3">Countdown to</h2>
+          <h1 class="fade-down opacity-0 text-center font-great text-4xl md:text-6xl lg:text-8xl">
+            Save the Date
+          </h1>
+        </div>
+        <div id="timer" class="fade-up opacity-0  grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-amber-200 [&>*]:p-1">
+        </div>
+        <Countdown/>
+        <p class="fade-up text-amber-200 text-center mt-5 font-bold text-lg md:text-2xl">{date}</p>
+      </div>
+    </section>
+    <section class="animasi5 relative">
+        <div class="container py-12 md:py-20 mx-auto relative z-10">
+          <div class="flex flex-col text-center items-center text-amber-200 space-y-5 [&>*]:opacity-0 [&>*]:max-w-prose [&>*]:font-josefin">
+            <p class="fade-up">Assalamualaikum Wr. Wb.</p>
+            <p class="fade-up">Untuk Mengikuti Sunnah Rasul-Mu Dalam Rangka Membentuk Keluarga Yang Sakinah, Mawaddah, Warahmah.
+            </p>
+            <p class="fade-up">Maka Ijinkanlah Kami Menikahkannya. Ya Allah Perkenankan Kami Merangkaikan Kasih Sayang Yang Kau Ciptakan Diantara Putra-Putri Kami.</p>
+          </div>
+        </div>
+    </section>
+    <section class="animasi2 w-full max-w-screen-md mx-auto overflow-hidden relative">
+        <div class="container space-y-5">
+            <div class="fade-down flex flex-col mt-12 text-amber-200 text-center items-center">
+            <h1 class="fade-down opacity-0 text-center font-great text-5xl md:text-8xl">
+              Bride x Groom
+            </h1>
+            <p class="fade-right opacity-0 font-medium pb-8 text-lg font-josefin">
+              We Are Getting Married
+            </p>
+            </div>
+            <div class="flex flex-row justify-center items-center mx-auto [&>*]:opacity-0 [&>*]:w-full [&>*]:flex [&>*]:flex-col [&>*]:items-center">
+                <div class="fade-right">
+                    <div class="relative flex items-center justify-center w-full">
+                        <div class="relative flex items-center justify-center w-40 md:w-72">
+                          <div
+                          class="w-28 h-36 md:w-56 md:h-64 bg-cover bg-center relative"
+                          style={`background-image:url(${imgfr}); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);`}>
+                          </div>
+                          <img src="/assets/floral1.png" alt="JejakBahagia" class="absolute">
+                        </div>
+                      </div>
+                </div>
+                <div class="fade-left">
+                    <div class="relative flex items-center justify-center w-full">
+                        <div class="relative flex items-center justify-center w-40 md:w-72">
+                          <div
+                          class="w-28 h-36 md:w-56 md:h-64 bg-cover bg-center relative"
+                          style={`background-image:url(${imgfv}); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);`}>
+                          </div>
+                          <img src="/assets/floral1.png" alt="JejakBahagia" class="absolute">
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="text-center max-w-screen-sm mx-auto">
+                <div class="fade-up opacity-0 font-josefin space-y-3 text-amber-200">
+                    <p class="text-4xl md:text-6xl font-great font-medium">{ fullfemale }</p>
+                    <p class="text-lg">{childfemale}</p>
+                    <p class="text-lg font-medium">
+                    { parentfemale }</p>
+                    <p>{cityfemale}</p>
+                    <div class="flex gap-3 text-center justify-center mt-4">
+                    <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
+                        <Icon name="mdi:facebook" class="w-10 h-10 text-amber-600 bg-white hover:bg-amber-200 hover:text-white p-2 rounded-full" />
+                    </a>
+                    <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
+                        <Icon name="mdi:instagram" class="w-10 h-10 text-amber-600 bg-white hover:bg-amber-200 hover:text-white p-2 rounded-full" />
+                    </a>
+                    </div>
+                </div>
+                <div class="flex items-center w-full lg:w-1/2 mx-auto my-12 gap-x-4"> 
+                    <hr class="animate-faderight flex-grow border border-amber-200 w-max"> 
+                    <Icon name="mdi:clover" class="w-12 h-12 text-amber-200" /> 
+                    <hr class="animate-fadeleft flex-grow border border-amber-200 w-max"> 
+                </div> 
+                <div class="fade-up opacity-0 font-josefin space-y-3 text-amber-200">
+                <p class="text-4xl md:text-6xl font-great font-medium">{ fullmale }</p>
+                <p class="text-lg">{ childmale }</p>
+                <p class="text-lg font-medium">
+                    { parentmale }
+                </p>
+                <p>{citymale}</p>
+                <div class="flex gap-3 text-center justify-center mt-4">
+                    <a href={`https://www.facebook.com/${facebookmale}`} class="flex flex-row gap-2 items-center">
+                    <Icon name="mdi:facebook" class="w-10 h-10 text-amber-600 bg-white hover:bg-amber-200 hover:text-white p-2 rounded-full" />
+                    </a>
+                    <a href={`https://www.instagram.com/${instagrammale}`} class="flex flex-row gap-2 items-center">
+                    <Icon name="mdi:instagram" class="w-10 h-10 text-amber-600 bg-white hover:bg-amber-200 hover:text-white p-2 rounded-full" />
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="animasi6 relative overflow-hidden">
+      <div class="container mx-auto py-20 px-6">
+        <div class="text-center my-5 mb-10">
+          <h2 class="fade-left opacity-0 text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin text-amber-200">Where & When</h2>
+          <h1 class="fade-right opacity-0 text-amber-200 text-center font-great text-5xl md:text-8xl">
+            Wedding Day
+          </h1>
+        </div>
+        <div
+          class="grid gird-cols-1 sm:grid-cols-2 w-full mx-auto justify-center items-center gap-8 mt-5 [&>*]:mx-auto [&>*]:rounded-2xl [&>*]:h-full [&>*]:border [&>*]:border-amber-200 [&>*]:text-amber-200 [&>*]:p-8 [&>*]:space-y-4 [&>*]:opacity-0 [&>*]:w-full [&>*]:h-max"
+        >
+          <div class="fade-right">
+            <div class="flex items-center w-full mx-auto gap-x-4"> 
+                <hr class="flex-grow border border-amber-200">
+                <h2 class="text-center font-great text-4xl">Akad</h2>
+                <hr class="flex-grow border border-amber-200"> 
+            </div>
+            <div class="font-josefin flex flex-col justify-start items-start lg:items-center gap-4 [&>*]:flex [&>*]:flex-row [&>*]:gap-4 [&>*]:text-center [&>*]:justify-center">
+              <div class="">
+                <Icon name="mdi:date-range" class="w-6 h-6 text-amber-200" />
+                {date}
+              </div>
+              <div class="">
+                <Icon name="mdi:clock-time-four-outline" class="w-6 h-6 text-amber-200" />
+                {timefs}
+              </div> 
+              <div class="">
+                <Icon name="mdi:google-maps" class="w-6 h-6 text-amber-200" />
+                {addressfs}
+              </div>
+            </div>
+            <div class="group">
+              <a href={mapsfs}>
+                <button
+              class="mx-auto mt-8 flex items-center justify-center rounded-full border border-white text-amber-200 px-4 py-2 text-center text-sm font-medium"
+              >Kunjungi Lokasi <Icon name="mdi:google-maps" class="w-6 h-6 text-amber-200" /></button
+            >
+              </a>
+            </div>
+          </div>
+          <div class="fade-left">
+            <div class="flex items-center w-full mx-auto gap-x-4"> 
+                <hr class="flex-grow border border-amber-200">
+                <h2 class="text-center font-great text-4xl">Resepsi</h2>
+                <hr class="flex-grow border border-amber-200"> 
+            </div>
+            <div class="font-josefin flex flex-col justify-start items-start lg:items-center gap-4 [&>*]:flex [&>*]:flex-row [&>*]:gap-4 [&>*]:text-center [&>*]:justify-center">
+              <div class="">
+                <Icon name="mdi:date-range" class="w-6 h-6 text-amber-200" />
+                {date}
+              </div>
+              <div class="">
+                <Icon name="mdi:clock-time-four-outline" class="w-6 h-6 text-amber-200" />
+                {timefs}
+              </div> 
+              <div class="">
+                <Icon name="mdi:google-maps" class="w-6 h-6 text-amber-200" />
+                {addresssc}
+              </div>
+            </div>
+            <div class="group">
+              <a href={mapsfs}>
+                <button
+              class="mx-auto mt-8 flex items-center justify-center rounded-full border border-white text-amber-200 px-4 py-2 text-center text-sm font-medium"
+              >Kunjungi Lokasi <Icon name="mdi:google-maps" class="w-6 h-6 text-amber-200" /></button
+            >
+              </a>
+            </div>
+          </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873130.0607204797!2d110.1445006182314!3d-7.744660421581015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1712983300381!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="fade-up opacity-0 mx-auto mt-12 w-full max-w-3xl h-96 p-2 rounded-lg bg-amber-200"></iframe>
+      </div>
+    </section>
+    <section class="animasi8 relative overflow-hidden">
+      <div class="container mx-auto px-6 py-20">
+        <div class="text-center my-5 mb-10 fade-down text-amber-200">
+          <h2 class="fade-down opacity-0 text-xl md:text-2xl font-bold mt-5 font-josefin ">A Glimpse of</h2>
+          <h2 class="fade-down opacity-0 text-center font-great text-5xl lg:text-8xl">
+            Our Moments
+          </h2>
+        
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-5">
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory1} alt="Foto 1">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory2} alt="Foto 1">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory3} alt="Foto 1">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory4} alt="Foto 1">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory5} alt="Foto 1">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory6} alt="Foto 1">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory7} alt="Foto 1">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory8} alt="Foto 1">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory3} alt="Foto 1">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory4} alt="Foto 1">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory6} alt="Foto 1">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src={imgstory1} alt="Foto 1">
+        </div>
+    </div>
+</div>
+
+      </div>
+    </section>
+    <section class="animasi9 relative bg-cover bg-no-repeat bg-center bg-fixed py-20 overflow-hidden before:content-[''] before:bg-black/80 before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
+      <div class="container  text-center mx-auto relative z-10">
+        <div>
+          <h2 class="fade-right text-5xl lg:text-8xl text-amber-200 font-great">Wedding Gift</h2>
+          <p class="fade-left max-w-prose mx-auto font-bold mt-5 font-josefin text-amber-200">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
+        </div>
+        <div class="fade-up py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
+          <div class="text-center font-poppins flex flex-col items-center">
+            <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
+            <div class="font-josefin">
+              <p class="text-2xl text-amber-600 mt-5 md:mt-0 font-bold mb-3">{bank}</p>
+              <p class="max-w-prose">{namebank}</p>
+              <span class="copy-content font-bold">{numberbank}</span>
+              <div class="icon pt-5">
+                <button class="bg-amber-600 text-white px-5 py-2 rounded-lg">Copy Rekening</button>
+                <Payment />
+              </div>
+              <span class="copy-message absolute hidden inset-x-0">Rekening dicopy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="animasi10 overflow-hidden relative">
+      <div class="container py-20 z-50 px-6 text-center mx-auto relative">
+        <div class="fade-down text-center my-5 mb-10 text-amber-200">
+          <h2 class="fade-left text-center font-great text-5xl lg:text-8xl">
+            Ucapan & Doa
+          </h2>
+          <h2 class="fade-right text-xl md:text-2xl font-bold mt-5 font-josefin">Please Confirm Your Attendance</h2>
+        </div>
+
+        <Rsvp color="amber-600" />
+          
+      </div>
+    </section>
+    <Footerpost />
+    <section class="fixed bottom-5 right-5 z-20">
+      <div class="container flex flex-col items-end justify-end mx-auto">
+        <a href="https://wa.me/6281532094978?text=Hallo Admin JejakBahagia, saya mau konsultasi undangan digital dong!" target="_blank">
+          <Icon name="mdi:whatsapp" class="w-14 h-14 mb-5 text-white bg-green-500 rounded-full p-2" />
+        </a>
+        
+      <Audio />
+      </div>
+    </section>
+    <audio id="myAudio" loop class="hidden">
+      <source src="/assets/sezairi-its-you.mp3" type="audio/mpeg">
+    </audio>
+    <Animation />
+  </main>
+</Noheader>

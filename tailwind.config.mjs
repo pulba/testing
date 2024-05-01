@@ -10,6 +10,7 @@ export default {
       nautigal: ["The Nautigal", "cursive"],
       poppins: ["Poppins", "sans-serif"],
       haviland: ["Mr De Haviland", "cursive"],
+      great: ["Great Vibes", "cursive"],
     },
     extend: {
       animation: {

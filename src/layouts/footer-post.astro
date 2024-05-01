@@ -4,11 +4,10 @@ import '@fontsource/the-nautigal';
 import '@fontsource/mr-de-haviland';
 import Logo from '../components/logo.astro';
 import Animation from './animation.astro';
-const { colors } = Astro.props
 ---
 
 
-<section class={`relative bg-cover bg-no-repeat bg-top bg-fixed py-20 before:content-[''] before:bg-gradient-to-b before:from-${ colors } before:to-transparent before:inset-0 before:bg-cover before:absolute`} style="background-image: url(/assets/ring-footer.jpg)">
+<section class={`relative overflow-hidden bg-cover bg-no-repeat bg-center bg-top bg-fixed py-20 before:content-[''] before:bg-black/65 before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute`} style="background-image: url(/assets/wedding.jpg)">
     <div class="container text-center mx-auto relative z-10">
       <div class="flex flex-col items-center justify-center">
         <p class="animate-fadedown text-xl max-w-prose mx-auto font-bold mt-5 font-poppins text-white">Terimakasih</p>
