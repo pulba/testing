@@ -45,7 +45,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
                   
                   <div class="flex flex-col sm:flex-row gap-4 items-center justify-center sm:justify-start sm:justify-between mt-2">
                   <a href={post.data.slug} class="flex flex-row items-center justify-between gap-2 text-white bg-gray-600 w-fit px-4 py-2 rounded-md">{post.data.link}<Icon name="mdi:eye" class="w-4 h-4"/></a>
-                  <a href={post.data.slug} class="flex flex-row items-center justify-between gap-2 text-white bg-pink-600 w-fit px-4 py-2 rounded-md">Pesan <Icon name="mdi:whatsapp" class="w-4 h-4 text-white" /></a>
+                  <a href="/pesan" class="flex flex-row items-center justify-between gap-2 text-white bg-pink-600 w-fit px-4 py-2 rounded-md">Pesan <Icon name="mdi:whatsapp" class="w-4 h-4 text-white" /></a>
                   </div>
                       
                   </div>
