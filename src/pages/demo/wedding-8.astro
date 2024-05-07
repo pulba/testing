@@ -14,9 +14,11 @@ import Animation from '../../layouts/animation.astro';
 export const data = {
   slug: "demo/wedding-8",
   title: "Demo 8",
-  type: "Basic",
+  type: "Basic 02",
   link: "Preview",
   price: "Rp 49.000",
+  unprice: "Rp. 75.000",
+  number: 1,
   img: {
     url: '/assets/demo-8.webp',
     alt: "jejak bahagia"
@@ -194,37 +196,37 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 <section class="animasi1 relative h-screen bg-cover bg-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-gradient-to-t before:from-sky-500 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${cover})`}>
   
   <div class="container h-screen pb-20 mx-auto flex flex-col justify-between items-center relative">
-    <h1 class="animate-fadedown text-sm md:text-xl mt-8 tracking-widest font-poppins font-semibold text-sky-500">
+    <h1 class="animate-fadedown text-sm md:text-xl mt-8 tracking-widest font-poppins font-semibold   text-sky-2000">
         WEDDING INVITATION
     </h1>
-    <div class="text-center">
+    <div class="text-center text-sky-200">
         
         <div
-        class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-nautigal font-thin text-white text-center text-6xl lg:text-8xl">
+        class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-nautigal font-thin text-sky-200 text-center text-6xl lg:text-9xl">
         <span>{ female }</span>
         <span> & </span> 
         <span> { male } </span> 
       </div>
-        <h3 class="animate-faderight mt-2 font-poppins text-white">Dear Mr./Mrs./Ms.</h3>
-        <h4 id="invite-name" class="animate-fadeleft font-bold text-xl text-white my-3 capitalize">
+        <h3 class="animate-faderight mt-2 font-poppins">Dear Mr./Mrs./Ms.</h3>
+        <h4 id="invite-name" class="animate-fadeleft font-bold text-xl my-3 capitalize">
           <Namatamu /> nama tamu
         </h4>
         <label
           for="toggle" id="toaudio"
-          class="animate-fadeup w-fit mx-auto mt-5 px-4 py-2 relative bg-white text-sky-500 flex gap-1 transition-all duration-700 ease-linear hover:bg-sky-500 uppercase hover:text-white">Open Invitation </label>
+          class="animate-fadeup w-fit mx-auto mt-5 px-4 py-2 relative bg-sky-50 rounded-md font-bold text-sky-950 flex gap-1 transition-all duration-700 ease-linear hover:bg-sky-500 hover:  text-sky-200">Open Invitation </label>
     </div>
   </div>
 </section>
 <main id="myDIV" class="hidden bg-sky-500 peer-checked:block scroll-smooth">
   <section class="animasi2 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-sky-500 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${imgstory7})`}>
     <div class="container h-screen pb-20 mx-auto flex flex-col justify-center items-center relative">
-        <h1 class="animate-fadedown text-sm md:text-xl mt-8 tracking-widest font-poppins font-semibold text-white">
-            WEDDING INVITATION
+        <h1 class="animate-fadedown text-sm md:text-xl mt-8 tracking-widest font-poppins font-semibold   text-sky-200">
+            THE WEDDING
         </h1>
         <div class="text-center">
             
             <div
-            class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-nautigal font-thin text-white text-center text-6xl lg:text-8xl">
+            class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-nautigal font-thin text-sky-200 text-center text-6xl lg:text-9xl">
             <span>{ female }</span>
             <span> & </span> 
             <span> { male } </span> 
@@ -236,12 +238,12 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
         <div class="text-center my-5">
-          <h2 class="fade-down opacity-0  text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-white">Countdown to</h2>
-          <h1 class="fade-right opacity-0  text-white text-center font-nautigal text-4xl md:text-6xl lg:text-8xl">
+          <h2 class="fade-down opacity-0  text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3   text-sky-200">Countdown to</h2>
+          <h1 class="fade-right opacity-0 text-sky-950 text-center font-nautigal text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up opacity-0  grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-bold [&>*]:text-white [&>*]:p-1">
+        <div id="timer" class="fade-up opacity-0  grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-bold [&>*]:  text-sky-950 [&>*]:p-1">
         </div>
         <Countdown>
       </div>
@@ -256,20 +258,20 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               style={`background-image:url(${imgfr})`}>
               </div>
             </div>
-            <h3 class="fade-down opacity-0  text-8xl mt-6 font-nautigal text-white">{ female }</h3>
-            <div class="fade-up opacity-0  font-poppins space-y-3 text-white">
-            <div class="text-white">
+            <h3 class="fade-down opacity-0  text-8xl mt-6 font-nautigal   text-sky-200">{ female }</h3>
+            <div class="fade-up opacity-0  font-poppins space-y-3   text-sky-200">
+            <div class="  text-sky-200">
               <p class="text-xl font-medium border-b-2 border-b-sky-500 w-max mx-auto">{ fullfemale }</p>
               <p class="text-lg">{childfemale}</p>
-              <p class="text-lg font-medium text-white">
+              <p class="text-lg font-medium   text-sky-200">
                 { parentfemale }
               </p>
               <div class="flex gap-3 text-center justify-center mt-4">
                 <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
-                  <Icon name="mdi:facebook" class="w-8 h-8 text-white hover:text-white" />
+                  <Icon name="mdi:facebook" class="w-8 h-8   text-sky-200 hover:  text-sky-200" />
                 </a>
                 <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
-                  <Icon name="mdi:instagram" class="w-8 h-8 text-white hover:text-white" />
+                  <Icon name="mdi:instagram" class="w-8 h-8   text-sky-200 hover:  text-sky-200" />
                 </a>
               </div>
             </div>
@@ -281,20 +283,20 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               style={`background-image:url(${imgfv})`}>
               </div>
               </div>
-            <h3 class="fade-down opacity-0  text-8xl mt-6 font-nautigal text-white">{male}</h3>
-            <div class="fade-up opacity-0  font-poppins space-y-3 text-white">
-                <div class="text-white">
+            <h3 class="fade-down opacity-0  text-8xl mt-6 font-nautigal   text-sky-200">{male}</h3>
+            <div class="fade-up opacity-0  font-poppins space-y-3   text-sky-200">
+                <div class="  text-sky-200">
                   <p class="text-xl font-medium border-b-2 border-b-sky-500 w-max mx-auto">{fullmale}</p>
                   <p class="text-lg">{ childmale }</p>
-                  <p class="text-lg font-medium text-white">
+                  <p class="text-lg font-medium   text-sky-200">
                     { parentmale }
                   </p>
                   <div class="flex gap-3 text-center justify-center mt-4">
                     <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
-                      <Icon name="mdi:facebook" class="w-8 h-8 text-white hover:text-white" />
+                      <Icon name="mdi:facebook" class="w-8 h-8   text-sky-200 hover:  text-sky-200" />
                     </a>
                     <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
-                      <Icon name="mdi:instagram" class="w-8 h-8 text-white hover:text-white" />
+                      <Icon name="mdi:instagram" class="w-8 h-8   text-sky-200 hover:  text-sky-200" />
                     </a>
                   </div>
                 </div>
@@ -306,21 +308,21 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   <section class="animasi5 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-before:content-[''] before:bg-gradient-to-b before:from-sky-500 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url('/assets/ring-cd.jpg');">
   <div class="container py-20 px-6 mx-auto relative z-10">
     <div class="text-center my-5 mb-10">
-        <h2 class="fade-down opacity-0  text-white text-center font-nautigal text-5xl lg:text-8xl">
+        <h2 class="fade-down opacity-0    text-sky-200 text-center font-nautigal text-5xl lg:text-8xl">
             Event will be organized
         </h2>
       </div>
     <div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-x-8 gap-y-16 mt-5 pt-16 [&>*]:bg-sky-500 [&>*]:opacity-0 [&>*]:text-center [&>*]:font-poppins [&>*]:w-full [&>*]:border [&>*]:border-sky-500 [&>*]:rounded-lg [&>*]:border-2 [&>*]:border-white [&>*]:py-20 [&>*]:px-8">
       <div class="fade-right">
-        <h2 class="text-center font-nautigal text-4xl md:text-6xl text-white">Akad Nikah</h2>
+        <h2 class="text-center font-nautigal text-4xl md:text-6xl  text-sky-200">Akad Nikah</h2>
         <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-white"
+          <strong class="text-md font-bold  text-sky-200"
             >{date}
           </strong>
         </p>
         <p class="mt-2 sm:mt-4 text-md">{timefs}</p>
         <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-white"
+          <strong class="text-md font-bold   text-sky-200"
             >{addressfs}</strong
           >
         </p>
@@ -329,30 +331,30 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </p>
         <div class="group">
         <a href={mapsfs}>
-          <button class="mx-auto mt-8 flex items-center justify-center rounded-full bg-white text-sky-500 px-12 py-3 text-center text-sm font-medium">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-white group-hover:text-white" />
+          <button class="mx-auto mt-8 flex items-center justify-center rounded-full bg-white   text-sky-2000 px-12 py-3 text-center text-sm font-medium">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6   text-sky-200 group-hover:  text-sky-200" />
           </button>
         </a>
         </div>
       </div>
       <div class="fade-left">
-        <h2 class="text-center font-nautigal text-4xl md:text-6xl text-white">Resepsi</h2>
+        <h2 class="text-center font-nautigal text-4xl md:text-6xl   text-sky-200">Resepsi</h2>
         <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-white"
+          <strong class="text-md font-bold   text-sky-200"
             >{date}
           </strong>
         </p>
-        <p class="mt-2 sm:mt-4 text-md">{timefs}</p>
+        <p class="mt-2 sm:mt-4 text-md  text-sky-200">{timefs}</p>
         <p class="mt-2 sm:mt-4">
-          <strong class="text-md font-bold text-white"
+          <strong class="text-md font-bold  text-sky-200"
             >{addresssc}</strong
           >
         </p>
-        <p class="mt-2 sm:mt-4 text-sm">
+        <p class="mt-2 sm:mt-4 text-sm  text-sky-200">
           {locationth}
         </p>
         <div class="group">
           <a href={mapsfs}>
-            <button class="mx-auto mt-8 flex items-center justify-center rounded-full bg-white text-sky-500 px-12 py-3 text-center text-sm font-medium">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-white group-hover:text-white" />
+            <button class="mx-auto mt-8 flex items-center justify-center rounded-full bg-white   text-sky-2000 px-12 py-3 text-center text-sm font-medium">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6   text-sky-200 group-hover:  text-sky-200" />
             </button>
           </a>
         </div>
@@ -363,11 +365,11 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 <section class="animasi6 overflow-hidden">
   <div class="container mx-auto px-6 py-20">
     <div class="text-center my-5 mb-10">
-      <h2 class="fade-down opacity-0  text-white text-center font-nautigal text-5xl lg:text-8xl">
+      <h2 class="fade-down opacity-0 text-sky-50 text-center font-nautigal text-5xl lg:text-8xl">
         Our Moment
       </h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 justify-center gap-2 pb-20 w-full md:max-w-4xl mx-auto [&>*]:p-1 [&>*]:relative">
+    <div class="grid grid-cols-1 md:grid-cols-2 justify-center gap-2 pb-20 w-full md:max-w-4xl mx-auto [&>*]:p-1 [&>*]:relative odd:rounded-full">
       <div class="fade-right opacity-0 ">
         <div class="truncate rounded-md">
           <img
@@ -411,17 +413,17 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
   <div class="absolute inset-0 bg-white bg-cover bg-no-repeat bg-center bg-fixed bg-center before:content-[''] before:bg-gradient-to-b before:from-sky-500 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg);"></div>
   <div class="container py-20 px-6 text-center mx-auto relative">
     <div>
-      <h2 class="fade-right opacity-0  text-5xl lg:text-8xl text-white font-nautigal">Wedding Gift</h2>
+      <h2 class="fade-right opacity-0  text-5xl lg:text-8xl  text-sky-50 font-nautigal">Wedding Gift</h2>
       <img src="/assets/dekor10.webp" alt="JejakBahagia" class="fade-left opacity-0  mx-auto">
-      <p class="fade-down opacity-0  max-w-prose mx-auto mt-5 font-poppins text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
+      <p class="fade-down opacity-0  max-w-prose mx-auto mt-5 font-poppins   text-sky-200">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
     </div>
     <div class="fade-up opacity-0 relative py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-center items-center flex flex-col mx-auto gap-5 bg-white rounded shadow-lg">
       <div class="text-center font-poppins">
-        <p class="text-2xl text-sky-500 mt-5 md:mt-0 font-bold mb-3">{bank}</p>
+        <p class="text-2xl   text-sky-2000 mt-5 md:mt-0 font-bold mb-3">{bank}</p>
         <p class="max-w-prose">{namebank}</p>
         <span class="copy-content font-bold">{numberbank}</span>
         <div class="icon pt-5">
-          <button class="bg-sky-500 text-white px-5 py-2 rounded-full">Copy Rekening</button>
+          <button class="bg-sky-500 text-sky-50 px-5 py-2 rounded-full">Copy Rekening</button>
           <Payment />
         </div>
         <span class="copy-message absolute hidden inset-x-0">Rekening dicopy</span>
@@ -433,7 +435,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 <section class="animasi8 overflow-hidden">
   <div class="container py-20 sm:px-6 text-center mx-auto">
     <div class="text-center my-5 mb-10">
-      <h2 class="fade-down opacity-0  text-white text-center font-nautigal text-5xl lg:text-8xl">
+      <h2 class="fade-down opacity-0 text-sky-50 text-center font-nautigal text-5xl lg:text-8xl">
         Reservation
       </h2>
     </div>
@@ -444,7 +446,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 <section class="fixed bottom-5 right-5 z-20">
   <div class="container flex flex-col items-end justify-end mx-auto">
     <a href="https://wa.me/6281532094978?text=Hallo Admin JejakBahagia, saya mau konsultasi undangan digital dong!" target="_blank">
-      <Icon name="mdi:whatsapp" class="w-14 h-14 mb-5 text-white bg-green-500 rounded-full p-2" />
+      <Icon name="mdi:whatsapp" class="w-14 h-14 mb-5  text-sky-50 bg-green-500 rounded-full p-2" />
     </a>
     
   <Audio />

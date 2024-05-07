@@ -14,9 +14,11 @@ import Animation from '../../layouts/animation.astro';
 export const data = {
   slug: "demo/wedding-1",
   title: "Demo 1",
-  type: "Diamond",
+  type: "Diamond 01",
   link: "Preview",
-  price: "Rp 99.000",
+  price: "Rp. 99.000",
+  unprice: "Rp. 150.000",
+  number: 3,
   img: {
     url: '/assets/demo-1.webp',
     alt: "jejak bahagia"
@@ -228,7 +230,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
       <div class="text-center text-gray-800">
         <h3 class="animate-fadeup mt-2 font-josefin">Dear Mr./Mrs./Ms.</h3>
       <h4 id="invite-name" class="animate-fadeup text-xl font-josefin my-3 capitalize">
-        <Namatamu /> nama tamu
+        <Namatamu /> 
       </h4>
       <p class="animate-fadeup font-josefin text-center">You are cordially invited to our wedding.</p>
       </div>

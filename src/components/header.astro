@@ -6,7 +6,7 @@ import '@fontsource/the-nautigal';
 import Logo from './logo.astro';
 ---
 
-<nav x-data="{ isOpen: false }" class="relative bg-white shadow">
+<nav x-data="{ isOpen: false }" class="relative bg-white shadow bg-gray-50">
   <div class="container px-6 py-4 mx-auto relative w-full flex justify-between items-center [&>*]:lg:w-1/3 [&>*]:font-poppins">
       
     <Logo file="JejakBahagia" />
@@ -24,7 +24,8 @@ import Logo from './logo.astro';
             hover:[&>*]:before:w-full hover:[&>*]:before:left-0 hover:[&>*]:before:bg-pink-600 hover:[&>*]:text-pink-600">
               <a href="/" class="nav">Home</a>
               <a href="/about" class="nav">About</a>
-              <a href="/demos" class="nav">Tema</a>
+              <a href="/tema" class="nav">Tema</a>
+              <a href="/harga" class="nav">Harga</a>
               <a href="/contact" class="nav">Contact</a>
           </div>
           <div class="relative mt-4 md:mt-0 flex flex-col items-center ">

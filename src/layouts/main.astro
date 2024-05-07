@@ -17,10 +17,6 @@ const { title, desc } = Astro.props;
     <style>
       
 
-
-
-
-      /* Untuk WebKit (Chrome, Safari, dll.) */
 body::-webkit-scrollbar {
     width: 10px; 
     height: 100px;
@@ -59,7 +55,7 @@ body::-webkit-scrollbar-thumb:hover {
 
     </style>
   </head>
-  <body>
+  <body class="bg-gray-50">
     <Header />
     <Primary>
       <slot />

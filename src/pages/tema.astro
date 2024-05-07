@@ -1,0 +1,59 @@
+---
+import Archive from '../layouts/archive.astro';
+import '@fontsource-variable/josefin-sans';
+import { Icon } from 'astro-iconify';
+import { Image } from 'astro:assets';
+const posts = await Astro.glob('../pages/demo/*.astro');
+---
+
+<Archive title="Tema JejakBahagia" desc="Ini halaman Demos dari undangan" subs="Dengan desain undangan digital ini, tamu undangan tidak akan ragu untuk menghadiri acara Kamu!">
+
+    <section>
+        <div class="container px-6 py-20 mx-auto text-center">
+          <div class="space-y-2 max-w-xl mx-auto">
+            <h1
+              class="font-bold font-josefin text-4xl md:text-5xl text-pink-600"
+            >
+            Pilihan Desain
+            </h1>
+            <p class="mt-4 text-center text-gray-600 font-poppins mx-auto">
+              Dengan adanya preset kamu tinggal pilih design undangan sesuai dengan yang kamu mau!
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 min-[451px]:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mt-10 pt-10 max-w-screen-lg mx-auto">
+            {
+              posts.slice(0, 12)
+              .sort((a, b) => a.data.number - b.data.number)
+              .map((post) => (
+                <div class="relative border border-gray-300 p-6 rounded-lg shadow-xl">
+                  <div class="relative">
+                    <div class="overflow-hidden rounded-lg">
+                    <a href={post.data.slug}>
+                    <Image
+                      class="w-full aspect-video object-cover hover:scale-125 duration-500 transition-all ease-linear"
+                      src={post.data.img.url}
+                      alt="Jejak Bahagia"
+                      width={600}
+                      height={900}
+                    />
+                  </a>
+                  </div>
+                  <p class="font-bold text-xl text-gray-800 sm:text-left mt-3 capitalize">{post.data.type}</p>  
+                  <p class="font-bold text-gray-800 sm:text-left">{post.data.price}</p>  
+                  <p class="font-bold text-pink-600 line-through sm:text-left text-xs">{post.data.unprice}</p>  
+                  
+                  <div class="flex flex-col sm:flex-row gap-4 items-center justify-center sm:justify-start sm:justify-between mt-2">
+                  <a href={post.data.slug} class="flex flex-row items-center justify-between gap-2 text-white bg-gray-600 w-fit px-4 py-2 rounded-md">{post.data.link}<Icon name="mdi:eye" class="w-4 h-4"/></a>
+                  <a href={post.data.slug} class="flex flex-row items-center justify-between gap-2 text-white bg-pink-600 w-fit px-4 py-2 rounded-md">Pesan <Icon name="mdi:whatsapp" class="w-4 h-4 text-white" /></a>
+                  </div>
+                      
+                  </div>
+                
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+</Archive>

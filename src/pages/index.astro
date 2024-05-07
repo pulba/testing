@@ -47,18 +47,18 @@ const posts = await Astro.glob('../pages/demo/*.astro');
         <h2 class="font-bold font-josefin text-4xl md:text-5xl text-pink-600">Mengapa Harus JejakBahagia?</h2>
         <p class="max-w-prose text-center text-gray-500 font-poppins mx-auto">Sejak tahun 2022 JejakBahagia telah menjadi bagian dari momen spesial customer dan telah dipercaya oleh ribuan pengguna. </p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto justify-center items-center text-center border rounded-lg -mb-14 relative bg-white max-w-screen-lg divide-x mt-20 [&>*]:p-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-4 mx-auto justify-center items-center text-center border rounded-lg -mb-16 drop-shadow-xl relative bg-white max-w-screen-lg divide-y sm:divide-x sm:divide-y-0 mt-20 [&>*]:p-8">
         <div class="[&>*]:font-poppins">
           <h4 class="text-5xl font-bold text-pink-600">+1K</h4>
-          <p class="text-xl">Undangan Aktif</p>
+          <p class="text-xl text-gray-500">Undangan Aktif</p>
         </div>
         <div class="[&>*]:font-poppins">
           <h4 class="text-5xl font-bold text-pink-600">+8K</h4>
-          <p class="text-xl">Tamu Undangan</p>
+          <p class="text-xl text-gray-500">Tamu Undangan</p>
         </div>
         <div class="[&>*]:font-poppins">
           <h4 class="text-5xl font-bold text-pink-600">+4K</h4>
-          <p class="text-xl">Doa & Ucapan</p>
+          <p class="text-xl text-gray-500">Doa & Ucapan</p>
         </div>
       </div>
     </div>
@@ -70,7 +70,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
         <p class="text-center text-gray-500 mx-auto font-poppins">Berbagai macam fitur terbaik undangan online yang Anda butuhkan ada disini dan kami akan selalu berinovasi menambahkan fitur-fitur lainnya
         </p>
       </div>
-      <div class="grid grid-cols-1 min-[450px]:grid-cols-2 lg:grid-cols-3 gap-4 mt-16 w-full max-w-screen-lg mx-auto [&>*]:w-full [&>*]:mx-auto [&>*]:p-8 [&>*]:bg-white [&>*]:shadow-lg [&>*]:rounded-lg [&>*]:sm:flex [&>*]:gap-x-4 [&>*]:gap-y-8 [&>*]:relative hover:[&>*]:scale-105 hover:[&>*]:shadow-2xl [&>*]:border-pink-600 [&>*]:border">
+      <div class="grid grid-cols-1 min-[450px]:grid-cols-2 lg:grid-cols-3 gap-4 mt-16 w-full max-w-screen-lg mx-auto [&>*]:w-full [&>*]:mx-auto [&>*]:p-8 [&>*]:bg-white [&>*]:shadow-lg [&>*]:rounded-lg [&>*]:sm:flex [&>*]:gap-x-4 [&>*]:gap-y-8 [&>*]:relative hover:[&>*]:scale-105 hover:[&>*]:drop-shadow-xl [&>*]:border-pink-600 [&>*]:border">
         <div class="">
           <div>
             <Icon name="mdi:web-check" class="w-10 h-10 mb-2 sm:mb-0 text-white bg-pink-600 p-2 rounded-full" />
@@ -175,13 +175,14 @@ const posts = await Astro.glob('../pages/demo/*.astro');
         </p>
       </div>
       <div
-        class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 mt-10 pt-10 max-w-screen-lg mx-auto"
-      >
+        class="grid grid-cols-1 min-[451px]:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mt-10 pt-10 max-w-screen-lg mx-auto">
         {
-          posts.slice(0, 12).map((post) => (
-            <div class="relative">
+          posts.slice(0, 12)
+          .sort((a, b) => a.data.number - b.data.number)
+          .map((post) => (
+            <div class="relative border border-gray-300 p-6 rounded-lg shadow-xl">
               <div class="relative">
-                <div class="overflow-hidden border border-2 border-pink-700 rounded-lg">
+                <div class="overflow-hidden rounded-lg">
                 <a href={post.data.slug}>
                 <Image
                   class="w-full aspect-video object-cover hover:scale-125 duration-500 transition-all ease-linear"
@@ -192,13 +193,15 @@ const posts = await Astro.glob('../pages/demo/*.astro');
                 />
               </a>
               </div>
-              <a href={post.data.slug} class="font-josefin rounded-tr-lg text-white bg-pink-400 w-fit px-4 py-2 absolute right-0 top-0">{post.data.price}</a>  
+              <p class="font-bold text-xl text-gray-800 sm:text-left mt-3 capitalize">{post.data.type}</p>  
+              <p class="font-bold text-gray-800 sm:text-left">{post.data.price}</p>  
+              <p class="font-bold text-pink-600 line-through sm:text-left text-xs">{post.data.unprice}</p>  
+              
+              <div class="flex flex-col sm:flex-row gap-4 items-center justify-center sm:justify-start sm:justify-between mt-2">
+              <a href={post.data.slug} class="flex flex-row items-center justify-between gap-2 text-white bg-gray-600 w-fit px-4 py-2 rounded-md">{post.data.link}<Icon name="mdi:eye" class="w-4 h-4"/></a>
+              <a href={post.data.slug} class="flex flex-row items-center justify-between gap-2 text-white bg-pink-600 w-fit px-4 py-2 rounded-md">Pesan <Icon name="mdi:whatsapp" class="w-4 h-4 text-white" /></a>
               </div>
-              <div class="flex flex-row justify-between gap-2 mt-1  ">
-                <div class="font-josefin relative text-white bg-pink-600 w-fit px-4 py-[2px] text-center flex justify-center items-center">{post.data.type}</div>
-
-                <a href={post.data.slug} class="flex flex-row items-center gap-2 font-josefin relative text-white bg-gray-600 w-fit px-4 py-2">{post.data.link}<Icon name="mdi:eye" class="w-4 h-4"/></a>
-
+                  
               </div>
             
             </div>
@@ -208,18 +211,18 @@ const posts = await Astro.glob('../pages/demo/*.astro');
     </div>
   </section>
   
-  <section class="bg-white dark:bg-gray-900">
+  <section class="bg-gray-50">
     <div class="container py-20 px-6 mx-auto">
       <div class="text-center mx-auto space-y-3 max-w-xl">
         <h2 class="font-bold font-josefin text-3xl sm:text-4xl md:text-5xl text-pink-600">Apapun Paketnya <br>Tetep Ramah Dikantong</h2>
         <p class="text-center text-gray-500 font-poppins mx-auto">Silakan tentukan harga paket sesuai kebutuhan Anda. Kami memberikan harga termurah dan fitur terlengkap. Lihat perbandingan masing-masing paket disini.
         </p>
       </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full mx-auto mt-16 gap-2 [&>*]:w-full [&>*]:transform [&>*]:rounded-lg [&>*]:font-poppins">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full mx-auto mt-16 gap-2 [&>*]:w-full [&>*]:transform [&>*]:rounded-lg [&>*]:font-poppins">
             <div class="px-8 py-12 border border-gray-400 flex flex-col justify-between">
               <div class="text-center">
                   <p class="text-2xl font-semibold text-gray-800">Basic</p>
-                  <h4 class="mt-2 text-gray-600 line-through">Rp.100.000</h4>
+                  <h4 class="mt-2 text-gray-600 line-through">Rp. 75.000</h4>
                   <h4 class="mt-2 text-4xl font-semibold flex justify-center text-gray-800"><sup class="text-base">Rp</sup>49.000</h4>
                   <p class="mt-4 text-gray-500">Masa Aktif 30 Hari</p>
               </div>
@@ -259,10 +262,10 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             <div class="px-8 py-12 bg-gray-300 border border-gray-400 flex flex-col justify-between">
                 <div class="text-center">
                     <p class="text-2xl font-semibold text-gray-800">Silver</p>
-                    <h4 class="mt-2 text-gray-600 line-through">Rp.150.000
+                    <h4 class="mt-2 text-gray-600 line-through">Rp. 100.000
                     </h4>
                     <h4 class="mt-2 text-4xl font-semibold flex justify-center text-gray-800"><sup class="text-base">Rp</sup>75.000</h4>
-                    <p class="mt-4 text-gray-500">Masa Aktif 30 Hari</p>
+                    <p class="mt-4 text-gray-500">Masa Aktif 3 Bulan</p>
                 </div>
                 <hr class="h-px my-4 bg-gray-500 w-1/2 mx-auto border-0">
                 <div class="space-y-2  [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:text-center">
@@ -302,9 +305,9 @@ const posts = await Astro.glob('../pages/demo/*.astro');
               
               <div class="text-center text-white">
                 <p class="text-2xl font-semibold">Diamond</p>
-                <h4 class="mt-2 line-through">Rp.200.000</h4>
+                <h4 class="mt-2 line-through">Rp. 150.000</h4>
                 <h4 class="mt-2 text-4xl font-semibold flex justify-center"><span class="text-xl font-medium">Rp</span>99.000</h4>
-                <p class="mt-4">Masa Aktif 1 Tahun</p>
+                <p class="mt-4">Masa Aktif 6 Bulan</p>
             </div>
 
             <hr class="h-px my-4 bg-gray-100 w-1/2 mx-auto border-0">
@@ -337,7 +340,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
             <div class="px-8 py-12 bg-gray-50 bg-gray-800 flex flex-col justify-between">
               <div class="text-center text-white">
                   <h4 class="text-2xl font-semibold">Exclusive</h4>
-                  <h4 class="mt-2 line-through">Rp.250.0000</h4>
+                  <h4 class="mt-2 line-through">Rp. 200.0000</h4>
                   <h4 class="mt-2 text-4xl font-semibold flex justify-center"><span class="text-xl font-medium">Rp</span>149.000</h4>
                   <p class="mt-4">Masa Aktif 1 Tahun</p>
               </div>
@@ -383,35 +386,35 @@ const posts = await Astro.glob('../pages/demo/*.astro');
       <div class="splide__track h-full md:h-96 overflow-visible">
         <ul class="splide__list flex gap-2">
           <li
-          class="splide__slide overflow-hidden w-fit rounded-lg" data-splide-interval="5000">
+          class="splide__slide overflow-hidden w-fit rounded-lg" data-splide-interval="1000">
           <img
             src="/assets/testi-1.webp"
             alt="Foto 1"
             class="object-cover h-full"/>
           </li>
           <li
-          class="splide__slide overflow-hidden w-fit rounded-lg" data-splide-interval="5000">
+          class="splide__slide overflow-hidden w-fit rounded-lg" data-splide-interval="1000">
           <img
             src="/assets/testi-2.webp"
             alt="Foto 1"
             class="h-full"/>
           </li>
           <li
-          class="splide__slide overflow-hidden w-fit rounded-lg" data-splide-interval="5000">
+          class="splide__slide overflow-hidden w-fit rounded-lg" data-splide-interval="1000">
           <img
             src="/assets/testi-3.webp"
             alt="Foto 1"
             class="h-full"/>
           </li>
           <li
-          class="splide__slide overflow-hidden w-fit rounded-lg" data-splide-interval="5000">
+          class="splide__slide overflow-hidden w-fit rounded-lg" data-splide-interval="1000">
           <img
             src="/assets/testi-4.webp"
             alt="Foto 1"
             class="h-full"/>
           </li>
           <li
-          class="splide__slide overflow-hidden w-fit rounded-lg" data-splide-interval="5000">
+          class="splide__slide overflow-hidden w-fit rounded-lg" data-splide-interval="1000">
           <img
             src="/assets/testi-5.webp"
             alt="Foto 1"
@@ -469,9 +472,3 @@ const posts = await Astro.glob('../pages/demo/*.astro');
   </div>
 </section>
 </Home>
-
-<script>
-  import "@splidejs/splide/css";
-  import Splide from "@splidejs/splide";
-  
-</script>

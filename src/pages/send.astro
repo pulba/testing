@@ -1,37 +1,31 @@
 ---
 import Noheader from '../layouts/noheader.astro';
+import { Icon } from 'astro-iconify';
 
-export const data = {
-  slug: "pages/form-send",
-  title: "Send",
 
-  male: "Romeo",
-  female: "juliet",
-}
-const { frontmatter } = Astro.props;
-const title = frontmatter ? frontmatter.title : data.title;
-const male = frontmatter ? frontmatter.male : data.male;
-const female = frontmatter ? frontmatter.female : data.female;
 
 ---
-<Noheader title={title}>
+<Noheader title="Send">
 <section>
   <div class="container px-6 py-20 mx-auto">
-    <form id="formsend" class="w-full max-w-xl p-12 mx-auto mb-10 bg-white rounded-md shadow-md border">
+    <form id="formSend" class="w-full max-w-xl p-12 mx-auto mb-10 bg-white rounded-md shadow-md border">
       <div class="[&>*]:font-poppins [&>*]:text-left [&>*]:text-gray-800/50">
-          <div class="[&>input]:my-2 [&>input]:block [&>input]:w-full [&>input]:px-4 [&>input]:py-3 [&>input]:text-gray-700 [&>input]:capitalize [&>input]:bg-white [&>input]:border [&>input]:border-gray-200 [&>input]:rounded-lg [&>input]:focus:outline-none">
+          <div class="[&>input]:my-2 [&>input]:block [&>input]:w-full [&>input]:px-4 [&>input]:py-3 [&>input]:text-gray-700 [&>input]:capitalize [&>input]:bg-white [&>input]:border [&>input]:border-gray-200 [&>input]:ring-0 [&>input]:rounded-lg [&>input]:focus:outline-0">
               <label for="male" class="">Penganti Pria</label>
-              <input value={male} id="male" type="text" name="name">
+              <input value="" id="male" type="text" name="name">
               <label for="female">Penganti Wanita</label>
-              <input value={female} id="female" type="text" name="name">
+              <input value="" id="female" type="text" name="name">
               <label for="Penerima">Nama Penerima</label>
               <input value="" id="Penerima" type="text" name="name">
-              <label for="username">Nomor Whatsapp</label>
-              <input type="tel" id="phone" name="phone" placeholder="123-45-678">
+              <label for="number">Nomor Whatsapp</label>
+              <div class="flex flex-row gap-2 items-center">
+              <input type="text" id="number" class="py-3 px-4 border border-gray-200 w-full rounded-lg" readonly>
+              <Icon name="mdi:contact" id="whatsapp-icon" class="h-6 w-6" />
+              </div>
           </div>
           <div>
             <label for="message">Pesan</label>
-            <textarea id="message" rows="4" name="content" class="block mt-2 p-5 w-full text-sm text-gray-800 bg-gray-50 rounded-lg border border-gray-300 focus:outline-none"></textarea>
+            <textarea id="message" rows="20" name="content" class="block mt-2 p-5 w-full text-sm text-gray-800 bg-gray-50 rounded-lg border border-gray-300 focus:outline-none"></textarea>
           </div>
           <div>
         </div>
@@ -44,6 +38,71 @@ const female = frontmatter ? frontmatter.female : data.female;
     </form>
   </div>
 </section>
+<script>
+  function updateMessage() {
+    var maleName = document.getElementById("male").value.trim();
+    var femaleName = document.getElementById("female").value.trim();
+    var Penerima = document.getElementById("Penerima").value.trim();
+
+    var message = `
+Kepada Yth.
+Bapak/Ibu/Saudara/i 
+
+${Penerima}
+
+
+*Assalamualaikum Warahmatullahi Wabarakaatuh*
+
+Dengan memohon rahmat dan ridho Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara Resepsi kami:
+
+🤵🏻 *${maleName}*
+
+dengan
+
+🧕🏻 *${femaleName}*
+
+Untuk informasi detail mengenai acara, silahkan kunjungi link dibawah ini:
+
+https://jejakbahagia.com/posts/yanto-yanti/?to=${Penerima.replace(" ", "+")}
+
+Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu. Atas kehadiran dan doa restunya kami ucapkan terima kasih.
+
+*Wassalamualaikum Warahmatullahi Wabarakaatuh*
+
+Kami yang berbahagia,
+
+${maleName} & ${femaleName}
+
+`;
+
+    document.getElementById("message").value = message;
+  }
+
+  document.getElementById("formSend").addEventListener("submit", function(e) {
+    e.preventDefault();
+    updateMessage();  
+
+    var Number = document.getElementById("number").value.trim();
+    var message = document.getElementById("message").value.trim();
+    var whatsapp = "https://web.whatsapp.com/send?phone=" + Number + "&text=" + encodeURIComponent(message);
+    window.open(whatsapp, "_blank");
+  });
+
+  document.getElementById("male").addEventListener("input", updateMessage);
+  document.getElementById("female").addEventListener("input", updateMessage);
+  document.getElementById("Penerima").addEventListener("input", updateMessage);
+
+  window.onload = updateMessage;
+
+
+  document.getElementById('whatsapp-icon').addEventListener('click', function() {
+  var Number = "+62815-3209-4978";
+  document.getElementById('number').value = Number;
+});
+</script>
+
 
 </Noheader>
+
+
 
