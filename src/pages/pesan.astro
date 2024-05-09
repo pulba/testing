@@ -147,18 +147,33 @@ document.getElementById('sendMessage').addEventListener('submit', function(e) {
       backBtn.classList.add('hidden');
 
       backBtn.addEventListener('click', function() {
-          if (currentPage > 0) {
-              pages[currentPage].classList.add('hidden');
-              currentPage--;
-              pages[currentPage].classList.remove('hidden');
+    if (currentPage > 0) {
+        // Check if there are any required inputs with empty values
+        const requiredInputs = document.querySelectorAll('[required]');
+        let requiredEmpty = false;
+        requiredInputs.forEach(input => {
+            if (!input.value.trim()) {
+                requiredEmpty = true;
+                // Remove the 'required' attribute
+                input.removeAttribute('required');
+            }
+        });
 
-              if (currentPage === 0) {
-                  backBtn.classList.add('hidden');
-              }
-              nextBtn.classList.remove('hidden');
-              sendBtn.classList.add('hidden');
-          } 
-      });
+        if (!requiredEmpty) {
+            // Proceed with going back to the previous page
+            pages[currentPage].classList.add('hidden');
+            currentPage--;
+            pages[currentPage].classList.remove('hidden');
+
+            if (currentPage === 0) {
+                backBtn.classList.add('hidden');
+            }
+            nextBtn.classList.remove('hidden');
+            sendBtn.classList.add('hidden');
+        }
+    }
+});
+
 
     nextBtn.addEventListener('click', function() {
         

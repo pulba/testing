@@ -1,51 +1,42 @@
 ---
 import Noheader from '../layouts/noheader.astro';
 import { Icon } from 'astro-iconify';
-
-
-
 ---
 <Noheader title="Send">
-<section>
-  <div class="container px-6 py-20 mx-auto">
-    <form id="formSend" class="w-full max-w-xl p-12 mx-auto mb-10 bg-white rounded-md shadow-md border">
-      <div class="[&>*]:font-poppins [&>*]:text-left [&>*]:text-gray-800/50">
-          <div class="[&>input]:my-2 [&>input]:block [&>input]:w-full [&>input]:px-4 [&>input]:py-3 [&>input]:text-gray-700 [&>input]:capitalize [&>input]:bg-white [&>input]:border [&>input]:border-gray-200 [&>input]:ring-0 [&>input]:rounded-lg [&>input]:focus:outline-0">
-              <label for="male" class="">Penganti Pria</label>
-              <input value="" id="male" type="text" name="name">
-              <label for="female">Penganti Wanita</label>
-              <input value="" id="female" type="text" name="name">
-              <label for="Penerima">Nama Penerima</label>
-              <input value="" id="Penerima" type="text" name="name">
-              <label for="number">Nomor Whatsapp</label>
+<section class="bg-pink-200 bg-cover bg-center relative before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute" style="background-image: url(/public/assets/wedding.jpg);">
+  <div class="container px-6 py-16 h-screen mx-auto relative grid grid-cols-1 place-content-center">
+    <form id="formSend" action="javascript:void(0);" onsubmit="sendWhatsApp();" class="w-full max-w-screen-lg p-6 sm:p-12 mx-auto bg-white rounded-md shadow-md border">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 justify-center items-center [&>*]:font-poppins [&>*]:text-left [&>*]:text-gray-800/50">
+          <div class="w-full space-y-6 [&>input]:block [&>input]:w-full [&>input]:px-4 [&>input]:py-3 [&>input]:text-gray-700 [&>input]:capitalize [&>input]:bg-white [&>input]:border [&>input]:border-gray-200 *:rounded-md focus:*:outline-none focus:*:ring focus:*:ring-0">
+              <input value="" id="male" type="text" name="name" placeholder="Penganti Pria">
+              <input value="" id="female" type="text" name="name" placeholder="Penganti Wanita">
+              <input value="" id="Penerima" type="text" name="name" placeholder="Nama Penerima">
               <div class="flex flex-row gap-2 items-center">
-              <input type="text" id="number" class="py-3 px-4 border border-gray-200 w-full rounded-lg" readonly>
-              <Icon name="mdi:contact" id="whatsapp-icon" class="h-6 w-6" />
+              <input type="tel" id="number" class="py-3 px-4 border border-gray-200 w-full rounded-lg focus:outline-none focus:ring focus:ring-0" placeholder="Nomor Whatsapp">
+              <Icon name="mdi:contact" id="whatsapp-icon" class="h-6 w-6 text-pink-600" />
               </div>
           </div>
-          <div>
-            <label for="message">Pesan</label>
-            <textarea id="message" rows="20" name="content" class="block mt-2 p-5 w-full text-sm text-gray-800 bg-gray-50 rounded-lg border border-gray-300 focus:outline-none"></textarea>
+          <div class="w-full">
+            <textarea id="message" rows="12" name="content" class="block p-5 w-full text-sm text-gray-800 bg-gray-50 rounded-lg border border-gray-300 focus:outline-none"></textarea>
           </div>
           <div>
         </div>
       </div>
     
       <div class="flex justify-end mt-6">
-        <button id="send" type="submit" class="px-6 py-2 z-50 relative bg-gray-800 rounded-lg text-white font-bold font-poppins flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-gray-800 hover:ring-2 hover:ring-gray-500">Kirim Pesan</button>
+        <button id="send" type="submit" class="px-6 py-2 z-50 relative bg-pink-600 rounded-md text-white font-bold font-poppins flex gap-1 transition-all duration-700 ease-linear hover:bg-white hover:text-pink-600 hover:ring-2 hover:ring-pink-600">Kirim Pesan</button>
     
       </div>
     </form>
   </div>
 </section>
 <script>
+
   function updateMessage() {
     var maleName = document.getElementById("male").value.trim();
     var femaleName = document.getElementById("female").value.trim();
     var Penerima = document.getElementById("Penerima").value.trim();
-
-    var message = `
-Kepada Yth.
+    var message = `*Kepada Yth.*
 Bapak/Ibu/Saudara/i 
 
 ${Penerima}
@@ -84,7 +75,7 @@ ${maleName} & ${femaleName}
 
     var Number = document.getElementById("number").value.trim();
     var message = document.getElementById("message").value.trim();
-    var whatsapp = "https://web.whatsapp.com/send?phone=" + Number + "&text=" + encodeURIComponent(message);
+    var whatsapp = "https://api.whatsapp.com/send?phone=" + Number + "&text=" + encodeURIComponent(message);
     window.open(whatsapp, "_blank");
   });
 
