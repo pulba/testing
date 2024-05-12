@@ -15,43 +15,42 @@ const { title, desc } = Astro.props;
     <SEO title={title} desc={desc} />
     <ViewTransitions />
     <style>
-      
-
-body::-webkit-scrollbar {
-    width: 10px; 
-    height: 100px;
-}
-
-body::-webkit-scrollbar-track {
-    background: #ffffff; 
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #db2777!important;
-    max-height: 50px!important; 
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background: black; /* Warna thumb scrollbar saat dihover */
-}
-
-
-/* Contoh untuk Firefox */
-/*::-moz-scrollbar {
-    width: 10px;
+      /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #DB2777 #EBEBEB;
 }*/
 
-/*::-moz-scrollbar-track {
-    background: #f1f1f1;
-}*/
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #EBEBEB;
+}
 
-/*::-moz-scrollbar-thumb {
-    background: #888;
-}*/
+*::-webkit-scrollbar-track:hover {
+  background-color: #E3E3E3;
+}
 
-/*::-moz-scrollbar-thumb:hover {
-    background: #555;
-}*/
+*::-webkit-scrollbar-track:active {
+  background-color: #E3E3E3;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #DB2777;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #EC4899;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #BE185D;
+}
 
     </style>
   </head>

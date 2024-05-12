@@ -11,18 +11,43 @@ const { title, desc } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <SEO title={title} desc={desc} />
     <style>
-      body::-webkit-scrollbar {
-        width: 10px;
-      }
-      
-      body::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-      }
-      
-      body::-webkit-scrollbar-thumb {
-        background-color: #db2777;
-        border-radius: 25px;
-      }
+      /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #DB2777 #EBEBEB;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #EBEBEB;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #E3E3E3;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #E3E3E3;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #DB2777;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #EC4899;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #BE185D;
+}
+
     </style>
   </head>
   <body>

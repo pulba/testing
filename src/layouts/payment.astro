@@ -2,26 +2,24 @@
 
 ---
 <script>
-  const button = document.querySelector(".icon") as HTMLElement;
-  const message = document.querySelector(".copy-message") as HTMLElement;
-  
-  function copyToClipBoard(){
-    const copyContent = document.querySelector(".copy-content") as HTMLElement;
-    navigator.clipboard.writeText(copyContent.innerHTML)
-    .then(() => {
-      message.style.display = "block";
-      setTimeout(() => {
-        message.style.display = "none";
-      }, 2000);
-    })
-    .catch(err => {
-      console.error('Gagal menyalin teks: ', err);
+  document.addEventListener('DOMContentLoaded', function () {
+  const copyButtons = document.querySelectorAll('.btn-copy');
+
+  copyButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const content = this.previousElementSibling.textContent;
+      const copyMessage = this.nextElementSibling;
+      navigator.clipboard.writeText(content).then(() => {
+        copyMessage.textContent = 'Rekening dicopy!'; 
+        copyMessage.classList.remove('hidden'); 
+        setTimeout(() => {
+          copyMessage.classList.add('hidden'); 
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy: ', err); 
+      });
     });
-  }
-  
-  if(button){
-    button.addEventListener("click", function(){
-      copyToClipBoard();
-    });
-  }
-  </script>
+  });
+});
+
+</script>

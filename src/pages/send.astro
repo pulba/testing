@@ -4,7 +4,7 @@ import { Icon } from 'astro-iconify';
 ---
 <Noheader title="Send">
 <section class="bg-pink-200 bg-cover bg-center relative before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute" style="background-image: url(/public/assets/wedding.jpg);">
-  <div class="container px-6 py-16 h-screen mx-auto relative grid grid-cols-1 place-content-center">
+  <div class="container px-6 py-16 h-max md:h-screen mx-auto relative grid grid-cols-1 place-content-center">
     <form id="formSend" action="javascript:void(0);" onsubmit="sendWhatsApp();" class="w-full max-w-screen-lg p-6 sm:p-12 mx-auto bg-white rounded-md shadow-md border">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 justify-center items-center [&>*]:font-poppins [&>*]:text-left [&>*]:text-gray-800/50">
           <div class="w-full space-y-6 [&>input]:block [&>input]:w-full [&>input]:px-4 [&>input]:py-3 [&>input]:text-gray-700 [&>input]:capitalize [&>input]:bg-white [&>input]:border [&>input]:border-gray-200 *:rounded-md focus:*:outline-none focus:*:ring focus:*:ring-0">
@@ -32,6 +32,32 @@ import { Icon } from 'astro-iconify';
 </section>
 <script>
 
+// var url = new URL('http://localhost:4321/send');
+
+// url.searchParams.append('male', 'roni');
+// url.searchParams.append('female', 'noni');
+
+// var modifiedUrl = url.toString();
+
+// console.log(modifiedUrl);
+
+
+window.onload = function() {
+    var path = window.location.pathname;
+
+    var parts = path.split('/send/')[1].split('-');
+
+    var maleName = parts[0];
+    var femaleName = parts[1];
+
+    if (maleName && femaleName) {
+        
+    } else {
+        console.log('Parameter male dan female harus ada');
+    }
+}
+
+
   function updateMessage() {
     var maleName = document.getElementById("male").value.trim();
     var femaleName = document.getElementById("female").value.trim();
@@ -39,8 +65,7 @@ import { Icon } from 'astro-iconify';
     var message = `*Kepada Yth.*
 Bapak/Ibu/Saudara/i 
 
-${Penerima}
-
+*_${Penerima}_* 
 
 *Assalamualaikum Warahmatullahi Wabarakaatuh*
 
@@ -85,11 +110,6 @@ ${maleName} & ${femaleName}
 
   window.onload = updateMessage;
 
-
-  document.getElementById('whatsapp-icon').addEventListener('click', function() {
-  var Number = "+62815-3209-4978";
-  document.getElementById('number').value = Number;
-});
 </script>
 
 
