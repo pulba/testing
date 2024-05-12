@@ -1,7 +1,7 @@
 ---
 layout: '../demo/wedding-13.astro'
-title: 'Oca-Tito'
-slug: 'posts/oca-tito'
+title: Oca-Tito
+slug: posts/oca-tito
 # data mempelai
 male: "Tito"
 ml: "T"

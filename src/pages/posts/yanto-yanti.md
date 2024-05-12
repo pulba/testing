@@ -1,7 +1,7 @@
 ---
 layout: '../demo/wedding-1.astro'
-title: 'Yanto-Yanti'
-slug: 'posts/yanto-yanti'
+title: Yanto-Yanti
+slug: posts/yanto-yanti
 # Img header
 img: 
   url: '/src/assets/bg-wedding-1.jpg'
