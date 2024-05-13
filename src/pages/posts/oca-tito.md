@@ -2,6 +2,8 @@
 layout: '../demo/wedding-13.astro'
 title: Oca-Tito
 slug: posts/oca-tito
+bgClr: 'gray-950'
+txClr: 'white'
 # data mempelai
 male: "Tito"
 ml: "T"
@@ -31,6 +33,8 @@ numberbankfml: "7772555957"
 # waktu & tempat acara
 timefs: 08.00 WITA - 14.00 WITA
 timesc: 08.00 WITA - 14.00 WITA
+locationfs: Jl. Serayu No. 16 RT/RW 001/001, Kel/Des Panderejo, Kec. Banyuwangi
+locationsc: Jl. Serayu No. 16 RT/RW 001/001, Kel/Des Panderejo, Kec. Banyuwangi
 addressfs: Rumah Mempelai Wanita
 addresssc: Rumah Mempelai Wanita
 mapsfs: https://maps.app.goo.gl/7bmjgptX3g4bS12J6 

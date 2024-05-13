@@ -16,6 +16,8 @@ export const data = {
   link: "Preview",
   price: "Rp. 75.000",
   unprice: "Rp. 100.000",
+  bgClr: "purple-200",
+  txClr: "purple-600",
   number: 5,
   img: {
     url: '/assets/demo-13.webp',
@@ -69,6 +71,8 @@ export const data = {
 
 const { frontmatter } = Astro.props;
 const title = frontmatter ? frontmatter.title : data.title;
+const bgClr = frontmatter ? frontmatter.bgClr : data.bgClr;
+const txClr = frontmatter ? frontmatter.txClr : data.txClr;
 
 const male = frontmatter ? frontmatter.male : data.male;
 const ml = frontmatter ? frontmatter.ml : data.ml;
@@ -116,7 +120,7 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
   desc="Ini halaman Demo Wedding 1 dari undangan"
 >
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
-  <section class="animasi bg-purple-200 hero relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
+  <section class=`animasi bg-${bgClr} hero relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500`>
     <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-1/2 *:md:w-1/3 *:lg:w-1/5">
         <div>
             <img src="/assets/dekor-12.webp" class="animate-fadedown" alt="JejakBahagia" />
@@ -138,19 +142,19 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
       
     <div class="container mx-auto px-6">
       <div class="h-screen  py-12 flex flex-col justify-center items-center relative">
-        <div class="w-full flex flex-col justify-center items-center text-black relative">
+        <div class=`w-full flex flex-col justify-center items-center text-${txClr} relative`>
             <div class="mx-auto text-center w-full md:w-1/2">
                 <div class="flex flex-row h-24">
-                    <h1 class="animate-fadedown text-purple-600 text-8xl text-left font-montecarlo w-1/2">{fml}</h1>
-                    <div class="animate-fadeleft border-r-2 border-t-2 border-purple-600 w-1/2"></div>
+                    <h1 class=`animate-fadedown text-${txClr} text-8xl text-left font-montecarlo w-1/2`>{fml}</h1>
+                    <div class=`animate-fadeleft border-r-2 border-t-2 border-${txClr} w-1/2`></div>
                 </div>
-                <div class="flex flex-row text-purple-900 *:text-2xl *:md:text-3xl *:lg:text-4xl *:font-montecarlo *:w-full">
+                <div class={`flex flex-row text-${txClr} *:text-2xl *:md:text-3xl *:lg:text-4xl *:font-montecarlo *:w-full`}>
                     <p class="animate-faderight text-left">{ fullfemale } </p>
                     <p class="animate-fadeleft text-end ">{ fullmale } </p>
                 </div>
                 <div class="flex flex-row h-24">
-                    <div class="animate-faderight border-l-2 border-b-2 border-purple-600 w-1/2"></div>
-                    <h1 class="animate-fadeup text-purple-600 text-8xl text-center sm:text-end font-montecarlo w-1/2">{ml}</h1>
+                    <div class=`animate-faderight border-l-2 border-b-2 border-${txClr} w-1/2`></div>
+                    <h1 class=`animate-fadeup text-${txClr} text-8xl text-center sm:text-end font-montecarlo w-1/2`>{ml}</h1>
                 </div>
                 <h3 class="animate-fadeup mt-2 font-josefin">Dear Mr./Mrs./Ms.</h3>
                 <h4 id="invite-name" class="animate-fadeup text-xl font-josefin my-3 capitalize">
@@ -161,13 +165,14 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
             class="animate-fadeup mt-5 px-6 py-2 relative bg-purple-600 rounded-full tracking-widest text-white font-josefin flex gap-1 transition-all duration-700 ease-linear hover:bg-purple-700"
             ><Icon name="mdi:love-letter" class="w-5 h-5" />Buka Undangan 
             </label>
+            <a href="http://localhost:4321/send?male=dadadng&female=sitii&url=http://localhost:4321/posts/oca-tito" class="hidden">bagikan</a>
         </div>
       </div>
       
         
     </div>
   </section>
-  <main id="myDIV" class="hidden bg-purple-200 peer-checked:block">
+  <main id="myDIV" class=`block bg-${bgClr} peer-checked:block`>
     <section class="animasi relative h-screen overflow-hidden">
       <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-1/2 *:md:w-1/3 *:lg:w-1/5">
         <div>
@@ -188,12 +193,12 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
     </div>
         <div class="container px-6 mx-auto relative">
             <div class="h-screen flex flex-col items-center justify-center">
-              <div class="animate-fadedown flex flex-col items-center justify-center text-center sm:flex-row gap-3 lg:gap-8 w-full text-center font-montecarlo text-purple-600 text-center text-6xl lg:text-8xl">
+              <div class=`animate-fadedown flex flex-col items-center justify-center text-center sm:flex-row gap-3 lg:gap-8 w-full text-center font-montecarlo text-${txClr} text-center text-6xl lg:text-8xl`>
                 <span>{ female }</span>
-                <span class="flex items-center justify-center"> <Icon name="mdi:cards-heart" class="text-purple-900 w-12 h-12" /> </span> 
+                <span class="flex items-center justify-center"> <Icon name="mdi:cards-heart" class=`text-${txClr} w-12 h-12` /> </span> 
                 <span> { male } </span> 
               </div>
-                <p class="animate-fadeup italic mt-8 text-center font-poppins tracking-widest max-w-prose">{quote}</p>   
+                <p class=`animate-fadeup italic text-${txClr} mt-8 text-center font-poppins tracking-widest max-w-prose`>{quote}</p>   
             </div>
         </div>
       </div>
@@ -208,8 +213,8 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
         </div>
         </div>
         <div class="container mx-auto relative py-20 px-6">
-          <div class="flex flex-col text-center items-center py-12">
-            <p class="fade-down opacity-0 text-purple-900 text-center font-montecarlo text-3xl md:text-5xl">
+          <div class=`flex flex-col text-center text-${txClr} items-center py-12`>
+            <p class="fade-down opacity-0 text-center font-montecarlo text-3xl md:text-5xl">
                 Bismillahirrahmanirrahim
             </p>
             <p class="fade-up opacity-0 font-medium py-8 font-josefin">
@@ -225,31 +230,31 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
                     </div>
                     <img src="/assets/dekor-13.webp" alt="Jejak Bahagia Frame" class="absolute">
                 </div>
-                <h3 class="fade-left opacity-0 text-6xl mt-6 font-montecarlo text-purple-600">
+                <h3 class=`fade-left opacity-0 text-6xl mt-6 font-montecarlo text-${txClr}`>
                     {female}
                 </h3>
-                <div class="fade-up opacity-0 font-josefin space-y-3 relative">
-                    <p class="text-xl font-medium border-b-2 border-b-purple-600">
+                <div class=`fade-up opacity-0 font-josefin space-y-3 relative text-${txClr}`>
+                    <p class=`text-xl font-medium border-b-2 border-b-{txClr}`>
                         {fullfemale}
                     </p>
                     <p class="text-lg">
                         {childfemale}
                     </p>
-                    <p class="text-lg font-medium text-purple-600">
+                    <p class="text-lg font-medium">
                         {parentfemale}
                     </p>
                     <p>
                         {cityfemale}
                     </p>
                     <div class="flex gap-3 text-center justify-center mt-4">
-                        <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
-                            <Icon name="mdi:instagram" class="w-10 h-10 text-white bg-purple-900 hover:text-purple-900 hover:bg-white p-2 rounded-full" />
+                        <a href={`https://www.instagram.com/${instagramfemale}`} class=`flex flex-row gap-2 items-center *:w-8 *:h-8 *:text-${txClr}`>
+                            <Icon name="mdi:instagram"/>
                         </a>
                     </div>
                 </div>
               </div>
             <div>
-                <p class="zoom-in opacity-0 text-purple-900 font-montecarlo text-4xl"><Icon name="mdi:ring" class="text-purple-900 w-16 h-16" /></p>
+                <p class="zoom-in opacity-0 text-${txClr} font-montecarlo text-4xl"><Icon name="mdi:ring" class=`text-${txClr} w-16 h-16` /></p>
             </div>
             <div class="relative w-full h-full">
               <div class="fade-right opacity-0 relative flex items-center justify-center w-72">
@@ -258,25 +263,25 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
                   </div>
                   <img src="/assets/dekor-13.webp" alt="Jejak Bahagia Frame" class="absolute">
               </div>
-              <h3 class="fade-left opacity-0 text-6xl mt-6 font-montecarlo text-purple-600">
+              <h3 class=`fade-left opacity-0 text-6xl mt-6 font-montecarlo text-${txClr}`>
                   {male}
               </h3>
-              <div class="fade-up opacity-0 font-josefin space-y-3 relative">
-                  <p class="text-xl font-medium border-b-2 border-b-purple-600">
+              <div class=`fade-up opacity-0 font-josefin space-y-3 relative text-${txClr}`>
+                  <p class=`text-xl font-medium border-b-2 border-b-${txClr}`>
                       {fullmale}
                   </p>
                   <p class="text-lg">
                       {childmale}
                   </p>
-                  <p class="text-lg font-medium text-purple-600">
+                  <p class="text-lg font-medium">
                       {parentmale}
                   </p>
                   <p>
                       {citymale}
                   </p>
                   <div class="flex gap-3 text-center justify-center mt-4">
-                      <a href={`https://www.instagram.com/${instagrammale}`} class="flex flex-row gap-2 items-center">
-                          <Icon name="mdi:instagram" class="w-10 h-10 text-white bg-purple-900 hover:text-purple-900 hover:bg-white p-2 rounded-full" />
+                      <a href={`https://www.instagram.com/${instagrammale}`} class=`flex flex-row gap-2 items-center *:w-8 *:h-8 *:text-${txClr}`>
+                          <Icon name="mdi:instagram"/>
                       </a>
                   </div>
               </div>
@@ -286,7 +291,7 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
           </div>
         </div>
     </section>
-    <section class="animasi2 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-purple-200 before:to-transparent before:inset-0 before:bg-cover before:absolute"
+    <section class=`animasi2 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-${bgClr} before:to-transparent before:inset-0 before:bg-cover before:absolute`
       style="background-image: url(/assets/ring-cd.jpg);">
         <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-1/2 *:md:w-1/3 *:lg:w-1/5">
             <div class="right-0 bottom-0 rotate-180">
@@ -297,16 +302,16 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
             </div>
         </div>
       <div class="container pb-28 mx-auto relative z-10">
-        <div class="text-center my-5">
-          <h2 class="fade-left opacity-0 text-2xl text-purple-900 font-bold mt-5 md:mt-0 mb-3 font-josefin">
+        <div class=`text-center text-${txClr} my-5`>
+          <h2 class="fade-left opacity-0 text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin">
             Save The Date</h2>
-          <h1 class="fade-right opacity-0 text-center text-purple-600 font-montecarlo text-4xl md:text-6xl lg:text-8xl">
+          <h1 class="fade-right opacity-0 text-center font-montecarlo text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up opacity-0 grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto *:text-center *:text-4xl *:sm:text-6xl *:font-medium *:text-purple-900 *:p-5 *:bg-white *:mx-2 *:rounded-lg">
+        <div id="timer" class=`fade-up opacity-0 grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto *:text-center *:text-4xl *:sm:text-6xl *:font-medium *:text-${bgClr} *:p-5 *:bg-white *:mx-2 *:rounded-lg`>
         </div>
-        <div id="endEvent" class="fade-up opacity-0 py-20 hidden text-center text-gray-800 text-2xl inset-x-0 capitalize font-josefin">event telah berakhir</div>
+        <div id="endEvent" class=`fade-up opacity-0 py-20 hidden text-center text-text-${txClr} text-2xl inset-x-0 capitalize font-josefin`>event telah berakhir</div>
       </div>
     </section>
     <section id="endEvent" class="animasi3 relative border-t-2 border-purple-600 overflow-hidden">
@@ -325,26 +330,26 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
             </div>
         </div>
       <div class="container mx-auto py-20 px-6">
-        <div class="text-center my-5 mb-10">
-          <h2 class="fade-left opacity-0 text-2xl text-purple-900 font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
-          <h1 class="fade-right opacity-0 text-purple-600 text-center font-montecarlo text-5xl lg:text-8xl">
+        <div class=`text-center text-${txClr} my-5 mb-10`>
+          <h2 class="fade-left opacity-0 text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
+          <h1 class="fade-right opacity-0 text-center font-montecarlo text-5xl lg:text-8xl">
             Wedding Day
           </h1>
         </div>
         <div
-          class="grid gird-cols-1 sm:grid-cols-2 max-w-4xl w-full mx-auto justify-center items-center gap-4 mt-5 *:mx-auto *:h-full *:w-full">
-          <div class="fade-right opacity-0 py-4 px-8 rounded-xl">
-            <div class="text-center font-josefin">
+          class=`grid gird-cols-1 sm:grid-cols-2 max-w-4xl w-full mx-auto justify-center items-center gap-4 mt-5 *:mx-auto *:h-full *:w-full *:opacity-0 *:py-4 *:px-8 *:rounded-xl *:border-2 *:border-${txClr}`>
+          <div class="fade-right">
+            <div class=`text-center font-josefin text-${txClr}`>
               <h2 class="text-center font-montecarlo text-4xl">Akad Nikah</h2>
               <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-purple-600"
+                <strong class="text-md font-bold"
                   >{date}
                 </strong>
               </p>
               <p class="mt-2 sm:mt-4 text-md">{timefs}</p>
-              <p class="mt-2 sm:mt-4 text-md">{locationfs}</p>
+              <p class="mt-2 sm:mt-4 text-md capitalize">{locationfs}</p>
               <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-purple-600"
+                <strong class="text-md font-bold text-${txClr}"
                   >{addressfs}</strong
                 >
               </p>
@@ -352,26 +357,26 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
             <div class="group">
               <a href={mapsfs}>
                 <button
-              class="mx-auto mt-8 flex items-center justify-center rounded-full text-white bg-purple-600 px-4 py-2 text-center text-sm font-medium group-hover:bg-purple-800 group-hover:border-none group-hover:duration-500 group-hover:transition-all"
+              class=`mx-auto mt-8 flex items-center justify-center rounded-full text-${bgClr} bg-${txClr} px-4 py-2 text-center text-sm font-medium group-hover:bg-purple-800 group-hover:border-none group-hover:duration-500 group-hover:transition-all`
               >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
               </a>
             </div>
           </div>
-          <div class="fade-left opacity-0 py-4 px-8 rounded-xl">
-            <div class="text-center font-josefin">
+          <div class="fade-left">
+            <div class=`text-center font-josefin text-${txClr}`>
                 <h2 class="text-center font-montecarlo text-5xl">Resepsi</h2>
                 <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-purple-600">{date}</strong></p>
+                <strong class="text-md font-bold">{date}</strong></p>
                 <p class="mt-2 sm:mt-4 text-md">{timesc}</p>
                 <p class="mt-2 sm:mt-4 text-md">{locationsc}</p>
                 <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-purple-600"
+                <strong class="text-md font-bold"
                 >{addresssc}</strong></p>
             </div>
             <div class="group">
               <a href={mapssc}>
                 <button
-              class="mx-auto mt-8 flex items-center justify-center rounded-full text-white bg-purple-600 px-4 py-2 text-center text-sm font-medium group-hover:bg-purple-800 group-hover:border-none group-hover:duration-500 group-hover:transition-all"
+              class=`mx-auto mt-8 flex items-center justify-center rounded-full text-${bgClr} bg-${txClr} px-4 py-2 text-center text-sm font-medium group-hover:bg-purple-800 group-hover:border-none group-hover:duration-500 group-hover:transition-all`
               >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
               </a>
             </div>
@@ -382,7 +387,7 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
     <section class="animasi4 relative bg-cover bg-no-repeat bg-center bg-fixed py-20 overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-purple-200 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
       <div class="container text-center mx-auto relative z-10">
         <div class="fade-down">
-          <h2 class="fade-down opacity-0 text-5xl lg:text-8xl text-purple-600 font-montecarlo">Wedding Gift</h2>
+          <h2 class="fade-down opacity-0 text-5xl lg:text-8xl text-${txClr} font-montecarlo">Wedding Gift</h2>
           <p class="fade-right opacity-0 max-w-prose mx-auto font-bold mt-5 font-josefin">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
         </div>
         <div class="flex flex-col md:flex-row gap-8 justify-center items-center w-full max-w-screen-md mx-auto">
@@ -390,7 +395,7 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
             <div class="text-center font-poppins flex flex-col items-center">
               <img class="rounded-lg object-cover h-12 w-12" src={logobankml} alt="JejakBahagia">
               <div class="font-josefin">
-                <p class="text-2xl text-purple-600 mt-5 md:mt-0 font-bold mb-3">{bankml}</p>
+                <p class="text-2xl text-${txClr} mt-5 md:mt-0 font-bold mb-3">{bankml}</p>
                 <p class="max-w-prose">{namebankml}</p>
                 <span class="copy-content font-bold">{numberbankml}</span>
                 <div class="btn-copy pt-5">
@@ -404,7 +409,7 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
             <div class="text-center font-poppins flex flex-col items-center">
               <img class="rounded-lg object-cover h-12 w-12" src={logobankfml} alt="JejakBahagia">
               <div class="font-josefin">
-                <p class="text-2xl text-purple-600 mt-5 md:mt-0 font-bold mb-3">{bankfml}</p>
+                <p class="text-2xl text-${txClr} mt-5 md:mt-0 font-bold mb-3">{bankfml}</p>
                 <p class="max-w-prose">{namebankfml}</p>
                 <span class="copy-content font-bold">{numberbankfml}</span>
                 <div class="btn-copy pt-5">
@@ -435,10 +440,10 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
         </div>
       <div class="container py-20 px-6 text-center mx-auto relative">
         <div class="text-center my-5 mb-10">
-          <h2 class="fade-down opacity-0 text-purple-600 text-center font-montecarlo text-5xl lg:text-8xl">
+          <h2 class="fade-down opacity-0 text-${txClr} text-center font-montecarlo text-5xl lg:text-8xl">
             Ucapan & Doa
           </h2>
-          <h2 class="fade-down opacity-0 text-2xl text-purple-600/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Please Confirm Your Attendance</h2>
+          <h2 class="fade-down opacity-0 text-2xl text-${txClr}/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Please Confirm Your Attendance</h2>
         </div>
 
         <Rsvp color="purple-600" />
@@ -487,6 +492,8 @@ const quote = frontmatter ? frontmatter.quote : data.quote;
         }
         });
     }
+
+    
     </script>
 </Noheader>
 

@@ -3,7 +3,7 @@ import Noheader from '../layouts/noheader.astro';
 import { Icon } from 'astro-iconify';
 ---
 <Noheader title="Send">
-<section class="bg-pink-200 bg-cover bg-center relative before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute" style="background-image: url(/public/assets/wedding.jpg);">
+<section class="bg-pink-200 bg-cover bg-center relative before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/wedding.jpg);">
   <div class="container px-6 py-16 h-max md:h-screen mx-auto relative grid grid-cols-1 place-content-center">
     <form id="formSend" action="javascript:void(0);" onsubmit="sendWhatsApp();" class="w-full max-w-screen-lg p-6 sm:p-12 mx-auto bg-white rounded-md shadow-md border">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 justify-center items-center [&>*]:font-poppins [&>*]:text-left [&>*]:text-gray-800/50">
@@ -12,7 +12,7 @@ import { Icon } from 'astro-iconify';
               <input value="" id="female" type="text" name="name" placeholder="Penganti Wanita">
               <input value="" id="Penerima" type="text" name="name" placeholder="Nama Penerima">
               <div class="flex flex-row gap-2 items-center">
-              <input type="tel" id="number" class="py-3 px-4 border border-gray-200 w-full rounded-lg focus:outline-none focus:ring focus:ring-0" placeholder="Nomor Whatsapp">
+              <input type="tel" id="number" class="py-3 px-4 text-black border border-gray-200 w-full rounded-lg focus:outline-none focus:ring focus:ring-0" placeholder="Nomor Whatsapp">
               <Icon name="mdi:contact" id="whatsapp-icon" class="h-6 w-6 text-pink-600" />
               </div>
           </div>
@@ -32,40 +32,31 @@ import { Icon } from 'astro-iconify';
 </section>
 <script>
 
-// var url = new URL('http://localhost:4321/send');
-
-// url.searchParams.append('male', 'roni');
-// url.searchParams.append('female', 'noni');
-
-// var modifiedUrl = url.toString();
-
-// console.log(modifiedUrl);
 
 
-window.onload = function() {
-    var path = window.location.pathname;
+  const urlParams = new URLSearchParams(window.location.search);
+    const maleValue = urlParams.get('male');
+    const femaleValue = urlParams.get('female');
+    const urlValue = urlParams.get('url');
+    
+    document.getElementById('male').value = maleValue;
+    document.getElementById('female').value = femaleValue;
 
-    var parts = path.split('/send/')[1].split('-');
-
-    var maleName = parts[0];
-    var femaleName = parts[1];
-
-    if (maleName && femaleName) {
-        
-    } else {
-        console.log('Parameter male dan female harus ada');
-    }
-}
-
+    urlParams.append('url', 'jejakbahagia.com');
+    const newUrl = `${window.location.origin}${window.location.pathname}?${urlParams.toString()}`;
+    console.log(newUrl);
+    
 
   function updateMessage() {
     var maleName = document.getElementById("male").value.trim();
     var femaleName = document.getElementById("female").value.trim();
     var Penerima = document.getElementById("Penerima").value.trim();
+    var detailURL = urlValue;
     var message = `*Kepada Yth.*
 Bapak/Ibu/Saudara/i 
 
 *_${Penerima}_* 
+
 
 *Assalamualaikum Warahmatullahi Wabarakaatuh*
 
@@ -79,7 +70,7 @@ dengan
 
 Untuk informasi detail mengenai acara, silahkan kunjungi link dibawah ini:
 
-https://jejakbahagia.com/posts/yanto-yanti/?to=${Penerima.replace(" ", "+")}
+${detailURL}/?to=${Penerima}
 
 Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu. Atas kehadiran dan doa restunya kami ucapkan terima kasih.
 

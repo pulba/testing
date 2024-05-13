@@ -12,9 +12,9 @@ import Audio from '../../layouts/audio.astro'
 import Animation from '../../layouts/animation.astro'
 
 export const data = {
-  slug: "demo/wedding-12",
-  title: "Demo 12",
-  type: "Exlusive Jawa",
+  slug: "demo/wedding-14",
+  title: "Demo 14",
+  type: "Exlusive Melayu",
   link: "Preview",
   price: "Rp. 149.000",
   unprice: "Rp. 200.000",
@@ -24,11 +24,11 @@ export const data = {
     alt: "jejak bahagia"
   },
   cover: {
-    url: '/assets/foto-tambahan-10.webp',
+    url: '/assets/deko-15.webp',
     alt: "jejak bahagia"
   },
   imgsc: {
-    url: '/assets/foto-tambahan-11.webp'
+    url: '/assets/img-2.webp'
   },
   imgth: {
     url: '/assets/bg-wedding-2.jpg'
@@ -195,11 +195,19 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
 <Noheader title={title} desc="Ini halaman Demo Wedding 1 dari undangan">
   
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
-  <section class="animasi relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-black/80 before:inset-0 before:bg-cover before:absolute"
+  <section class="animasi relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-yellow-500 before:mix-blend-multiply before:inset-0 before:bg-cover before:absolute"
     style={`background-image:url(${cover})`}>
+    <img src="/assets/dekor-16.webp" class="absolute top-0 lg:-top-14 w-full" alt="">
     <div class="container mx-auto flex flex-col justify-center items-center text-amber-200 relative overflow-hidden z-50">
-        <img src="/assets/dekor-11.png" alt="jejakbahagia" class="w-24 md:w-44 mb-5">
-        <div class="mx-auto text-center [&>*]:text-amber-500">
+        <div class="animate-zoomin relative mt-5">
+            <div class="relative flex items-center justify-center">
+                <div
+                class="w-44 h-56 bg-cover bg-top relative rounded-t-full rounded-b-lg drop-shadow-2xl"
+                style={`background-image:url(${imgsc})`}>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto text-center [&>*]:text-white relative">
             <div class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-great text-center text-6xl lg:text-8xl">
                 <span>{ female }</span>
                 <span > & </span> 
