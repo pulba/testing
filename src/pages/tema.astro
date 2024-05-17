@@ -23,7 +23,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
           <div
             class="grid grid-cols-1 min-[451px]:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mt-10 pt-10 max-w-screen-lg mx-auto">
             {
-              posts.slice(0, 12)
+              posts.slice(0, 15)
               .sort((a, b) => a.data.number - b.data.number)
               .map((post) => (
                 <div class="relative border border-gray-300 p-6 rounded-lg shadow-xl">
@@ -43,7 +43,7 @@ const posts = await Astro.glob('../pages/demo/*.astro');
                   <p class="font-bold text-gray-800 sm:text-left">{post.data.price}</p>  
                   <p class="font-bold text-pink-600 line-through sm:text-left text-xs">{post.data.unprice}</p>  
                   
-                  <div class="flex flex-col sm:flex-row gap-4 items-center justify-center sm:justify-start sm:justify-between mt-2">
+                  <div class="flex flex-col min-[320px]:flex-row gap-4 items-center justify-center min-[320px]:justify-start min-[320px]:justify-between mt-2">
                   <a href={post.data.slug} class="flex flex-row items-center justify-between gap-2 text-white bg-gray-600 w-fit px-4 py-2 rounded-md">{post.data.link}<Icon name="mdi:eye" class="w-4 h-4"/></a>
                   <a href="/pesan" class="flex flex-row items-center justify-between gap-2 text-white bg-pink-600 w-fit px-4 py-2 rounded-md">Pesan <Icon name="mdi:whatsapp" class="w-4 h-4 text-white" /></a>
                   </div>
