@@ -33,19 +33,23 @@ const { color } = Astro.props
 </form>
 
   
-<div x-data="{ data: [] }" x-init={`fetch('/api/rsvp-get?url=${current_url}').then(response => response.json()).then(rsvp => data = rsvp)`}  class="fade-right w-full max-w-xl mx-auto overflow-auto bg-white space-y-6 px-2 sm:p-6 overflow-y-scroll h-96">
+<div x-data="{ data: [], hasData: false }" 
+     x-init={`fetch('/api/rsvp-get?url=${current_url}').then(response => response.json()).then(rsvp => { data = rsvp; if(data.length > 0) hasData = true; })`}  
+     class="fade-right w-full max-w-xl mx-auto overflow-auto bg-white space-y-6 px-2 sm:p-6 overflow-y-scroll h-96" 
+     x-show="hasData">
   <template x-for="user in data" :key="user.id">
     <div class="flex flex-col leading-1.5 w-full p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl font-poppins" id="display">
       <div class="flex items-center justify-between">
         <p x-text="user.name" class="text-md font-semibold text-gray-800 capitalize"></p>
         <p x-text="user.present ? 'Hadir' : 'Tidak Hadir'"
-        x-bind:class=`{'text-white bg-gray-800': user.present, 'text-white bg-gray-400': !user.present}`
-        class="text-sm font-normal px-3 py-1 rounded-full"></p>
+           x-bind:class="{'text-white bg-gray-800': user.present, 'text-white bg-gray-400': !user.present}"
+           class="text-sm font-normal px-3 py-1 rounded-full"></p>
       </div>
       <p x-text="user.content" class="text-base italic text-left py-5 text-gray-800/50 font-medium"></p>
     </div>
   </template>
 </div>
+
 
 <Animation />
 
@@ -63,32 +67,22 @@ const { color } = Astro.props
 
     const radio = Array.from(document.getElementsByClassName("radio"));
     let present;
-    radio.forEach(function(elm, i){
+    radio.forEach(function(elm){
       if(elm.checked){
         present = elm;
       }
     });
 
-    fetch('/api/rsvp-send?name='+username+'&content='+message+'&present='+present.value+'&url='+current_url+'', {
+    fetch(`/api/rsvp-send?name=${username}&content=${message}&present=${present.value}&url=${current_url}`, {
       method: "GET"
     })
-    .then(x => x.json())
+    .then(response => response.json())
     .then(data => {
       console.log('Data berhasil diterima:', data);
-      const result = document.getElementById("display");
-      const item = data; 
+      const result = document.querySelector("[x-data]").__x.$data;
+      result.data.push(data);
+      result.hasData = true;
 
-      const itemHtml = `
-        <div class="flex flex-col leading-1.5 p-4 w-full border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl font-poppins">
-          <div class="flex items-center justify-between">
-            <p class="text-md font-semibold text-gray-800 capitalize">${item.name}</p>
-           
-            <p class="text-sm font-normal ${item.present ? 'text-white bg-gray-800' : 'text-gray-800 bg-red-500'} px-3 py-1 rounded-full">${item.present ? 'Hadir' : 'Tidak Hadir'}</p>
-          </div>
-          <p class="text-base italic text-left py-5 text-gray-800/50 font-medium">${item.content}</p>
-        </div>
-      `;
-      result.innerHTML = itemHtml;
       usernameInput.value = '';
       messageInput.value = '';
     })
@@ -97,4 +91,5 @@ const { color } = Astro.props
     });
   });
 </script>
+
 

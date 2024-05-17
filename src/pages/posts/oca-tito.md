@@ -2,8 +2,28 @@
 layout: '../demo/wedding-13.astro'
 title: Oca-Tito
 slug: posts/oca-tito
-bgClr: 'gray-950'
-txClr: 'white'
+
+#colors
+bgfs: 'bg-gray-950'
+bgsc: 'bg-gray-200'
+txfs: 'text-gray-950'
+txsc: 'text-white'
+bdfs: 'border-white'
+bdsc: 'border-white'
+from: 'from-gray-950'
+dbbgf: "*:bg-white"
+dbbgs: "*:bg-gray-950"
+dbtxf: "*:text-white"
+dbtxs: "*:text-white"
+#img
+dekorfs: 
+  url: '/assets/dekor-19.webp'
+dekorsc: 
+  url: '/assets/dekor-20.webp'
+pm1: 
+  url: '/assets/foto1.webp'
+pm2: 
+  url: '/assets/foto2.webp'
 # data mempelai
 male: "Tito"
 ml: "T"
@@ -39,7 +59,5 @@ addressfs: Rumah Mempelai Wanita
 addresssc: Rumah Mempelai Wanita
 mapsfs: https://maps.app.goo.gl/7bmjgptX3g4bS12J6 
 mapssc: https://maps.app.goo.gl/7bmjgptX3g4bS12J6
-
-
 quote: "Takdir Allah yang mengikatkan cinta dua hati, pernikahan adalah perjalanan spiritual yang disatukan oleh rahmat-Nya."
 ---
