@@ -11,362 +11,167 @@ import Footerpost from '../../layouts/footer-post.astro'
 import Audio from '../../layouts/audio.astro'
 import Animation from '../../layouts/animation.astro'
 
-export const data = {
-  slug: "demo/wedding-2",
-  title: "Demo 2",
-  type: "Diamond 02",
-  link: "Preview",
-  price: "Rp 99.000",
-  unprice: "Rp. 150.000",
-  number: 3,
-  img: {
-    url: '/assets/demo-2.webp',
-    alt: "jejak bahagia"
-  },
-  cover: {
-    url: '/assets/bg-wedding-1.jpg',
-    alt: "jejak bahagia"
-  },
-  imgth: {
-    url: '/assets/bg-wedding-2.jpg'
-  },
-
-  //Img kedua mempelai
-  imgfr: {
-    url: '/assets/girl-wedding.jpg'
-  },
-  imgfv: {
-    url: '/assets/man-wedding.jpg'
-  },
-
-  //Img Our Story
-  imgsx: {
-    url: '/assets/foto-stroy-1.jpg'
-  },
-  imgsv: {
-    url: '/assets/foto-stroy-2.jpg'
-  },
-  imgeg: {
-    url: '/assets/foto-stroy-3.jpg'
-  },
-  //img Our Moments
-  imgstory1: {
-    url: '/assets/foto-moment-1.jpg'
-  },
-  imgstory2: {
-    url: '/assets/foto-moment-2.jpg'
-  },
-  imgstory3: {
-    url: '/assets/foto-moment-3.jpg'
-  },
-  imgstory4: {
-    url: '/assets/foto-moment-1.jpg'
-  },
-  imgstory5: {
-    url: '/assets/foto-moment-2.jpg'
-  },
-  imgstory6: {
-    url: '/assets/foto-moment-3.jpg'
-  },
-  imgstory7: {
-    url: '/assets/foto-moment-1.jpg'
-  },
-  imgstory8: {
-    url: '/assets/foto-moment-3.jpg'
-  },
-  logobank: {
-    url: '/assets/gopay.png'
-  },
-  male: "Joe",
-  fullmale: "Jonathan Wijaya",
-  female: "Chrissy",
-  fullfemale: "Chrissy Gunawan",
-  date: "Jumat, 05 Januari 2030",
-
-  childmale: "Putra Pertama dari Pasangan",
-  childfemale: "Putri Pertama dari Pasangan",
-  parentmale: "Bambang & Mulyani",
-  parentfemale: "Joko & Siti",
-  instagrammale: "invivit.id",
-  instagramfemale: "invivit.id",
-  facebookmale: "invivit",
-  facebookfemale: "invivit",
-  citymale: "Yogyakarta",
-  cityfemale: "Lampung",
-
-//name bank
-  bank: "Gopay",
-  namebank: "Chrissy Gunawan",
-  numberbank: "123456789",
-  // waktu & tempat acara
-  timefs: "08:00 - 09:00 WIB",
-  timesc: "10:00 - 11:00 WIB",
-  timeth: "13:00 - end WIB",
-  addressfs: "Masjid Kampus UGM",
-  addresssc: "Jogja Expo Center",
-  addressth: "Rumah Mempelai Wanita",
-  locationfs: "Jl. Raya Janti Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55198",
-  locationsc: "Jl. Raya Janti Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55198",
-  locationth: "Jl. Raya Janti Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55198",
-  mapsfs: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
-  mapssc: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
-  mapsth: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
-
-  
-  storyfs: "Di sebuah kafe yang nyaman di tengah kota, dua orang asing, Juliet dan Romeo, tak sengaja bertemu. Romeo, seorang fotografer yang sedang mencari inspirasi untuk proyek terbarunya, sedangkan Juliet, seorang penulis lepas yang sedang mencatat ide-ide baru untuk novel romantisnya, tak menyadari bahwa matanya sedang bertatapan dengan seorang pria tampan di sisi lain kafe.",
-  storysc: "Beberapa bulan kemudian, Romeo memutuskan bahwa dia tidak ingin kehilangan Juliet dari hidupnya. Dengan hati yang penuh harap, dia menyiapkan proposal yang tak terlupakan. Di bawah langit malam yang cerah, di taman yang dihiasi dengan ratusan lentera, Romeo berlutut di hadapan Juliet.",
-  storyth: "Dari pertemuan tak terduga di kafe hingga momen indah pertunangan mereka di taman yang dipenuhi lentera, cerita cinta Juliet dan Romeo adalah bukti bahwa takdir bisa membawa dua hati yang saling mencari dan membuat mereka bersatu dalam cinta yang abadi.",
-  quote: "And everything that We have made in pairs so that you may remember (the greatness of Allah). Q.S Adz-Dzariat verse 49",
-}
-
-const { frontmatter } = Astro.props;
-const title = frontmatter ? frontmatter.title : data.title;
-
-const male = frontmatter ? frontmatter.male : data.male;
-const fullmale = frontmatter ? frontmatter.fullmale : data.fullmale;
-const female = frontmatter ? frontmatter.female : data.female;
-const fullfemale = frontmatter ? frontmatter.fullfemale : data.fullfemale;
-const date = frontmatter ? frontmatter.date : data.date;
-
-const childmale = frontmatter ? frontmatter.childmale : data.childmale;
-const childfemale = frontmatter ? frontmatter.childfemale : data.childfemale;
-const parentmale = frontmatter ? frontmatter.parentmale : data.parentmale;
-const parentfemale = frontmatter ? frontmatter.parentfemale : data.parentfemale;
-const instagrammale = frontmatter ? frontmatter.instagrammale : data.instagrammale;
-const instagramfemale = frontmatter ? frontmatter.instagramfemale : data.instagramfemale;
-const facebookmale = frontmatter ? frontmatter.facebookmale : data.facebookmale;
-const facebookfemale = frontmatter ? frontmatter.facebookfemale : data.facebookfemale;
-const citymale = frontmatter ? frontmatter.citymale : data.citymale;
-const cityfemale = frontmatter ? frontmatter.cityfemale : data.cityfemale;
-
-//bank
-const bank = frontmatter ? frontmatter.bank : data.bank;
-const namebank = frontmatter ? frontmatter.namebank : data.namebank;
-const numberbank = frontmatter ? frontmatter.numberbank : data.numberbank;
-const logobank = frontmatter ? frontmatter.logobank ? frontmatter.logobank.url ? frontmatter.logobank.url : data.logobank.url :  data.logobank.url : data.logobank.url;
-//waktu & tempat acara
-const timefs = frontmatter ? frontmatter.timefs : data.timefs;
-const timesc = frontmatter ? frontmatter.timesc : data.timesc;
-const timeth = frontmatter ? frontmatter.timeth : data.timeth;
-const addressfs = frontmatter ? frontmatter.addressfs : data.addressfs;
-const addresssc = frontmatter ? frontmatter.addresssc : data.addresssc;
-const addressth = frontmatter ? frontmatter.addressth : data.addressth;
-const mapsfs = frontmatter ? frontmatter.mapsfs : data.mapsfs;
-const mapssc = frontmatter ? frontmatter.mapssc : data.mapssc;
-const mapsth = frontmatter ? frontmatter.mapsth : data.mapsth;
-const locationfs = frontmatter ? frontmatter.locationfs : data.locationfs;
-const locationsc = frontmatter ? frontmatter.locationsc : data.locationsc;
-const locationth = frontmatter ? frontmatter.locationth : data.locationth;
-
-//story & quote
-const storyfs = frontmatter ? frontmatter.storyfs : data.storyfs;
-const storysc = frontmatter ? frontmatter.storysc : data.storysc;
-const storyth = frontmatter ? frontmatter.storyth : data.storyth;
-const quote = frontmatter ? frontmatter.quote : data.quote;
-
-//Img header
-const cover = frontmatter ? frontmatter.cover ? frontmatter.cover.url ? frontmatter.cover.url : data.cover.url :  data.cover.url : data.cover.url;
-const imgth = frontmatter ? frontmatter.imgth ? frontmatter.imgth.url ? frontmatter.imgth.url : data.imgth.url :  data.imgth.url : data.imgth.url;
-
-//Img kedua mempelai
-const imgfr = frontmatter ? frontmatter.imgfr ? frontmatter.imgfr.url ? frontmatter.imgfr.url : data.imgfr.url :  data.imgfr.url : data.imgfr.url;
-const imgfv = frontmatter ? frontmatter.imgfv ? frontmatter.imgfv.url ? frontmatter.imgfv.url : data.imgfv.url :  data.imgfv.url : data.imgfv.url;
-
-
-//Img Our Story
-const imgsx = frontmatter ? frontmatter.imgsx ? frontmatter.imgsx.url ? frontmatter.imgsx.url : data.imgsx.url :  data.imgsx.url : data.imgsx.url;
-const imgsv = frontmatter ? frontmatter.imgsv ? frontmatter.imgsv.url ? frontmatter.imgsv.url : data.imgsv.url :  data.imgsv.url : data.imgsv.url;
-const imgeg = frontmatter ? frontmatter.imgeg ? frontmatter.imgeg.url ? frontmatter.imgeg.url : data.imgeg.url :  data.imgeg.url : data.imgeg.url;
-
-//Img Our Moments
-const imgstory1 = frontmatter ? frontmatter.imgstory1 ? frontmatter.imgstory1.url ? frontmatter.imgstory1.url : data.imgstory1.url :  data.imgstory1.url : data.imgstory1.url;
-const imgstory2 = frontmatter ? frontmatter.imgstory2 ? frontmatter.imgstory2.url ? frontmatter.imgstory2.url : data.imgstory2.url :  data.imgstory2.url : data.imgstory2.url;
-const imgstory3 = frontmatter ? frontmatter.imgstory3 ? frontmatter.imgstory3.url ? frontmatter.imgstory3.url : data.imgstory3.url :  data.imgstory3.url : data.imgstory3.url;
-const imgstory4 = frontmatter ? frontmatter.imgstory4 ? frontmatter.imgstory4.url ? frontmatter.imgstory4.url : data.imgstory4.url :  data.imgstory4.url : data.imgstory4.url;
-const imgstory5 = frontmatter ? frontmatter.imgstory5 ? frontmatter.imgstory5.url ? frontmatter.imgstory5.url : data.imgstory5.url :  data.imgstory5.url : data.imgstory5.url;
-const imgstory6 = frontmatter ? frontmatter.imgstory6 ? frontmatter.imgstory6.url ? frontmatter.imgstory6.url : data.imgstory6.url :  data.imgstory6.url : data.imgstory6.url;
-const imgstory7 = frontmatter ? frontmatter.imgstory7 ? frontmatter.imgstory7.url ? frontmatter.imgstory7.url : data.imgstory7.url :  data.imgstory7.url : data.imgstory7.url;
-const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.url ? frontmatter.imgstory8.url : data.imgstory8.url :  data.imgstory8.url : data.imgstory8.url;
+const {frontmatter} = Astro.props
 ---
 
-<Noheader title={title} desc="Ini halaman Demo Wedding 2 dari undangan">
+<Noheader title={frontmatter.title} desc={frontmatter.desc}>
 
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear " />
 
   <section class="animasi1 relative h-screen bg-cover bg-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
-  <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale-[75%]" style={`background-image:url(${cover})`}></div>
+  <div class="absolute inset-0 bg-cover bg-center grayscale-[90%]" style={`background-image:url(${frontmatter.cover})`}></div>
   
-  <div class="container mx-auto py-20 h-screen flex flex-col justify-between items-center text-white relative">
-      <p class="animate-fadedown text-sm md:text-xl mt-8 font-poppins font-semibold text-gray-800">
+  <div class="container mx-auto py-20 h-screen flex flex-col justify-between items-center relative">
+      <p class=`animate-fadedown text-sm md:text-xl mt-8 font-poppins font-semibold ${frontmatter.txsc}`>
         Undangan Pernikahan
       </p>
-      <div class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-nautigal text-gray-800 text-center text-6xl lg:text-8xl">
-        <span>{ female }</span>
-        <span> & </span> 
-        <span> { male } </span> 
+      <div
+        class=`animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-nautigal text-center text-6xl lg:text-9xl ${frontmatter.txsc}`>
+        <span>{frontmatter.female }</span>
+        <span class=`${frontmatter.txfs}`> & </span> 
+        <span> {frontmatter.male } </span> 
       </div>
     <div class="animate-fadedown mx-auto text-center mt-2 text-gray-800">
       <h3 class="mt-2 font-poppins text-xs">Kepada Yth. <br>  Bapak/Ibu/Saudara/i</h3>
-      <h4 id="invite-name" class="font-poppins my-3 capitalize">
-        <Namatamu /> nama tamu
+      <h4 id="invite-name" class="animate-fadeup text-xl font-josefin my-3 capitalize">
+        <Namatamu /> Nama Tamu
       </h4>
       <label
         for="toggle" id="toaudio"
-        class="animate-fadeup mt-5 px-4 py-2 relative bg-gray-400 rounded-full text-gray-800 font-bold flex flex-row items-center justify-center gap-1 transition-all duration-700 ease-linear hover:bg-white"><Icon name="mdi:love-letter" class="w-5 h-5" /> Open Invitation </label>
+        class=`animate-fadeup mt-5 px-4 py-2 relative rounded-full font-bold flex flex-row items-center justify-center gap-1 ${frontmatter.txfs} ${frontmatter.bgsc}`><Icon name="mdi:love-letter" class="w-5 h-5" /> Open Invitation </label>
     </div>
   </div>
   </section>
-  <main id="myDIV" class="hidden bg-gray-100 peer-checked:block scroll-smooth">
+  <main id="myDIV" class=`hidden peer-checked:block scroll-smooth ${frontmatter.bgfs}`>
     <section class="animasi2 hero relative h-screen overflow-hidden">
-      <div class="absolute inset-0 bg-gray-500 bg-cover bg-center grayscale" style={`background-image:url(${imgth})`}></div>
+      <div class="absolute inset-0 bg-cover bg-center grayscale" style={`background-image:url(${frontmatter.imgsc})`}></div>
       
-      <div class="container h-screen mx-auto pt-20 flex flex-col justify-center items-center text-white relative">
-        <div class="animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-nautigal text-white text-center text-6xl lg:text-8xl">
-          <span>{ female }</span>
-          <span> & </span> 
-          <span> { male } </span> 
-        </div>
-        <p class="animate-faderight font-poppins text-center text-xl md:text-2xl mt-5">{date}</p>
+      <div class="container h-screen mx-auto pt-20 flex flex-col justify-center items-center relative">
+        <div
+        class=`animate-fadeleft flex flex-col sm:flex-row gap-2 text-center font-nautigal text-center text-6xl lg:text-9xl ${frontmatter.txsc}`>
+        <span>{frontmatter.female }</span>
+        <span class=`${frontmatter.txfs}`> & </span> 
+        <span> {frontmatter.male } </span> 
+      </div>
+        <p class=`animate-faderight font-poppins text-center text-xl md:text-2xl mt-5 ${frontmatter.txfs}`>{frontmatter.date}</p>
       </div>
     </section>
     <section class="animasi3 overflow-hidden">
       <div class="container py-20 px-6 mx-auto">
-        <div class="flex flex-col md:flex-row gap-16 max-w-4xl mx-auto my-12">
+        <div class="flex flex-col sm:flex-row gap-16 max-w-4xl mx-auto my-12">
           <div class="rounded-lg grayscale">
-            <img src={imgth} alt="JejakBahagia"  class="fade-right opacity-0 rounded-3xl w-screen">
+            <img src={frontmatter.imgstory1} alt="JejakBahagia"  class="fade-right opacity-0 rounded-lg aspect-video sm:aspect-square">
           </div>
           <div class="flex flex-col items-center justify-center font-poppins text-center">
-            <img src="/assets/pattern.png" class="fade-left opacity-0" alt="JejakBahagia">
-            <p class="fade-left opacity-0">{quote}</p>
+            <img src={frontmatter.dekorfs} class="fade-left opacity-0" alt="JejakBahagia">
+            <p class=`fade-left opacity-0 ${frontmatter.txth}`>{frontmatter.quote}</p>
           </div>
         </div>
       </div>
     </section>
     <section class="animasi4 bg-white overflow-hidden">
       <div class="container py-20 px-6 mx-auto">
-        <img src="/assets/pattern-2.png" alt="JejakBahagia" class="fade-down opacity-0 mx-auto">
+        <img src={frontmatter.dekorth} alt="JejakBahagia" class="fade-down opacity-0 grayscale mx-auto">
         <div class="flex flex-col lg:flex-row justify-center items-center gap-y-16 max-w-4xl mx-auto mt-5 [&>*]:text-center [&>*]:w-full [&>*]:flex [&>*]:flex-col [&>*]:items-center">
           <div>
             <div class="fade-right opacity-0 relative grayscale flex items-center justify-center w-72">
               <div class="w-56 h-64 bg-cover bg-center relative rounded-full"
-              style={`background-image:url(${imgfr})`}>
+              style={`background-image:url(${frontmatter.pm1})`}>
               </div>
-              <img src="/assets/floral2.webp" alt="JejakBahagia"  class="absolute">
+              <img src={frontmatter.dekorsc} alt="JejakBahagia"  class="absolute">
             </div>
-            <h3 class="fade-down opacity-0 text-8xl mt-6 font-nautigal text-gray-800">{ female }</h3>
+            <h3 class=`fade-down opacity-0 text-8xl mt-6 font-nautigal ${frontmatter.txsc}`>{frontmatter.female }</h3>
             <div class="fade-up opacity-0 font-poppins space-y-3">
-              <div class="">
-                <p class="text-xl font-medium w-max mx-auto border-b-2 border-b-gray-800">{ fullfemale }</p>
-                <p class="text-lg">{childfemale}</p>
-                <p class="text-lg font-medium text-gray-800">
-                  { parentfemale }
+              <div class=`${frontmatter.txth}`>
+                <p class=`text-xl font-medium w-max mx-auto border-b-2 ${frontmatter.bdr}`>{frontmatter.fullfemale }</p>
+                <p class="text-lg">{frontmatter.childfemale}</p>
+                <p class=`text-lg font-medium ${frontmatter.txsc}`>{frontmatter.parentfemale }
                 </p>
-                <p>{cityfemale}</p>
-                <div class="flex gap-3 text-center justify-center mt-4">
-                  <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
-                    <Icon name="mdi:facebook" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
-                  </a>
-                  <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
-                    <Icon name="mdi:instagram" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
+                <p>{frontmatter.cityfemale}</p>
+                <div class="flex text-center justify-center mt-4">
+                  <a href={`https://www.instagram.com/${frontmatter.instagramfemale}`} class="flex flex-row gap-2 items-center">
+                    <Icon name="mdi:instagram" class=`w-10 h-10 p-2 rounded-full ${frontmatter.txfs} ${frontmatter.bgsc}` />
                   </a>
                 </div>
               </div>
             </div>
           </div>
-            <div>
-              <div class="fade-right opacity-0 relative grayscale flex items-center justify-center w-72">
-                <div class="w-56 h-64 bg-cover bg-center relative rounded-full"
-                style={`background-image:url(${imgfv})`}>
-                </div>
-                <img src="/assets/floral2.webp" alt="JejakBahagia"  class="absolute">
+          <div>
+            <div class="fade-left opacity-0 relative grayscale flex items-center justify-center w-72">
+              <div class="w-56 h-64 bg-cover bg-center relative rounded-full"
+              style={`background-image:url(${frontmatter.pm2})`}>
               </div>
-              <h3 class="fade-down opacity-0 text-8xl mt-6 font-nautigal text-gray-800">{ male }</h3>
-              <div class="fade-up opacity-0 font-poppins space-y-3">
-                <div>
-                    <p class="text-xl font-medium w-max mx-auto border-b-2 border-b-gray-800">{ fullmale }</p>
-                    <p class="text-lg">{ childmale }</p>
-                    <p class="text-lg font-medium text-gray-800">
-                      { parentmale }
-                    </p>
-                    <p>{citymale}</p>
-                    <div class="flex gap-3 text-center justify-center mt-4">
-                      <a href={`https://www.facebook.com/${facebookmale}`} class="flex flex-row gap-2 items-center">
-                        <Icon name="mdi:facebook" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
-                      </a>
-                      <a href={`https://www.instagram.com/${instagrammale}`} class="flex flex-row gap-2 items-center">
-                        <Icon name="mdi:instagram" class="w-8 h-8 text-neutral-400 hover:text-gray-800" />
-                      </a>
-                    </div>
-                  </div>
+              <img src={frontmatter.dekorsc} alt="JejakBahagia"  class="absolute">
+            </div>
+            <h3 class=`fade-down opacity-0 text-8xl mt-6 font-nautigal ${frontmatter.txsc}`>{frontmatter.male }</h3>
+            <div class="fade-up opacity-0 font-poppins space-y-3">
+              <div class=`${frontmatter.txth}`>
+                <p class=`text-xl font-medium w-max mx-auto border-b-2 ${frontmatter.bdr}`>{frontmatter.fullmale }</p>
+                <p class="text-lg">{frontmatter.childmale}</p>
+                <p class=`text-lg font-medium ${frontmatter.txsc}`>{frontmatter.parentmale }
+                </p>
+                <p>{frontmatter.citymale}</p>
+                <div class="flex text-center justify-center mt-4">
+                  <a href={`https://www.instagram.com/${frontmatter.instagrammale}`} class="flex flex-row gap-2 items-center">
+                    <Icon name="mdi:instagram" class=`w-10 h-10 p-2 rounded-full ${frontmatter.txfs} ${frontmatter.bgsc}` />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </section>
     <section class="animasi5 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gray-500 bg-cover bg-no-repeat lg:bg-center bg-fixed bg-center grayscale blur-[1px]" style="background-image: url('/assets/ring-cd.jpg');">
+      <div class=`absolute inset-0 bg-gray-500 bg-cover bg-no-repeat lg:bg-center bg-fixed bg-center grayscale blur-[1px] before:content-[''] before:bg-gradient-to-b before:to-transparent before:inset-0 before:bg-cover before:absolute ${frontmatter.from}` style={`background-image:url(${frontmatter.add1})`}>
       </div>
       <div class="container py-32 px-6 mx-auto relative z-10">
-        <div class="text-center my-5">
-          <h2 class="fade-down opacity-0 text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3 text-gray-800">Countdown to</h2>
-          <h1 class="fade-right opacity-0 text-gray-800 text-center font-nautigal text-4xl md:text-6xl lg:text-8xl">
+        <div class=`text-center my-5 ${frontmatter.txsc}`>
+          <h2 class="fade-down opacity-0 text-xl md:text-2xl font-bold mt-5 md:mt-0 mb-3">Countdown to</h2>
+          <h1 class="fade-right opacity-0 text-center font-nautigal text-4xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up opacity-0 grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl w-full mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-bold [&>*]:font-poppins [&>*]:text-gray-800 [&>*]:p-1">
+        <div id="timer" class=`fade-up opacity-0 grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl w-full mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-bold [&>*]:font-poppins [&>*]:p-1 ${frontmatter.txsc}`>
         </div>
         <Countdown/>
         <div class="grid grid-cols-1 md:grid-cols-2 items-center max-w-4xl mx-auto gap-x-8 gap-y-16 mt-5 pt-16">
           <div class="fade-right opacity-0 rounded-lg w-full">
-            <img src="/assets/foto-tambahan-2.jpg" alt="JejakBahagia"  class="rounded-3xl grayscale-[75%]">
+            <img src=`${frontmatter.imgstory2}` alt="JejakBahagia"  class="aspect-square rounded-lg grayscale">
           </div>
-          <div class="fade-left opacity-0 text-center font-poppins w-full bg-gray-100 py-12 px-6 rounded-3xl">
-            <h2 class="text-center font-nautigal text-4xl md:text-6xl text-gray-800">Akad Nikah</h2>
-            <p class="mt-2 sm:mt-4">
-              <strong class="text-md font-bold text-gray-800"
-                >{date}
-              </strong>
-            </p>
-            <p class="mt-2 sm:mt-4 text-md">{timefs}</p>
-            <p class="mt-2 sm:mt-4">
-              <strong class="text-md font-bold text-gray-800"
-                >{addressth}</strong
+          <div class=`fade-right opacity-0 py-12 rounded-lg ${frontmatter.bgfs} ${frontmatter.txth}`>
+            <div class="text-center font-josefin">
+              <h2 class="text-center font-nautigal text-5xl">Akad Nikah</h2>
+              <p class="mt-2 sm:mt-4">{frontmatter.date}</p>
+              <p class="mt-2 sm:mt-4 text-md">{frontmatter.timefs}</p>
+              <p class="mt-2 sm:mt-4">{frontmatter.addressfs}</p>
+              <div class="group">
+                <a href={frontmatter.mapsfs}>
+                  <button
+                class=`mx-auto mt-8 flex items-center justify-center rounded-full px-4 py-2 text-center text-sm font-medium ${frontmatter.txfs} ${frontmatter.bgsc}`
+                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button
               >
-            </p>
-            <p class="mt-2 sm:mt-4 text-sm">
-              {locationfs}
-            </p>
-            <div class="group">
-              <a href={mapsfs}>
-                <button class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-800 text-gray-800 px-4 py-2 text-center text-sm font-medium group-hover:bg-gray-800 group-hover:text-white group-hover:border-none group-hover:duration-500 group-hover:transition-all">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-gray-800 group-hover:text-white" />
-                </button>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="fade-right opacity-0 rounded-lg w-full md:order-last">
-            <img src="/assets/foto-tambahan-3.jpg" alt="JejakBahagia"  class="rounded-3xl grayscale-[75%]">
+          <div class="fade-left opacity-0 rounded-lg w-full md:order-last">
+            <img src=`${frontmatter.imgstory2}` alt="JejakBahagia"  class="aspect-square rounded-lg grayscale">
           </div>
-          <div class="fade-left opacity-0 text-center font-poppins w-full bg-gray-100 py-12 px-6 rounded-3xl">
-            <h2 class="text-center font-nautigal text-4xl md:text-6xl text-gray-800">Resepsi</h2>
-            <p class="mt-2 sm:mt-4">
-              <strong class="text-md font-bold text-gray-800"
-                >{date}
-              </strong>
-            </p>
-            <p class="mt-2 sm:mt-4 text-md">{timesc}</p>
-            <p class="mt-2 sm:mt-4">
-              <strong class="text-md font-bold text-gray-800"
-                >{addressth}</strong
+          <div class=`fade-right opacity-0 py-12 rounded-lg ${frontmatter.bgfs} ${frontmatter.txth}`>
+            <div class="text-center font-josefin">
+              <h2 class="text-center font-nautigal text-5xl">Resepsi</h2>
+              <p class="mt-2 sm:mt-4">{frontmatter.date}</p>
+              <p class="mt-2 sm:mt-4 text-md">{frontmatter.timesc}</p>
+              <p class="mt-2 sm:mt-4">{frontmatter.addresssc}</p>
+              <div class="group">
+                <a href={frontmatter.mapssc}>
+                  <button
+                class=`mx-auto mt-8 flex items-center justify-center rounded-full px-4 py-2 text-center text-sm font-medium ${frontmatter.txfs} ${frontmatter.bgsc}`
+                >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button
               >
-            </p>
-            <p class="mt-2 sm:mt-4 text-sm">
-              {locationsc}
-            </p>
-            <div class="group">
-              <a href={mapssc}>
-                <button class="mx-auto mt-8 flex items-center justify-center rounded-full border border-gray-800 text-gray-800 px-4 py-2 text-center text-sm font-medium group-hover:bg-gray-800 group-hover:text-white group-hover:border-none group-hover:duration-500 group-hover:transition-all">Google Maps <Icon name="mdi:google-maps" class="w-6 h-6 text-gray-800 group-hover:text-white" />
-                </button>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -375,7 +180,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="animasi6 py-20 overflow-hidden">
       <div class="container py-20 px-6 text-center mx-auto">
         <div>
-          <h2 class="fade-down opacity-0 text-gray-800 text-center font-nautigal text-6xl lg:text-8xl">Tentang Kami</h2>
+          <h2 class=`fade-down opacity-0 text-center font-nautigal text-6xl lg:text-8xl ${frontmatter.txth}`>Tentang Kami</h2>
         </div>
         <div class="mx-auto">
           <div class="fade-right opacity-0 bg-white rounded shadow-lg mx-auto my-5 w-full md:w-3/4 p-10">
@@ -383,52 +188,49 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               <div class="w-full md:w-1/4">
                 <img
                   class="rounded-lg grayscale"
-                  src={imgsx}
+                  src={frontmatter.imgstory9}
                   alt="JejakBahagia"
                 />
               </div>
               <div class="text-left font-poppins">
-                <p class="text-5xl text-gray-800 mt-5 md:mt-0 font-nautigal mb-3">Fist Time</p>
-                <p class="max-w-prose text-gray-800/75">
-                  {storyfs}
+                <p class=`text-5xl mt-5 md:mt-0 font-nautigal mb-3 ${frontmatter.txsc}`>Fist Time</p>
+                <p class=`max-w-prose ${frontmatter.txth}`>{frontmatter.storyfs}
                 </p>
               </div>
             </div>
           </div>
-          <Icon name="mdi:arrow-u-down-left" class="fade-down opacity-0 w-24 h-24 mx-auto text-gray-400" />
+          <Icon name="mdi:arrow-u-down-left" class=`fade-down opacity-0 w-24 h-24 mx-auto ${frontmatter.txsc}` />
           <div class="fade-left opacity-0 bg-white rounded shadow-lg mx-auto my-5 w-full md:w-3/4 p-10">
             <div class="md:flex mx-auto gap-5 justify-center">
               <div class="w-full md:w-1/4">
                 <img
                   class="rounded-lg grayscale"
-                  src={imgsv}
+                  src={frontmatter.imgstory10}
                   alt="JejakBahagia"
                 />
               </div>
               <div class="text-left font-poppins">
-                <p class="text-5xl text-gray-800 mt-5 md:mt-0 font-nautigal mb-3">
+                <p class=`text-5xl mt-5 md:mt-0 font-nautigal mb-3 ${frontmatter.txsc}`>
                   Menyatakan Cinta
                 </p>
-                <p class="max-w-prose text-gray-800/75">
-                  {storysc}
+                <p class=`max-w-prose ${frontmatter.txth}`>{frontmatter.storysc}
                 </p>
               </div>
             </div>
           </div>
-          <Icon name="mdi:arrow-u-down-left" class="fade-down opacity-0 w-24 h-24 mx-auto text-gray-400" />
+          <Icon name="mdi:arrow-u-down-left" class=`fade-down opacity-0 w-24 h-24 mx-auto ${frontmatter.txsc}` />
           <div class="fade-up opacity-0 bg-white rounded shadow-lg mx-auto my-5 w-full md:w-3/4 p-10">
             <div class="md:flex mx-auto gap-5 justify-center">
               <div class="w-full md:w-1/4">
                 <img
                   class="rounded-lg grayscale"
-                  src={imgeg}
+                  src={frontmatter.imgstory11}
                   alt="JejakBahagia"
                 />
               </div>
               <div class="text-left font-poppins">
-                <p class="text-5xl text-gray-800 mt-5 md:mt-0 font-nautigal mb-3">Tunangan</p>
-                <p class="max-w-prose text-gray-800/75">
-                  {storyth}
+                <p class=`text-5xl mt-5 md:mt-0 font-nautigal mb-3 ${frontmatter.txsc}`>Tunangan</p>
+                <p class=`max-w-prose ${frontmatter.txth}`>{frontmatter.storyth}
                 </p>
               </div>
             </div>
@@ -439,7 +241,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="animasi7 overflow-hidden">
       <div class="container mx-auto px-6 py-20">
         <div class="text-center my-5 mb-10">
-          <h2 class="fade-down opacity-0 text-gray-800 text-center font-nautigal text-5xl lg:text-8xl">
+          <h2 class=`fade-down opacity-0 text-center font-nautigal text-5xl lg:text-8xl ${frontmatter.txth}`>
             Moment Kami
           </h2>
         </div>
@@ -447,7 +249,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           <div class="fade-right">
             <div class="truncate">
               <img
-                src={imgstory1}
+                src={frontmatter.imgstory1}
                 alt="Foto 1"
                 class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
@@ -456,7 +258,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           <div class="fade-down opacity-0">
             <div class="truncate">
               <img
-                src={imgstory2}
+                src={frontmatter.imgstory2}
                 alt="Foto 1"
                 class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
@@ -465,7 +267,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           <div class="fade-up opacity-0">
             <div class="truncate">
               <img
-                src={imgstory3}
+                src={frontmatter.imgstory3}
                 alt="Foto 1"
                 class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
@@ -474,7 +276,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           <div class="fade-left opacity-0">
             <div class="truncate">
               <img
-                src={imgstory4}
+                src={frontmatter.imgstory4}
                 alt="Foto 1"
                 class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
@@ -483,7 +285,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           <div class="fade-left opacity-0">
             <div class="truncate">
               <img
-                src={imgstory5}
+                src={frontmatter.imgstory5}
                 alt="Foto 1"
                 class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
@@ -492,7 +294,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           <div class="fade-up opacity-0">
             <div class="truncate">
               <img
-                src={imgstory6}
+                src={frontmatter.imgstory6}
                 alt="Foto 1"
                 class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
@@ -501,7 +303,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           <div class="fade-down opacity-0">
             <div class="truncate">
               <img
-                src={imgstory7}
+                src={frontmatter.imgstory7}
                 alt="Foto 1"
                 class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
@@ -510,7 +312,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           <div class="fade-left opacity-0">
             <div class="truncate">
               <img
-                src={imgstory8}
+                src={frontmatter.imgstory8}
                 alt="Foto 1"
                 class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
               />
@@ -519,55 +321,62 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section class="animasi8 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gray-500 bg-cover bg-no-repeat bg-center bg-fixed bg-center grayscale before:content-[''] before:bg-black before:inset-0 before:bg-opacity-75 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg);"></div>
-      <div class="container py-20 px-6 text-center mx-auto relative">
-        <div>
-          <h2 class="fade-down opacity-0 text-5xl lg:text-8xl text-white font-nautigal">Wedding Gift</h2>
-          <img src="/assets/pattern-2.png" alt="JejakBahagia" class="fade-down opacity-0 mx-auto">
-          <p class="fade-left opacity-0 max-w-prose mx-auto mt-5 font-poppins text-white">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
+    <section class="animasi9 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden">
+      <div class=`absolute inset-0 bg-cover bg-center grayscale blur-[1px] before:content-[''] before:bg-gradient-to-b before:to-transparent before:inset-0 before:bg-cover before:absolute ${frontmatter.from}` style={`background-image:url(${frontmatter.add2})`}></div>
+      <div class="container py-20 px-6 text-center mx-auto relative z-10">
+        <div class=`text-center my-10 ${frontmatter.txth}`>
+          <h2 class=`fade-right opacity-0 text-5xl lg:text-8xl font-nautigal ${frontmatter.txsc}`>Wedding Gift</h2>
+          <p class="fade-left opacity-0 max-w-prose mx-auto font-bold mt-5 font-josefin">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
         </div>
-        <div class="fade-up opacity-0 py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
-          <div class="text-center font-poppins flex flex-col items-center">
-            <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
-            <p class="text-2xl c mt-5 md:mt-0 font-bold mb-3">{bank}</p>
-            <p class="max-w-prose text-gray-800">{namebank}</p>
-            <span class="copy-content font-bold">{numberbank}</span>
-            <div class="icon pt-5">
-              <button class="bg-gray-800 text-white px-5 py-2 rounded-full">Copy Rekening</button>
-              <Payment />
+        <div class="flex flex-col md:flex-row gap-8 justify-center items-center w-full max-w-screen-md mx-auto">
+          <div class:list={[`fade-down opacity-0 py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-center md:flex mx-auto gap-5 bg-white rounded-lg border-2 ${frontmatter.bdr} shadow-lg`]}>
+            <div class="text-center font-poppins flex flex-col items-center">
+              <img class="h-8 w-1/2 lg:w-full grayscale" src={frontmatter.logoml} alt="JejakBahagia">
+              <div class:list={[`mt-4 font-josefin ${frontmatter.txth}`]}>
+                <p class="max-w-prose">{frontmatter.namebankml}</p>
+                <span class="copy-content font-bold">{frontmatter.numberbankml}</span>
+                <div class="btn-copy pt-5">
+                  <button class:list={[`${frontmatter.bgsc} ${frontmatter.txfs} px-5 py-2 rounded-lg`]}>Copy Rekening</button>
+                </div>
+                <span class="copy-message absolute hidden inset-x-0">Rekening dicopy</span>
+              </div>
             </div>
-            <span class="copy-message absolute hidden -bottom-6 inset-x-0">Rekening dicopy</span>
+          </div>
+          <div class:list={[`fade-up opacity-0 py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-center md:flex mx-auto gap-5 bg-white rounded-lg border-2 ${frontmatter.bdr} shadow-lg`]}>
+            <div class="text-center font-poppins flex flex-col items-center">
+              <img class="h-8 w-1/2 lg:w-full grayscale" src={frontmatter.logofml} alt="JejakBahagia">
+              <div class:list={[`mt-5 font-josefin ${frontmatter.txth}`]}>
+                <p class="max-w-prose">{frontmatter.namebankfml}</p>
+                <span class="copy-content font-bold">{frontmatter.numberbankfml}</span>
+                <div class="btn-copy pt-5">
+                  <button class:list={[`${frontmatter.bgsc} ${frontmatter.txfs} px-5 py-2 rounded-lg`]}>Copy Rekening</button>
+                </div>
+                <span class="copyMessage absolute hidden inset-x-0">Rekening dicopy</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       </div>
     </section>
-    <section class="animasi9 overflow-hidden">
-      <div class="container py-20 sm:px-6 text-center mx-auto">
-        <div class="text-center my-5 mb-10">
-          <h2  class="fade-down opacity-0 text-gray-800 text-center font-nautigal text-5xl lg:text-8xl">
+    <section class="animasi10 overflow-hidden relative">
+      <div class="container py-20 z-50 px-6 text-center mx-auto relative">
+        <div class:list={[`text-center my-5 mb-10 ${frontmatter.txth}`]}>
+          <h2 class="fade-right opacity-0 text-4xl md:text-8xl font-nautigal">
             Ucapan & Doa
           </h2>
+          <h2 class="fade-right opacity-0 text-xl md:text-2xl font-bold mt-5 font-josefin">Please Confirm Your Attendance</h2>
         </div>
         <Rsvp color="gray-600" />
       </div>
     </section>
     
     <Footerpost />
-    <section class="fixed bottom-5 right-5 z-20">
-      <div class="container flex flex-col items-end justify-end mx-auto">
-        <a href="https://wa.me/6281532094978?text=Hallo Admin JejakBahagia, saya mau konsultasi undangan digital dong!" target="_blank">
-          <Icon name="mdi:whatsapp" class="w-14 h-14 mb-5 text-white bg-green-500 rounded-full p-2" />
-        </a>
-        
-      <Audio />
-      </div>
-    </section>
+    <Audio />
     <audio id="myAudio" loop class="hidden">
-      <source src="/assets/john-legend-all-of-me.mp3" type="audio/mpeg">
+      <source src=`/assets/${frontmatter.music}.mp3` type="audio/mpeg">
     </audio>
-
+    <Payment />
   <Animation />
   </main>
 </Noheader>

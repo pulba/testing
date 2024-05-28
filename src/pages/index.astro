@@ -2,9 +2,8 @@
 import Home from '../layouts/home.astro';
 import '@fontsource-variable/josefin-sans';
 import { Icon } from 'astro-iconify';
-import { Image } from 'astro:assets';
-const posts = await Astro.glob('../pages/demo/*.astro');
-
+const posts = await Astro.glob('../pages/posts/*.md');
+import Splide from '../layouts/autoscroll.astro'
 ---
 
 <Home title="Home" desc="Masih zaman undangan kertas? pake undangan digital dong langsung kirim ke semua kontak Anda!">
@@ -27,14 +26,14 @@ const posts = await Astro.glob('../pages/demo/*.astro');
         <div class="mx-auto relative grid place-items-center overflow-hidden">
           <div class="h-screen grid place-items-center overflow-hidden">
             <div class="grid grid-cols-[repeat(5,_100px)] auto-rows-[100px] gap-2 place-items-center mb-[100px] [&>*]:object-cover [&>*]:w-[200px] [&>*]:h-[200px] [&>*]:rounded-[5px] max-[639px]:[&>*:nth-child(4n-1)]:col-[2_/_span_2] min-[640px]:grid-cols-[repeat(6,_100px)] min-[640px]:[&>*:nth-child(5n-1)]:col-[2_/_span_2] [&>*]:col-[auto_/_span_2]">
-            <img src="/assets/girl-wedding.jpg" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/ring-cd.jpg" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/man-wedding.jpg" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/foto-moment-3.jpg" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/bg-wedding-1.jpg" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/foto-tambahan-1.jpg" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/foto-moment-2.jpg" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
-            <img src="/assets/foto-tambahan-2.jpg" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/img-27.webp" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/img-20.webp" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/img-25.webp" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/img-29.webp" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/img-19.webp" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/img-28.webp" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/img-18.webp" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
+            <img src="/assets/img-6.webp" alt="Jejak Bahagia" style="clip-path: path('M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z');">
           </div>
         </div>
         
@@ -174,40 +173,30 @@ const posts = await Astro.glob('../pages/demo/*.astro');
           Dengan adanya preset kamu tinggal pilih design undangan sesuai dengan yang kamu mau!
         </p>
       </div>
-      <div
-        class="grid grid-cols-1 min-[451px]:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mt-10 pt-10 max-w-screen-lg mx-auto">
+      <div class="grid grid-cols-1 min-[451px]:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mt-10 pt-10 max-w-screen-lg mx-auto">
         {
           posts.slice(0, 15)
-          .sort((a, b) => a.data.number - b.data.number)
+          .sort((a, b) => a.frontmatter.number - b.frontmatter.number)
           .map((post) => (
-            <div class="relative border border-gray-300 p-6 rounded-lg shadow-xl">
+            <div class="relative border-4 border-white p-4 bg-gray-200 rounded-lg shadow-xl">
               <div class="relative">
                 <div class="overflow-hidden rounded-lg">
-                <a href={post.data.slug}>
-                <Image
-                  class="w-full aspect-video object-cover hover:scale-125 duration-500 transition-all ease-linear"
-                  src={post.data.img.url}
-                  alt="Jejak Bahagia"
-                  width={600}
-                  height={900}
-                />
-              </a>
+                  <div class="w-full aspect-video object-cover">
+                    <img src={post.frontmatter.img.url} alt={post.frontmatter.desc} />
+                  </div>
+                </div>
+                <p class="font-bold text-xl pt-4 text-gray-800 sm:text-left capitalize">{post.frontmatter.type}</p>
+                  <div class="flex flex-col min-[320px]:flex-row gap-4 items-center justify-center min-[320px]:justify-start min-[320px]:justify-between mt-2">
+                    <a href={post.frontmatter.slug} class="flex flex-row items-center justify-between gap-2 text-white bg-gray-600 w-fit px-4 py-2 rounded-md">{post.frontmatter.link}Preview<Icon name="mdi:eye" class="w-4 h-4" /></a>
+                    <a href="/pesan" class="flex flex-row items-center justify-between gap-2 text-white bg-pink-600 w-fit px-4 py-2 rounded-md">Pesan <Icon name="mdi:whatsapp" class="w-4 h-4 text-white" /></a>
+                  </div>
+                
               </div>
-              <p class="font-bold text-xl text-gray-800 sm:text-left mt-3 capitalize">{post.data.type}</p>  
-              <p class="font-bold text-gray-800 sm:text-left">{post.data.price}</p>  
-              <p class="font-bold text-pink-600 line-through sm:text-left text-xs">{post.data.unprice}</p>  
-              
-              <div class="flex flex-col min-[320px]:flex-row gap-4 items-center justify-center min-[320px]:justify-start min-[320px]:justify-between mt-2">
-              <a href={post.data.slug} class="flex flex-row items-center justify-between gap-2 text-white bg-gray-600 w-fit px-4 py-2 rounded-md">{post.data.link}<Icon name="mdi:eye" class="w-4 h-4"/></a>
-              <a href="/pesan" class="flex flex-row items-center justify-between gap-2 text-white bg-pink-600 w-fit px-4 py-2 rounded-md">Pesan <Icon name="mdi:whatsapp" class="w-4 h-4 text-white" /></a>
-              </div>
-                  
-              </div>
-            
             </div>
           ))
         }
       </div>
+      
     </div>
   </section>
   
@@ -510,4 +499,6 @@ const posts = await Astro.glob('../pages/demo/*.astro');
     </a>
   </div>
 </section>
+<Splide /> 
+
 </Home>

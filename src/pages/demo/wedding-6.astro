@@ -9,218 +9,42 @@ import Rsvp from '../../layouts/rsvp.astro'
 import Countdown from '../../layouts/countdown.astro'
 import Footerpost from '../../layouts/footer-post.astro'
 import Audio from '../../layouts/audio.astro'
+import Animation from '../../layouts/animation.astro'
+import Splide from '../../layouts/autoscroll.astro'
 
-export const data = {
-  slug: "demo/wedding-6",
-  title: "Demo 6",
-  type: "Exlusive 01",
-  link: "Preview",
-  price: "Rp 149.000",
-  unprice: "Rp. 200.000",
-  number: 4,
-  img: {
-    url: '/assets/demo-6.webp',
-    alt: "jejak bahagia"
-  },
-  cover: {
-    url: '/assets/foto-tambahan-4.jpg',
-    alt: "jejak bahagia"
-  },
-  imgsc: {
-    url: '/assets/foto-tambahan-5.jpg'
-  },
-  imgth: {
-    url: '/assets/foto-tambahan-6.jpg'
-  },
-
-  //Img kedua mempelai
-  imgfr: {
-    url: '/assets/girl-wedding.jpg'
-  },
-  imgfv: {
-    url: '/assets/man-wedding.jpg'
-  },
-
-  //Img Our Story
-  imgsx: {
-    url: '/assets/foto-stroy-1.jpg'
-  },
-  imgsv: {
-    url: '/assets/foto-stroy-2.jpg'
-  },
-  imgeg: {
-    url: '/assets/foto-stroy-3.jpg'
-  },
-  //img Our Moments
-  imgstory1: {
-    url: '/assets/foto-moment-1.jpg'
-  },
-  imgstory2: {
-    url: '/assets/foto-moment-2.jpg'
-  },
-  imgstory3: {
-    url: '/assets/foto-moment-3.jpg'
-  },
-  imgstory4: {
-    url: '/assets/foto-moment-1.jpg'
-  },
-  imgstory5: {
-    url: '/assets/foto-moment-2.jpg'
-  },
-  imgstory6: {
-    url: '/assets/foto-moment-3.jpg'
-  },
-  imgstory7: {
-    url: '/assets/foto-moment-1.jpg'
-  },
-  imgstory8: {
-    url: '/assets/foto-moment-3.jpg'
-  },
-  logobank: {
-    url: '/assets/gopay.png'
-  },
-  male: "Avif",
-  fullmale: "Avif Maulana",
-  female: "Maria",
-  fullfemale: "Maria Christin",
-  date: "Jumat, 05 Januari 2030",
-
-  childmale: "Putra Pertama dari Pasangan",
-  childfemale: "Putri Pertama dari Pasangan",
-  parentmale: "Bambang & Mulyani",
-  parentfemale: "Joko & Siti",
-  instagrammale: "invivit.id",
-  instagramfemale: "invivit.id",
-  facebookmale: "invivit",
-  facebookfemale: "invivit",
-  citymale: "Yogyakarta",
-  cityfemale: "Lampung",
-
-//name bank
-  bank: "BCA",
-  namebank: "Yanto Nugroho",
-  numberbank: "123456789",
-  // waktu & tempat acara
-  timefs: "08:00 - 09:00 WIB",
-  timesc: "10:00 - 11:00 WIB",
-  timeth: "13:00 - end WIB",
-  addressfs: "Masjid Kampus UGM",
-  addresssc: "Jogja Expo Center",
-  addressth: "Rumah Mempelai Wanita",
-  locationfs: "Jl. Raya Janti Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55198",
-  locationsc: "Jl. Raya Janti Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55198",
-  locationth: "Jl. Raya Janti Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55198",
-  mapsfs: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
-  mapssc: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
-  mapsth: "https://maps.app.goo.gl/fpXEChVvcrKveA468",
-
-  
-  storyfs: "Di sebuah kafe yang nyaman di tengah kota, dua orang asing, Juliet dan Romeo, tak sengaja bertemu. Romeo, seorang fotografer yang sedang mencari inspirasi untuk proyek terbarunya, sedangkan Juliet, seorang penulis lepas yang sedang mencatat ide-ide baru untuk novel romantisnya, tak menyadari bahwa matanya sedang bertatapan dengan seorang pria tampan di sisi lain kafe.",
-  storysc: "Beberapa bulan kemudian, Romeo memutuskan bahwa dia tidak ingin kehilangan Juliet dari hidupnya. Dengan hati yang penuh harap, dia menyiapkan proposal yang tak terlupakan. Di bawah langit malam yang cerah, di taman yang dihiasi dengan ratusan lentera, Romeo berlutut di hadapan Juliet.",
-  storyth: "Dari pertemuan tak terduga di kafe hingga momen indah pertunangan mereka di taman yang dipenuhi lentera, cerita cinta Juliet dan Romeo adalah bukti bahwa takdir bisa membawa dua hati yang saling mencari dan membuat mereka bersatu dalam cinta yang abadi.",
-  quote: "And everything that We have made in pairs so that you may remember (the greatness of Allah). Q.S Adz-Dzariat verse 49",
-}
-
-const { frontmatter } = Astro.props;
-const title = frontmatter ? frontmatter.title : data.title;
-
-const male = frontmatter ? frontmatter.male : data.male;
-const fullmale = frontmatter ? frontmatter.fullmale : data.fullmale;
-const female = frontmatter ? frontmatter.female : data.female;
-const fullfemale = frontmatter ? frontmatter.fullfemale : data.fullfemale;
-const date = frontmatter ? frontmatter.date : data.date;
-
-const childmale = frontmatter ? frontmatter.childmale : data.childmale;
-const childfemale = frontmatter ? frontmatter.childfemale : data.childfemale;
-const parentmale = frontmatter ? frontmatter.parentmale : data.parentmale;
-const parentfemale = frontmatter ? frontmatter.parentfemale : data.parentfemale;
-const instagrammale = frontmatter ? frontmatter.instagrammale : data.instagrammale;
-const instagramfemale = frontmatter ? frontmatter.instagramfemale : data.instagramfemale;
-const facebookmale = frontmatter ? frontmatter.facebookmale : data.facebookmale;
-const facebookfemale = frontmatter ? frontmatter.facebookfemale : data.facebookfemale;
-const citymale = frontmatter ? frontmatter.citymale : data.citymale;
-const cityfemale = frontmatter ? frontmatter.cityfemale : data.cityfemale;
-
-//bank
-const bank = frontmatter ? frontmatter.bank : data.bank;
-const namebank = frontmatter ? frontmatter.namebank : data.namebank;
-const numberbank = frontmatter ? frontmatter.numberbank : data.numberbank;
-const logobank = frontmatter ? frontmatter.logobank ? frontmatter.logobank.url ? frontmatter.logobank.url : data.logobank.url :  data.logobank.url : data.logobank.url;
-//waktu & tempat acara
-const timefs = frontmatter ? frontmatter.timefs : data.timefs;
-const timesc = frontmatter ? frontmatter.timesc : data.timesc;
-const timeth = frontmatter ? frontmatter.timeth : data.timeth;
-const addressfs = frontmatter ? frontmatter.addressfs : data.addressfs;
-const addresssc = frontmatter ? frontmatter.addresssc : data.addresssc;
-const addressth = frontmatter ? frontmatter.addressth : data.addressth;
-const mapsfs = frontmatter ? frontmatter.mapsfs : data.mapsfs;
-const mapssc = frontmatter ? frontmatter.mapssc : data.mapssc;
-const mapsth = frontmatter ? frontmatter.mapsth : data.mapsth;
-const locationfs = frontmatter ? frontmatter.locationfs : data.locationfs;
-const locationsc = frontmatter ? frontmatter.locationsc : data.locationsc;
-const locationth = frontmatter ? frontmatter.locationth : data.locationth;
-
-//story & quote
-const storyfs = frontmatter ? frontmatter.storyfs : data.storyfs;
-const storysc = frontmatter ? frontmatter.storysc : data.storysc;
-const storyth = frontmatter ? frontmatter.storyth : data.storyth;
-const quote = frontmatter ? frontmatter.quote : data.quote;
-
-//Img header
-const cover = frontmatter ? frontmatter.cover ? frontmatter.cover.url ? frontmatter.cover.url : data.cover.url :  data.cover.url : data.cover.url;
-const imgsc = frontmatter ? frontmatter.imgsc ? frontmatter.imgsc.url ? frontmatter.imgsc.url : data.imgsc.url :  data.imgsc.url : data.imgsc.url;
-const imgth = frontmatter ? frontmatter.imgth ? frontmatter.imgth.url ? frontmatter.imgth.url : data.imgth.url :  data.imgth.url : data.imgth.url;
-
-//Img kedua mempelai
-const imgfr = frontmatter ? frontmatter.imgfr ? frontmatter.imgfr.url ? frontmatter.imgfr.url : data.imgfr.url :  data.imgfr.url : data.imgfr.url;
-const imgfv = frontmatter ? frontmatter.imgfv ? frontmatter.imgfv.url ? frontmatter.imgfv.url : data.imgfv.url :  data.imgfv.url : data.imgfv.url;
-
-//Img Our Story
-const imgsx = frontmatter ? frontmatter.imgsx ? frontmatter.imgsx.url ? frontmatter.imgsx.url : data.imgsx.url :  data.imgsx.url : data.imgsx.url;
-const imgsv = frontmatter ? frontmatter.imgsv ? frontmatter.imgsv.url ? frontmatter.imgsv.url : data.imgsv.url :  data.imgsv.url : data.imgsv.url;
-const imgeg = frontmatter ? frontmatter.imgeg ? frontmatter.imgeg.url ? frontmatter.imgeg.url : data.imgeg.url :  data.imgeg.url : data.imgeg.url;
-
-//Img Our Moments
-const imgstory1 = frontmatter ? frontmatter.imgstory1 ? frontmatter.imgstory1.url ? frontmatter.imgstory1.url : data.imgstory1.url :  data.imgstory1.url : data.imgstory1.url;
-const imgstory2 = frontmatter ? frontmatter.imgstory2 ? frontmatter.imgstory2.url ? frontmatter.imgstory2.url : data.imgstory2.url :  data.imgstory2.url : data.imgstory2.url;
-const imgstory3 = frontmatter ? frontmatter.imgstory3 ? frontmatter.imgstory3.url ? frontmatter.imgstory3.url : data.imgstory3.url :  data.imgstory3.url : data.imgstory3.url;
-const imgstory4 = frontmatter ? frontmatter.imgstory4 ? frontmatter.imgstory4.url ? frontmatter.imgstory4.url : data.imgstory4.url :  data.imgstory4.url : data.imgstory4.url;
-const imgstory5 = frontmatter ? frontmatter.imgstory5 ? frontmatter.imgstory5.url ? frontmatter.imgstory5.url : data.imgstory5.url :  data.imgstory5.url : data.imgstory5.url;
-const imgstory6 = frontmatter ? frontmatter.imgstory6 ? frontmatter.imgstory6.url ? frontmatter.imgstory6.url : data.imgstory6.url :  data.imgstory6.url : data.imgstory6.url;
-const imgstory7 = frontmatter ? frontmatter.imgstory7 ? frontmatter.imgstory7.url ? frontmatter.imgstory7.url : data.imgstory7.url :  data.imgstory7.url : data.imgstory7.url;
-const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.url ? frontmatter.imgstory8.url : data.imgstory8.url :  data.imgstory8.url : data.imgstory8.url;
+const {frontmatter} = Astro.props
 ---
 
-<Noheader title={title} desc="Ini halaman Demo Wedding 1 dari undangan">
+<Noheader title={frontmatter.title} desc={frontmatter.desc}>
   
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
   <section class="animasi1 hero relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500">
-    <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+    <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:lg:w-1/5">
       <div>
-        <img src="/assets/dekor7.webp" class="rotate-90" alt="JejakBahagia" />
+        <img src=`${frontmatter.dekorfs}` class="rotate-90" alt="JejakBahagia" />
       </div>
       <div class="right-0 top-0">
-        <img src="/assets/dekor7.webp" class="-scale-100 right-0 top-0" alt="JejakBahagia" />
+        <img src=`${frontmatter.dekorfs}` class="-scale-100 right-0 top-0" alt="JejakBahagia" />
       </div>
     </div>
     <div class="absolute overflow-hidden w-screen z-20 h-[100%]">
       <div class="bottom-0 w-screen object-cover absolute flex items-center justify-center">
-          <img src="/assets/dekor6.webp" class="animate-fadeup object-cover w-64 md:w-96" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorsc}` class="animate-fadeup object-cover w-64 md:w-96" alt="JejakBahagia" />
       </div>
     </div>
-    <div class="absolute inset-0 bg-red-500 bg-cover bg-center before:content-[''] before:bg-gradient-to-t before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${cover})`}></div>
+    <div class="absolute inset-0 bg-red-500 bg-cover bg-center before:content-[''] before:bg-gradient-to-t before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url('${frontmatter.cover}')`}></div>
     <div class="container mx-auto px-6 relative z-50">
       <div class="h-screen py-12 flex flex-col justify-center items-center relative">
-      <div class="flex flex-col justify-end items-center text-black relative overflow-hidden">
+      <div class=`flex flex-col justify-end items-center relative overflow-hidden ${frontmatter.txth}`>
         <div class="mx-auto text-center">
             <span class="animate-fadedown px-3 text-xl md:text-2xl text-center mx-auto"> 
                 The Wedding of
             </span>
             <div class="mx-auto text-center w-screen flex flex-col items-center justify-center">
-                <div class="animate-fadeleft  flex flex-col items-center justify-center h-max  sm:flex-row gap-3 lg:gap-8 w-full text-center font-montecarlo text-red-500 text-center text-6xl lg:text-8xl">
-                  <span>{ female }</span>
-                  <span class="text-red-800"> & </span> 
-                  <span> { male } </span> 
+                <div class=`animate-fadeleft  flex flex-col items-center justify-center h-max  sm:flex-row gap-3 lg:gap-8 w-full text-center font-montecarlo text-center text-6xl lg:text-8xl ${frontmatter.txsc}`>
+                  <span>{ frontmatter.female }</span>
+                  <span class=`${frontmatter.txth}`> & </span> 
+                  <span> { frontmatter.male } </span> 
                 </div>
             </div>
           </div>
@@ -230,7 +54,7 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
             </h4>
         </div>
         <label for="toggle" id="toaudio"
-        class="animate-fadeup mt-5 px-6 py-2 relative bg-red-500 tracking-widest text-white font-josefin flex gap-1 transition-all duration-700 ease-linear hover:bg-red-700"
+        class=`animate-fadeup mt-5 px-6 py-2 relative tracking-widest font-josefin flex gap-1 ${frontmatter.bgsc} ${frontmatter.txfs}`
         ><Icon name="mdi:love-letter" class="w-5 h-5" />Open Invitation 
         </label>
       </div>
@@ -238,95 +62,85 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     </div>
   </section>
   <main id="myDIV" class="hidden bg-red-100 peer-checked:block">
-    <section class="animasi2 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-red-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${imgth})`}>
-      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+    <section class="animasi2 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-red-100 before:to-transparent before:inset-0 before:bg-cover before:absolute" style={`background-image:url(${frontmatter.imgsc})`}>
+      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:lg:w-1/5">
         <div>
-          <img src="/assets/dekor7.webp" class="rotate-90" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="rotate-90" alt="JejakBahagia" />
         </div>
         <div class="right-0 top-0">
-          <img src="/assets/dekor7.webp" class="-scale-100 right-0 top-0" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="-scale-100 right-0 top-0" alt="JejakBahagia" />
         </div>
       </div>
       <div class="container px-6 mx-auto py-20  relative overflow-hidden">
         <div class="h-screen grid grid-cols-1 gap-4 place-content-end">
           <h2
-          class="animate-faderight font-nautigal font-thin text-red-500 text-black w-full max-[300px]:text-5xl min-[300px]:text-6xl md:text-7xl lg:text-9xl relative after:content-[''] after:h-[1px] after:w-full after:bg-red-500 after:top-1/2 after:absolute after:ml-3 after:-translate-y-1/2">{ male } & { female }
+          class=`animate-faderight font-montecarlo font-thin text-red-500 w-full max-[300px]:text-5xl min-[300px]:text-6xl md:text-7xl lg:text-9xl relative after:content-[''] after:h-[1px] after:w-full after:top-1/2 after:absolute after:ml-3 after:-translate-y-1/2 ${frontmatter.txsc} after:${frontmatter.bgsc}`>{ frontmatter.male } & { frontmatter.female }
         </h2>
-        <p class="animate-fadeup max-w-prose font-poppins">{quote}</p>    
+        <p class=`animate-fadeup max-w-prose font-josefin ${frontmatter.txth}`>{frontmatter.quote}</p>    
         </div>
       </div>
     </section>
     <section class="animasi3 relative overflow-hidden">
-      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:lg:w-1/5">
         <div>
-          <img src="/assets/dekor7.webp" class="rotate-90" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="rotate-90" alt="JejakBahagia" />
         </div>
         <div class="right-0 top-0">
-          <img src="/assets/dekor7.webp" class="-scale-x-100 -rotate-90 right-0 top-0" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="-scale-x-100 -rotate-90 right-0 top-0" alt="JejakBahagia" />
         </div>
         <div class="left-0 bottom-0">
-          <img src="/assets/dekor7.webp" class="" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="" alt="JejakBahagia" />
         </div>
         <div class="bottom-0 right-0">
-          <img src="/assets/dekor7.webp" class="-scale-100 rotate-90" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="-scale-100 rotate-90" alt="JejakBahagia" />
         </div>
       </div>
-      <div class="container mx-auto px-6 py-20">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-20 md:gap-y-40 gap-x-16 max-w-4xl mx-auto mt-12">
+      <div class="container mx-auto px-6 py-20 relative z-50">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-12 md:gap-y-40 gap-x-16 max-w-4xl mx-auto mt-12">
           <div class="relative items-center justify-center mx-auto w-full">
-            <div class="text-center overflow-hidden">
-              <div class="fade-right opacity-0 relative flex items-center justify-center w-72">
+            <div class="text-center overflow-hidden flex items-center justify-center md:items-end md:justify-end">
+              <div class="fade-right relative flex items-center justify-center w-72">
                 <div class="w-56 h-64 bg-cover bg-center relative"
-                style={`background-image:url(${imgfr})`}>
+                style={`background-image:url('${frontmatter.pm1}')`}>
                 </div>
-                <img src="/assets/dekor8.png" alt="JejakBahagia"  class="absolute">
+                <img src=`${frontmatter.dekorth}` alt="JejakBahagia"  class="absolute">
               </div>
             </div>
           </div>
-          <div class="relative items-center justify-center mx-auto w-full">
-            <h3 class="fade-down opacity-0 text-6xl mt-6 font-montecarlo text-red-500">{ female }</h3>
-            <div class="fade-up opacity-0 font-josefin space-y-3">
-              <p class="text-xl font-medium border-b-2 border-b-red-300">{ fullfemale }</p>
-              <p class="text-lg">{childfemale}</p>
-              <p class="text-lg font-medium text-red-500">
-                { parentfemale }</p>
-              <p>{cityfemale}</p>
-              <div class="flex gap-3 mt-4">
-                <a href={`https://www.facebook.com/${facebookfemale}`} class="flex flex-row gap-2 items-center">
-                  <Icon name="mdi:facebook" class="w-10 h-10 text-red-500 hover:text-white hover:bg-red-500 bg-white p-2 rounded-full" />
-                </a>
-                <a href={`https://www.instagram.com/${instagramfemale}`} class="flex flex-row gap-2 items-center">
-                  <Icon name="mdi:instagram" class="w-10 h-10 text-red-500 hover:text-white hover:bg-red-500 bg-white p-2 rounded-full" />
-                </a>
-              </div>
+          <div class="relative text-center sm:text-start mx-auto w-full">
+            <h3 class=`fade-down opacity-0 text-6xl mt-6 font-montecarlo ${frontmatter.txsc}`>{ frontmatter.female }</h3>
+            <div class=`fade-up opacity-0 font-josefin space-y-3 ${frontmatter.txth}`>
+              <p class=`text-xl font-medium border-b-2 w-full mx-auto sm:mx-0 ${frontmatter.bdr}`>{ frontmatter.fullfemale }</p>
+              <p class="text-lg">{frontmatter.childfemale}</p>
+              <p class=`text-lg font-medium ${frontmatter.txsc}`>
+                { frontmatter.parentfemale }</p>
+              <p>{frontmatter.cityfemale}</p>
+              <a href={`https://www.instagram.com/${frontmatter.instagramfemale}`} class="flex flex-row gap-2 items-center justify-center sm:justify-start">
+                <Icon name="mdi:instagram" class=`w-10 h-10 p-2 rounded-full ${frontmatter.txfs} ${frontmatter.bgsc}` />
+              </a>
             </div>
           </div>
           <div class="relative items-center justify-center mx-auto w-full sm:order-last">
-            <div class="text-center overflow-hidden">
+            <div class="text-center overflow-hidden flex items-center justify-center md:items-start md:justify-start">
               <div class="fade-right opacity-0 relative flex items-center justify-center w-72">
                 <div class="w-56 h-64 bg-cover bg-center relative"
-                style={`background-image:url(${imgfv})`}>
+                style={`background-image:url(${frontmatter.pm2})`}>
                 </div>
-                <img src="/assets/dekor8.png" alt="JejakBahagia"  class="absolute">
+                <img src=`${frontmatter.dekorth}` alt="JejakBahagia"  class="absolute">
               </div>
             </div>
             </div>
-            <div class="relative items-center justify-center mx-auto w-full">
-              <h3 class="fade-right opacity-0 text-6xl  sm:text-right mt-6 font-montecarlo text-red-500">{ male }</h3>
-              <div class="fade-up opacity-0 font-josefin space-y-3 sm:text-right">
-                <p class="text-xl font-medium border-b-2 border-b-red-300">{ fullmale }</p>
-                <p class="text-lg">{childmale}</p>
+            <div class="relative text-center sm:text-start mx-auto w-full">
+              <h3 class=`fade-down opacity-0 text-6xl mt-6 font-montecarlo sm:text-right ${frontmatter.txsc}`>{ frontmatter.male }</h3>
+              <div class=`fade-up opacity-0 font-josefin space-y-3 sm:text-right ${frontmatter.txth}`>
+                <p class=`text-xl font-medium border-b-2 w-full ${frontmatter.bdr}`>{ frontmatter.fullmale }</p>
+                <p class="text-lg">{frontmatter.childmale}</p>
                 <p class="text-lg font-medium text-red-500">
-                  { parentmale }</p>
-                <p>{citymale}</p>
-                <div class="flex gap-3 mt-4 sm:justify-end">
-                  <a href={`https://www.facebook.com/${facebookmale}`} class="flex flex-row gap-2 items-center">
-                    <Icon name="mdi:facebook" class="w-10 h-10 text-red-500 hover:text-white hover:bg-red-500 bg-white p-2 rounded-full" />
-                  </a>
-                  <a href={`https://www.instagram.com/${instagrammale}`} class="flex flex-row gap-2 items-center">
-                    <Icon name="mdi:instagram" class="w-10 h-10 text-red-500 hover:text-white hover:bg-red-500 bg-white p-2 rounded-full" />
-                  </a>
-                </div>
+                  { frontmatter.parentmale }</p>
+                <p>{frontmatter.citymale}</p>
+                <a href={`https://www.instagram.com/${frontmatter.instagrammale}`} class="flex flex-row gap-2 items-center justify-center sm:justify-end">
+                  <Icon name="mdi:instagram" class=`w-10 h-10 p-2 rounded-full ${frontmatter.txfs} ${frontmatter.bgsc}` />
+                </a>
               </div>
             </div>
         </div>
@@ -335,60 +149,56 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
     <section class="animasi4 relative bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-red-100 before:to-transparent before:inset-0 before:bg-cover before:absolute"
       style="background-image: url(/assets/ring-cd.jpg);">
       <div class="container py-32 mx-auto relative z-10">
-        <div class="text-center my-5">
-          <h2 class="fade-right opacity-0 text-2xl text-red-500/80 font-bold mt-5 md:mt-0 mb-3 font-josefin">
+        <div class=`text-center my-5 ${frontmatter.txsc}`>
+          <h2 class="fade-right opacity-0 text-xl font-bold mt-5 md:mt-0 mb-3 font-josefin">
             Save The Date</h2>
-          <h1 class="fade-left opacity-0 text-center text-red-500 font-montecarlo text-4xl md:text-6xl lg:text-8xl">
+          <h1 class="fade-left opacity-0 text-center font-montecarlo text-5xl md:text-6xl lg:text-8xl">
             Our Happy Day
           </h1>
         </div>
-        <div id="timer" class="fade-up opacity-0 grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:text-red-500 [&>*]:p-1">
+        <div id="timer" class=`fade-up opacity-0 grid grid-cols-2 md:grid-cols-4 gap-y-8 justify-center text-center items-center mt-20 sm:px-20 max-w-3xl mx-auto [&>*]:text-center [&>*]:text-4xl [&>*]:sm:text-6xl [&>*]:font-medium [&>*]:p-1 ${frontmatter.txsc}`>
         </div>
         <Countdown/>
       </div>
     </section>
     <section class="animasi5 relative overflow-hidden">
       <div class="container mx-auto py-20 px-6">
-        <div class="text-center my-5 mb-10">
-          <h2 class="fade-right opacity-0 text-2xl text-red-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
-          <h1 class="fade-left opacity-0 text-red-500 text-center font-montecarlo text-5xl lg:text-8xl">
+        <div class=`text-center my-5 mb-10 ${frontmatter.txsc}`>
+          <h2 class="fade-right opacity-0 text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
+          <h1 class="fade-left opacity-0 text-center font-montecarlo text-5xl lg:text-8xl">
             Wedding Day
           </h1>
         </div>
         <div
-          class="grid gird-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-4xl w-full mx-auto justify-center items-center gap-x-6 gap-y-8 mt-5 [&>*]:mx-auto [&>*]:h-full [&>*]:w-full [&>*]:bg-orange-200 [&>*]:relative">
-          <div class="fade-right opacity-0">
+          class="grid gird-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-4xl w-full mx-auto justify-center items-center gap-x-6 gap-y-8 mt-5 [&>*]:mx-auto [&>*]:h-full [&>*]:w-full [&>*]:relative">
+          <div class=`fade-right opacity-0 border ${frontmatter.txth}`>
             <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2">
               <div>
-                  <img src="/assets/dekor7.webp" class=" rotate-90" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` class=" rotate-90" alt="JejakBahagia" />
               </div>
               <div class="right-0 top-0 rotate-180">
-                  <img src="/assets/dekor7.webp" class="right-0 top-0" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` class="right-0 top-0" alt="JejakBahagia" />
               </div>
               <div class="right-0 bottom-0 rotate-90 -scale-100">
-                  <img src="/assets/dekor7.webp" class="" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` class="" alt="JejakBahagia" />
               </div>
               <div class="left-0 bottom-0">
-                  <img src="/assets/dekor7.webp" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` alt="JejakBahagia" />
               </div>
             </div>
             <div class="text-center font-josefin px-4 min-[350px]:px-12 py-12 w-full relative">
               <h2 class="text-center font-montecarlo text-4xl">Akad Nikah</h2>
+              <p class=`mt-2 sm:mt-4 ${frontmatter.txsc}`>{frontmatter.date}</p>
+              <p class="mt-2 sm:mt-4 text-md">{frontmatter.timefs}</p>
               <p class="mt-2 sm:mt-4">
                 <strong class="text-md font-bold text-red-500"
-                  >{date}
-                </strong>
-              </p>
-              <p class="mt-2 sm:mt-4 text-md">{timefs}</p>
-              <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-red-500"
-                  >{addressfs}</strong
+                  >{frontmatter.addressfs}</strong
                 >
               </p>
               <div class="group">
-                <a href={mapsfs}>
+                <a href={frontmatter.mapsfs}>
                   <button
-                class="mx-auto mt-8 flex items-center justify-center rounded-full  text-white bg-red-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-red-500 group-hover:ring-2 group-hover:ring-red-500 group-hover:duration-500 group-hover:transition-all"
+                class=`mx-auto mt-8 flex items-center justify-center rounded-full  px-4 py-2 text-center text-sm font-medium ${frontmatter.bgsc} ${frontmatter.txfs}`
                 >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
                 </a>
               </div>
@@ -397,95 +207,94 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
           <div class="fade-down opacity-0 ">
             <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2">
               <div>
-                  <img src="/assets/dekor7.webp" class=" rotate-90" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` class=" rotate-90" alt="JejakBahagia" />
               </div>
               <div class="right-0 top-0 rotate-180">
-                  <img src="/assets/dekor7.webp" class="right-0 top-0" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` class="right-0 top-0" alt="JejakBahagia" />
               </div>
               <div class="right-0 bottom-0 rotate-90 -scale-100">
-                  <img src="/assets/dekor7.webp" class="" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` class="" alt="JejakBahagia" />
               </div>
               <div class="left-0 bottom-0">
-                  <img src="/assets/dekor7.webp" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` alt="JejakBahagia" />
               </div>
             </div>
             <div class="text-center font-josefin px-4 min-[350px]:px-12 py-12 w-full relative">
                 <h2 class="text-center font-montecarlo text-5xl">Resepsi</h2>
                 <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-red-500">{date}</strong></p>
-                <p class="mt-2 sm:mt-4 text-md">{timesc}</p>
+                <strong class=`mt-2 sm:mt-4 ${frontmatter.txsc}`>{frontmatter.date}</strong></p>
+                <p class="mt-2 sm:mt-4 text-md">{frontmatter.timesc}</p>
                 <p class="mt-2 sm:mt-4">
                 <strong class="text-md font-bold text-red-500"
-                >{addresssc}</strong></p>
+                >{frontmatter.addresssc}</strong></p>
                 <div class="group">
-                  <a href={mapsfs}>
+                  <a href={frontmatter.mapsfs}>
                     <button
-                  class="mx-auto mt-8 flex items-center justify-center rounded-full  text-white bg-red-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-red-500 group-hover:ring-2 group-hover:ring-red-500 group-hover:duration-500 group-hover:transition-all"
+                  class=`mx-auto mt-8 flex items-center justify-center rounded-full  px-4 py-2 text-center text-sm font-medium ${frontmatter.bgsc} ${frontmatter.txfs}`
                   >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
                   </a>
                 </div>
             </div>
           </div>
-          <div class="fade-left opacity-0">
+          <div class="fade-left opacity-0 ">
             <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2">
               <div>
-                  <img src="/assets/dekor7.webp" class=" rotate-90" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` class=" rotate-90" alt="JejakBahagia" />
               </div>
               <div class="right-0 top-0 rotate-180">
-                  <img src="/assets/dekor7.webp" class="right-0 top-0" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` class="right-0 top-0" alt="JejakBahagia" />
               </div>
               <div class="right-0 bottom-0 rotate-90 -scale-100">
-                  <img src="/assets/dekor7.webp" class="" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` class="" alt="JejakBahagia" />
               </div>
               <div class="left-0 bottom-0">
-                  <img src="/assets/dekor7.webp" alt="JejakBahagia" />
+                  <img src=`${frontmatter.dekorfs}` alt="JejakBahagia" />
               </div>
             </div>
             <div class="text-center font-josefin px-4 min-[350px]:px-12 py-12 w-full relative">
               <h2 class="text-center font-montecarlo text-3xl">Unduh Mantu</h2>
               <p class="mt-2 sm:mt-4">
-                <strong class="text-md font-bold text-red-500"
-                  >{date}</strong
+                <strong class=`mt-2 sm:mt-4 ${frontmatter.txsc}`>{frontmatter.date}</strong
                 >
               </p>
-              <p class="mt-2 sm:mt-4 text-md">{timeth}</p>
+              <p class="mt-2 sm:mt-4 text-md">{frontmatter.timeth}</p>
               <p class="mt-2 sm:mt-4">
                 <strong class="text-md font-bold text-red-500"
-                  >{addressth}</strong
+                  >{frontmatter.addressth}</strong
                 >
               </p>
               <div class="group">
-                <a href={mapsfs}>
+                <a href={frontmatter.mapsfs}>
                   <button
-                class="mx-auto mt-8 flex items-center justify-center rounded-full  text-white bg-red-500 px-4 py-2 text-center text-sm font-medium group-hover:bg-orange-200 group-hover:text-red-500 group-hover:ring-2 group-hover:ring-red-500 group-hover:duration-500 group-hover:transition-all"
+                class=`mx-auto mt-8 flex items-center justify-center rounded-full  px-4 py-2 text-center text-sm font-medium ${frontmatter.bgsc} ${frontmatter.txfs}`
                 >Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" /></button>
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873130.0607204797!2d110.1445006182314!3d-7.744660421581015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1712983300381!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="fade-up opacity-0 mx-auto mt-12 w-full max-w-3xl h-96"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873130.0607204797!2d110.1445006182314!3d-7.744660421581015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1712983300381!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class=`fade-up opacity-0 mx-auto mt-12 w-full max-w-3xl h-96 rounded-lg p-1 ${frontmatter.bgth}`></iframe>
       </div>
     </section>
-    <section class="animasi6 bg-red-200 relative overflow-hidden">
-      <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+    <section class="animasi6 relative overflow-hidden">
+      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:lg:w-1/5">
         <div>
-            <img src="/assets/dekor7.webp" class=" rotate-90" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="rotate-90" alt="JejakBahagia" />
         </div>
-        <div class="right-0 top-0 rotate-180">
-            <img src="/assets/dekor7.webp" class="right-0 top-0" alt="JejakBahagia" />
-        </div>
-        <div class="right-0 bottom-0 rotate-90 -scale-100">
-            <img src="/assets/dekor7.webp" class="" alt="JejakBahagia" />
+        <div class="right-0 top-0">
+          <img src=`${frontmatter.dekorfs}` class="-scale-x-100 -rotate-90 right-0 top-0" alt="JejakBahagia" />
         </div>
         <div class="left-0 bottom-0">
-            <img src="/assets/dekor7.webp" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="" alt="JejakBahagia" />
+        </div>
+        <div class="bottom-0 right-0">
+          <img src=`${frontmatter.dekorfs}` class="-scale-100 rotate-90" alt="JejakBahagia" />
         </div>
       </div>
       <div class="container mx-auto py-20 text-center">
-        <div>
-          <h2 class="fade-right opacity-0 text-2xl text-red-500/50 font-bold my-5 font-josefin">The Journey</h2>
-          <h2 class="fade-left opacity-0 text-red-500 text-center font-montecarlo text-6xl lg:text-8xl">Our Story</h2>
+        <div class:list={[`${frontmatter.txsc}`]}>
+          <h2 class="fade-right opacity-0 text-2xl font-bold my-5 font-josefin">The Journey</h2>
+          <h2 class="fade-left opacity-0 text-center font-montecarlo text-6xl lg:text-8xl">Our Story</h2>
         </div>
         <div class="splide h-full md:h-96 overflow-hidden mt-10">
           <div class="splide__track h-full md:h-96 overflow-visible">
@@ -493,16 +302,48 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
               <li
               class="splide__slide w-full flex bg-white overflow-hidden">
               <img
-                src={imgstory1}
+                src={frontmatter.imgstory1}
                 alt="Foto 1"
                 class="object-cover aspect-video"/>
               </li>
               <li
               class="splide__slide w-full flex flex-col items-center justify-center overflow-hidden px-8 space-y-5">
                <div class="hidden sm:block border border-l-[1px] border-red-500 h-16"></div>
-               <p class="text-3xl font-montecarlo ">Fist Time</p>
+               <p class:list={[`text-3xl font-montecarlo ${frontmatter.txsc}`]}>Fist Time</p>
                 <p class="max-w-prose font-josefin">
-                  {storyfs}
+                  {frontmatter.storyfs}
+                </p>
+                <div class="hidden sm:block border border-l-[1px] border-red-500 h-16"></div>
+              </li>
+              <li
+              class="splide__slide w-full flex bg-white overflow-hidden">
+              <img
+                src={frontmatter.imgstory1}
+                alt="Foto 1"
+                class="object-cover aspect-video"/>
+              </li>
+              <li
+              class="splide__slide w-full flex flex-col items-center justify-center overflow-hidden px-8 space-y-5">
+               <div class="hidden sm:block border border-l-[1px] border-red-500 h-16"></div>
+               <p class:list={[`text-3xl font-montecarlo ${frontmatter.txsc}`]}>Fist Love</p>
+                <p class="max-w-prose font-josefin">
+                  {frontmatter.storysc}
+                </p>
+                <div class="hidden sm:block border border-l-[1px] border-red-500 h-16"></div>
+              </li>
+              <li
+              class="splide__slide w-full flex bg-white overflow-hidden">
+              <img
+                src={frontmatter.imgstory1}
+                alt="Foto 1"
+                class="object-cover aspect-video"/>
+              </li>
+              <li
+              class="splide__slide w-full flex flex-col items-center justify-center overflow-hidden px-8 space-y-5">
+               <div class="hidden sm:block border border-l-[1px] border-red-500 h-16"></div>
+               <p class:list={[`text-3xl font-montecarlo ${frontmatter.txsc}`]}>Wedding</p>
+                <p class="max-w-prose font-josefin">
+                  {frontmatter.storyth}
                 </p>
                 <div class="hidden sm:block border border-l-[1px] border-red-500 h-16"></div>
               </li>
@@ -511,193 +352,112 @@ const imgstory8 = frontmatter ? frontmatter.imgstory8 ? frontmatter.imgstory8.ur
         </div>
       </div>
     </section>
-    <section class="animasi7 relative overflow-hidden">
-      <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+    <section class="animasi8 relative overflow-hidden">
+      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:lg:w-1/5">
         <div>
-            <img src="/assets/dekor7.webp" class=" rotate-90" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="rotate-90" alt="JejakBahagia" />
         </div>
-        <div class="right-0 top-0 rotate-180">
-            <img src="/assets/dekor7.webp" class="right-0 top-0" alt="JejakBahagia" />
-        </div>
-        <div class="right-0 bottom-0 rotate-90 -scale-100">
-            <img src="/assets/dekor7.webp" class="" alt="JejakBahagia" />
+        <div class="right-0 top-0">
+          <img src=`${frontmatter.dekorfs}` class="-scale-x-100 -rotate-90 right-0 top-0" alt="JejakBahagia" />
         </div>
         <div class="left-0 bottom-0">
-            <img src="/assets/dekor7.webp" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="" alt="JejakBahagia" />
+        </div>
+        <div class="bottom-0 right-0">
+          <img src=`${frontmatter.dekorfs}` class="-scale-100 rotate-90" alt="JejakBahagia" />
         </div>
       </div>
       <div class="container mx-auto px-6 py-20">
-        <div class="text-center my-5 mb-10">
-          <h2 class="fade-right opacity-0 text-2xl text-red-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">A Glimpse of</h2>
-          <h2 class="fade-left opacity-0 text-red-500 text-center font-montecarlo text-5xl lg:text-8xl">
+        <div class:list={[`text-center my-5 mb-10 ${frontmatter.txsc}`]}>
+          <h2 class="fade-down opacity-0 text-xl md:text-2xl font-bold mt-5 font-josefin ">A Glimpse of</h2>
+          <h2 class="fade-down opacity-0 text-center font-montecarlo text-5xl lg:text-8xl">
             Our Moments
           </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-2 pb-20 [&>*]:w-full [&>*]:md:max-w-4xl [&>*]:p-1 [&>*]:relative">
-          <div class="fade-right">
-            <div class="truncate">
-              <img
-                src={imgstory1}
-                alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-              />
-            </div>
+          <div class="gap-4 columns-2 md:columns-3 mt-5 *:rounded-lg *:w-full *:mb-6 *:opacity-0">
+            <img class="fade-right aspect-video" src={frontmatter.imgstory1} />
+            <img class="fade-down aspect-square" src={frontmatter.imgstory2} />
+            <img class="fade-left aspect-square" src={frontmatter.imgstory3} />
+            <img class="fade-down aspect-square" src={frontmatter.imgstory4} />
+            <img class="fade-up aspect-square" src={frontmatter.imgstory5} />
+            <img class="fade-left aspect-video" src={frontmatter.imgstory1} />
+            <img class="fade-left aspect-square" src={frontmatter.imgstory3} />
+            <img class="fade-down aspect-video" src={frontmatter.imgstory1} />
+            <img class="fade-up aspect-square" src={frontmatter.imgstory7} />
           </div>
-          <div class="fade-down opacity-0">
-            <div class="truncate">
-              <img
-                src={imgstory2}
-                alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-              />
-            </div>
-          </div>
-          <div class="fade-up opacity-0">
-            <div class="truncate">
-              <img
-                src={imgstory3}
-                alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-              />
-            </div>
-          </div>
-          <div class="fade-left opacity-0">
-            <div class="truncate">
-              <img
-                src={imgstory4}
-                alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-              />
-            </div>
-          </div>
-          <div class="fade-left opacity-0">
-            <div class="truncate">
-              <img
-                src={imgstory5}
-                alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-              />
-            </div>
-          </div>
-          <div class="fade-up opacity-0">
-            <div class="truncate">
-              <img
-                src={imgstory6}
-                alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-              />
-            </div>
-          </div>
-          <div class="fade-down opacity-0">
-            <div class="truncate">
-              <img
-                src={imgstory7}
-                alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-              />
-            </div>
-          </div>
-          <div class="fade-left opacity-0">
-            <div class="truncate">
-              <img
-                src={imgstory8}
-                alt="Foto 1"
-                class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear"
-              />
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
-    <section class="animasi8 relative bg-cover bg-no-repeat bg-center bg-fixed py-20 overflow-hidden before:content-[''] before:bg-gradient-to-b before:from-orange-50 before:to-transparent before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/gift.jpg); ">
-      <div class="container text-center mx-auto relative z-10">
-        <div>
-          <h2 class="fade-left opacity-0 text-5xl lg:text-8xl text-red-500 font-montecarlo">Wedding Gift</h2>
-          <p class="fade-right opacity-0 max-w-prose mx-auto font-bold mt-5 font-josefin">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
+    <section class="animasi9 relative bg-cover bg-no-repeat bg-center bg-fixed py-20 overflow-hidden">
+      <div class="container px-6 text-center mx-auto relative z-10">
+        <div class:list={[`${frontmatter.txsc}`]}>
+          <h2 class="fade-right opacity-0 text-5xl lg:text-8xl font-montecarlo">Wedding Gift</h2>
+          <p class="fade-left opacity-0 max-w-prose mx-auto font-bold mt-5 font-josefin">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
         </div>
-        <div class="fade-up opacity-0 py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-evenly md:flex mx-auto gap-5 bg-white rounded shadow-lg">
-          <div class="text-center font-poppins flex flex-col items-center">
-            <img class="rounded-lg object-cover h-8 w-8" src={logobank} alt="JejakBahagia">
-            <div class="font-josefin">
-              <p class="text-2xl text-red-500 mt-5 md:mt-0 font-bold mb-3">{bank}</p>
-              <p class="max-w-prose">{namebank}</p>
-              <span class="copy-content font-bold">{numberbank}</span>
-              <div class="icon pt-5">
-                <button class="bg-red-500 text-white px-5 py-2 rounded-lg">Copy Rekening</button>
-                <Payment />
+        <div class="flex flex-col md:flex-row gap-8 justify-center items-center w-full max-w-screen-md mx-auto">
+          <div class:list={[`fade-down opacity-0 py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-center md:flex mx-auto gap-5 bg-white rounded-lg border-2 ${frontmatter.bdr} shadow-lg`]}>
+            <div class="text-center font-poppins flex flex-col items-center">
+              <img class="h-8 w-1/2 lg:w-full" src={frontmatter.logoml} alt="JejakBahagia">
+              <div class:list={[`mt-4 font-josefin ${frontmatter.txsc}`]}>
+                <p class="max-w-prose">{frontmatter.namebankml}</p>
+                <span class="copy-content font-bold">{frontmatter.numberbankml}</span>
+                <div class="btn-copy pt-5">
+                  <button class:list={[`${frontmatter.bgsc} ${frontmatter.txfs} px-5 py-2 rounded-lg`]}>Copy Rekening</button>
+                </div>
+                <span class="copy-message absolute hidden inset-x-0">Rekening dicopy</span>
               </div>
-              <span class="copy-message absolute hidden inset-x-0">Rekening dicopy</span>
+            </div>
+          </div>
+          <div class:list={[`fade-up opacity-0 py-8 px-4 md:px-16 mx-auto mt-16 w-full max-w-xs justify-center md:flex mx-auto gap-5 bg-white rounded-lg border-2 ${frontmatter.bdr} shadow-lg`]}>
+            <div class="text-center font-poppins flex flex-col items-center">
+              <img class="h-8 w-1/2 lg:w-full" src={frontmatter.logofml} alt="JejakBahagia">
+              <div class:list={[`mt-5 font-josefin ${frontmatter.txsc}`]}>
+                <p class="max-w-prose">{frontmatter.namebankfml}</p>
+                <span class="copy-content font-bold">{frontmatter.numberbankfml}</span>
+                <div class="btn-copy pt-5">
+                  <button class:list={[`${frontmatter.bgsc} ${frontmatter.txfs} px-5 py-2 rounded-lg`]}>Copy Rekening</button>
+                </div>
+                <span class="copyMessage absolute hidden inset-x-0">Rekening dicopy</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
       </div>
     </section>
-    <section class="animasi9 relative overflow-hidden">
-      <div class="absolute overflow-hidden w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/3 [&>*]:lg:w-1/5">
+    <section class="animasi10 overflow-hidden relative">
+      <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:lg:w-1/5">
         <div>
-            <img src="/assets/dekor7.webp" class=" rotate-90" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="rotate-90" alt="JejakBahagia" />
         </div>
-        <div class="right-0 top-0 rotate-180">
-            <img src="/assets/dekor7.webp" class="right-0 top-0" alt="JejakBahagia" />
-        </div>
-        <div class="right-0 bottom-0 rotate-90 -scale-100">
-            <img src="/assets/dekor7.webp" class="" alt="JejakBahagia" />
+        <div class="right-0 top-0">
+          <img src=`${frontmatter.dekorfs}` class="-scale-x-100 -rotate-90 right-0 top-0" alt="JejakBahagia" />
         </div>
         <div class="left-0 bottom-0">
-            <img src="/assets/dekor7.webp" alt="JejakBahagia" />
+          <img src=`${frontmatter.dekorfs}` class="" alt="JejakBahagia" />
+        </div>
+        <div class="bottom-0 right-0">
+          <img src=`${frontmatter.dekorfs}` class="-scale-100 rotate-90" alt="JejakBahagia" />
         </div>
       </div>
-      <div class="container py-20 relative z-50 px-6 text-center mx-auto">
-        <div class="text-center my-5 mb-10">
-          <h2 class="fade-left opacity-0 text-red-500 text-center font-montecarlo text-5xl lg:text-8xl">
+      <div class="container py-20 z-50 px-6 text-center mx-auto relative">
+        <div class:list={[`text-center my-5 mb-10 ${frontmatter.txsc}`]}>
+          <h2 class="fade-right opacity-0 text-4xl md:text-8xl font-montecarlo">
             Ucapan & Doa
           </h2>
-          <h2 class="fade-right opacity-0 text-2xl text-red-500/50 font-bold mt-5 md:mt-0 mb-3 font-josefin">Please Confirm Your Attendance</h2>
+          <h2 class="fade-right opacity-0 text-xl md:text-2xl font-bold mt-5 font-josefin">Please Confirm Your Attendance</h2>
         </div>
 
-        <Rsvp color="red-500" />
+        <Rsvp color="gray-600" />
           
       </div>
     </section>
     <Footerpost />
-    <section class="fixed bottom-5 right-5 z-20">
-      <div class="container flex flex-col items-end justify-end mx-auto">
-        <a href="https://wa.me/6281532094978?text=Hallo Admin JejakBahagia, saya mau konsultasi undangan digital dong!" target="_blank">
-          <Icon name="mdi:whatsapp" class="w-14 h-14 mb-5 text-white bg-green-500 rounded-full p-2" />
-        </a>
-        
-      <Audio />
-      </div>
-    </section>
+    <Audio />
     <audio id="myAudio" loop class="hidden">
-      <source src="/assets/bruno-mars-marry-you.mp3" type="audio/mpeg">
-  </audio>
+      <source src=`/assets/${frontmatter.music}.mp3` type="audio/mpeg">
+    </audio>
+    <Animation /> 
+    <Payment /> 
+    <Splide /> 
   </main>
-  <script>
-    import "@splidejs/splide/css";
-    import Splide from "@splidejs/splide";
-    import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
-    if (document.querySelector('.splide')) {
-        new Splide(".splide", {
-            type: "loop",
-            gap: "8px",
-            perPage: 2, 
-            arrows:false, 
-            pagination:false,
-            focus: "center",
-            drag: "free",
-            autoScroll: {
-                speed: 3,
-            },
-            breakpoints: {
-                768: {
-                    perPage: 1,
-                },
-            },
-        }).mount({ AutoScroll });
-    }
-  </script>
 </Noheader>
 

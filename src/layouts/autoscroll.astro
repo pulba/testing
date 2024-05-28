@@ -1,0 +1,28 @@
+---
+
+---
+
+<script>
+    import "@splidejs/splide/css";
+    import Splide from "@splidejs/splide";
+    import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+    if (document.querySelector('.splide')) {
+        new Splide(".splide", {
+            type: "loop",
+            gap: "8px",
+            perPage: 2, 
+            arrows:false, 
+            pagination:false,
+            focus: "center",
+            drag: "free",
+            autoScroll: {
+                speed: .9,
+            },
+            breakpoints: {
+                768: {
+                    perPage: 1,
+                },
+            },
+        }).mount({ AutoScroll });
+    }
+  </script>
