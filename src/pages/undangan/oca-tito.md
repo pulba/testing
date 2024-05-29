@@ -1,11 +1,12 @@
 ---
 layout: '../demo/wedding-7.astro'
 title: Oca-Tito
-slug: posts/oca-tito
+slug: undangan/oca-tito
 type: Tanpa Foto
 desc: Tanpa Foto
+countdown: Jun 26, 2024 15:37:25
 img:
-  url: '/src/assets/bg-wedding-13.jpg'
+  url: '/assets/oca-tito2.webp'
   alt: jejak bahagia
 
 
@@ -27,7 +28,7 @@ bdr: 'border-gray-200'
 
 #dekor
 dekorfs: '/assets/dekor38.webp'
-dekorsc: '/assets/dekor37.webp'
+dekorsc: '/assets/dekor31.webp'
 dekorth: '/assets/dekor39.webp'
 
 # Img kedua mempelai

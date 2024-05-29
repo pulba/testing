@@ -1,0 +1,52 @@
+---
+import Archive from '../layouts/archive.astro';
+import '@fontsource-variable/josefin-sans';
+import { Icon } from 'astro-iconify';
+const posts = await Astro.glob('../pages/undangan/*.md');
+---
+
+<Archive title="Tema" desc="Dengan adanya preset kamu tinggal pilih design undangan sesuai dengan yang kamu mau!">
+
+    <section>
+        <div class="container px-6 py-20 mx-auto text-center">
+          <div class="space-y-2 max-w-xl mx-auto">
+            <h1
+              class="font-bold font-josefin text-4xl md:text-5xl text-pink-600"
+            >
+            Pilihan Customer
+            </h1>
+            <p class="mt-4 text-center text-gray-600 font-poppins mx-auto">
+              Jadilah bagian dari mereka yang berbahagia menggunakan tema kami
+            </p>
+          </div>
+          <div class="grid grid-cols-1 min-[451px]:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mt-10 pt-10 max-w-screen-lg mx-auto">
+            {
+              posts.slice(0, 15)
+              .map((post) => (
+                <div class="relative p-4 bg-white rounded-lg shadow-xl">
+                  <div class="relative">
+                    <div class="overflow-hidden rounded-lg">
+                      <div class="w-full aspect-video object-cover">
+                        <img src={post.frontmatter.img.url} alt={post.frontmatter.desc} />
+                      </div>
+                    </div>
+                    <div class="pt-4">
+                      <p class="font-bold text-xl text-gray-800 sm:text-left capitalize">{post.frontmatter.type}</p>  
+                      <p class="font-bold text-gray-800 sm:text-left">{post.frontmatter.price}</p>  
+                      <p class="font-bold text-pink-600 line-through sm:text-left text-xs">{post.frontmatter.unprice}</p>  
+                      
+                      <div class="flex flex-col min-[320px]:flex-row gap-4 items-center justify-center min-[320px]:justify-start min-[320px]:justify-between mt-2">
+                        <a href={post.frontmatter.slug} class="flex flex-row items-center justify-between gap-2 text-white bg-gray-600 w-fit px-4 py-2 rounded-md">{post.frontmatter.link}Preview<Icon name="mdi:eye" class="w-4 h-4" /></a>
+                        <a href="/pesan" class="flex flex-row items-center justify-between gap-2 text-white bg-pink-600 w-fit px-4 py-2 rounded-md">Pesan <Icon name="mdi:whatsapp" class="w-4 h-4 text-white" /></a>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              ))
+              
+            }
+          </div>
+        </div>
+      </section>
+</Archive>

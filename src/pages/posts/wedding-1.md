@@ -4,6 +4,7 @@ slug: 'posts/wedding-1'
 title: 'Wedding-1'
 type: 'Diamond 01'
 desc: 'Tema Diamond'
+countdown: "June 5, 2025 15:37:25"
 price: 'Rp 99.000'
 unprice: 'Rp 150.000'
 number: 3
@@ -72,7 +73,7 @@ facebookfemale: "facebook"
 citymale: "Palembang"
 cityfemale: "Makkasar"
 
-# name bank
+#bank
 logoml: /assets/bri.png
 bankml: "BRI"
 namebankml: "Remeo Alexa"

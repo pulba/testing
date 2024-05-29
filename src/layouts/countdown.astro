@@ -4,9 +4,10 @@
 
 <script>
 
-const timer = document.getElementById("timer");
+const timer = document.querySelector("#timer");
+
 if(timer){
-    const tanggalTujuan = new Date("Jan 5, 2030 15:37:25").getTime();
+    const tanggalTujuan = new Date(timer.dataset.count).getTime()
 
     const hitungMundur = setInterval(function(){
 
@@ -19,7 +20,7 @@ if(timer){
     const menit = Math.floor(selisih % (1000 * 60 * 60) / (1000 * 60));
     const detik = Math.floor(selisih % (1000 * 60) / (1000));
 
-        timer.innerHTML = 
+    timer.innerHTML = 
         '<div><div class="leading-8 font-josefin">' + hari + '<br><span class="text-xl">Hari</span></div></div>' +
         '<div><div class="leading-8 font-josefin">' + jam + '<br><span class="text-xl">Jam</span></div></div>' +
         '<div><div class="leading-8 font-josefin">' + menit + '<br><span class="text-xl">Menit</span></div></div>' +
@@ -29,6 +30,8 @@ if(timer){
             end.innerHTML = '<div class="absolute leading-8 text-gray-800 text-2xl inset-x-0 capitalize font-josefin">event telah berakhir</div>';
             timer.innerHTML = "";
             timer.appendChild(end);
+            
+            console.log(timer);
             }
 
     });

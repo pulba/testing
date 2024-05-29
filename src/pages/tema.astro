@@ -5,7 +5,7 @@ import { Icon } from 'astro-iconify';
 const posts = await Astro.glob('../pages/posts/*.md');
 ---
 
-<Archive title="Tema" desc="Ini halaman Demos dari undangan" subs="Dengan desain undangan digital ini, tamu undangan tidak akan ragu untuk menghadiri acara Kamu!">
+<Archive title="Tema" desc="Dengan adanya preset kamu tinggal pilih design undangan sesuai dengan yang kamu mau!">
 
     <section>
         <div class="container px-6 py-20 mx-auto text-center">
@@ -24,14 +24,14 @@ const posts = await Astro.glob('../pages/posts/*.md');
               posts.slice(0, 15)
               .sort((a, b) => a.frontmatter.number - b.frontmatter.number)
               .map((post) => (
-                <div class="relative border border-pink-300 bg-gray-200 rounded-lg shadow-xl">
+                <div class="relative p-4 bg-white rounded-lg shadow-xl">
                   <div class="relative">
                     <div class="overflow-hidden rounded-lg">
                       <div class="w-full aspect-video object-cover">
                         <img src={post.frontmatter.img.url} alt={post.frontmatter.desc} />
                       </div>
                     </div>
-                    <div class="p-6 ">
+                    <div class="pt-4">
                       <p class="font-bold text-xl text-gray-800 sm:text-left capitalize">{post.frontmatter.type}</p>  
                       <p class="font-bold text-gray-800 sm:text-left">{post.frontmatter.price}</p>  
                       <p class="font-bold text-pink-600 line-through sm:text-left text-xs">{post.frontmatter.unprice}</p>  
