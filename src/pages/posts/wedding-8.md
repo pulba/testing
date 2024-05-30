@@ -4,6 +4,7 @@ slug: 'posts/wedding-8'
 title: 'Wedding-8'
 type: 'Basic 02'
 desc: 'Tema Basic 02'
+countdown: "June 5, 2025 15:37:25"
 price: 'Rp 49.000'
 unprice: 'Rp 80.000'
 number: 1
@@ -16,13 +17,13 @@ bgfs: 'bg-white'
 bgsc: 'bg-yellow-100'
 bgth: 'bg-sky-800'
 
-from: 'from-sky-800'
-before: 'before:bg-sky-800'
-
 txfs: 'text-white'
 txsc: 'text-yellow-100'
 txth: 'text-gray-800'
+
 bdr: 'border-yellow-100'
+from: 'from-sky-800'
+before: 'before:bg-sky-800'
 
 # Img header
 cover: '/assets/img-6.webp'
@@ -35,6 +36,7 @@ dekorsc: '/assets/dekor10.webp'
 dekorth: '/assets/dekor28.webp'
 dekorfr: '/assets/dekor29.webp'
 dekorfv: '/assets/dekor26.webp'
+
 # Img kedua mempelai
 pm1: '/assets/img-27.webp'
 pm2: '/assets/img-26.webp'

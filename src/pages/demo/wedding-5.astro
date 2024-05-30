@@ -16,28 +16,31 @@ let {frontmatter, count} = Astro.props;
 if(!frontmatter) {
   let data = {};
   data["title"] = 'wedding-5'
-  data["type"] = 'wedding-5'
+  data["type"] = 'Silver 03'
   data["desc"] = 'wedding-5'
+  data["countdown"] = 'Jun 26, 2024 15:37:25'
 
-  data["bgfs"] = 'bg-pink-100'
-  data["bgsc"] = 'bg-pink-600'
-  data["bgth"] = 'bg-pink-900'
+  data["bgfs"] = 'bg-yellow-100'
+  data["bgsc"] = 'bg-yellow-800'
+  data["bgth"] = 'bg-yellow-800'
 
-  data["txfs"] = 'text-pink-100'
-  data["txsc"] = 'text-pink-600'
-  data["txth"] = 'text-pink-900'
+  data["txfs"] = 'text-yellow-100'
+  data["txsc"] = 'text-yellow-800'
+  data["txth"] = 'text-yellow-800'
 
-  data["bdr"] = 'border-pink-900'
-  data["from"] = 'from-pink-100'
+  data["bdr"] = 'border-yellow-800'
+  data["from"] = 'from-yellow-800'
   data["before"] = 'before:bg-black'
 
-  data["cover"] = '/assets/img-12.webp'
-  data["imgsc"] = '/assets/img-25.webp'
+  data["cover"] = '/assets/img-5.webp'
+  data["imgsc"] = '/assets/img-6.webp'
   data["bg"] = '/assets/dekor-24.webp'
-  // Img kedua mempelai
-  data["dekorfs"] = '/assets/dekor22.webp'
-  data["dekorsc"] = '/assets/dekor23.webp'
-  data["dekorth"] = '/assets/dekor24.webp'
+
+  // Img dekor mempelai
+  data["dekorfs"] = '/assets/dekor4.webp'
+  data["dekorsc"] = '/assets/dekor5.webp'
+  data["dekorth"] = '/assets/dekor11.webp'
+
   // Img kedua mempelai
   data["pm1"] = '/assets/img-27.webp'
   data["pm2"] = '/assets/img-26.webp'
@@ -116,12 +119,7 @@ if(!frontmatter) {
   <section class=`animasi1 relative h-screen bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-gradient-to-t ${frontmatter.from} before:inset-0 before:absolute`
     style={`background-image:url(${frontmatter.cover})`}>
     <div class="absolute overflow-hidden z-20 w-full h-[100%] [&>*]:absolute [&>*]:object-cover [&>*]:w-1/2 [&>*]:lg:w-1/5">
-      <div>
-        <img src=`${frontmatter.dekorfs}` class="" alt="JejakBahagia" />
-      </div>
-      <div class="right-0 top-0">
-        <img src=`${frontmatter.dekorfs}` class="rotate-90 right-0 top-0" alt="JejakBahagia" />
-      </div>
+      
       <div class="left-0 bottom-0 -rotate-90">
         <img src=`${frontmatter.dekorfs}` alt="JejakBahagia" />
       </div>
@@ -507,7 +505,7 @@ if(!frontmatter) {
           <h2 class="fade-right opacity-0 text-xl md:text-2xl font-bold mt-5 font-josefin">Please Confirm Your Attendance</h2>
         </div>
 
-        <Rsvp color="gray-600" />
+        <Rsvp color="gray-800" />
           
       </div>
     </section>

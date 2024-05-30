@@ -16,14 +16,13 @@ bgsc: 'bg-zinc-600'
 bgth: 'bg-zinc-900'
 bgfr: 'bg-zinc-900'
 
-
-from: 'from-zinc-900'
-before: 'before:bg-sky-800'
-
 txfs: 'text-white'
 txsc: 'text-white'
 txth: 'text-gray-950'
+
 bdr: 'border-gray-200'
+from: 'from-zinc-900'
+before: 'before:bg-sky-800'
 
 
 #dekor

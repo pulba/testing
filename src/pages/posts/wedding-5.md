@@ -4,6 +4,7 @@ slug: 'posts/wedding-5'
 title: 'Wedding-5'
 type: 'Silver 03'
 desc: 'Tema Silver'
+countdown: "June 5, 2025 15:37:25"
 price: 'Rp 75.000'
 unprice: 'Rp 100.000'
 number: 2
@@ -15,12 +16,13 @@ img:
 bgfs: 'bg-yellow-100'
 bgsc: 'bg-yellow-800'
 bgth: 'bg-gray-800'
-from: 'from-yellow-800'
 
 txfs: 'text-yellow-100'
 txsc: 'text-yellow-800'
 txth: 'text-gray-800'
+
 bdr: 'border-yellow-800'
+from: 'from-yellow-800'
 
 # Img header
 cover: '/assets/img-5.webp'

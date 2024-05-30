@@ -4,6 +4,7 @@ slug: 'posts/wedding-7'
 title: 'Wedding-7'
 type: 'Tanpa Foto'
 desc: 'Tanpa Foto'
+countdown: "June 5, 2025 15:37:25"
 price: 'Rp 49.000'
 unprice: 'Rp 80.000'
 number: 5
@@ -17,13 +18,13 @@ bgsc: 'bg-pink-600'
 bgth: 'bg-pink-800'
 bgfr: 'bg-pink-100'
 
-from: 'from-pink-100'
-before: 'before:bg-sky-800'
-
 txfs: 'text-pink-200'
 txsc: 'text-pink-600'
 txth: 'text-pink-950'
+
 bdr: 'border-pink-200'
+from: 'from-pink-100'
+before: 'before:bg-sky-800'
 
 #dekor
 dekorfs: '/assets/dekor34.webp'

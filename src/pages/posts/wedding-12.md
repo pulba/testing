@@ -4,6 +4,7 @@ slug: 'posts/wedding-12'
 title: 'Wedding-12'
 type: 'Exlusive 01'
 desc: 'Tema Exlusive'
+countdown: "June 5, 2025 15:37:25"
 price: 'Rp 149.000'
 unprice: 'Rp 200.000'
 number: 4
@@ -19,6 +20,7 @@ bgth: 'bg-gray-950'
 txfs: 'text-amber-200'
 txsc: 'text-amber-500'
 txth: 'text-gray-950'
+
 bdr: 'border-amber-200'
 
 # Img header

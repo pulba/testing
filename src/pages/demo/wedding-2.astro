@@ -16,28 +16,29 @@ let {frontmatter, count} = Astro.props;
 if(!frontmatter) {
   let data = {};
   data["title"] = 'wedding-2'
-  data["type"] = 'wedding-2'
+  data["type"] = 'Diamond 02'
   data["desc"] = 'wedding-2'
+  data["countdown"] = 'Jun 26, 2024 15:37:25'
 
-  data["bgfs"] = 'bg-gray-100'
-  data["bgsc"] = 'bg-gray-600'
-  data["bgth"] = 'bg-gray-900'
+  data["bgfs"] = 'bg-pink-100'
+  data["bgsc"] = 'bg-pink-600'
+  data["bgth"] = 'bg-pink-900'
 
-  data["txfs"] = 'text-gray-100'
-  data["txsc"] = 'text-gray-500'
-  data["txth"] = 'text-gray-900'
+  data["txfs"] = 'text-pink-100'
+  data["txsc"] = 'text-pink-500'
+  data["txth"] = 'text-pink-900'
 
-  data["bdr"] = 'border-gray-600'
-  data["from"] = 'from-gray-100'
+  data["bdr"] = 'border-pink-100'
+  data["from"] = 'from-pink-100'
   data["before"] = 'before:bg-black'
 
-  data["cover"] = '/assets/img-12.webp'
+  data["cover"] = '/assets/img-19.webp'
   data["imgsc"] = '/assets/img-25.webp'
   data["bg"] = '/assets/dekor-24.webp'
   // Img kedua mempelai
-  data["dekorfs"] = '/assets/dekor22.webp'
-  data["dekorsc"] = '/assets/dekor23.webp'
-  data["dekorth"] = '/assets/dekor24.webp'
+  data["dekorfs"] = '/assets/dekor9.webp'
+  data["dekorsc"] = '/assets/dekor25.webp'
+  data["dekorth"] = '/assets/dekor26.webp'
   // Img kedua mempelai
   data["pm1"] = '/assets/img-27.webp'
   data["pm2"] = '/assets/img-26.webp'
@@ -51,7 +52,7 @@ if(!frontmatter) {
   data["imgstory7"] = '/assets/img-11.webp'
   data["imgstory8"] = '/assets/img-12.webp'
   data["add1"] = '/assets/img-29.webp'
-  data["add2"] = '/assets/img-31.webp'
+  data["add2"] = '/assets/img-4.webp'
 
   //img story love
   data["imgstory9"] = '/assets/img-16.webp'
@@ -127,7 +128,7 @@ if(!frontmatter) {
         <span class=`${frontmatter.txfs}`> & </span> 
         <span> {frontmatter.male } </span> 
       </div>
-    <div class="animate-fadedown mx-auto text-center mt-2 text-gray-800">
+    <div class=`animate-fadedown mx-auto text-center mt-2 ${frontmatter.txsc}`>
       <h3 class="mt-2 font-poppins text-xs">Kepada Yth. <br>  Bapak/Ibu/Saudara/i</h3>
       <h4 id="invite-name" class="animate-fadeup text-xl font-josefin my-3 capitalize">
         <Namatamu /> Nama Tamu
@@ -219,7 +220,7 @@ if(!frontmatter) {
       </div>
     </section>
     <section class="animasi5 relative overflow-hidden">
-      <div class=`absolute inset-0 bg-gray-500 bg-cover bg-no-repeat lg:bg-center bg-fixed bg-center grayscale blur-[1px] before:content-[''] before:bg-gradient-to-b before:to-transparent before:inset-0 before:bg-cover before:absolute ${frontmatter.from}` style={`background-image:url(${frontmatter.add1})`}>
+      <div class=`absolute inset-0 bg-cover bg-no-repeat lg:bg-center bg-fixed bg-center grayscale blur-[1px] before:content-[''] before:bg-gradient-to-b before:to-transparent before:inset-0 before:bg-cover before:absolute ${frontmatter.from}` style={`background-image:url(${frontmatter.add1})`}>
       </div>
       <div class="container py-32 px-6 mx-auto relative z-10">
         <div class=`text-center my-5 ${frontmatter.txsc}`>

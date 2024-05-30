@@ -6,6 +6,7 @@ type: 'Exlusive 02'
 desc: 'Tema Exlusive'
 price: 'Rp 149.000'
 unprice: 'Rp 200.000'
+countdown: Jun 26, 2024 15:37:25
 number: 4
 img:
   url: '/assets/demo-14.webp'
@@ -15,10 +16,14 @@ img:
 #colors
 bgfs: 'bg-white'
 bgsc: 'bg-red-900'
+bgth: 'bg-black'
+
 txfs: 'text-white'
 txsc: 'text-red-900'
 txth: 'text-amber-200'
+
 bdr: 'border-red-900'
+before: 'bg-white'
 
 # Img header
 cover: '/assets/img-22.webp'
@@ -26,12 +31,14 @@ imgsc: '/assets/dekor-21.webp'
 bg: '/assets/dekor-24.webp'
 
 #dekor
-dekorfs: '/assets/dekor-22.webp'
-dekorsc: '/assets/dekor-23.webp'
-dekorth: '/assets/dekor11.webp'
+dekorfs: '/assets/dekor41.webp'
+dekorsc: '/assets/dekor40.webp'
+dekorth: '/assets/dekor43.webp'
+dekorfr: '/assets/dekor11.webp'
+
 # Img kedua mempelai
-pm1: '/assets/img-22.webp'
-pm2: '/assets/img-1.webp'
+pm1: '/assets/img-2.webp'
+pm2: '/assets/img-3.webp'
 
 # Img Our moment
 imgstory1: '/assets/img-22.webp'

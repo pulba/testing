@@ -18,40 +18,42 @@ let {frontmatter, count} = Astro.props;
 if(!frontmatter) {
   let data = {};
   data["title"] = 'wedding-14'
-  data["type"] = 'wedding-14'
+  data["type"] = 'Exlusive 02'
   data["desc"] = 'wedding-14'
+  data["countdown"] = 'Jun 26, 2024 15:37:25'
 
-  data["bgfs"] = 'bg-pink-100'
-  data["bgsc"] = 'bg-pink-600'
-  data["bgth"] = 'bg-pink-900'
+  data["bgfs"] = 'bg-white'
+  data["bgsc"] = 'bg-red-900'
+  data["bgth"] = 'bg-black'
 
-  data["txfs"] = 'text-pink-100'
-  data["txsc"] = 'text-pink-600'
-  data["txth"] = 'text-pink-900'
+  data["txfs"] = 'text-white'
+  data["txsc"] = 'text-red-900'
+  data["txth"] = 'text-amber-200'
 
-  data["bdr"] = 'border-pink-900'
-  data["from"] = 'from-pink-100'
-  data["before"] = 'before:bg-black'
+  data["bdr"] = 'border-red-900'
+  data["from"] = 'from-red-100'
+  data["before"] = 'before:bg-white'
 
-  data["cover"] = '/assets/img-12.webp'
-  data["imgsc"] = '/assets/img-25.webp'
-  data["bg"] = '/assets/dekor-24.webp'
+  data["cover"] = '/assets/img-22.webp'
+  data["imgsc"] = '/assets/img-21.webp'
+  data["bg"] = '/assets/dekor42.webp'
   // Img kedua mempelai
-  data["dekorfs"] = '/assets/dekor22.webp'
-  data["dekorsc"] = '/assets/dekor23.webp'
-  data["dekorth"] = '/assets/dekor24.webp'
+  data["dekorfs"] = '/assets/dekor41.webp'
+  data["dekorsc"] = '/assets/dekor40.webp'
+  data["dekorth"] = '/assets/dekor43.webp'
+  data["dekorfr"] = '/assets/dekor11.webp'
   // Img kedua mempelai
-  data["pm1"] = '/assets/img-27.webp'
-  data["pm2"] = '/assets/img-26.webp'
+  data["pm1"] = '/assets/img-1.webp'
+  data["pm2"] = '/assets/img-3.webp'
   // Img kedua mempelai
-  data["imgstory1"] = '/assets/img-5.webp'
-  data["imgstory2"] = '/assets/img-6.webp'
-  data["imgstory3"] = '/assets/img-7.webp'
-  data["imgstory4"] = '/assets/img-8.webp'
-  data["imgstory5"] = '/assets/img-9.webp'
-  data["imgstory6"] = '/assets/img-10.webp'
-  data["imgstory7"] = '/assets/img-11.webp'
-  data["imgstory8"] = '/assets/img-12.webp'
+  data["imgstory1"] = '/assets/img-22.webp'
+  data["imgstory2"] = '/assets/img-1.webp'
+  data["imgstory3"] = '/assets/img-2.webp'
+  data["imgstory4"] = '/assets/img-3.webp'
+  data["imgstory5"] = '/assets/img-1.webp'
+  data["imgstory6"] = '/assets/img-2.webp'
+  data["imgstory7"] = '/assets/img-3.webp'
+  data["imgstory8"] = '/assets/img-1.webp'
   data["add1"] = '/assets/img-29.webp'
   data["add2"] = '/assets/img-31.webp'
 
@@ -115,7 +117,7 @@ if(!frontmatter) {
 <Noheader title={frontmatter.title} desc={frontmatter.desc}>
   
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
-  <section class:list={[`animasi relative bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-black before:opacity-60 before:inset-0 before:bg-cover before:absolute before:${frontmatter.bgfs}`]} style=`background-image: url('${frontmatter.cover}')`>
+  <section class=`animasi relative bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute before:${frontmatter.bgfs}` style=`background-image: url('${frontmatter.cover}')`>
     <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
       <div class="top-0 max-h-12">
         <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-12" alt="JejakBahagia" />
@@ -145,8 +147,8 @@ if(!frontmatter) {
         </div>
     </div>
   </section>
-  <main id="myDIV" class:list={[`hidden relative bg-cover bg-center peer-checked:block before:content-[''] before:bg-white before:opacity-80 before:inset-0 before:bg-cover before:absolute ${frontmatter.bgfs}`]} class="block relative bg-gray-950 peer-checked:block" style=`background-image: url('${frontmatter.bg}')`>
-    <section class="animasi1 relative h-screen bg-cover bg-center mx-auto overflow-hidden before:content-[''] before:bg-gradient-to-t before:from-amber-200 before:to-transparent before:inset-0 before:bg-cover before:absolute">
+  <main id="myDIV" class=`relative bg-cover bg-center peer-checked:block ${frontmatter.bgfs}`>
+    <section class=`relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
       <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
         <div class="top-0 max-h-12">
           <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-12" alt="JejakBahagia" />
@@ -157,7 +159,7 @@ if(!frontmatter) {
     </div>
       <div class="container mx-auto h-screen flex flex-col justify-center items-center relative z-10 font-josefin">
       <div class:list={[`mx-auto text-center flex flex-col items-center ${frontmatter.txsc}`]}>
-        <img src=`${frontmatter.imgsc}` alt="jejakbahagia" class="animate-fadedown w-36 md:w-56 mb-5">
+        <img src=`${frontmatter.dekorth}` alt="jejakbahagia" class="animate-fadedown w-36 md:w-56 mb-5">
         <h5>THE WEDDING OF</h5>
         <div
         class="animate-zoomout flex flex-col sm:flex-row gap-2 text-center font-great text-center text-6xl lg:text-8xl gap-4">
@@ -169,7 +171,7 @@ if(!frontmatter) {
       </div>
       </div>
     </section>
-    <section class="animasi2 w-full mx-auto overflow-hidden relative">       
+    <section class=`animasi1 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>       
       <div class="container mx-auto py-20 px-6">
         <div class:list={[`text-center my-5 ${frontmatter.txsc}`]}>
           <p class="fade-down opacity-0 w-full max-w-prose mx-auto px-5 sm:px-0 text-md font-josefin"
@@ -186,7 +188,7 @@ if(!frontmatter) {
         <p class:list={[`fade-up text-center mt-5 font-bold text-lg md:text-2xl ${frontmatter.txsc}`]}>{frontmatter.date}</p>
       </div>
     </section>
-    <section class="animasi2 w-full overflow-hidden relative">
+    <section class=`animasi2 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
         
         <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
           <div class="top-0 max-h-12">
@@ -213,7 +215,7 @@ if(!frontmatter) {
                           class="w-28 h-36 md:w-56 md:h-64 bg-cover bg-center relative"
                           style=`background-image: url('${frontmatter.pm1}'); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);`>
                           </div>
-                          <img src=`${frontmatter.dekorth}` alt="JejakBahagia" class="absolute">
+                          <img src=`${frontmatter.dekorfr}` alt="JejakBahagia" class="absolute">
                         </div>
                       </div>
                 </div>
@@ -224,7 +226,7 @@ if(!frontmatter) {
                           class="w-28 h-36 md:w-56 md:h-64 bg-cover bg-center relative"
                           style=`background-image: url('${frontmatter.pm2}'); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);`>
                           </div>
-                          <img src=`${frontmatter.dekorth}` alt="JejakBahagia" class="absolute">
+                          <img src=`${frontmatter.dekorfr}` alt="JejakBahagia" class="absolute">
                         </div>
                       </div>
                 </div>
@@ -266,7 +268,7 @@ if(!frontmatter) {
             </div>
         </div>
     </section>
-    <section class="animasi6 relative overflow-hidden">
+    <section class=`animasi3 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
       <div class="container mx-auto py-20 px-6">
         <div class:list={[`text-center my-5 mb-10 ${frontmatter.txsc}`]} class="text-center my-5 mb-10">
           <h2 class="fade-left opacity-0 text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
@@ -334,7 +336,7 @@ if(!frontmatter) {
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873130.0607204797!2d110.1445006182314!3d-7.744660421581015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1712983300381!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class:list={[`fade-up opacity-0 mx-auto mt-12 w-full max-w-3xl h-96 p-[2px] rounded-lg ${frontmatter.bgsc}`]}></iframe>
       </div>
     </section>
-    <section class="animasi6 relative overflow-hidden">
+    <section class=`animasi4 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
       <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
         <div class="top-0 max-h-12">
           <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-12" alt="JejakBahagia" />
@@ -404,7 +406,7 @@ if(!frontmatter) {
         </div>
       </div>
     </section>
-    <section class="animasi8 relative overflow-hidden">
+    <section class=`animasi5 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
       <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
         <div class="top-0 max-h-12">
           <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-12" alt="JejakBahagia" />
@@ -432,8 +434,8 @@ if(!frontmatter) {
           </div>
       </div>
     </section>
-    <section class="animasi9 relative bg-cover bg-no-repeat bg-center bg-fixed py-20 overflow-hidden">
-      <div class="container px-6 text-center mx-auto relative z-10">
+    <section class=`animasi6 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
+      <div class="container py-20 px-6 text-center mx-auto relative z-10">
         <div class:list={[`${frontmatter.txsc}`]}>
           <h2 class="fade-right opacity-0 text-5xl lg:text-8xl font-great">Wedding Gift</h2>
           <p class="fade-left opacity-0 max-w-prose mx-auto font-bold mt-5 font-josefin">Doa & restu anda di pernikahan kami cukuplah sebagai bingkisan, namun jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan akan semakin melengkapi kebahagiaan kami.</p>
@@ -469,7 +471,7 @@ if(!frontmatter) {
       </div>
       </div>
     </section>
-    <section class="animasi10 overflow-hidden relative">
+    <section class=`animasi7 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
       <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
         <div class="top-0 max-h-12">
           <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-12" alt="JejakBahagia" />

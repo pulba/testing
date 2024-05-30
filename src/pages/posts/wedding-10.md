@@ -4,6 +4,7 @@ slug: 'posts/wedding-10'
 title: 'Wedding-10'
 type: 'Silver 01'
 desc: 'Tema Silver'
+countdown: "June 5, 2025 15:37:25"
 price: 'Rp 75.000'
 unprice: 'Rp 100.000'
 number: 2
@@ -15,13 +16,14 @@ img:
 bgfs: 'bg-red-200'
 bgsc: 'bg-red-900'
 bgth: 'bg-red-900'
-from: 'from-red-900'
-before: 'before:bg-black'
 
 txfs: 'text-red-200'
 txsc: 'text-red-600'
 txth: 'text-red-900'
+
 bdr: 'border-red-900'
+from: 'from-red-900'
+before: 'before:bg-black'
 
 # Img header
 cover: '/assets/img-5.webp'
@@ -31,6 +33,7 @@ bg: '/assets/dekor-24.webp'
 #dekor
 dekorfs: '/assets/dekor8.webp'
 dekorsc: '/assets/dekor17.webp'
+
 # Img kedua mempelai
 pm1: '/assets/img-27.webp'
 pm2: '/assets/img-26.webp'

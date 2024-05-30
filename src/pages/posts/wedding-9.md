@@ -4,6 +4,7 @@ slug: 'posts/wedding-9'
 title: 'Wedding-9'
 type: 'Basic 03'
 desc: 'Tema Basic 03'
+countdown: "June 5, 2025 15:37:25"
 price: 'Rp 49.000'
 unprice: 'Rp 80.000'
 number: 1
@@ -16,13 +17,13 @@ bgfs: 'bg-pink-200'
 bgsc: 'bg-pink-600'
 bgth: 'bg-pink-800'
 
-from: 'from-pink-200'
-before: 'before:bg-pink-800'
-
 txfs: 'text-pink-100'
 txsc: 'text-pink-600'
 txth: 'text-pink-800'
+
 bdr: 'border-pink-800'
+from: 'from-pink-200'
+before: 'before:bg-pink-800'
 
 # Img header
 cover: '/assets/img-6.webp'

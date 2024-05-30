@@ -4,6 +4,7 @@ slug: 'posts/wedding-4'
 title: 'Wedding-4'
 type: 'Diamond 03'
 desc: 'Tema Diamond'
+countdown: "June 5, 2025 15:37:25"
 price: 'Rp 99.000'
 unprice: 'Rp 150.000'
 number: 3
@@ -16,13 +17,13 @@ bgfs: 'bg-blue-100'
 bgsc: 'bg-blue-600'
 bgth: 'bg-gray-900'
 
-from: 'from-blue-100'
-before: 'before:bg-black'
-
 txfs: 'text-blue-200'
 txsc: 'text-blue-600'
 txth: 'text-gray-900'
+
 bdr: 'border-blue-600'
+from: 'from-blue-100'
+before: 'before:bg-black'
 
 # Img header
 cover: '/assets/dekor27.webp'

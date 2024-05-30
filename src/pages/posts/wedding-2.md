@@ -4,6 +4,7 @@ slug: 'posts/wedding-2'
 title: 'Wedding-2'
 type: 'Diamond 02'
 desc: 'Tema Diamond'
+countdown: "June 5, 2025 15:37:25"
 price: 'Rp 99.000'
 unprice: 'Rp 150.000'
 number: 3
@@ -12,16 +13,16 @@ img:
   alt: jejak bahagia
 
 #colors
-bgfs: 'bg-gray-100'
-bgsc: 'bg-gray-500'
-bgth: 'bg-gray-900'
+bgfs: 'bg-pink-100'
+bgsc: 'bg-pink-500'
+bgth: 'bg-pink-900'
 
-from: 'from-gray-100'
-before: 'before:bg-black'
-
-txfs: 'text-gray-100'
+txfs: 'text-pink-100'
 txsc: 'text-pink-600'
-txth: 'text-gray-900'
+txth: 'text-pink-900'
+
+from: 'from-pink-100'
+before: 'before:bg-black'
 bdr: 'border-pink-600'
 
 # Img header
