@@ -182,7 +182,9 @@ import Splide from '../layouts/autoscroll.astro'
               <div class="relative">
                 <div class="overflow-hidden rounded-lg">
                   <div class="w-full object-cover">
-                    <img src={post.frontmatter.img.url} alt={post.frontmatter.desc} />
+                    <a href={post.frontmatter.slug}>
+                        <img src={post.frontmatter.img.url} alt={post.frontmatter.desc} />
+                        </a>
                   </div>
                 </div>
                 <p class="font-bold text-xl pt-4 text-gray-800 sm:text-left capitalize">{post.frontmatter.type}</p>

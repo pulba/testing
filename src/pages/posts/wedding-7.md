@@ -76,9 +76,12 @@ timeth: 13:00 - end WIB
 addressfs: Masjid Kampus UGM
 addresssc: Jogja Expo Center
 addressth: Rumah Mempelai Wanita
+locationfs: Jl. Serayu No. 16 RT/RW 001/001, Kel/Des Panderejo, Kec. Banyuwangi
+locationsc: Jl. Serayu No. 16 RT/RW 001/001, Kel/Des Panderejo, Kec. Banyuwangi
 mapsfs: https://maps.app.goo.gl/fpXEChVvcrKveA468 
 mapssc: https://maps.app.goo.gl/fpXEChVvcrKveA468
 mapsth: https://maps.app.goo.gl/fpXEChVvcrKveA468
+linkmaps: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3953.144855136041!2d110.3807054!3d-7.7744606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59b4fe07a7f9%3A0x2f7c4fd3d72616bb!2sJl.%20Prof.%20DR.%20Drs%20Notonagoro%2C%20Karang%20Malang%2C%20Caturtunggal%2C%20Kec.%20Depok%2C%20Kabupaten%20Sleman%2C%20Daerah%20Istimewa%20Yogyakarta%2055281!5e0!3m2!1sid!2sid!4v1717643524613!5m2!1sid!2sid
 
 quote: "Tidak ada yang lebih indah selain berbagi hidup dengan seseorang yang mengerti dan mendukungmu tanpa syarat.  Dan tidak ada perasaan yang lebih indah selain menemukan seseorang yang menjadi tempat pulang terbaik."
 ---

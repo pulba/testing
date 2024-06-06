@@ -102,6 +102,7 @@ if(!frontmatter) {
   data["mapsfs"] = "https://maps.app.goo.gl/fpXEChVvcrKveA468" 
   data["mapssc"] = "https://maps.app.goo.gl/fpXEChVvcrKveA468"
   data["mapsth"] = "https://maps.app.goo.gl/fpXEChVvcrKveA468"
+  data["linkmaps"] = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3953.144855136041!2d110.3807054!3d-7.7744606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59b4fe07a7f9%3A0x2f7c4fd3d72616bb!2sJl.%20Prof.%20DR.%20Drs%20Notonagoro%2C%20Karang%20Malang%2C%20Caturtunggal%2C%20Kec.%20Depok%2C%20Kabupaten%20Sleman%2C%20Daerah%20Istimewa%20Yogyakarta%2055281!5e0!3m2!1sid!2sid!4v1717643524613!5m2!1sid!2sid"
 
 //story love
   data["storyfs"] = "Di sebuah kafe yang nyaman di tengah kota, dua orang asing, Yanti dan Yanto, tak sengaja bertemu. Yanto, seorang fotografer yang sedang mencari inspirasi untuk proyek terbarunya, sedangkan Yanti, seorang penulis lepas yang sedang mencatat ide-ide baru untuk novel romantisnya, tak menyadari bahwa matanya sedang bertatapan dengan seorang pria tampan di sisi lain kafe."
@@ -294,9 +295,10 @@ if(!frontmatter) {
           <div class=`fade-right opacity-0 ${frontmatter.bgfs}`>
             <div class="text-center font-josefin">
               <h2 class="text-center font-great text-4xl">Akad Nikah</h2>
-              <p class="mt-2 sm:mt-4">{frontmatter.date}</p>
-              <p class="mt-2 sm:mt-4 text-md">{frontmatter.timefs}</p>
-              <p class="mt-2 sm:mt-4">{frontmatter.addressfs}</p>
+              <p class="text-lg font-bold flex gap-2"><Icon name="mdi:date-range" class="w-6 h-6" /> {frontmatter.date}</p>
+                <p class="text-md flex gap-2"><Icon name="mdi:clock-time-eight-outline" class="w-6 h-6" />{frontmatter.timefs}</p>
+                <p class="flex gap-2"><Icon name="mdi:home" class="w-6 h-6" />{frontmatter.addressfs}</p>
+                <p class="flex gap-2"><Icon name="mdi:google-maps" class="w-8 h-8" />{frontmatter.locationfs}</p>
               <div class="group">
                 <a href={frontmatter.mapsfs}>
                   <button
@@ -310,9 +312,10 @@ if(!frontmatter) {
           <div class=`fade-left opacity-0 ${frontmatter.bgfs}`>
             <div class="text-center font-josefin">
               <h2 class="text-center font-great text-4xl">Resepsi</h2>
-              <p class="mt-2 sm:mt-4">{frontmatter.date}</p>
-              <p class="mt-2 sm:mt-4 text-md">{frontmatter.timesc}</p>
-              <p class="mt-2 sm:mt-4">{frontmatter.addresssc}</p>
+              <p class="text-lg font-bold flex gap-2"><Icon name="mdi:date-range" class="w-6 h-6" /> {frontmatter.date}</p>
+                <p class="text-md flex gap-2"><Icon name="mdi:clock-time-eight-outline" class="w-6 h-6" />{frontmatter.timesc}</p>
+                <p class="flex gap-2"><Icon name="mdi:home" class="w-6 h-6" />{frontmatter.addresssc}</p>
+                <p class="flex gap-2"><Icon name="mdi:google-maps" class="w-8 h-8" />{frontmatter.locationsc}</p>
               <div class="group">
                 <a href={frontmatter.mapssc}>
                   <button
@@ -324,7 +327,7 @@ if(!frontmatter) {
             </div>
           </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873130.0607204797!2d110.1445006182314!3d-7.744660421581015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1712983300381!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class=`fade-up opacity-0 mx-auto mt-12 w-full max-w-3xl h-96 p-2 rounded-lg ${frontmatter.bgfs}`></iframe>
+        <iframe src=`${frontmatter.linkmaps}` style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class=`fade-up opacity-0 mx-auto mt-12 w-full max-w-3xl h-96 p-2 rounded-lg ${frontmatter.bgfs}`></iframe>
       </div>
     </section>
     <section class="animasi8 relative overflow-hidden">

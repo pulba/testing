@@ -3,7 +3,7 @@ import Noheader from '../layouts/noheader.astro';
 import { Icon } from 'astro-iconify';
 ---
 <Noheader title="Send">
-<section class="bg-pink-200 bg-cover bg-center relative before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/wedding.jpg);">
+<section class="bg-pink-200 bg-cover bg-center relative before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute" style="background-image: url(/assets/img-29.webp);">
   <div class="container px-6 py-16 h-max md:h-screen mx-auto relative grid grid-cols-1 place-content-center">
     <form id="formSend" action="javascript:void(0);" onsubmit="sendWhatsApp();" class="w-full max-w-screen-lg px-6 py-16 sm:px-12 mx-auto bg-white rounded-md shadow-md border">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 justify-center items-center [&>*]:font-poppins [&>*]:text-left [&>*]:text-gray-800/50">
@@ -54,7 +54,7 @@ import { Icon } from 'astro-iconify';
     var message = `*Kepada Yth.*
 Bapak/Ibu/Saudara/i 
 
-*_<span class="capitalize">${Penerima}</span>_* 
+*${Penerima}* 
 
 
 *Assalamualaikum Warahmatullahi Wabarakaatuh*

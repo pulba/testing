@@ -102,6 +102,7 @@ if(!frontmatter) {
   data["mapsfs"] = "https://maps.app.goo.gl/fpXEChVvcrKveA468" 
   data["mapssc"] = "https://maps.app.goo.gl/fpXEChVvcrKveA468"
   data["mapsth"] = "https://maps.app.goo.gl/fpXEChVvcrKveA468"
+  data["linkmaps"] = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3953.144855136041!2d110.3807054!3d-7.7744606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59b4fe07a7f9%3A0x2f7c4fd3d72616bb!2sJl.%20Prof.%20DR.%20Drs%20Notonagoro%2C%20Karang%20Malang%2C%20Caturtunggal%2C%20Kec.%20Depok%2C%20Kabupaten%20Sleman%2C%20Daerah%20Istimewa%20Yogyakarta%2055281!5e0!3m2!1sid!2sid!4v1717643524613!5m2!1sid!2sid"
 
 //story love
   data["storyfs"] = "Di sebuah kafe yang nyaman di tengah kota, dua orang asing, Yanti dan Yanto, tak sengaja bertemu. Yanto, seorang fotografer yang sedang mencari inspirasi untuk proyek terbarunya, sedangkan Yanti, seorang penulis lepas yang sedang mencatat ide-ide baru untuk novel romantisnya, tak menyadari bahwa matanya sedang bertatapan dengan seorang pria tampan di sisi lain kafe."
@@ -147,8 +148,8 @@ if(!frontmatter) {
         </div>
     </div>
   </section>
-  <main id="myDIV" class=`relative bg-cover bg-center peer-checked:block ${frontmatter.bgfs}`>
-    <section class=`relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
+  <main id="myDIV" class=`hidden relative bg-cover bg-center peer-checked:block ${frontmatter.bgfs}`>
+    <section class=`animasi relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute before:${frontmatter.bgfs}` style=`background-image: url('${frontmatter.bg}')`>
       <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
         <div class="top-0 max-h-12">
           <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-12" alt="JejakBahagia" />
@@ -171,7 +172,7 @@ if(!frontmatter) {
       </div>
       </div>
     </section>
-    <section class=`animasi1 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>       
+    <section class=`animasi1 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute before:${frontmatter.bgfs}` style=`background-image: url('${frontmatter.bg}')`>       
       <div class="container mx-auto py-20 px-6">
         <div class:list={[`text-center my-5 ${frontmatter.txsc}`]}>
           <p class="fade-down opacity-0 w-full max-w-prose mx-auto px-5 sm:px-0 text-md font-josefin"
@@ -188,7 +189,7 @@ if(!frontmatter) {
         <p class:list={[`fade-up text-center mt-5 font-bold text-lg md:text-2xl ${frontmatter.txsc}`]}>{frontmatter.date}</p>
       </div>
     </section>
-    <section class=`animasi2 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
+    <section class=`animasi2 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute before:${frontmatter.bgfs}` style=`background-image: url('${frontmatter.bg}')`>
         
         <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
           <div class="top-0 max-h-12">
@@ -268,7 +269,7 @@ if(!frontmatter) {
             </div>
         </div>
     </section>
-    <section class=`animasi3 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
+    <section class=`animasi3 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute before:${frontmatter.bgfs}` style=`background-image: url('${frontmatter.bg}')`>
       <div class="container mx-auto py-20 px-6">
         <div class:list={[`text-center my-5 mb-10 ${frontmatter.txsc}`]} class="text-center my-5 mb-10">
           <h2 class="fade-left opacity-0 text-2xl font-bold mt-5 md:mt-0 mb-3 font-josefin">Where & When</h2>
@@ -333,10 +334,10 @@ if(!frontmatter) {
             </div>
           </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873130.0607204797!2d110.1445006182314!3d-7.744660421581015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1712983300381!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class:list={[`fade-up opacity-0 mx-auto mt-12 w-full max-w-3xl h-96 p-[2px] rounded-lg ${frontmatter.bgsc}`]}></iframe>
+        <iframe src=`${frontmatter.linkmaps}` style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class:list={[`fade-up opacity-0 mx-auto mt-12 w-full max-w-3xl h-96 p-[2px] rounded-lg ${frontmatter.bgsc}`]}></iframe>
       </div>
     </section>
-    <section class=`animasi4 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
+    <section class=`animasi4 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute before:${frontmatter.bgfs}` style=`background-image: url('${frontmatter.bg}')`>
       <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
         <div class="top-0 max-h-12">
           <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-12" alt="JejakBahagia" />
@@ -406,7 +407,7 @@ if(!frontmatter) {
         </div>
       </div>
     </section>
-    <section class=`animasi5 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
+    <section class=`animasi5 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute before:${frontmatter.bgfs}` style=`background-image: url('${frontmatter.bg}')`>
       <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
         <div class="top-0 max-h-12">
           <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-12" alt="JejakBahagia" />
@@ -434,7 +435,7 @@ if(!frontmatter) {
           </div>
       </div>
     </section>
-    <section class=`animasi6 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
+    <section class=`animasi6 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute before:${frontmatter.bgfs}` style=`background-image: url('${frontmatter.bg}')`>
       <div class="container py-20 px-6 text-center mx-auto relative z-10">
         <div class:list={[`${frontmatter.txsc}`]}>
           <h2 class="fade-right opacity-0 text-5xl lg:text-8xl font-great">Wedding Gift</h2>
@@ -471,7 +472,7 @@ if(!frontmatter) {
       </div>
       </div>
     </section>
-    <section class=`animasi7 relative bg-cover bg-center overflow-hidden before:content-[''] before:opacity-90 before:inset-0 before:bg-cover before:absolute ${frontmatter.before}` style=`background-image: url('${frontmatter.bg}')`>
+    <section class=`animasi7 relative bg-cover bg-center overflow-hidden before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute before:${frontmatter.bgfs}` style=`background-image: url('${frontmatter.bg}')`>
       <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
         <div class="top-0 max-h-12">
           <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-12" alt="JejakBahagia" />

@@ -238,9 +238,10 @@ if(!frontmatter) {
           <div class=`fade-right opacity-0 py-12 rounded-lg ${frontmatter.bgfs} ${frontmatter.txth}`>
             <div class="text-center font-josefin">
               <h2 class="text-center font-nautigal text-5xl">Akad Nikah</h2>
-              <p class="mt-2 sm:mt-4">{frontmatter.date}</p>
-              <p class="mt-2 sm:mt-4 text-md">{frontmatter.timefs}</p>
-              <p class="mt-2 sm:mt-4">{frontmatter.addressfs}</p>
+              <p class="text-lg font-bold flex gap-2"><Icon name="mdi:date-range" class="w-6 h-6" /> {frontmatter.date}</p>
+              <p class="text-md flex gap-2"><Icon name="mdi:clock-time-eight-outline" class="w-6 h-6" />{frontmatter.timefs}</p>
+              <p class="flex gap-2"><Icon name="mdi:home" class="w-6 h-6" />{frontmatter.addressfs}</p>
+              <p class="flex gap-2"><Icon name="mdi:google-maps" class="w-8 h-8" />{frontmatter.locationfs}</p>
               <div class="group">
                 <a href={frontmatter.mapsfs}>
                   <button
@@ -257,9 +258,10 @@ if(!frontmatter) {
           <div class=`fade-right opacity-0 py-12 rounded-lg ${frontmatter.bgfs} ${frontmatter.txth}`>
             <div class="text-center font-josefin">
               <h2 class="text-center font-nautigal text-5xl">Resepsi</h2>
-              <p class="mt-2 sm:mt-4">{frontmatter.date}</p>
-              <p class="mt-2 sm:mt-4 text-md">{frontmatter.timesc}</p>
-              <p class="mt-2 sm:mt-4">{frontmatter.addresssc}</p>
+              <p class="text-lg font-bold flex gap-2"><Icon name="mdi:date-range" class="w-6 h-6" /> {frontmatter.date}</p>
+            <p class="text-md flex gap-2"><Icon name="mdi:clock-time-eight-outline" class="w-6 h-6" />{frontmatter.timesc}</p>
+            <p class="flex gap-2"><Icon name="mdi:home" class="w-6 h-6" />{frontmatter.addresssc}</p>
+            <p class="flex gap-2"><Icon name="mdi:google-maps" class="w-8 h-8" />{frontmatter.locationsc}</p>
               <div class="group">
                 <a href={frontmatter.mapssc}>
                   <button

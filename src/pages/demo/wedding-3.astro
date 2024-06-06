@@ -272,9 +272,10 @@ if(!frontmatter) {
       <div class="grid grid-cols-1 md:grid-cols-2 max-w-screen-md mx-auto gap-x-8 gap-y-16 mt-5 pt-16">
         <div class=`fade-right opacity-0 text-center font-poppins w-full rounded-lg py-12 px-8 border ${frontmatter.bgfs} ${frontmatter.txsc} ${frontmatter.bdr}`>
           <h2 class="text-center font-nautigal text-4xl md:text-6xl">Akad Nikah</h2>
-          <p class="mt-2 sm:mt-4">{frontmatter.date}</p>
-          <p class="mt-2 sm:mt-4 text-md">{frontmatter.timefs}</p>
-          <p class="mt-2 sm:mt-4 font-bold">{frontmatter.addressfs}</p>
+          <p class="text-lg font-bold flex gap-2"><Icon name="mdi:date-range" class="w-6 h-6" /> {frontmatter.date}</p>
+            <p class="text-md flex gap-2"><Icon name="mdi:clock-time-eight-outline" class="w-6 h-6" />{frontmatter.timefs}</p>
+            <p class="flex gap-2"><Icon name="mdi:home" class="w-6 h-6" />{frontmatter.addressfs}</p>
+            <p class="flex gap-2"><Icon name="mdi:google-maps" class="w-8 h-8" />{frontmatter.locationfs}</p>
           <div class="group">
           <a href={frontmatter.mapsfs}>
             <button class=`mx-auto mt-8 flex items-center justify-center rounded-full px-6 py-2 text-center text-sm font-medium  ${frontmatter.bgsc} ${frontmatter.txfs}`>Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" />
@@ -284,9 +285,10 @@ if(!frontmatter) {
         </div>
         <div class=`fade-left opacity-0 text-center font-poppins w-full rounded-lg py-12 px-8 border ${frontmatter.bgfs} ${frontmatter.txsc} ${frontmatter.bdr}`>
           <h2 class="text-center font-nautigal text-4xl md:text-6xl">Resepsi</h2>
-          <p class="mt-2 sm:mt-4">{frontmatter.date}</p>
-          <p class="mt-2 sm:mt-4 text-md">{frontmatter.timesc}</p>
-          <p class="mt-2 sm:mt-4 font-bold">{frontmatter.addresssc}</p>
+          <p class="text-lg font-bold flex gap-2"><Icon name="mdi:date-range" class="w-6 h-6" /> {frontmatter.date}</p>
+            <p class="text-md flex gap-2"><Icon name="mdi:clock-time-eight-outline" class="w-6 h-6" />{frontmatter.timesc}</p>
+            <p class="flex gap-2"><Icon name="mdi:home" class="w-6 h-6" />{frontmatter.addresssc}</p>
+            <p class="flex gap-2"><Icon name="mdi:google-maps" class="w-8 h-8" />{frontmatter.locationsc}</p>
           <div class="group">
           <a href={frontmatter.mapssc}>
             <button class=`mx-auto mt-8 flex items-center justify-center rounded-full px-6 py-2 text-center text-sm font-medium  ${frontmatter.bgsc} ${frontmatter.txfs}`>Google Maps <Icon name="mdi:google-maps" class="w-6 h-6" />

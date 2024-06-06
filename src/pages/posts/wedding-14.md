@@ -28,7 +28,7 @@ before: 'bg-white'
 # Img header
 cover: '/assets/img-22.webp'
 imgsc: '/assets/dekor-21.webp'
-bg: '/assets/dekor-24.webp'
+bg: '/assets/dekor42.webp'
 
 #dekor
 dekorfs: '/assets/dekor41.webp'

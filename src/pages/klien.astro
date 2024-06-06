@@ -26,15 +26,13 @@ const posts = await Astro.glob('../pages/undangan/*.md');
                 <div class="relative p-4 bg-white rounded-lg shadow-xl">
                   <div class="relative">
                     <div class="overflow-hidden rounded-lg">
-                      <div class="w-full aspect-video object-cover">
-                        <img src={post.frontmatter.img.url} alt={post.frontmatter.desc} />
+                      <div class="w-full overflow-hidden">
+                        <a href={post.frontmatter.slug}>
+                        <img src={post.frontmatter.img.url} alt={post.frontmatter.desc} class="object-cover aspect-video transition-all duration-700	ease-linear hover:scale-125 hover:duration-700 hover:transition-all hover:ease-linear rounded-lg rounded-lg" />
+                        </a>
                       </div>
                     </div>
                     <div class="pt-4">
-                      <p class="font-bold text-xl text-gray-800 sm:text-left capitalize">{post.frontmatter.type}</p>  
-                      <p class="font-bold text-gray-800 sm:text-left">{post.frontmatter.price}</p>  
-                      <p class="font-bold text-pink-600 line-through sm:text-left text-xs">{post.frontmatter.unprice}</p>  
-                      
                       <div class="flex flex-col min-[320px]:flex-row gap-4 items-center justify-center min-[320px]:justify-start min-[320px]:justify-between mt-2">
                         <a href={post.frontmatter.slug} class="flex flex-row items-center justify-between gap-2 text-white bg-gray-600 w-fit px-4 py-2 rounded-md">{post.frontmatter.link}Preview<Icon name="mdi:eye" class="w-4 h-4" /></a>
                         <a href="/pesan" class="flex flex-row items-center justify-between gap-2 text-white bg-pink-600 w-fit px-4 py-2 rounded-md">Pesan <Icon name="mdi:whatsapp" class="w-4 h-4 text-white" /></a>

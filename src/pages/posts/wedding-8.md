@@ -31,9 +31,9 @@ imgsc: '/assets/img-20.webp'
 bg: '/assets/dekor-24.webp'
 
 #dekor
-dekorfs: '/assets/dekor31.webp'
+dekorfs: '/assets/dekor30.webp'
 dekorsc: '/assets/dekor10.webp'
-dekorth: '/assets/dekor28.webp'
+dekorth: '/assets/dekor31.webp'
 dekorfr: '/assets/dekor29.webp'
 dekorfv: '/assets/dekor26.webp'
 
@@ -46,6 +46,8 @@ imgstory1: '/assets/img-5.webp'
 imgstory2: '/assets/img-6.webp'
 imgstory3: '/assets/img-7.webp'
 imgstory4: '/assets/img-8.webp'
+imgstory5: '/assets/img-9.webp'
+imgstory6: '/assets/img-10.webp'
 add1: '/assets/img-30.webp'
 add2: '/assets/img-4.webp'
 
@@ -89,6 +91,8 @@ timeth: 13:00 - end WIB
 addressfs: Masjid Kampus UGM
 addresssc: Jogja Expo Center
 addressth: Rumah Mempelai Wanita
+locationfs: Beringin tengah, Ringin jaya kec BNS
+locationsc: Beringin tengah, Ringin jaya kec BNS
 mapsfs: https://maps.app.goo.gl/fpXEChVvcrKveA468 
 mapssc: https://maps.app.goo.gl/fpXEChVvcrKveA468
 mapsth: https://maps.app.goo.gl/fpXEChVvcrKveA468
