@@ -11,6 +11,9 @@ export default {
       poppins: ["Poppins", "sans-serif"],
       haviland: ["Mr De Haviland", "cursive"],
       great: ["Great Vibes", "cursive"],
+      pacifico: ["Pacifico", "cursive"],
+      dyna: ["Dynalight", "system-ui"],
+      alex: ["Alex Brush", "cursive"],
     },
     extend: {
       animation: {

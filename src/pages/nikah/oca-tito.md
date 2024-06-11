@@ -1,7 +1,7 @@
 ---
 layout: '../demo/wedding-7.astro'
 title: Oca-Tito
-slug: undangan/oca-tito
+slug: nikah/oca-tito
 type: Oca-Tito
 desc: Oca-Tito
 countdown: Jun 26, 2024 15:37:25
@@ -65,8 +65,8 @@ namebankfml: Feny dwi Fandi
 numberbankfml: "7772555957"
 
 # waktu & tempat acara
-timefs: 08.00 WITA - 14.00 WITA
-timesc: 08.00 WITA - 14.00 WITA
+timefs: 08.00 - 10.00 WIT
+timesc: 10.00 - 15.00 WIT
 locationfs: Jl. Serayu No. 16 RT/RW 001/001, Kel/Des Panderejo, Kec. Banyuwangi
 locationsc: Jl. Serayu No. 16 RT/RW 001/001, Kel/Des Panderejo, Kec. Banyuwangi
 addressfs: Rumah Mempelai Wanita

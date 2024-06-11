@@ -1,7 +1,7 @@
 ---
 layout: '../demo/wedding-8.astro'
 title: Indah-Safak
-slug: undangan/indah-safak
+slug: nikah/indah-safak
 type: Indah-Safak
 desc: Indah-Safak
 countdown: Jun 24, 2024 08:00:00
@@ -62,8 +62,8 @@ parentmale: "Bapak Asrofi & Ibu Rumini"
 parentfemale: "Bapak Dasimin & Ibu Jamilah"
 instagrammale: "_safaak/"
 instagramfemale: "indahagusthira_/"
-citymale: "Purworejo"
-cityfemale: "Lampung Barat"
+citymale: "Jawa Tengah - Purworejo"
+cityfemale: "Lampung - Lampung Barat"
 music: "indah-safak"
 
 # name bank
