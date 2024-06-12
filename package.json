@@ -14,7 +14,7 @@
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/vercel": "^7.4.0",
+    "@astrojs/vercel": "latest",
     "@fontsource-variable/josefin-sans": "^5.0.20",
     "@fontsource/alex-brush": "^5.0.20",
     "@fontsource/dynalight": "^5.0.20",
@@ -30,7 +30,7 @@
     "@types/alpinejs": "^3.13.9",
     "alpinejs": "^3.13.7",
     "animejs": "^3.2.2",
-    "astro": "^4.5.5",
+    "astro": "latest",
     "astro-iconify": "^1.2.0",
     "drizzle-orm": "^0.30.3",
     "tailwindcss": "latest"
