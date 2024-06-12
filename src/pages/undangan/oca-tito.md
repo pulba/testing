@@ -1,7 +1,7 @@
 ---
 layout: '../demo/wedding-7.astro'
 title: Oca-Tito
-slug: nikah/oca-tito
+slug: undangan/oca-tito
 type: Oca-Tito
 desc: Oca-Tito
 countdown: Jun 26, 2024 15:37:25

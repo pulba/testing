@@ -1,11 +1,11 @@
 ---
-layout: '../demobd/ultah-1.astro'
-slug: 'ultah/kezia'
+layout: '../demo/ultah-1.astro'
+slug: 'undangan/kezia'
 title: 'Kezia Anabel'
 type: 'Tanpa Foto'
 desc: 'Tema ULang Tahun'
 img:
-  url: '/assets/demo-1.webp'
+  url: '/assets/demo-ultah.webp'
 
 #colors
 bgfs: 'bg-blue-100'

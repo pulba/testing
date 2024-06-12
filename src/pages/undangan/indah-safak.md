@@ -1,7 +1,7 @@
 ---
 layout: '../demo/wedding-8.astro'
 title: Indah-Safak
-slug: nikah/indah-safak
+slug: undangan/indah-safak
 type: Indah-Safak
 desc: Indah-Safak
 countdown: Jun 24, 2024 08:00:00
