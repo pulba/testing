@@ -12,7 +12,7 @@ export default {
       haviland: ["Mr De Haviland", "cursive"],
       great: ["Great Vibes", "cursive"],
       pacifico: ["Pacifico", "cursive"],
-      dyna: ["Dynalight", "system-ui"],
+      dyna: ["Dynalight", "cursive"],
       alex: ["Alex Brush", "cursive"],
     },
     extend: {

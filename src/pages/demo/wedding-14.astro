@@ -31,8 +31,8 @@ if(!frontmatter) {
   data["txth"] = 'text-amber-200'
 
   data["bdr"] = 'border-red-900'
-  data["from"] = 'from-red-100'
-  data["before"] = 'before:bg-white'
+  data["from"] = 'from-red-50'
+  data["before"] = 'before:bg-red-100'
 
   data["cover"] = '/assets/img-22.webp'
   data["imgsc"] = '/assets/img-21.webp'
@@ -118,10 +118,10 @@ if(!frontmatter) {
 <Noheader title={frontmatter.title} desc={frontmatter.desc}>
   
   <input type="checkbox" id="toggle" class="peer hidden peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear"/>
-  <section class=`animasi relative bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:bg-black before:opacity-80 before:inset-0 before:bg-cover before:absolute before:${frontmatter.bgfs}` style=`background-image: url('${frontmatter.cover}')`>
+  <section class=`animasi relative bg-cover bg-center flex items-center overflow-hidden peer-checked:h-0 peer-checked:transition-all peer-checked:duration-700 peer-checked:ease-linear peer-checked:delay-500 before:content-[''] before:opacity-80 before:inset-0 before:bg-cover before:absolute before:${frontmatter.before}` style=`background-image: url('${frontmatter.cover}')`>
     <div class="absolute overflow-hidden w-full h-[100%] *:absolute *:object-cover *:w-full *:z-20">
       <div class="top-0 max-h-12">
-        <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-12" alt="JejakBahagia" />
+        <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-16" alt="JejakBahagia" />
     </div>
     <div class="bottom-0">
         <img src=`${frontmatter.dekorfs}` class="w-full h-full max-h-12" alt="JejakBahagia" />

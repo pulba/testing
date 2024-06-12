@@ -23,7 +23,7 @@ txsc: 'text-red-900'
 txth: 'text-amber-200'
 
 bdr: 'border-red-900'
-before: 'bg-white'
+before: 'bg-red-200'
 
 # Img header
 cover: '/assets/img-22.webp'

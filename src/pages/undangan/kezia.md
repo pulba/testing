@@ -1,7 +1,7 @@
 ---
 layout: '../demo/ultah-1.astro'
-slug: 'undangan/kezia'
 title: 'Kezia Anabel'
+slug: 'undangan/kezia'
 type: 'Tanpa Foto'
 desc: 'Tema ULang Tahun'
 img:
