@@ -30,7 +30,7 @@
     "@types/alpinejs": "^3.13.9",
     "alpinejs": "^3.13.7",
     "animejs": "^3.2.2",
-    "astro": "latest",
+    "astro": "^4.10.2",
     "astro-iconify": "^1.2.0",
     "drizzle-orm": "^0.30.3",
     "tailwindcss": "latest"
