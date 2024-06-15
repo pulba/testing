@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require('tailwindcss/plugin')
 
-export default {
+module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     fontFamily: {
@@ -43,11 +43,11 @@ export default {
         },
         fadeup: {
           '0%': { transform: 'translateY(150px)', opacity: 0 },
-          '100%': { transform: 'translateX(0)', opacity: 1 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
         },
         fadedown: {
           '0%': { transform: 'translateY(-150px)', opacity: 0 },
-          '100%': { transform: 'translateX(0)', opacity: 1 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
         }
       }
     },

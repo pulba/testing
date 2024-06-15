@@ -9,7 +9,7 @@ img:
   url: '/assets/indah4.webp'
   alt: jejak bahagia
 
-#colors
+# Colors
 bgfs: 'bg-orange-900/80'
 bgsc: 'bg-orange-100'
 bgth: 'bg-orange-100'
@@ -27,13 +27,12 @@ cover: '/assets/indah2.webp'
 imgsc: '/assets/indah10.webp'
 bg: '/assets/indah2.webp'
 
-#dekor
+# Dekor
 dekorfs: '/assets/dekor30.webp'
 dekorsc: '/assets/dekor9.webp'
 dekorth: '/assets/dekor31.webp'
 dekorfr: '/assets/dekor29.webp'
 dekorfv: '/assets/dekor26.webp'
-
 
 # Img kedua mempelai
 pm1: '/assets/indah9.webp'
@@ -49,11 +48,11 @@ imgstory6: '/assets/indah5.webp'
 add1: '/assets/img-30.webp'
 add2: '/assets/img-4.webp'
 
-# data mempelai
+# Data mempelai
 male: "Safak"
 fullmale: "Musafak"
 female: "Indah"
-fullfemale: "Indah Agustira,S.S"
+fullfemale: "Indah Agustira, S.S"
 date: "Senin, 24 Juni 2024"
 
 childmale: "Putra kedua dari Pasangan"
@@ -66,23 +65,24 @@ citymale: "Jawa Tengah - Purworejo"
 cityfemale: "Lampung - Lampung Barat"
 music: "indah-safak"
 
-# name bank
-logoml: /assets/bri.png
+# Name bank
+logoml: '/assets/bri.png'
 namebankml: "Indah Agustira"
 numberbankml: "565601027298535"
-logofml: /assets/bri.png
-namebankfml: Indah Agustira
+logofml: '/assets/bri.png'
+namebankfml: "Indah Agustira"
 numberbankfml: "565601027298535"
 
-# waktu & tempat acara
-timefs: 08:00 WIB - 10:00 WIB
-timesc: 10:00 WIB - 21:00 WIB
-locationfs: Beringin tengah, Ringin jaya kec BNS
-locationsc: Beringin tengah, Ringin jaya kec BNS
-addressfs: Rumah Mempelai Wanita
-addresssc: Rumah Mempelai Wanita
-mapsfs: https://maps.app.goo.gl/TPFGy6iMrK4avsNr9 
-mapssc: https://maps.app.goo.gl/TPFGy6iMrK4avsNr9
-linkmaps: https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3973.5841324686276!2d104.27230187498239!3d-5.170394994807005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwMTAnMTMuNCJTIDEwNMKwMTYnMjkuNiJF!5e0!3m2!1sen!2sid!4v1717683982019!5m2!1sen!2sid
+# Waktu & tempat acara
+timefs: "08:00 WIB - 10:00 WIB"
+timesc: "10:00 WIB - 21:00 WIB"
+locationfs: "Beringin Tengah, Ringin Jaya Kec. BNS"
+locationsc: "Beringin Tengah, Ringin Jaya Kec. BNS"
+addressfs: "Rumah Mempelai Wanita"
+addresssc: "Rumah Mempelai Wanita"
+mapsfs: "https://maps.app.goo.gl/TPFGy6iMrK4avsNr9"
+mapssc: "https://maps.app.goo.gl/TPFGy6iMrK4avsNr9"
+linkmaps: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3973.5841324686276!2d104.27230187498239!3d-5.170394994807005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwMTAnMTMuNCJTIDEwNMKwMTYnMjkuNiJF!5e0!3m2!1sen!2sid!4v1717683982019!5m2!1sen!2sid"
 quote: "Takdir Allah yang mengikatkan cinta dua hati, pernikahan adalah perjalanan spiritual yang disatukan oleh rahmat-Nya."
+
 ---
